@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Највећи заједнички делилац</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Највећи заједнички делилац<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Појам највећег заједничког делиоца нам је познат још из основне школе. Подсетимо се:</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Највећи заједнички делилац (НЗД) два природна броја је највећи природан број који дели оба дата
+броја без остатка.</p>
+
+    </div></div>
+<p>На пример, НЗД бројева 60 и 42 је 6, јер 6 дели и 60 и 42, а при томе не постоји већи број са овом особином.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Задатак налажења НЗД бројева <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> може да се графички интерпретира на следећи начин:
+дат је правоугаоник од <span class="math notranslate nohighlight">\(a \cdot b\)</span> јединичних квадрата, а потребно је одредити највеће <span class="math notranslate nohighlight">\(d\)</span>,
+такво да дати правоугаоник може да се покрије квадратима величине <span class="math notranslate nohighlight">\(d \cdot d\)</span>.</p>
+<img alt="../_images/nzd_a_b.png" class="align-center" src="../_images/nzd_a_b.png" />
+<p>Постоје разни начини да се на основу датих <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> израчуна ово највеће <span class="math notranslate nohighlight">\(d\)</span>.
+У наставку ћемо анализирати неколико поступака за израчунавање НЗД два дата природна броја,
+обраћајући посебну пажњу на ефикасност тих поступака. Након сваког поступка ћемо поставити иста питања,
+уобичајена при анализи ефикасности алгоритама:</p>
+<ul class="simple">
+<li><p>који су посебно неповољни случајеви улаза за дати алгоритам, тј. за који улаз је алгоритму потребно
+највише времена да дође до одговора?</p></li>
+<li><p>колико операција, односно времена може да буде потребно алгоритму у најнеповољнијим случајевима?</p></li>
+</ul>
+<div class="section" id="id2">
+<h2>Алгоритам смањивања за по 1<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Једно, алгоритамски веома лоше решење, било би да редом испробавамо природне бројеве почевши од
+<span class="math notranslate nohighlight">\(min(a, b)\)</span> наниже као могуће НЗД, док не наиђемо на број који је делилац и од <span class="math notranslate nohighlight">\(a\)</span> и од
+<span class="math notranslate nohighlight">\(b\)</span>. Први заједнички делилац на који наиђемо је уједно и највећи број са том особином, па је
+то НЗД.</p>
+
+<div data-childcomponent="nzd_dva_broja_smanjivanjem" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=nzd_dva_broja_smanjivanjem data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="// nzd dva broja - algoritam smanjivanja za po 1
+using System;
+
+class Program
+{
+    static long NZD(long a, long b)
+    {
+        long d = Math.Min(a, b);
+        while (a % d &gt; 0 || b % d &gt; 0)
+            d--;
+
+        return d;
+    }
+    static void Main(string[] args)
+    {
+        long a = long.Parse(Console.ReadLine());
+        long b = long.Parse(Console.ReadLine());
+        Console.WriteLine(NZD(a, b));
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>У графичкој илустрацији алгоритма која следи, свака слика одговара једној итерацији алгоритма.
+Квадрат се смањује све док се и ширина и висина правоугаоника не уклопе у мрежу квадрата.</p>
+
+    <div class="gallery" id="nzd0_smanjivanje">
+        <div>
+            <div style="width: 600px;height:100%">
+            <img src="../_images/nzd_smanj_01.png" width="100%" height="100%">
+<img src="../_images/nzd_smanj_02.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_03.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_04.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_05.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_06.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_07.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_08.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_09.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_21.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_22.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_23.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_24.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_25.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_26.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_27.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_28.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_29.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_30.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_31.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_32.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_33.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_34.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_35.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_36.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_smanj_37.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="nzd0_smanjivanje-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Опишите један посебно неповољан улаз за алгоритам смањивања за по 1, тј. вредности <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span>
+за које је алгоритму потребан посебно велики број операција.</p>
+<p>Можете ли да процените време рада алгоритма у случају неповољних 64-битних вредности (тј. вредности типа <code class="docutils literal notranslate"><span class="pre">long</span></code>)?</p>
+
+    </p></div></div>
+<p>Није тешко приметити да је за алгоритам смањивања за по 1 (у смислу броја потребних операција)
+неповољно када су вредности <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> веома велике и међусобно блиске, јер је тада
+вредност НЗД сразмерно веома мала. Екстреман пример би био <span class="math notranslate nohighlight">\(a=2^{63}-1, b=2^{63}-2\)</span>.
+У овом случају једини заједнички делилац бројева <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> је један (зашто?), тј.
+ови бројеви су узајамно прости. Због тога је број операција потребних да се на описани начин
+дође до резултата реда <span class="math notranslate nohighlight">\(2^{63} \approx 10^{19}\)</span>, а за то је, као што већ знамо, данашњим рачунарима
+потребно више стотина година.</p>
+</div>
+<div class="section" id="id3">
+<h2>Алгоритам истовремене факторизације<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Поступак који се учи у основној школи је да се дати бројеви раставе на просте чиниоце, а затим се у
+факторизацијама датих бројева пронађу прости чиниоци који су заједнички. Производ тих заједничких
+простих чинилаца је тражени НЗД. На пример, <span class="math notranslate nohighlight">\(60 = 2 \cdot 2 \cdot 3 \cdot 5, 42 = 2 \cdot 3 \cdot 7\)</span>,
+заједнички прости чиниоци су 2 и 3, па је НЗД једнак <span class="math notranslate nohighlight">\(2 \cdot 3 = 6\)</span>. Уобичајено је да се
+бројеви чији НЗД тражимо факторишу истовремено, користећи запис као на следећој слици. Са десне
+стране црте пишемо све чиниоце којима је дељив бар један од бројева са леве стране, а оне са којим су
+дељива оба броја посебно означимо и на крају помножимо.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/nzd_faktorizacijom.png"><img alt="../_images/nzd_faktorizacijom.png" src="../_images/nzd_faktorizacijom.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Поступак налажења НЗД факторизацијом два броја (заједнички фактори су заокружени).</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Из поступка факторизације знамо да потенцијалне просте делиоце <span class="math notranslate nohighlight">\(d\)</span> броја <span class="math notranslate nohighlight">\(a\)</span> треба да
+тражимо све док је <span class="math notranslate nohighlight">\(d \leq \sqrt a\)</span>, а делиоце броја <span class="math notranslate nohighlight">\(b\)</span> док је <span class="math notranslate nohighlight">\(d \leq \sqrt b\)</span>.
+Пошто се делиоци оба броја налазе истовремено, услов за останак у петљи је да за бар један од
+бројева <span class="math notranslate nohighlight">\(a, b\)</span> претрага није завршена. Овај услов може формално да се искаже на неколико
+логички равноправних начина, нпр:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+d \cdot d \leq a \lor d \cdot d \leq b &amp;\iff d \leq \sqrt a \lor d \leq \sqrt b\\
+&amp;\iff d \leq max(\sqrt {a}, \sqrt {b})\\
+&amp;\iff d \leq \sqrt {max(a, b)}\\
+\end{aligned}\end{split}\]</div>
+<p>Ево и програма за поступак одређивања НЗД истовременом факторизацијом:</p>
+
+<div data-childcomponent="nzd_dva_broja_faktorizacijom" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=nzd_dva_broja_faktorizacijom data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="// nzd dva broja - algoritam uporedne faktorizacije
+using System;
+
+class Program
+{
+    static long NZD(long a, long b)
+    {
+        long d = 2;
+        long nzd = 1;
+        while (d * d &lt;= a || d * d &lt;= b)
+        {
+            bool deljiv_a = (a % d == 0);
+            bool deljiv_b = (b % d == 0);
+            if (deljiv_a)
+                a /= d;
+            if (deljiv_b)
+                b /= d;
+            if (deljiv_a &amp;&amp; deljiv_b)
+                nzd *= d;
+            if (!deljiv_a &amp;&amp; !deljiv_b)
+                d++;
+        }
+
+        if (a == b)
+            nzd *= a;
+
+        return nzd;
+    }
+    static void Main(string[] args)
+    {
+        long a = long.Parse(Console.ReadLine());
+        long b = long.Parse(Console.ReadLine());
+        Console.WriteLine(NZD(a, b));
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Које вредности су посебно неповољне за алгоритам налажења НЗД помоћу факторизације?</p>
+<p>Колико операција, односно времена може у најнеповољнијем случају да буде потребно
+овом алгоритму за вредности из опсега типа <code class="docutils literal notranslate"><span class="pre">long</span></code>?</p>
+
+    </p></div></div>
+<p>Алгоритам налажења НЗД помоћу факторизације је веома сличан поступку факторизације, тј. растављања
+једног датог броја на просте чиниоце. Због тога је и број операција, као и код алгоритма факторизације,
+у најгорем случају сразмеран корену из већег од бројева <span class="math notranslate nohighlight">\(a, b\)</span>. Као што смо раније видели,
+неповољан случај су велики прости бројеви, а за такве бројеве може да буде потребно око
+<span class="math notranslate nohighlight">\(2^{30}\)</span> операција, тј. неколико секунди.</p>
+</div>
+<div class="section" id="id4">
+<h2>Еуклидов алгоритам<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Еуклидов алгоритам се заснива на једноставној идеји, познатој од давнина. Да бисмо ту идеју представили
+на што јаснији начин, вратимо се графичкој интерпретацији проблема, у којој је потребно да се
+правоугаоник прекрије што већим (међусобно једнаким) квадратима странице <span class="math notranslate nohighlight">\(d\)</span>. Нека су <span class="math notranslate nohighlight">\(a\)</span>
+и <span class="math notranslate nohighlight">\(b\)</span> странице правоугаоника и нека је <span class="math notranslate nohighlight">\(a \geq b\)</span>. Пошто квадрат странице <span class="math notranslate nohighlight">\(d\)</span> треба
+да прекрије правоугаоник, његова страница се цео број пута садржи у страници <span class="math notranslate nohighlight">\(b\)</span>. Самим тим, мада
+још не знамо колико је <span class="math notranslate nohighlight">\(d\)</span>, знамо да ћемо квадратима величине <span class="math notranslate nohighlight">\(d \cdot d\)</span> лако покрити квадрат
+величине <span class="math notranslate nohighlight">\(b \cdot b\)</span>. Зато од полазног правоугаоника можемо да одбацимо квадрат величине <span class="math notranslate nohighlight">\(b \cdot b\)</span> и
+наставимо да тражимо највећи квадрат којим може да се покрије преостали правоугаоник величине
+<span class="math notranslate nohighlight">\((a-b) \cdot b\)</span>.</p>
+<p>Ово размишљање можемо да понављамо све док преостали правоугаоник не постане квадрат, када је одговор
+очигледан. Описани поступак овако изгледа на примеру <span class="math notranslate nohighlight">\(a=60, b= 42\)</span>:</p>
+
+    <div class="gallery" id="nzd1_euklid1">
+        <div>
+            <div style="width: 600px;height:100%">
+            <img src="../_images/nzd_euk_minus_01.png" width="100%" height="100%">
+<img src="../_images/nzd_euk_minus_02.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_euk_minus_03.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_euk_minus_04.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_euk_minus_05.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_euk_minus_06.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_euk_minus_07.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="nzd1_euklid1-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Исту идеју можемо да искажемо и формално. Нека је <span class="math notranslate nohighlight">\(d\)</span> заједнички делилац бројева <span class="math notranslate nohighlight">\(a, b\)</span>,
+тј. нека је <span class="math notranslate nohighlight">\(a=m \cdot d, b=n \cdot d\)</span>. Без губљења општости можемо да претпоставимо <span class="math notranslate nohighlight">\(a \geq b\)</span>.
+Тада је <span class="math notranslate nohighlight">\(d\)</span> делилац и броја <span class="math notranslate nohighlight">\(a-b\)</span> јер <span class="math notranslate nohighlight">\(a-b = (m-n) \cdot d\)</span>. Важи и обрнуто,
+ако је <span class="math notranslate nohighlight">\(d\)</span> заједнички делилац бројева <span class="math notranslate nohighlight">\(a-b\)</span> и <span class="math notranslate nohighlight">\(b\)</span>, онда је <span class="math notranslate nohighlight">\(d\)</span> делилац
+и броја <span class="math notranslate nohighlight">\(a\)</span>. Одавде закључујемо да је скуп заједничких делилаца бројева <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span>
+исти као и скуп заједничких делилаца бројева <span class="math notranslate nohighlight">\(a-b\)</span> и <span class="math notranslate nohighlight">\(b\)</span>. Два иста скупа имају и исти максимум,
+што значи да је <span class="math notranslate nohighlight">\(nzd(a, b) = nzd(a-b, b)\)</span>.</p>
+<p>Овим је оправдан приступ који се користи у Еуклидовом поступку за одређивање НЗД, тј. ово је суштина доказа
+да је поступак коректан. Запишимо поступак и помоћу програма:</p>
+
+<div data-childcomponent="nzd_dva_broja_euklid_1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=nzd_dva_broja_euklid_1 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="// nzd dva broja - euklidov algoritam (optimizovana verzija)
+using System;
+
+class Program
+{
+    static long NZD(long a, long b)
+    {
+        while (a &gt; 0 &amp;&amp; b &gt; 0)
+        {
+            if (a &gt;= b)
+                a -= b;
+            else
+                b -= a;
+        }
+        if (a == 0)
+            return b;
+        else
+            return a;
+    }
+    static void Main(string[] args)
+    {
+        long a = long.Parse(Console.ReadLine());
+        long b = long.Parse(Console.ReadLine());
+        Console.WriteLine(NZD(a, b));
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Пре него што пређемо на анализу, уочимо да поступак може додатно да се оптимизује тако што узастопна
+одузимања <span class="math notranslate nohighlight">\(b\)</span> од <span class="math notranslate nohighlight">\(a\)</span> заменимо рачунањем остатка при дељењу. На пример, од правоугаоника
+величине <span class="math notranslate nohighlight">\(18 \times 42\)</span>, одузимањем <span class="math notranslate nohighlight">\(42-18=24\)</span> прелазимо на правоугаоник <span class="math notranslate nohighlight">\(18 \times 24\)</span>,
+а затим одузимањем <span class="math notranslate nohighlight">\(24-18=6\)</span> на правоугаоник <span class="math notranslate nohighlight">\(18 \times 6\)</span>.
+Када од неког броја <span class="math notranslate nohighlight">\(p \in \mathbb{N}\)</span> узастопно одузимамо број <span class="math notranslate nohighlight">\(q  \in \mathbb{N}\)</span> док
+год је <span class="math notranslate nohighlight">\(p \geq q\)</span>, на крају као резултат добијамо остатак при дељењу <span class="math notranslate nohighlight">\(p\)</span> са <span class="math notranslate nohighlight">\(q\)</span>.
+Према томе, претходно описани поступак можемо још да побољшамо (убрзамо), тако што уместо <span class="math notranslate nohighlight">\((a-b)\)</span>
+користимо <span class="math notranslate nohighlight">\((a \bmod b)\)</span>. Након ове поправке, кораци поступка изгледају овако:</p>
+
+    <div class="gallery" id="nzd2_euklid2">
+        <div>
+            <div style="width: 600px;height:100%">
+            <img src="../_images/nzd_euk_mod_01.png" width="100%" height="100%">
+<img src="../_images/nzd_euk_mod_02.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_euk_mod_03.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/nzd_euk_mod_04.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="nzd2_euklid2-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Ово може да буде значајна уштеда када је један од бројева <span class="math notranslate nohighlight">\(a, b\)</span> веома велики, а други веома мали.</p>
+<p>Ево и програма за оптимизовану верзију Еуклидовог алгоритма, који уместо одузимања користи остатак при дељењу:</p>
+
+<div data-childcomponent="nzd_dva_broja_euklid_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=nzd_dva_broja_euklid_2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="// nzd dva broja - euklidov algoritam (prva verzija)
+using System;
+
+class Program
+{
+    static long NZD(long a, long b)
+    {
+        while (b &gt; 0)
+        {
+            long d = a % b;
+            a = b;
+            b = d;
+        }
+        return a;
+    }
+    static void Main(string[] args)
+    {
+        long a = long.Parse(Console.ReadLine());
+        long b = long.Parse(Console.ReadLine());
+        Console.WriteLine(NZD(a, b));
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Покушајте да пронађете вредности <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span>, за које би Еуклидовом алгоритму био потребан
+што већи број итерација. Да бисте дошли до таквог пара бројева, предлажемо вам да кренете од вредности
+за <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> у последњој итерацији, затим у претпоследњој итд. ка почетним вредностима.
+Наравно, број итерација које на овај начин можемо да извршимо уназад, ограничен је опсегом 64-битних
+променљивих које користимо у овим алгоритмима.</p>
+
+    </p></div></div>
+<p>Пошто желимо да максимизирамо број итерација, најбоље је да почнемо од најмањег могућег завршног пара
+вредности, а то је <span class="math notranslate nohighlight">\(a=1, b=1\)</span>. Да бисмо у датом опсегу могли да изведемо што већи број итерација
+уназад, вредности <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> ћемо повећавати штедљиво, тј. тако да ове вредности што спорије
+расту у свакој од итерација. Према томе, тражимо прво најмањи пар бројева који у једној итерацији доводи до
+пара <span class="math notranslate nohighlight">\(a=1, b=1\)</span>, а то је пар <span class="math notranslate nohighlight">\(a=2, b=1\)</span>. Да бисмо направили следећи корак уназад, потребан нам
+је што мањи број <span class="math notranslate nohighlight">\(a\)</span>, који при дељењу са 2 даје остатак 1, а то је 3. Тако добијамо претходни пар
+<span class="math notranslate nohighlight">\(a=3, b=2\)</span>. Настављајући поступак, добијамо следеће парове:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">0</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">1</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">2</span> <span class="n">iteracije</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">3</span> <span class="n">iteracije</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">-&gt;</span> <span class="mi">4</span> <span class="n">iteracije</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">-&gt;</span> <span class="mi">5</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">21</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">13</span> <span class="o">-&gt;</span> <span class="mi">6</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">34</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">21</span> <span class="o">-&gt;</span> <span class="mi">7</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">55</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">34</span> <span class="o">-&gt;</span> <span class="mi">8</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">89</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">55</span> <span class="o">-&gt;</span> <span class="mi">9</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">144</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">89</span> <span class="o">-&gt;</span> <span class="mi">10</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">233</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">144</span> <span class="o">-&gt;</span> <span class="mi">11</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">377</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">233</span> <span class="o">-&gt;</span> <span class="mi">12</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">610</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">377</span> <span class="o">-&gt;</span> <span class="mi">13</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">987</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">610</span> <span class="o">-&gt;</span> <span class="mi">14</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1597</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">987</span> <span class="o">-&gt;</span> <span class="mi">15</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">2584</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1597</span> <span class="o">-&gt;</span> <span class="mi">16</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">4181</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2584</span> <span class="o">-&gt;</span> <span class="mi">17</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">6765</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4181</span> <span class="o">-&gt;</span> <span class="mi">18</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10946</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">6765</span> <span class="o">-&gt;</span> <span class="mi">19</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">17711</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10946</span> <span class="o">-&gt;</span> <span class="mi">20</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">28657</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">17711</span> <span class="o">-&gt;</span> <span class="mi">21</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">46368</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">28657</span> <span class="o">-&gt;</span> <span class="mi">22</span> <span class="n">iteracije</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">75025</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">46368</span> <span class="o">-&gt;</span> <span class="mi">23</span> <span class="n">iteracije</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">121393</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">75025</span> <span class="o">-&gt;</span> <span class="mi">24</span> <span class="n">iteracije</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">196418</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">121393</span> <span class="o">-&gt;</span> <span class="mi">25</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">317811</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">196418</span> <span class="o">-&gt;</span> <span class="mi">26</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">514229</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">317811</span> <span class="o">-&gt;</span> <span class="mi">27</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">832040</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">514229</span> <span class="o">-&gt;</span> <span class="mi">28</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1346269</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">832040</span> <span class="o">-&gt;</span> <span class="mi">29</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">2178309</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1346269</span> <span class="o">-&gt;</span> <span class="mi">30</span> <span class="n">iteracija</span>
+<span class="o">...</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">259695496911122585</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">160500643816367088</span> <span class="o">-&gt;</span> <span class="mi">83</span> <span class="n">iteracije</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">420196140727489673</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">259695496911122585</span> <span class="o">-&gt;</span> <span class="mi">84</span> <span class="n">iteracije</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">679891637638612258</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">420196140727489673</span> <span class="o">-&gt;</span> <span class="mi">85</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1100087778366101931</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">679891637638612258</span> <span class="o">-&gt;</span> <span class="mi">86</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1779979416004714189</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1100087778366101931</span> <span class="o">-&gt;</span> <span class="mi">87</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">2880067194370816120</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1779979416004714189</span> <span class="o">-&gt;</span> <span class="mi">88</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">4660046610375530309</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2880067194370816120</span> <span class="o">-&gt;</span> <span class="mi">89</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">7540113804746346429</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4660046610375530309</span> <span class="o">-&gt;</span> <span class="mi">90</span> <span class="n">iteracija</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">12200160415121876738</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">7540113804746346429</span> <span class="o">-&gt;</span> <span class="mi">91</span> <span class="n">iteracija</span>
+</pre></div>
+</div>
+<p>Можда изненађујуће, видимо да после свега неколико десетина итерација долазимо до граница опсега 64-битне
+променљиве. Нагласимо још једном да су ово, према начину на који су добијени, парови бројева за које је
+Еуклидовом алгоритму потребан највећи број итерација. Прецизније речено, не постоје мањи парови бројева
+за које је Еуклидовом алгоритму потребан исти или већи број итерација.</p>
+<p>Одавде следи важан закључак: за било који пар бројева из опсега 64-битног целобројног типа, Еуклидовом
+алгоритму је довољно стотинак итерација да дође до резултата. Према томе, Еуклидов алгоритам је далеко,
+далеко ефикаснији од алгоритма факторизације, коме би за просте бројеве са границе опсега 64-битног
+целобројног типа биле потребне милијарде итерација.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Резимирајмо закључке до којих смо дошли током анализе различитих алгоритама за одређивање НЗД:</p>
+<ul class="simple">
+<li><p>Налажење НЗД алгоритмом смањивања за 1 је очигледно веома споро, тако да никоме не пада на памет да овај
+поступак користи при ручном одређивању НЗД. Једини разлог што се он понекад виђа као програм је што се
+веома лако записује у облику програма. Међутим, сасвим кратка и једноставна анализа показује да је налажење
+НЗД овим приступом бесмислено арчење рачунарских ресурса (као и код ручног рачунања). За веће вредности
+аргумената, алгоритам је практично неупотребљив.</p></li>
+<li><p>Алгоритам истовремене факторизације два броја се ослања на од раније познат алгоритам факторизације
+једног броја. Тај поступак јесте најефикаснији познат начин за одређивање простих чинилаца датог броја,
+међутим у проблему НЗД он одређује више него што се тражи. Због тога је број операција за налажење НЗД
+алгоритмом истовремене факторизације ипак непотребно висок.</p></li>
+<li><p>Еуклидов алгоритам је толико ефикасан, да би веома брзо (у делићу секунде) нашао НЗД и за бројеве од
+више хиљада цифара. За остале поменуте алгоритме о томе нема ни помисли.</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>Рачунање најмањег заједничког садржаоца<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Са појмом највећег заједничког делиоца, тесно је повезан појам најмањег заједничког садржаоца. Подсетимо се
+и њега:</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Најмањи заједнички садржалац (НЗС) два природна броја је најмањи природан број који је дељив са оба дата
+броја без остатка.</p>
+
+    </div></div>
+<p>На пример, НЗС бројева 60 и 42 је 420, јер 420 је дељив и са 60 и са 42, а при томе не постоји мањи број са овом
+особином.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>За ефикасно израчунавање најмањег заједничког садржаоца можемо да искористимо једнакост
+<span class="math notranslate nohighlight">\(nzd(a, b) \cdot nzs(a, b) = a \cdot b\)</span>. Да бисмо разумели зашто ова једнакост важи, размотримо
+пажљиво шта се дешава при поступку дељења простим чиниоцима, којим на папиру налазимо НЗД и НЗС.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nzd_nzs.png"><img alt="../_images/nzd_nzs.png" src="../_images/nzd_nzs.png" style="width: 500px;" /></a>
+</div>
+<p>Прости чиниоци који деле оба броја са леве стране (на слици заокружени), користе се и у рачунању НЗД
+и НЗС, а они који деле само један од бројева са леве стране, учествују само у производу за НЗС. Према
+томе, прости чиниоци који учествују два пута у производима на левој страни, учествују два пута и на десној, а
+они који учествују само једном на левој страни, учествују једном и на десној (само у НЗС). Према
+томе, производ свих простих чинилаца, при чему заокружене бројимо два пута, једнак је и са
+<span class="math notranslate nohighlight">\(a \cdot b\)</span> и са <span class="math notranslate nohighlight">\(nzd(a, b) \cdot nzs(a, b)\)</span>, па су ова два израза међусобно једнака.</p>
+<p>Једнакост <span class="math notranslate nohighlight">\(nzd(a, b) \cdot nzs(a, b) = a \cdot b\)</span> може да се докаже и формалније, посматрањем
+факторизација бројева <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span>. Нека је:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+a &amp;= p_1 ^ {\alpha_1} \cdot p_2 ^ {\alpha_2}  \cdot ... \cdot p_k ^ {\alpha_k}, \\
+b &amp;= p_1 ^ {\beta_1} \cdot p_2 ^ {\beta_2}  \cdot ... \cdot p_k ^ {\beta_k}\\
+\end{aligned}\end{split}\]</div>
+<p>Тада је:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+nzs(a, b) &amp;= p_1 ^ {max(\alpha_1, \beta_1)} \cdot p_2 ^ {max(\alpha_2, \beta_2)}  \cdot ... \cdot p_k ^ {max(\alpha_k, \beta_k)}\\
+nzd(a, b) &amp;= p_1 ^ {min(\alpha_1, \beta_1)} \cdot p_2 ^ {min(\alpha_2, \beta_2)}  \cdot ... \cdot p_k ^ {min(\alpha_k, \beta_k)}\\
+\end{aligned}\end{split}\]</div>
+<p>Сада имамо:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+nzs(a, b) \cdot nzd(a, b) &amp;= \left(p_1 ^ {max(\alpha_1, \beta_1)} \cdot p_2 ^ {max(\alpha_2, \beta_2)}  \cdot ... \cdot p_k ^ {max(\alpha_k, \beta_k)}\right) \cdot \left(p_1 ^ {min(\alpha_1, \beta_1)} \cdot p_2 ^ {min(\alpha_2, \beta_2)}  \cdot ... \cdot p_k ^ {min(\alpha_k, \beta_k)}\right)\\
+&amp;= p_1 ^ {max(\alpha_1, \beta_1) + min(\alpha_1, \beta_1)} \cdot p_2 ^ {max(\alpha_2, \beta_2) + min(\alpha_2, \beta_2)}  \cdot ... \cdot p_k ^ {max(\alpha_k, \beta_k) + min(\alpha_k, \beta_k)}\\
+&amp;= p_1 ^ {\alpha_1 + \beta_1} \cdot p_2 ^ {\alpha_2 + \beta_2}  \cdot ... \cdot p_k ^ {\alpha_k + \beta_k}\\
+&amp;= \left(p_1 ^ {\alpha_1} \cdot p_2 ^ {\alpha_2}  \cdot ... \cdot p_k ^ {\alpha_k}\right) \cdot \left(p_1 ^ {\beta_1} \cdot p_2 ^ {\beta_2}  \cdot ... \cdot p_k ^ {\beta_k}\right)\\
+&amp;= a \cdot b\\
+\end{aligned}\end{split}\]</div>
+<p>Захваљујући овој једнакости, можемо да искористимо Еуклидов алгоритам и за ефикасно израчунавање НЗС. Ради тога
+је довољно да прво израчунамо <span class="math notranslate nohighlight">\(nzd(a, b)\)</span>, а затим НЗС добијамо из <span class="math notranslate nohighlight">\(nzs(a, b) = a \cdot (b / nzd(a, b))\)</span>.
+При овом рачунању је потребно да се пази и на редослед операција. Мада је тај редослед математички гледано небитан,
+у програму редослед може да утиче на резултат. Погледајмо, на пример, шта се дешава за бројеве
+<span class="math notranslate nohighlight">\(a=1~000~000~000~000\)</span>  и <span class="math notranslate nohighlight">\(b=2~000~000~000~000\)</span>. Еуклидовим алгоритмом добијамо <span class="math notranslate nohighlight">\(nzd(a, b) = 1~000~000~000~000\)</span>.
+Ако бисмо сада НЗС рачунали као <code class="docutils literal notranslate"><span class="pre">nzs</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span> <span class="pre">/</span> <span class="pre">nzd</span></code>, добили бисмо погрешан резултат због прекорачења (<code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span></code> излази
+ван опсега 64-битне променљиве), док бисмо наредбом <code class="docutils literal notranslate"><span class="pre">nzs</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">*</span> <span class="pre">(b</span> <span class="pre">/</span> <span class="pre">nzd)</span></code> добили тачан резултат. Проверите ово
+малим варијацијама следећег програма.</p>
+
+<div data-childcomponent="nzs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=nzs data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+class Program
+{
+    static long NZS(long a, long b)
+    {
+        long a1 = a, b1 = b;
+        while (b1 &gt; 0)
+        {
+            long t = a1 % b1;
+            a1 = b1;
+            b1 = t;
+        }
+        long nzd = a1;
+        long nzs = a * (b / nzd);
+        return nzs;
+    }
+    static void Main(string[] args)
+    {
+        long a = long.Parse(Console.ReadLine());
+        long b = long.Parse(Console.ReadLine());
+        Console.WriteLine(NZS(a, b));
+    }
+}"   >
+
+
+</textarea>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="Факторизација броја - задаци.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

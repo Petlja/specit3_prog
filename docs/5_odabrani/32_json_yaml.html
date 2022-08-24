@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Формати JSON и YAML</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="json-yaml">
+<h1>Формати JSON и YAML<a class="headerlink" href="#json-yaml" title="Permalink to this headline">¶</a></h1>
+<p>У поглављу о обради текста смо научили како коришћењем регуларних
+израза и контекстно слободних граматика и технике рекурзивног спуста
+можемо имплементирати парсере за различите облике правилно
+структурираних текстуалних садржаја. У овом поглављу ћемо видети
+алтернативу том приступу. Наиме, постоје неки добро познати формати
+(на пример, <em>JSON</em>, <em>YAML</em>, <em>XML</em>) који се могу употребити за
+структурирање текстуалног садржаја, а за које већ постоје готови
+парсери у већини савремених програмских језика. Уместо да дефинишемо
+свој специфичан улазни формат за запис жељених података и да
+програмирамо специфичан парсер за тај формат, често има смисла своје
+податке записати у неком од тих распрострањених формата и употребити
+готова парсер за одабрани формат.</p>
+<p>Наведени формати се обично користе за чување одређених мета-података
+(на пример, података о имена аутора, датуму креирања, опису садржаја и
+слично), за опис конфигурационих параметара тј. подешавања софтвера,
+за пренос мање количине података преко веба и слично. Скренимо пажњу
+на то да се веће количине података обично чувају у базама података,
+јер се за разлику од текстуалних формата подаци у базама чувају на
+начин који омогућава веома ефикасну претрагу, проширивање, ажурирање и
+брисање.</p>
+<div class="section" id="json">
+<h2>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h2>
+<p><strong>JSON</strong> (енгл. JavaScript Object Notation) је формат за запис
+података који потиче из језика <em>JavaScript</em>, али је постао толико
+уобичајен да се данас користи из великог броја различитих програмских
+језика (укључујући и C#). У наставку нећемо описивати све детаље овог
+формата, већ ћемо кроз неколико примера покушати да опишемо оне
+најкоришћеније. Податке у формату JSON најчешће записујемо у облику
+објеката (структура, тј. речника) и низова. На пример, наредни JSON
+запис садржи податке о ученику Петру Петровићу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;ime&quot;</span><span class="p">:</span> <span class="s2">&quot;Petar&quot;</span><span class="p">,</span> <span class="s2">&quot;prezime&quot;</span><span class="p">:</span> <span class="s2">&quot;Petrović&quot;</span><span class="p">,</span> <span class="s2">&quot;prosek&quot;</span><span class="p">:</span> <span class="mf">4.75</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>У питању је објекат (речник) са три поља: поље <code class="docutils literal notranslate"><span class="pre">ime</span></code> чија је
+вредност <code class="docutils literal notranslate"><span class="pre">Petar</span></code>, поље <code class="docutils literal notranslate"><span class="pre">vrednost</span></code> чија је вредност <code class="docutils literal notranslate"><span class="pre">Petrovic</span></code> и
+поље <code class="docutils literal notranslate"><span class="pre">prosek</span></code> чија је вредност нумеричка и износи 4,75. Сви објекти
+се записују у витичастим заградама, док се и називи поља (кључеви)
+записују под наводницима. Текстуалне вредности поља се такође записују
+под наводницима, док се бројевне вредности записују уобичајено, без
+наводника (уз коришћење децималне тачке, а не запете ако су у питању
+рационални бројеви).</p>
+<p>Низови вредности се наводе између угластих заграда. На пример, запис</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;Pera&quot;</span><span class="p">,</span> <span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Jovana&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>представља низ од три ниске (имена ученика). Слично, можемо дефинисати
+и низ бројева (на пример, оцена једног ученика).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Елементни низова могу бити и други низови или објекти. У наредном
+примеру је описан низ ученика.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+       <span class="s2">&quot;ime&quot;</span><span class="p">:</span> <span class="s2">&quot;Petar&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;prezime&quot;</span><span class="p">:</span> <span class="s2">&quot;Petrovic&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+       <span class="s2">&quot;ime&quot;</span><span class="p">:</span> <span class="s2">&quot;Ana&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;prezime&quot;</span><span class="p">:</span> <span class="s2">&quot;Anić&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Приметимо да формат није осетљив на белине (размаке, преласке у нови
+ред и слично), па се може користити произвољан стил назубљивања ради
+повећања читљивости.</p>
+<p>Иако формат JSON допушта и прављење низова у којима се мешају подаци
+различитог типа, то нећемо користити.</p>
+<p>Детаљније информације о формату JSON можете пронаћи на интернету (на
+пример, <a class="reference external" href="https://www.json.org/">https://www.json.org/</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">https://en.wikipedia.org/wiki/JSON</a>).</p>
+<div class="section" id="json-c">
+<h3>Приступ JSON формату из C# програма<a class="headerlink" href="#json-c" title="Permalink to this headline">¶</a></h3>
+<p>Прикажимо сада како да из програма у језику C# учитамо податке из
+формата JSON. Од верзије .NET 6.0 (која се испоручује уз Visual
+Studio 2022) постоји библиотечка подршка за рад са форматом JSON
+(раније је за то било потребно инсталирати неку специјализовану
+библиотеку, а најпознатија таква библиотека је била <code class="docutils literal notranslate"><span class="pre">Newtonsoft</span> <span class="pre">Json.NET</span></code>).</p>
+<p>Сасвим природно, желимо да се објекти записани у формату JSON у нашем
+програму представе C# објектима, а низови C# низовима или
+листама. Зато је прво потребно у нашем програму дефинисати класе
+објеката које ћемо учитати. Кренимо од програма који учитава само
+податке о једном ученику. Дефинишемо класу <code class="docutils literal notranslate"><span class="pre">Ucenik</span></code> која има два
+поља (<code class="docutils literal notranslate"><span class="pre">ime</span></code> и <code class="docutils literal notranslate"><span class="pre">prezime</span></code>) типа <code class="docutils literal notranslate"><span class="pre">string?</span></code>. Упитник иза назива типа
+није грешка, већ у језику C# означава посебан тип, <em>анулирајући
+стринг</em> (енгл. nullable string). Анулирајући типови (енгл. nullable
+types) служе да се нагласи да нека вредност може остати недодељена
+(<code class="docutils literal notranslate"><span class="pre">null</span></code>) и компилатор тера програмера да приликом приступа садржају
+провери да ли је вредност <code class="docutils literal notranslate"><span class="pre">null</span></code> (и обичан стринг може имати
+вредност <code class="docutils literal notranslate"><span class="pre">null</span></code>, али компилатор не јавља грешку ако програмер, на
+пример, покуша да испише стринг, а да није претходно проверио да ли је
+вредност <code class="docutils literal notranslate"><span class="pre">null</span></code>, што може довести до изузетка и насилног прекида
+програма). Када учитавамо податке из JSON записа немамо гаранцију да
+ће тај запис садржати и име и презиме и могуће је да ће неко поље
+остати непопуњено, због чега је увек пожељно користити анулирајуће
+типове.</p>
+<p>Претпоставимо, за почетак, да је JSON опис задат помоћу ниске <code class="docutils literal notranslate"><span class="pre">json</span></code>
+унутар самог C# програма (касније ћемо показати како се опис може
+учитати из датотеке). Парсирање (каже се и <strong>десеријализација</strong>) се
+врши статичком методом <code class="docutils literal notranslate"><span class="pre">JsonSerializer.Deserialize</span></code>. Тој методи се
+као шаблонски параметар између заграда <code class="docutils literal notranslate"><span class="pre">&lt;...&gt;</span></code> наводи класа која се
+на улазу очекује, а као обичан параметар се наводи ниска која садржи
+JSON опис.  Да би се ова метода могла користити потребно је укључити
+именски простор <code class="docutils literal notranslate"><span class="pre">System.Text.Json</span></code>. Метода враћа објекат дате класе
+који такође треба да буде анулирајућег типа (у нашем случају
+<code class="docutils literal notranslate"><span class="pre">Ucenik?</span></code>), јер је могуће да читање тог објекта није
+успело. Приметимо да се приступ пољима анулирајућих објеката врши уз
+навођење упитника након имена променљиве (у том случају програм неће
+бити насилно прекинут са радом ако променљива има вредност <code class="docutils literal notranslate"><span class="pre">null</span></code>).</p>
+
+<div data-childcomponent="json_ucenik_kod" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=json_ucenik_kod data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System.Text.Json;
+
+class Ucenik
+{
+    public string? ime { get; set; }
+    public string? prezime { get; set; }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        string json = @&quot;{ &quot;&quot;ime&quot;&quot;: &quot;&quot;Pera&quot;&quot;, &quot;&quot;prezime&quot;&quot;: &quot;&quot;Peric&quot;&quot; }&quot;;
+        Ucenik? pera = JsonSerializer.Deserialize&lt;Ucenik&gt;(json);
+        Console.WriteLine(pera?.ime);
+        Console.WriteLine(pera?.prezime);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Прикажимо сада како бисмо учитали податке о низу ученика записаном у
+формату JSON. Бирамо да их након учитавања сместимо у листу. Пре
+исписа елемената листе проверавамо да ли је листа успешно учитана
+(поредимо вредност променљиве <code class="docutils literal notranslate"><span class="pre">ucenici</span></code> са <code class="docutils literal notranslate"><span class="pre">null</span></code>) и ако јесте,
+надаље можемо слободно да се понашамо као да је у питању променљива
+обичног, а не анулирајућег типа.</p>
+
+<div data-childcomponent="json_ucenici_kod" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=json_ucenici_kod data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System.Text.Json;
+
+class Ucenik
+{
+    public string? ime { get; set; }
+    public string? prezime { get; set; }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        string json = @&quot;[{ &quot;&quot;ime&quot;&quot;: &quot;&quot;Pera&quot;&quot;, &quot;&quot;prezime&quot;&quot;: &quot;&quot;Peric&quot;&quot; },
+                         { &quot;&quot;ime&quot;&quot;: &quot;&quot;Ana&quot;&quot;, &quot;&quot;prezime&quot;&quot;: &quot;&quot;Anic&quot;&quot; }]&quot;;
+        IList&lt;Ucenik?&gt;? ucenici = JsonSerializer.Deserialize&lt;IList&lt;Ucenik?&gt;&gt;(json);
+        if (ucenici != null)
+        {
+            foreach (Ucenik? u in ucenici)
+            {
+                Console.WriteLine(u?.ime);
+                Console.WriteLine(u?.prezime);
+            }
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>У наредном програму приказујемо како да JSON запис учитамо из
+датотеке. Претпоставићемо да се датотека зове <code class="docutils literal notranslate"><span class="pre">ucenici.json</span></code>, да је
+смештена у истом директоријуму као програм који пишемо и да има
+следећи садржај:</p>
+
+<div data-childcomponent="ucenici_json_sadrzaj" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ucenici_json_sadrzaj data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="[
+  {
+    &quot;ime&quot;: &quot;Pera&quot;,
+    &quot;prezime&quot;: &quot;Peric&quot;
+  },
+  {
+    &quot;ime&quot;: &quot;Ana&quot;,
+    &quot;prezime&quot;:  &quot;Anic&quot;
+  }
+]
+"   >
+
+
+</textarea>
+</div>
+<p>Најједноставнији начин да уитамо цео садржај датотеке у ниску у
+програму је коришћењем методе <code class="docutils literal notranslate"><span class="pre">File.ReadAllText</span></code> којој се прослеђује
+назив тј. путања до датотеке. Пошто приликом покушаја читања може доћи
+до разних изузетака (на пример, наведена датотека не мора да постоји),
+пожељно је употребити обраду изузетака (<code class="docutils literal notranslate"><span class="pre">try/catch</span></code>).</p>
+
+<div data-childcomponent="json_ucenici_datoteka_kod" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=json_ucenici_datoteka_kod data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System.Text.Json;
+
+class Ucenik
+{
+    public string? ime { get; set; }
+    public string? prezime { get; set; }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        string fileName = &quot;ucenici.json&quot;;
+        string json;
+        try
+        {
+            json = File.ReadAllText(fileName);
+        } catch (Exception e)
+        {
+            Console.WriteLine(&quot;Greska prilikom citanja json datoteke&quot;);
+            Console.WriteLine(e.Message);
+            return;
+        }
+        IList&lt;Ucenik?&gt;? ucenici = JsonSerializer.Deserialize&lt;IList&lt;Ucenik?&gt;&gt;(json);
+        if (ucenici != null)
+        {
+            foreach (Ucenik? u in ucenici)
+            {
+                Console.WriteLine(u?.ime);
+                Console.WriteLine(u?.prezime);
+            }
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Поред парсирања JSON записа (<strong>десеријализације</strong>), подржана је
+обратна операција (<strong>серијализација</strong>) којом се C# објекти и низови
+преводе у JSON формат. Наредни програм листу ученика записује у
+формату JSON. Користи се статичка метода <code class="docutils literal notranslate"><span class="pre">JsonSerializer.Serialize</span></code>,
+која враћа ниску са JSON записом прослеђених података.  Да би ниска
+била лепо форматирана, наводе се и додатне опције
+<code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">JsonSerializerOptions</span> <span class="pre">{</span> <span class="pre">WriteIndented</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">}</span></code>.</p>
+
+<div data-childcomponent="json_ucenici_sesrialize_kod" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=json_ucenici_sesrialize_kod data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System.Text.Json;
+
+class Ucenik
+{
+    public string? ime { get; set; }
+    public string? prezime { get; set; }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        var ucenici = new List&lt;Ucenik&gt;
+        {
+            new Ucenik{ime = &quot;Pera&quot;, prezime = &quot;Peric&quot;},
+            new Ucenik{ime = &quot;Ana&quot;, prezime = &quot;Anic&quot;}
+        };
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        string json = JsonSerializer.Serialize(ucenici, options);
+        Console.WriteLine(json);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="yaml">
+<h2>YAML<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h2>
+<p>Формат YAML представља алтернативу формату JSON. За разлику од формата
+JSON који занемарује белине и допушта слободно форматирање улаза,
+формат YAML користи белине и угнежђавање да би наметнуо структуру.
+Размотримо пример листе ученика:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">ime</span><span class="p">:</span> <span class="n">Petar</span>
+  <span class="n">prezime</span><span class="p">:</span> <span class="n">Petrović</span>
+  <span class="n">prosek</span><span class="p">:</span> <span class="mf">4.75</span>
+<span class="o">-</span> <span class="n">ime</span><span class="p">:</span> <span class="n">Ana</span>
+  <span class="n">prezime</span><span class="p">:</span> <span class="n">Anić</span>
+  <span class="n">prosek</span><span class="p">:</span> <span class="mf">5.00</span>
+</pre></div>
+</div>
+<p>Елементи низа су наведени у облику набрајања, а речник се препознаје
+навођењем кључева и вредности раздвојених двотачкама. Нагласимо да
+постоје и други начини за опис низова и речника (на пример, за
+навођење низова се поново могу користити угласте заграде). Приметимо
+да је број унетих карактера мањи него када се користи JSON (на пример,
+ниске нису ограђене наводницима). Са друге стране, формат је
+осетљивији на грешке (да је, на пример, поље које садржи презиме било
+увучено један карактер више или мање, запис не би био
+исправан). Препуштамо вам да више о овом формату потражите на
+интернету (на пример, <a class="reference external" href="https://yaml.org/">https://yaml.org/</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/YAML">https://en.wikipedia.org/wiki/YAML</a>).</p>
+<p>Формат YAML се користи ређе од формата JSON из C# програма, тако да не
+постоји библиотечка подршка за рад са њим. Једноставна серијализација
+података у YAML и десеријализација из YAML-а се може постићи
+коришћењем библиотеке <code class="docutils literal notranslate"><span class="pre">YamlDotNet</span></code>. Њу је пре коришћења потребно
+инсталирати, а најједноставнији начин да се то уради је коришћење
+алатке која се назива <code class="docutils literal notranslate"><span class="pre">NuGet</span></code> и која омогућава да веома једноставно
+инсталирате разне библиотеке које могу бити корисне приликом
+програмирања у језику C#. Ова алатка је интегрисана у Visual Studio.
+Упутство како се NuGet користи из окружења Visual Studio je доступно
+овде:</p>
+<p><a class="reference external" href="https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio">https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio</a></p>
+<p><a class="reference external" href="https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio">https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio</a></p>
+<p>Инсталирање пакета <code class="docutils literal notranslate"><span class="pre">YamlDotNet</span></code> може бити још једноставније. Довољно
+је отворити конзолни прозор (опцијом менија <code class="docutils literal notranslate"><span class="pre">Tools</span> <span class="pre">-&gt;</span> <span class="pre">NuGet</span> <span class="pre">Package</span> <span class="pre">Manager</span> <span class="pre">-&gt;</span> <span class="pre">Package</span> <span class="pre">Manager</span> <span class="pre">Console</span></code>) и затим унети наредбу</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PM</span><span class="o">&gt;</span> <span class="n">Install</span><span class="o">-</span><span class="n">Package</span> <span class="n">YamlDotNet</span>
+</pre></div>
+</div>
+<p>Када је библиотека <code class="docutils literal notranslate"><span class="pre">YamlDotNet</span></code> инсталирана, можемо је
+употребити. На пример, наредни програм врши серијализацију низа
+ученика и на екран (у конзолни прозор) исписује податке о датим
+ученицима у формату YAML. Приметимо да је на почетку програма било
+потребно укључивање потребног именског простора <code class="docutils literal notranslate"><span class="pre">YamlDotNet.Serialization</span></code>.</p>
+
+<div data-childcomponent="yaml_ucenici_serialize_kod" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=yaml_ucenici_serialize_kod data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using YamlDotNet.Serialization;
+
+class Ucenik
+{
+    public string ime { get; set; }
+    public string prezime { get; set; }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        var ucenici = new List&lt;Ucenik&gt;
+        {
+            new Ucenik{ime = &quot;Pera&quot;, prezime = &quot;Peric&quot;},
+            new Ucenik{ime = &quot;Ana&quot;, prezime = &quot;Anic&quot;}
+        };
+
+        var serializer = new SerializerBuilder().Build();
+        var yaml = serializer.Serialize(ucenici);
+        System.Console.WriteLine(yaml);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Након покретања програма у конзолу се исписује следећи садржај:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">ime</span><span class="p">:</span> <span class="n">Pera</span>
+  <span class="n">prezime</span><span class="p">:</span> <span class="n">Peric</span>
+<span class="o">-</span> <span class="n">ime</span><span class="p">:</span> <span class="n">Ana</span>
+  <span class="n">prezime</span><span class="p">:</span> <span class="n">Anic</span>
+</pre></div>
+</div>
+<p>За вежбу вам остављамо да проучите како се може вршити
+десеријализација тј. учитавање података из датотеке у формату YAML.</p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Креирај JSON датотеку која садржи податке о неколико књига из твоје
+кућне библиотеке. Дефиниши класе за представљање књига и напиши C#
+програм који учитава податке о књимага из JSON датотеке и приказује
+их у графичкој апликацији. Омогући измену података о књигама,
+додавање нових књига и брисање књига у графичкој
+апликацији. Омогући чување измењених података у JSON
+датотеци. Прилагоди апликацију тако да поред JSON формата подржава
+и YAML.</p>
+
+    </p></div></div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="31_pretraga_podniske.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

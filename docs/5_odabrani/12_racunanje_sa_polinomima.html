@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рачунање са полиномима</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Рачунање са полиномима<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Када се операције сабирања, одузимања, множења и дељења полинома имплементирају онако како их и ми
+сами рачунамо, задатак није алгоритамски нарочито интересантан, али може да буде поучан у контексту
+дизајна софтвера.</p>
+<p>Алгоритамски интересантан део ове лекције је ефикасан рекурзиван алгоритам за множење полинома, који
+омогућава да за велике степене полинома до резултата дођемо уз мање операција над бројевима, него
+уобичајеним приступом. Тај алгоритам је познат као Карацубин алгоритам, по математичару Анатолију
+Карацуби који га је смислио 1960. године.</p>
+<p>Карацубин алгоритам  је један од првих из групе алгоритама, који су касније постали познати као
+алгоритми типа <strong>подели и савладај</strong> (енгл. <em>divide and conquer</em>). Вероватно су вам од раније познати
+неки алгоритми овог типа, нпр. <em>Quick Sort</em> или <em>Merge Sort</em>. Алгоритам брзе Фуријеове трансформације
+(енгл. Fast Fourier Transform, скр. FFT), који је изузетно значајан у решавању разних инжењерских
+проблема, сродан је Карацубином и такође спада у алгоритме типа подели и савладај. Имајући ово на уму,
+идеја Карацубиног алгоритма је свакако вредна упознавања, јер су сличне идеје примењене у решавању
+многих других проблема.</p>
+<p>У овој лекцији ћемо се прво задржати на уредној имплементацији метода потребних за рад са полиномима,
+водећи рачуна о детаљима. На крају ћемо објаснити идеју Карацубиног алгоритма и проанализирати број
+операција.</p>
+<div class="section" id="id2">
+<h2>Полоними и рачунске операције над њима<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Као што знамо, полином је задат својим степеном и низом коефицијената. Овде ћемо подразумевати да
+је једина променљива у свим полиномима <span class="math notranslate nohighlight">\(x\)</span>, да су коефицијенти реални бројеви и да се задају
+редом, почевши од најстаријег, тј. оног уз највиши степен променљиве. На пример, полином
+<span class="math notranslate nohighlight">\(P(x) = 2x^3 - 5x^2 + 7\)</span>  задат је степеном 3 и коефицијентима 2, -5, 0, 7. За степен полинома
+ћемо користити ознаку <span class="math notranslate nohighlight">\(deg\)</span>, тако да за овај полином можемо да пишемо <span class="math notranslate nohighlight">\(deg(P) = 3\)</span>. Када
+кажемо да је степен неког полинома <span class="math notranslate nohighlight">\(n\)</span>, подразумевамо да је коефицијент
+уз степен <span class="math notranslate nohighlight">\(n\)</span> различит од нуле, а да су сви остали чланови полинома нижег степена од <span class="math notranslate nohighlight">\(n\)</span>.
+Специјално, за <strong>нула-полином</strong> код кога су сви коефицијенти нуле, кажемо да је степена -1.
+Коефицијент уз највиши степен полинома називамо <strong>водећи коефицијент</strong>, а коефицијент уз <span class="math notranslate nohighlight">\(x^0\)</span>
+зовемо <strong>слободан коефицијент</strong>.</p>
+<p>Од операција над полиномима, разматраћемо сабирање, одузимање, множење, дељење без остатка и рачунање
+остатка при дељењу. При извођењу ових операција користе се следећа правила рачунања са полиномима:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a \cdot x^k + b \cdot x^k = (a+b) \cdot x^k\)</span>. На пример, <span class="math notranslate nohighlight">\(14 x^3 + 4 x^3 = 18 x^3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a \cdot x^k - b \cdot x^k = (a-b) \cdot x^k\)</span>. На пример, <span class="math notranslate nohighlight">\(14 x^5 - 4 x^5 = 10 x^5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((a \cdot x^k) \cdot (b \cdot x^j) = (a \cdot b) \cdot x^{k+j}\)</span>. На пример, <span class="math notranslate nohighlight">\(2 x^3 \cdot 3 x^5 = 6 x^8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{a \cdot x^k}{b \cdot x^j} = \frac{a}{b} \cdot x^{k-j}\)</span>. На пример, <span class="math notranslate nohighlight">\(\frac{6 x^7}{2 x^5} = 3 x^2\)</span></p></li>
+</ul>
+<p><strong>Операције сабирања и одузимања полинома</strong></p>
+<p>Приликом сабирања и одузимања полинома, међусобно се сабирају и одузимају чланови са једнаким експонентима</p>
+<ul class="simple">
+<li><p>пример сабирања полинома: <span class="math notranslate nohighlight">\((2x^3-x^2+5x-3) + (7x^2 + 4) = 2x^3 + 6x^2 +5x + 1\)</span></p></li>
+<li><p>пример одузимања полинома: <span class="math notranslate nohighlight">\((2x^3-x^2+5x-3) - (7x^2 + 4) = 2x^3 - 8x^2 +5x - 7\)</span></p></li>
+</ul>
+<p><strong>Множење полинома</strong></p>
+<p>Приликом множења полинома користи се дистрибутивни закон, тј. сваки члан једног полинома се множи
+сваким чланом другог. На пример:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+(3x^2 - 2x + 5) \cdot (4x^3 + 3x + 2) &amp;= (3x^2 - 2x + 5) \cdot 4x^3 + (3x^2 - 2x + 5) \cdot 3x + (3x^2 - 2x + 5) \cdot 2 \\
+&amp;= (12x^5 - 8x^4 + 20x^3) + (9x^3 - 6x^2 + 15x) + (6x^2 - 4x + 10)\\
+&amp;= 12x^5 - 8x^4 + (20+9)x^3 + (6-6)x^2 + (15-4)x + 10\\
+&amp;= 12x^5 - 8x^4 + 29x^3 + 11x + 10\\
+\end{aligned}\end{split}\]</div>
+<p><strong>Дељење полинома</strong></p>
+<p>Поступак дељења полинома је сличан поступку целобројног дељења вишецифрених бројева, при коме се
+поред количника добија и остатак. Нека су</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P_n = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1x^1 + a_0\\
+Q_m = b_m x^m + b_{m-1}x^{m-1} + \cdots + b_1x^1 + b_0\\\end{split}\]</div>
+<p>два дата полинома. Желимо да израчунамо полиноме</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R_r = c_r x^r + c_{r-1}x^{r-1} + \cdots + c_1x^1 + c_0\\
+U_u = d_u x^u + d_{u-1}x^{u-1} + \cdots + d_1x^1 + d_0\\\end{split}\]</div>
+<p>такве да је <span class="math notranslate nohighlight">\(P = Q \cdot R + U\)</span> и при томе <span class="math notranslate nohighlight">\(deg(U) &lt; deg(Q)\)</span>.</p>
+<p>Као прво, можемо да уочимо да у случају када је степен полинома <span class="math notranslate nohighlight">\(P_n\)</span> мањи од степена полинома
+<span class="math notranslate nohighlight">\(Q_m\)</span>, тада је количник нула-полином, тј. <span class="math notranslate nohighlight">\(R(x) = 0\)</span>, а остатак је читав полином
+<span class="math notranslate nohighlight">\(P_n\)</span>. У противном, на основу особина производа полинома и уведеног ограничења <span class="math notranslate nohighlight">\(deg(U) &lt; deg(Q)\)</span>
+закључујемо да је водећи члан количника <span class="math notranslate nohighlight">\(c_r x^r = \frac{a_n}{b_m}x^{n-m}\)</span>. Када ово уврстимо у
+једнакост <span class="math notranslate nohighlight">\(P = Q \cdot R + U\)</span> добијамо</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P &amp;= Q \cdot R + U\\
+P &amp;= Q \cdot (c_r x^r + R') + U\\
+P &amp;= Q \cdot c_r x^r + Q \cdot R' + U\\
+P - Q \cdot c_r x^r &amp;= Q \cdot R' + U\\
+P' &amp;= Q \cdot R' + U\\
+\end{aligned}\end{split}\]</div>
+<p>где смо са <span class="math notranslate nohighlight">\(P'\)</span> означили полином <span class="math notranslate nohighlight">\(P - Q \cdot c_r x^r\)</span>, а са  <span class="math notranslate nohighlight">\(R'\)</span> полином
+<span class="math notranslate nohighlight">\(R - c_r x^r\)</span>. Да бисмо довршили поступак дељења, сада је потребно да поделимо полином
+<span class="math notranslate nohighlight">\(P'\)</span> полиномом <span class="math notranslate nohighlight">\(Q\)</span>, добијемо количник <span class="math notranslate nohighlight">\(R'\)</span> и израчунамо <span class="math notranslate nohighlight">\(R\)</span> као
+<span class="math notranslate nohighlight">\(R' +  c_r x^r\)</span>. Ово је једноставнији задатак од полазног јер је степен полинома <span class="math notranslate nohighlight">\(P'\)</span>
+мањи од степена полинома <span class="math notranslate nohighlight">\(P\)</span>, тако да овим поступком можемо да довршимо рачунање количника.</p>
+<p>Погледајмо описани поступак на примеру. Поделићемо полиноме <span class="math notranslate nohighlight">\(x^5+2x^4-2x^3+9x^2−4x+3\)</span> и
+<span class="math notranslate nohighlight">\(x^2−3x+4\)</span></p>
+<ul class="simple">
+<li><p>први члан количника је <span class="math notranslate nohighlight">\(x^5 / x^2 = x^3\)</span>, даље треба делити полином
+<span class="math notranslate nohighlight">\(P' = P - Q x^3 = x^5+2x^4-2x^3+9x^2−4x+3 - (x^2−3x+4) \cdot x^3 = 5x^4-6x^3+9x^2-4x+3\)</span></p></li>
+<li><p>други члан количника је <span class="math notranslate nohighlight">\(5x^4 / x^2 = 5x^2\)</span>, даље треба делити полином
+<span class="math notranslate nohighlight">\(P'' = P' - Q \cdot 5x^2 = 5x^4-6x^3+9x^2-4x+3 - (x^2−3x+4) \cdot 5x^2 = 9x^3-11x^2-4x+3\)</span></p></li>
+<li><p>трећи члан количника је <span class="math notranslate nohighlight">\(9x^3 / x^2 = 9x\)</span>, даље треба делити полином
+<span class="math notranslate nohighlight">\(P''' = P'' - Q \cdot 9x = 9x^3-11x^2-4x+3 - (x^2−3x+4) \cdot 9x = 16x^2 - 40x + 3\)</span></p></li>
+<li><p>четврти члан количника је :math:` 16x^2 / x^2 = 16`, преостали полином је
+<span class="math notranslate nohighlight">\(P'''' = P''' - Q \cdot 16 = 16x^2 - 40x + 3 - (x^2−3x+4) \cdot 16 = 8 x - 61\)</span>. Пошто је овај
+полином степена мањег од степена полинома <span class="math notranslate nohighlight">\(Q\)</span>, он представља остатак.</p></li>
+</ul>
+<p>Закључујемо да је количник <span class="math notranslate nohighlight">\(R = x^3 + 5 x^2 + 9 x + 16\)</span> и остатак <span class="math notranslate nohighlight">\(U = 8 x - 61\)</span>.
+Исправност рачунања можемо да потврдимо провером да важи <span class="math notranslate nohighlight">\(P = Q \cdot R + U\)</span>.</p>
+</div>
+<div class="section" id="id3">
+<h2>Имплементација полонима и операција над њима<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Природно је да полиноме у програму представимо објектима класе <code class="docutils literal notranslate"><span class="pre">Polynomial</span></code> (полином). Према ономе
+што је речено на почетку, класа треба да садржи низ реалних коефицијената <code class="docutils literal notranslate"><span class="pre">a</span></code> и својство <code class="docutils literal notranslate"><span class="pre">Deg</span></code>:</p>
+
+<div data-childcomponent="poc_definicije_klase_polinom" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=poc_definicije_klase_polinom data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public class Polynomial
+{
+    private List<double> a;
+
+    public int Deg
+    {
+        get { return a != null ? a.Count - 1 : -1; }
+    }
+
+    ...
+}
+</textarea>
+</div>
+<p>Мада ћемо у кôду за коефицијенте полинома да користимо листу реалих бројева, у даљој анализи
+користимо реч низ, као и до сада. При томе не мислимо на низ у смислу синтаксе језика, него на низ
+као математички појам.</p>
+<p>Резултат сваке од пет помињаних операција над полиномима (сабирање, одузимање, множење, дељење и
+рачунање остатка) је такође полином, за који треба предвидети довољно дугачке низове за коефицијенте.
+Због тога је потребно да пре израчунавања коефицијената резултата знамо степен резултата, односно горње
+ограничење степена резултата.</p>
+<p>Нека су дата два полинома, <span class="math notranslate nohighlight">\(P(x)\)</span> степена <span class="math notranslate nohighlight">\(n\)</span> и <span class="math notranslate nohighlight">\(Q(x)\)</span> степена <span class="math notranslate nohighlight">\(m\)</span>, дакле
+<span class="math notranslate nohighlight">\(deg(P) = n, deg(Q) = m\)</span>. Да бисмо имали на уму степене полинома, уобичајено је да их пишемо
+у индексу уз ознаку полинома, овако: <span class="math notranslate nohighlight">\(P_n, Q_m\)</span>.</p>
+<p>Користећи уведене ознаке, констатујмо да за полиноме <span class="math notranslate nohighlight">\(P_n, Q_m\)</span> важи:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(deg(P_n + Q_m) \leq \max(n, m)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(deg(P_n - Q_m) \leq \max(n, m)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(deg(P_n \cdot Q_m) = n + m\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(deg(\frac{P_n}{Q_m}) = n - m\)</span>.</p></li>
+</ul>
+<p>У случају збира или разлике, степен резултата може да буде мањи од <span class="math notranslate nohighlight">\(\max(m, n)\)</span> ако су
+полиноми <span class="math notranslate nohighlight">\(P_n, Q_m\)</span> истог степена и коефицијенти уз највиши степен се поништавају.</p>
+<div class="section" id="id4">
+<h3>Нормализација записа полинома<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Резултат сабирања и одузимања може да буде и било којег нижег степена, па и нула-полином. У случајевима
+када добијемо да је водећи коефицијент неког полинома нула, пожељно је да извршимо нормализацију
+записа тог полинома. На тај начин поједностављујемо имплементацију операција над полиномима и
+штедимо меморију. Нормализација се врши тако што се (на ефикасан начин) уклоне нуле у низу
+коефицијената, нпр. овако:</p>
+
+<div data-childcomponent="normalizacija_zapisa_polinoma" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=normalizacija_zapisa_polinoma data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+private void Normalize()
+{
+    int n = Deg, k = 0;
+    while (k <= n && a[n - k] == 0)
+        k++;
+
+    if (k > 0)
+        a.RemoveRange(n - k + 1, k);
+}
+</textarea>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Имплементација операција над полиномима<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h4>Оператори +, -, *<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p>Операције сабирања, одузимања и множења полинома можемо да имплементирамо као следеће методе:</p>
+
+<div data-childcomponent="sabiranje_oduzimanje_i_mnozenje_polinoma" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=sabiranje_oduzimanje_i_mnozenje_polinoma data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public static Polynomial operator +(Polynomial P, Polynomial Q)
+{
+    if (P.Deg < Q.Deg)
+    {
+        Polynomial tmp = P; P = Q; Q = tmp;
+    }
+    Polynomial R = new Polynomial(P);
+    for (int i = 0; i <= Q.Deg; i++)
+        R.a[i] += Q.a[i];
+
+    R.Normalize();
+    return R;
+}
+
+public static Polynomial operator -(Polynomial P, Polynomial Q)
+{
+    Polynomial R;
+    if (P.Deg >= Q.Deg)
+    {
+        R = new Polynomial(P);
+        for (int i = 0; i <= Q.Deg; i++)
+            R.a[i] -= Q.a[i];
+    }
+    else
+    {
+        R = new Polynomial(Q.Deg);
+        for (int i = 0; i <= P.Deg; i++)
+            R.a[i] = P.a[i] - Q.a[i];
+        for (int i = P.Deg+1; i <= Q.Deg; i++)
+            R.a[i] = -Q.a[i];
+    }
+    R.Normalize();
+    return R;
+}
+
+public static Polynomial operator *(Polynomial P, Polynomial Q)
+{
+    Polynomial R = new Polynomial(P.Deg + Q.Deg);
+    for (int i = 0; i <= P.Deg; i++)
+        for (int j = 0; j <= Q.Deg; j++)
+            R.a[i + j] += P.a[i] * Q.a[j];
+
+    return R;
+}
+</textarea>
+</div>
+<p>Захваљујући дефиницијама ових оператора, када будемо комплетирали класу <code class="docutils literal notranslate"><span class="pre">Polynomial</span></code>, у програмима
+који је користе моћи ћемо да пишемо наредбе попут:</p>
+
+<div data-childcomponent="upotreba_operatora" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=upotreba_operatora data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+Polynomial R = P + Q;
+Polynomial T = P * Q;
+</textarea>
+</div>
+<p>и сличне, где су <code class="docutils literal notranslate"><span class="pre">P</span></code>, <code class="docutils literal notranslate"><span class="pre">Q</span></code> полиноми раније дефинисани у програму.</p>
+</div>
+<div class="section" id="id7">
+<h4>Оператори /, % (дељење и остатак)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<p>Када ручно делимо два полинома, ми истовремено израчунавамо количник и остатак. Зато ћемо и у
+програму, да не бисмо понављали кôд, да напишемо метод <code class="docutils literal notranslate"><span class="pre">DivMod</span></code>, у коме се израчунавају оба
+резултујућа полинома. Метод <code class="docutils literal notranslate"><span class="pre">DivMod</span></code> може да буде и јаван, да би корисник коме су потребни
+и количник и остатак при дељењу нека два полинома добио резултате ефикасније. За кориснике
+којима је потребан само један од ова два резултујућа полинома, дефинишемо и операторе <code class="docutils literal notranslate"><span class="pre">/</span></code> и
+<code class="docutils literal notranslate"><span class="pre">%</span></code>, који се ослањају на метод <code class="docutils literal notranslate"><span class="pre">DivMod</span></code>.</p>
+
+<div data-childcomponent="deljenje_polinoma" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=deljenje_polinoma data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public static Tuple<Polynomial, Polynomial> DivMod(Polynomial P, Polynomial Q)
+{
+    if (P.Deg < Q.Deg)
+        return new Tuple<Polynomial, Polynomial>(Zero(), new Polynomial(Q));
+
+    Polynomial Div = new Polynomial(P.Deg - Q.Deg);
+    Polynomial Mod = new Polynomial(P);
+    for (int i = Div.Deg; i >= 0; i--)
+    {
+        Div.a[i] = Mod.a[i + Q.Deg] / Q.a[Q.Deg];
+        for (int j = 0; j <= Q.Deg; j++)
+            Mod.a[j + i] -= Q.a[j] * Div.a[i];
+    }
+    Mod.Normalize();
+    return new Tuple<Polynomial, Polynomial>(Div, Mod);
+}
+
+public static Polynomial operator /(Polynomial P, Polynomial Q)
+{
+    return DivMod(P, Q).Item1;
+}
+public static Polynomial operator %(Polynomial P, Polynomial Q)
+{
+    return DivMod(P, Q).Item2;
+}
+</textarea>
+</div>
+<p>Ови методи нам омогућавају да након комплетирања класе <code class="docutils literal notranslate"><span class="pre">Polynomial</span></code> пишемо:</p>
+
+<div data-childcomponent="upotreba_operatora_divmod1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=upotreba_operatora_divmod1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+Polynomial R = P / Q;
+Polynomial U = P % Q;
+</textarea>
+</div>
+<p>или</p>
+
+<div data-childcomponent="upotreba_operatora_divmod2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=upotreba_operatora_divmod2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+var RU = Polynomial.DivMod(P, Q);
+Polynomial R = RU.Item1;
+Polynomial U = RU.Item2;
+</textarea>
+</div>
+<p>и слично.</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Операције између бројева и полинома<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>У математици је уобичајено да се користе записи <span class="math notranslate nohighlight">\(P+c, c \cdot P\)</span> и слични, где је <span class="math notranslate nohighlight">\(P\)</span>
+полином. а <span class="math notranslate nohighlight">\(c\)</span> реалан број. Да бисмо омогућили исту функционалност у програмима, <strong>не морамо</strong>
+да дефинишемо све могуће операторе као што су</p>
+
+<div data-childcomponent="operatori" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=operatori data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+// nepotrebno
+public static Polynomial operator +(Polynomial P, double c)
+{
+    ...
+}
+public static Polynomial operator +(double c, Polynomial P)
+{
+    ...
+}
+public static Polynomial operator -(Polynomial P, double c)
+{
+    ...
+}
+public static Polynomial operator -(double c, Polynomial P)
+{
+    ...
+}
+public static Polynomial operator *(Polynomial P, double c)
+{
+    ...
+}
+public static Polynomial operator *(double c, Polynomial P)
+{
+    ...
+}
+public static Polynomial operator /(Polynomial P, double c)
+{
+    ...
+}
+</textarea>
+</div>
+<p>и слични. Довољно је да напишемо оператор који омогућава компајлеру да реалне бројеве по потреби
+схвати као одговарајуће полиноме степена нула. Реч је о оператору имплицитне конверзије реалног
+броја у полином. Пошто се ради о имплицитној конверзији, неће бити потребе ни да у изразима у којима
+користимо класу <code class="docutils literal notranslate"><span class="pre">Polynomial</span></code> назначавамо када број треба да се заменимо полиномом (експлицитна
+конверзија, односно каст). Компајлер ће то сам да учини у ситуацијама у којима то разрешава конфликт
+неслагања типова, као што то чини када сабирамо целе и реалне бројеве.</p>
+<p>Оператор имплицитне конверзије може, на пример, да се напише овако:</p>
+
+<div data-childcomponent="implicitna_konverzija_broja_u_polinom" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=implicitna_konverzija_broja_u_polinom data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+    public static implicit operator Polynomial(double c)
+    {
+        Polynomial P = new Polynomial(0);
+        P.a[0] = c;
+        return P;
+    }
+</textarea>
+</div>
+<p>Када будемо комплетирали класу, овај оператор ће нам омогућити да у корисничком програму пишемо овакве и
+сличне наредбе:</p>
+
+<div data-childcomponent="upotreba_implicitne_konverzije" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=upotreba_implicitne_konverzije data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+Polynomial R = P + 3;
+Polynomial T = 2 * Q;
+</textarea>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>Исписивање полинома<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Да бисмо могли да исписујемо саме полиноме (а не само њихове вредности или коефицијенте) на исти
+начин као што исписујемо бројеве и податке других основних типова, можемо да редефинишемо метод
+<code class="docutils literal notranslate"><span class="pre">ToString</span></code> за полиноме. Дефиниција тог метода изгледа овако:</p>
+
+<div data-childcomponent="ispisivanje_polinoma1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ispisivanje_polinoma1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public override string ToString()
+{
+    ...
+}
+</textarea>
+</div>
+<p>У овом методу можемо да израчунамо стринг, који ће да представља наш полином. Грубо говорећи, за дати
+полином треба у стринг нанизати записе облика <code class="docutils literal notranslate"><span class="pre">+a_i*x^i</span></code> за све степене <code class="docutils literal notranslate"><span class="pre">i</span></code> и коефицијенте <code class="docutils literal notranslate"><span class="pre">a_i</span></code>.
+Ипак, програмско исписивање полинома на начин који је уобичајен у математици је задатак који захтева
+нешто више пажње и труда, јер постоје разни изузеци од овог општег правила. На пример, ако је
+<span class="math notranslate nohighlight">\(P(x)= 3x^5 +x^4 -7x^2 + 2x - 6\)</span>, не желимо да програм испише
+<code class="docutils literal notranslate"><span class="pre">+3x^5+1x^4+0x^3+-7x^2+2x^1+-6x^0</span></code>, него <code class="docutils literal notranslate"><span class="pre">3x^5+x^4-7x^2+2x-6</span></code>. Из овог примера можемо да уочимо
+неколико додатних правила:</p>
+<ul class="simple">
+<li><p>Знак плус треба изоставити испред водећег коефицијента</p></li>
+<li><p>Када је коефицијент уз неки степен нула, цео члан треба изоставити, осим што код полинома једнаког
+нули треба исписати укупно једну нулу</p></li>
+<li><p>Када је коефицијент уз неки степен један, треба изоставити коефицијент, осим ако је реч о
+слободном коефицијенту</p></li>
+<li><p>Када је коефицијент уз неки степен минус један, треба писати само минус, осим ако је реч о
+слободном коефицијенту</p></li>
+<li><p>Уз линеаран коефицијент не треба писати <code class="docutils literal notranslate"><span class="pre">x^1</span></code>, него <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+<li><p>Уз слободан коефицијент не треба писати <code class="docutils literal notranslate"><span class="pre">x^0</span></code></p></li>
+<li><p>Када је коефицијент уз неки степен негативан, треба изоставити знак плус испред члана</p></li>
+</ul>
+<p>Да бисмо избегли понављање делова кôда, користимо помоћну функцију <code class="docutils literal notranslate"><span class="pre">Monomial</span></code>, која враћа текстуалну
+репрезентацију једног члана полинома, водећи рачуна о разним специјалним случајевима. У методу
+<code class="docutils literal notranslate"><span class="pre">ToString</span></code> само позивамо метод <code class="docutils literal notranslate"><span class="pre">Monomial</span></code>, и то једном за водећи члан, и једном у петљи за
+остале чланове.</p>
+
+<div data-childcomponent="ispisivanje_polinoma2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ispisivanje_polinoma2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+private string Monomial(double ai, int i, bool leading)
+{
+    if (ai == 0)
+        return "";
+
+    string sign = (leading || ai < 0) ? "" : "+";
+    string coef = (ai != 1 && ai != -1) ? ai.ToString() :
+        (i == 0) ? ai.ToString() : "";
+    string xPowI =
+        (i == 0) ? "" :
+        (i == 1) ? "x" :
+        string.Format("x^{0}", i);
+
+    return sign + coef + xPowI;
+}
+public override string ToString()
+{
+    if (Deg < 0)
+        return "0";
+
+    StringBuilder sb = new StringBuilder();
+    sb.Append(Monomial(a[Deg], Deg, true));
+    for (int i = Deg-1; i >= 0; i--)
+        sb.Append(Monomial(a[i], i, false));
+
+    return sb.ToString();
+}
+</textarea>
+</div>
+<p>Имплементација метода <code class="docutils literal notranslate"><span class="pre">ToString</span></code> за полиноме, омогућава нам да у корисничком програму за дати полином
+<code class="docutils literal notranslate"><span class="pre">P</span></code> пишемо нпр. <code class="docutils literal notranslate"><span class="pre">Console.WriteLine(&quot;P</span> <span class="pre">=</span> <span class="pre">{0}&quot;,</span> <span class="pre">P);</span></code> и добијемо исправно исписан израз полинома.</p>
+<p>Комплетан кôд овог (као и свих других) примера може да се преузме са уводне странице овог курса.</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Карацубин алгоритам<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>Из уобичајеног алгоритма за множење</p>
+
+<div data-childcomponent="mnozenje_polinoma" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=mnozenje_polinoma data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public static Polynomial operator *(Polynomial P, Polynomial Q)
+{
+    Polynomial R = new Polynomial(P.Deg + Q.Deg);
+    for (int i = 0; i <= P.Deg; i++)
+        for (int j = 0; j <= Q.Deg; j++)
+            R.a[i + j] += P.a[i] * Q.a[j];
+
+    return R;
+}
+</textarea>
+</div>
+<p>лако можемо да израчунамо број операција које се изврше у овом алгоритму. Наредба у двострукој петљи
+се извршава <span class="math notranslate nohighlight">\((deg(P) + 1) \cdot (deg(Q) + 1)\)</span> пута, а у њој имамо по једно сабирање и множење.
+Означимо степене полинома <span class="math notranslate nohighlight">\(P, Q\)</span> редом са <span class="math notranslate nohighlight">\(n, m\)</span>. Сада имамо да је број операција једнак
+<span class="math notranslate nohighlight">\(f(n, m) = (n + 1) \cdot (m + 1)\)</span>, одакле за довољно велике <span class="math notranslate nohighlight">\(n, m\)</span> следи
+<span class="math notranslate nohighlight">\(mn \leq f(n, m) \leq 2mn\)</span>. Користећи стандардну нотацију за сложеност алгоритма, овај закључак
+можемо да запишемо као <span class="math notranslate nohighlight">\(Т(n, m) = \theta(mn)\)</span>. Једноставније речено, број операција (а тиме и
+време рада алгоритма) расте асимптотски истом брзином као и производ  <span class="math notranslate nohighlight">\(mn\)</span>.</p>
+<p>Анатолиј Карацуба је 1960. године као студент Колмогорова дошао до идеје како да рекурзивним поступком
+смањи број операција при множењу полинома, када су степени <span class="math notranslate nohighlight">\(m, n\)</span> довољно велики. Да бисмо суштину
+идеје изразили што једноставније, претпоставимо да је</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P(x) = p_{2n-1}x^{2n-1}+...+p_{2}x^2+ + p_1x+p_0\\
+Q(x) = q_{2n-1}x^{2n-1}+...+q_{2}x^2+ + q_1x+q_0\\
+\end{aligned}\end{split}\]</div>
+<p>Тада полиноме <span class="math notranslate nohighlight">\(P, Q\)</span> можемо да запишемо и овако:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P(x) &amp;= p_{2n-1}x^{2n-1}+...+p_{n}x^{n} + p_{n-1}x^{n-1}+...+p_{0}x^{0}\\
+&amp;= (p_{2n-1}x^{n-1}+...+p_{n})x^{n} + (p_{n-1}x^{n-1}+...+p_{0}x^{0})\\
+&amp;= P_1 x^{n} + P_2\\
+\\
+Q(x) &amp;= q_{2n-1}x^{2n-1}+...+q_{n}x^{n} + q_{n-1}x^{n-1}+...+q_{0}x^{0}\\
+&amp;= (q_{2n-1}x^{n-1}+...+q_{n})x^{n} + (q_{n-1}x^{n-1}+...+q_{0}x^{0})\\
+&amp;= Q_1 x^{n} + Q_2\\
+\end{aligned}\end{split}\]</div>
+<p>Приметимо да су полиноми <span class="math notranslate nohighlight">\(P_1, P_2, Q_1, Q_2\)</span> степена <span class="math notranslate nohighlight">\(n-1\)</span>, тј. имају по <span class="math notranslate nohighlight">\(n\)</span>
+коефицијената, дакле двоструко мање коефицијената него полиноми <span class="math notranslate nohighlight">\(P\)</span> и <span class="math notranslate nohighlight">\(Q\)</span>. Даље имамо:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P \cdot Q &amp;= (P_1 x^{n} + P_2) (Q_1 x^{n} + Q_2)\\
+&amp;= (P_1 \cdot Q_1)x^{2n} + (P_1 \cdot Q_2)x^n + (P_2 \cdot Q_1)x^n + P_2 \cdot Q_2\\
+&amp;= (P_1 \cdot Q_1)x^{2n} + (P_1 \cdot Q_2 + P_2 \cdot Q_1)x^n + P_2 \cdot Q_2\\
+&amp;= (P_1 \cdot Q_1)x^{2n} + ((P_1+P_2)\cdot(Q_1+Q_2) - P_1 \cdot Q_1 - P_2 \cdot Q_2)x^n + P_2 \cdot Q_2\\
+&amp;= R_1 x^{2n} + ((P_1+P_2)\cdot(Q_1+Q_2) - R_1 - R_2)x^n + R_2\\
+\end{aligned}\end{split}\]</div>
+<p>где је <span class="math notranslate nohighlight">\(R_1 = P_1 \cdot Q_1, R_2 = P_2 \cdot Q_2\)</span>. На основу овога, производ <span class="math notranslate nohighlight">\(P \cdot Q\)</span>,
+можемо да добијемо тако што израчунамо производе</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+R_1 &amp;= P_1 \cdot Q_1\\
+R_2 &amp;= P_2 \cdot Q_2\\
+R_3 &amp;= (P_1+P_2)\cdot(Q_1+Q_2)\\
+\end{aligned}\end{split}\]</div>
+<p>уз додатни број операција, који је сразмеран са <span class="math notranslate nohighlight">\(n\)</span>. Другим речима, проблем множења два полинома
+са низовима коефицијената дужине <span class="math notranslate nohighlight">\(2n\)</span> сведен је на три проблема истог типа, са низовима дужине
+<span class="math notranslate nohighlight">\(n\)</span>. Због тога, за време извршавања алгоритма важи <span class="math notranslate nohighlight">\(T(2n,2n)=3T(n,n)+\theta(n)\)</span>. Може
+се доказати (за доказ видети <a class="reference external" href="https://sr.wikipedia.org/wiki/Мастер_теорема">мастер теорему</a>)
+да из ове рекурентне релације следи</p>
+<div class="math notranslate nohighlight">
+\[T(n,m) = \Theta (max(n,m)^{\log_{2}3})\]</div>
+<p>Ово значи да је за полиноме <span class="math notranslate nohighlight">\(P\)</span> и <span class="math notranslate nohighlight">\(Q\)</span>, степена редом <span class="math notranslate nohighlight">\(n\)</span> и <span class="math notranslate nohighlight">\(m\)</span>, потребно
+приближно <span class="math notranslate nohighlight">\(N^{\log_2 3} \approx N^{1.58}\)</span> операција за њихово множење Карацубиним алгоритмом,
+где је са <span class="math notranslate nohighlight">\(N\)</span> означен <span class="math notranslate nohighlight">\(max(n, m)\)</span>.</p>
+<p>На крају, ево и наше имплементације Карацубиног множења полинома:</p>
+
+<div data-childcomponent="karacuba_mnozenje_polinoma" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=karacuba_mnozenje_polinoma data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public static Polynomial Karatsuba(Polynomial P, Polynomial Q)
+{
+    if (P.Deg <= 1 || Q.Deg <= 1)
+        return P * Q;
+
+    int n = 1 + Math.Max(P.Deg, Q.Deg);
+    int n2 = n / 2;
+    Polynomial Lo1 = new Polynomial(n2 - 1);
+    Polynomial Hi1 = new Polynomial(P.Deg - n2);
+    Polynomial Lo2 = new Polynomial(n2 - 1);
+    Polynomial Hi2 = new Polynomial(Q.Deg - n2);
+    for (int i = 0; i < n2; i++)
+    {
+        Lo1.a[i] = P.a[i];
+        Lo2.a[i] = Q.a[i];
+    }
+    for (int i = n2; i <= P.Deg; i++)
+        Hi1.a[i - n2] = P.a[i];
+    for (int i = n2; i <= Q.Deg; i++)
+        Hi2.a[i - n2] = Q.a[i];
+
+    Polynomial z0 = Karatsuba(Lo1, Lo2);
+    Polynomial z2 = Karatsuba(Hi1, Hi2);
+    Polynomial z1 = Karatsuba(Lo1 + Hi1, Lo2 + Hi2) - z2 - z0;
+    return z0 + z1.TimesxPow(n2) + z2.TimesxPow(2 * n2);
+}
+
+// vraca polinom P * x^n
+private Polynomial TimesxPow(int n)
+{
+    Polynomial P = new Polynomial(Deg + n);
+    for (int i = Deg; i >= 0; i--)
+        P.a[i + n] = a[i];
+
+    return P;
+}
+</textarea>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>Задатак<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>Упоредите Карацубин алгоритам за множење полинома са класичним множењем, тако што ћете у оба алгоритма
+да додате мерење времена. Испорбајте оба начина за полиноме различитих степена и покушајте да одредите
+за колико велик степен полинома Карацубин алгоритам почиње да буде бржи од класичног множења.</p>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="Проширени Еуклидов алгоритам - задаци.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

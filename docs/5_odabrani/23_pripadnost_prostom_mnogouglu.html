@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Припадност тачке простом многоуглу</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Припадност тачке простом многоуглу<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Задатак којим ћемо се овде бавити је утврђивање да ли дата тачка припада датом простом многоуглу.
+Подсетимо се, многоугао је прост ако његове странице немају заједничких тачака, осим што суседне
+странице имају заједничко теме. Краће речено, многоугао је прост ако нема самопресека.</p>
+<div class="figure align-center" id="id3">
+<img alt="../_images/pt_in_poly_01.png" src="../_images/pt_in_poly_01.png" />
+<p class="caption"><span class="caption-text">Прост многоугао (лево) и сложен многоугао (десно)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Код многих проблема рачунарске геометрије човеку је прилично једноставно да врло брзо види одговор
+када му се улазни подаци представе у облику слике. На пример, у већини примера одмах видимо да ли
+је заокрет налево, да ли је тачка у троуглу, да ли се дате дужи секу, да ли је многоугао конвексан,
+која су темена конвексног омотача, да ли се конвексни многоуглови секу и слично. Међутим, проблем
+припадности тачке многоуглу је један од проблема, код којих ни човеку није једноставно да одмах
+види одговор.</p>
+<div class="figure align-center" id="id4">
+<img alt="../_images/pt_in_poly_02.png" src="../_images/pt_in_poly_02.png" />
+<p class="caption"><span class="caption-text">Проблем припадности тачке многоуглу</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Покушајте за сваки од многоуглова да што брже одговорите која од две црвене тачке је унутар, а
+која изван многоугла. Вероватно сте на трећој слици бар мало застали. Можемо да замислимо и много
+сложеније многоуглове од ових приказаних на слици. Зато је разумно поставити питање: који је
+ефикасан начин да се одговори на постављено питање?</p>
+<p>За слике које нису сувише сложене, склони смо да оком пратимо путању од дате тачке као када тражимо
+излаз из лавиринта. Међутим, ако многоугао изгледа као прави лавиринт и има раскрсница и слепих
+крајева, овај начин решавања може да постане компликован.</p>
+<p>До боље идеје можемо да дођемо ако приметимо да нам је на свакој од три дате слике једноставно да
+закључимо да је једна од црвених тачака унутар, а друга изван многоугла, мада можда не знамо одмах
+која од њих је која. Лако примећујемо да су тачке са разних сртана многоугаоне линије, зато што се
+у свим случајевима између црвених тачака налази само једна страница многоугла. Идеја која одавде
+произилази се састоји у томе да почнемо да се удаљавамо од дате тачке у било ком изабраном смеру
+(дуж неке полуправе) и бројимо пресеке са контуром многоугла (многоугаоном линијом). Када се удаљимо
+довољно од многоугла, тако да је очигледно да смо ван њега, по парности броја пресека са контуром
+можемо да одредимо да ли полазна тачка припада многоуглу: ако је број пресека паран, полазна тачка
+је ван многоугла, а ако је непаран, полазна тачка је у многоуглу.</p>
+<p>Размислимо како овај алгоритам можемо да прилагодимо извршавању на рачунару. Као прво, потребно је
+да изаберемо смер у коме се удаљавамо. Због једноставности даљег рачунања, можемо да изаберемо
+смер вертикално наниже. Даље, потребно је да знамо које странице многоугла се секу са изабраном
+полуправом, означимо је са <span class="math notranslate nohighlight">\(p\)</span>. Ради тога можемо да потражимо пресек сваке странице са
+полуправом <span class="math notranslate nohighlight">\(p\)</span> и одредимо парност броја пресека.</p>
+<div class="figure align-center" id="id5">
+<img alt="../_images/pt_in_poly_03.png" src="../_images/pt_in_poly_03.png" />
+<p class="caption"><span class="caption-text">Бројање пресека страница са полуправом наниже из тачке
+и утврђивање припадности многоуглу на основу парности броја пресека</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Ово је већ поступак који даје тачан одговор када полуправа <span class="math notranslate nohighlight">\(p\)</span> не садржи ни једно од темена
+многоугла. Да би поступак давао исправан одговор за сваки многоугао и сваку тачку, погледајмо и
+неколико карактеристичних случајева у којима полуправа <span class="math notranslate nohighlight">\(p\)</span> садржи једно или више темена
+многоугла.</p>
+<div class="figure align-center" id="id6">
+<img alt="../_images/pt_in_poly_04.png" src="../_images/pt_in_poly_04.png" />
+<p class="caption"><span class="caption-text">Припадност тачке многоуглу, специјални случајеви</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Јасно је да у првом случају желимо да бројимо један, а у другом нула или два пресека. Слично томе,
+у трећем случају треба бројати непаран, а у четвртом паран број пресека.</p>
+<p>Правило којим то можемо да постигнемо је да се крајња тачка странице броји као пресек са полуправом
+само онда, када је <span class="math notranslate nohighlight">\(x\)</span> координата те тачке већа од <span class="math notranslate nohighlight">\(x\)</span> координате друге крајње тачке те
+странице. На тај начин бисмо у случајевима са слике имали редом 1, 2, 1 и 2 пресека са полуправом,
+што одговара потребама. Специјално, за вертикалну страницу чије крајње тачке припадају полуправој се
+не броји ниједан пресек, јер <span class="math notranslate nohighlight">\(x\)</span> координата ниједне крајње тачке те странице није већа од
+<span class="math notranslate nohighlight">\(x\)</span> координате друге крајње тачке (<span class="math notranslate nohighlight">\(x\)</span> координате су исте).</p>
+<p>Сложеност алгоритма је очигледно линеарна, јер се постојање пресека са сваком од страница многоугла
+утврђује у константном времену.</p>
+<p>Сада имамо детаљно описан комплетан поступак, на основу кога може да се напише програм. Овога пута,
+писање програма остављамо читаоцима за вежбу.</p>
+<div class="section" id="id2">
+<h2>Задатак<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Напишите програм, који описаним поступком проверава да ли је дата тачка унутар датог простог многоугла,
+чија су темена дата редом. Није познато да ли је редослед темена у позитивном или негативном смеру.
+Све координате су целобројне и по апсолутној вредности не прелазе милијарду. У решењу треба користити
+само сабирање, одузимање и множење целих бројева (не користити реалне бројеве, дељење, или математичке
+функције попут <span class="math notranslate nohighlight">\(\sqrt{x}, \sin{x}, \cos{x}\)</span> и сличне).</p></li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="21_konveksan_omotac.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

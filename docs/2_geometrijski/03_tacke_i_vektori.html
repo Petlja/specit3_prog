@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тачке и вектори</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Тачке и вектори<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>У геометријским проблемима вектори се често користе, јер нам позната терминологија и ознаке које иду
+уз њих помажу да лакше излажемо и размењујемо идеје, чак и да лакше размишљамо о проблему.</p>
+<p>Овде се нећемо бавити увођењем вектора, већ полазимо од претпоставке да је појам вектора познат из
+математике и физике. Поменућемо укратко само неке особине вектора, које су нам овде значајне.
+Вектор је одређен својим правцем, смером и интензитетом. У неким применама је за вектор битна и
+такозвана нападна тачка, а такав вектор називамо везани вектор. Овде се таквим векторима нећемо
+бавити. Од интереса су нам само такозвани слободни вектори (прави вектори), који могу по вољи да се
+транслаторно померају. Слободни вектори се таквим померањем не мењају, јер задржавају свој правац,
+смер и интензитет. На даље реч вектор користимо у значењу „слободан вектор”.</p>
+<p>Јединични вектор <span class="math notranslate nohighlight">\(x\)</span> осе означавамо са <span class="math notranslate nohighlight">\(\overrightarrow{i}\)</span>, а јединични вектор <span class="math notranslate nohighlight">\(y\)</span>
+осе са <span class="math notranslate nohighlight">\(\overrightarrow{j}\)</span>. Сваки вектор у равни може да се разложи на две компоненте, од којих
+је једна паралелна <span class="math notranslate nohighlight">\(x\)</span> оси а друга <span class="math notranslate nohighlight">\(y\)</span> оси. Ове две компоненте могу редом да се изразе као
+<span class="math notranslate nohighlight">\(a \cdot \overrightarrow{i}\)</span> и <span class="math notranslate nohighlight">\(b \cdot \overrightarrow{j}\)</span>, где су <span class="math notranslate nohighlight">\(a, b\)</span> неки реални
+бројеви.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/razlaganje_vektora.png"><img alt="../_images/razlaganje_vektora.png" src="../_images/razlaganje_vektora.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Разлагање вектора на компоненте дуж оса.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Одавде следи важан закључак:</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>За сваки вектор <span class="math notranslate nohighlight">\(\overrightarrow{V}\)</span> у равни постоји јединствен пар реалних бројева <span class="math notranslate nohighlight">\((a, b)\)</span>,
+такав да је <span class="math notranslate nohighlight">\(\overrightarrow{V} = a \cdot \overrightarrow{i} + b \cdot \overrightarrow{j}\)</span>.
+Очигледно важи и обрнуто, тј. сваком пару бројева <span class="math notranslate nohighlight">\((a, b)\)</span> одговара тачно један вектор
+<span class="math notranslate nohighlight">\(\overrightarrow{V}\)</span>, такав да важи претходна једнакост (то је вектор
+<span class="math notranslate nohighlight">\(a \cdot \overrightarrow{i} + b \cdot \overrightarrow{j}\)</span>).</p>
+<p>Према томе, <strong>вектори у равни могу да се поистовете са паровима реалних бројева</strong> <span class="math notranslate nohighlight">\((a, b)\)</span>.
+Зато често уместо <span class="math notranslate nohighlight">\(\overrightarrow{V} = a \cdot \overrightarrow{i} + b \cdot \overrightarrow{j}\)</span>
+пишемо кратко <span class="math notranslate nohighlight">\(\overrightarrow{V} = (a, b)\)</span>, а бројеве <span class="math notranslate nohighlight">\(a, b\)</span> често називамо координатама
+вектора.</p>
+
+    </div></div>
+<p>Приметимо да од бројева <span class="math notranslate nohighlight">\(a, b\)</span> један или оба могу да буду једнаки нули. Ако је само <span class="math notranslate nohighlight">\(a\)</span> једнак
+нули, добијамо вектор паралелан оси <span class="math notranslate nohighlight">\(y\)</span>; ако је само <span class="math notranslate nohighlight">\(b\)</span> једнак нули, добијамо вектор паралелан
+оси <span class="math notranslate nohighlight">\(x\)</span>; а ако су оба једнака нули, добијамо нула-вектор.</p>
+<div class="section" id="id2">
+<h2>Операције над векторима и тачкама<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><strong>Множење вектора реалним бројем (скаларом)</strong></p>
+<p>Нека је вектор
+<span class="math notranslate nohighlight">\(\overrightarrow{V} = a \cdot \overrightarrow{i} + b \cdot \overrightarrow{j} = (a, b)\)</span>
+и <span class="math notranslate nohighlight">\(\alpha\)</span> реалан број. Тада важи:</p>
+<div class="math notranslate nohighlight">
+\[\alpha \cdot \overrightarrow{V} =
+\alpha \cdot (a \cdot \overrightarrow{i} + b \cdot \overrightarrow{j}) =
+(\alpha \cdot a \cdot \overrightarrow{i} + \alpha \cdot b \cdot \overrightarrow{j}) =
+(\alpha \cdot a, \alpha \cdot b).\]</div>
+<p><strong>Сабирање и одузимање вектора</strong></p>
+<p>Нека је <span class="math notranslate nohighlight">\(\overrightarrow{V_1} = (a_1, b_1), \overrightarrow{V_2} = (a_2, b_2)\)</span>.
+Тада важи:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\overrightarrow{V_1} + \overrightarrow{V_2} = (a_1 + a_2, b_1 + b_2),\\
+\overrightarrow{V_1} - \overrightarrow{V_2} = (a_1 - a_2, b_1 - b_2).\\
+\end{aligned}\end{split}\]</div>
+<p><strong>Транслација тачке за дати вектор</strong></p>
+<p>Нека се транслацијом тачке <span class="math notranslate nohighlight">\(A(a_x, a_y)\)</span> за вектор
+<span class="math notranslate nohighlight">\(\overrightarrow{V} = (v_x, v_y)\)</span> добија тачка <span class="math notranslate nohighlight">\(B(b_x, b_y)\)</span>. Тада важи:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+b_x = a_x + v_x,\\
+b_y = a_y + v_y.\\
+\end{aligned}\end{split}\]</div>
+<p>Због облика ових једнакости, уместо да кажемо: <em>транслација тачке</em> <span class="math notranslate nohighlight">\(A\)</span> <em>за вектор</em>
+<span class="math notranslate nohighlight">\(\overrightarrow{V}\)</span>, често кажемо: <em>збир тачке</em> <span class="math notranslate nohighlight">\(A\)</span> <em>и вектора</em>
+<span class="math notranslate nohighlight">\(\overrightarrow{V}\)</span> и пишемо <span class="math notranslate nohighlight">\(B = A + \overrightarrow{V}\)</span>.</p>
+</div>
+<div class="section" id="id3">
+<h2>Провера ортогоналности вектора<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Нека су дати вектори <span class="math notranslate nohighlight">\(\overrightarrow{\rm OA}\)</span> и <span class="math notranslate nohighlight">\(\overrightarrow{\rm OB}\)</span>.
+Наш задатак је да, помоћу координата ових вектора, изразимо услов да су вектори међусобно
+ортогонални (нормални један на другом). Означимо најпре са <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> углове
+које ови вектори редом заклапају са позитивним смером <span class="math notranslate nohighlight">\(x\)</span> осе. Тада је угао између
+ова два вектора једнак <span class="math notranslate nohighlight">\(\beta - \alpha\)</span>.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../_images/ortogonalni_vektori.png"><img alt="../_images/ortogonalni_vektori.png" src="../_images/ortogonalni_vektori.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Налажење услова нормалности вектора</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Угао <span class="math notranslate nohighlight">\(\angle AOB = \beta - \alpha\)</span> је прав ако и само ако је косинус тог угла једнак нули.
+Нека су познате координате тачака <span class="math notranslate nohighlight">\(A, B, O\)</span>, тј. нека је
+<span class="math notranslate nohighlight">\(A(x_a, y_a), B(x_b, y_b), O(x_o, y_o)\)</span>. Даље, користећи адициону формулу за косинус разлике
+углова, имамо:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\overrightarrow{\rm OA} \perp \overrightarrow{\rm OB} &amp;\iff \cos \angle AOB = 0 \\
+&amp;\iff \cos (\beta - \alpha) = 0\\
+&amp;\iff \cos \beta \cdot \cos \alpha + \sin \beta \cdot \sin \alpha = 0\\
+&amp;\iff \frac{x_a-x_o}{|OA|} \frac{x_b-x_o}{|OB|} + \frac{y_a-y_o}{|OA|} \frac{y_b-y_o}{|OB|} = 0\\
+&amp;\iff (x_a-x_o)(x_b-x_o) + (y_a-y_o)(y_b-y_o) = 0.\\
+\end{aligned}\end{split}\]</div>
+<p>Одавде следи закључак:</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Вектори <span class="math notranslate nohighlight">\(\overrightarrow{\rm OA}\)</span> и <span class="math notranslate nohighlight">\(\overrightarrow{\rm OB}\)</span> су међусобно ортогонални
+ако и само ако важи:</p>
+<div class="math notranslate nohighlight">
+\[(x_a-x_o)(x_b-x_o) + (y_a-y_o)(y_b-y_o) = 0.\]</div>
+
+    </div></div>
+<p>Из услова ортогоналности вектора једноставно се добија и услов ортогоналности правих. Наиме, праве
+<span class="math notranslate nohighlight">\(AB\)</span> и <span class="math notranslate nohighlight">\(CD\)</span> су међусобно ортогоналне ако и само ако су ортогонални вектори
+<span class="math notranslate nohighlight">\(\overrightarrow{\rm AB}\)</span> и <span class="math notranslate nohighlight">\(\overrightarrow{\rm CD}\)</span>. Угао између вектора се не мења
+њиховим паралелним померањем, па зато важи и ово тврђење:</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Праве <span class="math notranslate nohighlight">\(AB\)</span> и <span class="math notranslate nohighlight">\(CD\)</span> су међусобно ортогоналне ако и само ако важи</p>
+<div class="math notranslate nohighlight">
+\[(x_b-x_a)(x_d-x_c) + (y_b-y_a)(y_d-y_c) = 0.\]</div>
+
+    </div></div>
+<p>У случају да је тачка <span class="math notranslate nohighlight">\(O\)</span> координатни почетак, имамо <span class="math notranslate nohighlight">\(x_o = y_o = 0\)</span>, што нам даје
+једноставнији услов нормалности вектора <span class="math notranslate nohighlight">\(\overrightarrow{\rm OA}\)</span> и <span class="math notranslate nohighlight">\(\overrightarrow{\rm OB}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x_a x_b + y_a y_b = 0.\]</div>
+<p>Ова једнакост може да нам послужи да за дату тачку <span class="math notranslate nohighlight">\(A\)</span> одредимо једну могућу тачку <span class="math notranslate nohighlight">\(B\)</span>, такву
+да је <span class="math notranslate nohighlight">\(OA \perp OB\)</span>. На пример, ако изаберемо <span class="math notranslate nohighlight">\(x_b = y_a, y_b = -x_a\)</span>, добијамо:</p>
+<div class="math notranslate nohighlight">
+\[x_a x_b + y_a y_b = x_a y_a - y_a x_a = 0.\]</div>
+<p>Дакле, ако је дато <span class="math notranslate nohighlight">\(A(x_a, y_a)\)</span>, да бисмо формирали прав угао <span class="math notranslate nohighlight">\(\angle AOB\)</span> можемо да
+изаберемо тачку <span class="math notranslate nohighlight">\(B\)</span> као <span class="math notranslate nohighlight">\(B(y_a, -x_a)\)</span>.</p>
+<p>Ако тачка <span class="math notranslate nohighlight">\(O\)</span> није координатни почетак, услов нормалности вектора <span class="math notranslate nohighlight">\(\overrightarrow{\rm OA}\)</span>
+и <span class="math notranslate nohighlight">\(\overrightarrow{\rm OB}\)</span> гласи:</p>
+<div class="math notranslate nohighlight">
+\[(x_a-x_o)(x_b-x_o) + (y_a-y_o)(y_b-y_o) = 0.\]</div>
+<p>У том случају можемо да изаберемо <span class="math notranslate nohighlight">\(x_b = x_o + (y_a - y_o), y_b = y_o - (x_a - x_o)\)</span>. Увршавањем
+ових <span class="math notranslate nohighlight">\(x_b, y_b\)</span> у претходни услов уверавамо се да је он испуњен.</p>
+</div>
+<div class="section" id="id4">
+<h2>Примене вектора у задацима са троугловима и четвороугловима<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пример 1</strong>:</p>
+<p>Дате су редом координате темена <span class="math notranslate nohighlight">\(A, B, C\)</span> паралелограма <span class="math notranslate nohighlight">\(ABCD\)</span>. Одредити координате
+темена <span class="math notranslate nohighlight">\(D\)</span>.</p>
+
+    </p></div></div>
+<div class="figure align-center">
+<img alt="../_images/cetvrto_teme_paralelograma.png" src="../_images/cetvrto_teme_paralelograma.png" />
+</div>
+<p>Решење: У паралелограму <span class="math notranslate nohighlight">\(ABCD\)</span> су странице <span class="math notranslate nohighlight">\(AD\)</span> и <span class="math notranslate nohighlight">\(BC\)</span> паралелне и једнаке,
+па важи <span class="math notranslate nohighlight">\(\overrightarrow{\rm AD} = \overrightarrow{\rm BC}\)</span>. Означимо са <span class="math notranslate nohighlight">\(O\)</span> координатни
+почетак. Циљ нам је да изразимо <span class="math notranslate nohighlight">\(\overrightarrow{\rm OD}\)</span> помоћу <span class="math notranslate nohighlight">\(\overrightarrow{\rm OA}\)</span>,
+<span class="math notranslate nohighlight">\(\overrightarrow{\rm OB}\)</span> и <span class="math notranslate nohighlight">\(\overrightarrow{\rm OC}\)</span>. Сабирањем и одузимањем вектора
+добијамо:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\overrightarrow{\rm OD} &amp;= \overrightarrow{\rm OA} + \overrightarrow{\rm AD}\\
+&amp;= \overrightarrow{\rm OA} + \overrightarrow{\rm BC}\\
+&amp;= \overrightarrow{\rm OA} + (\overrightarrow{\rm OC} - \overrightarrow{\rm OB}),\\
+\end{aligned}\end{split}\]</div>
+<p>одакле непосредно следе једнакости по координатама:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_d = x_a + x_c - x_b,\\
+y_d = y_a + y_c - y_b.\\
+\end{aligned}\end{split}\]</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пример 2</strong>:</p>
+<p>Дате су редом координате темена <span class="math notranslate nohighlight">\(A, C\)</span> краће дијагонале ромба <span class="math notranslate nohighlight">\(ABCD\)</span>, чији је оштар угао
+<span class="math notranslate nohighlight">\(60^{\circ}\)</span>. Одредити координате темена <span class="math notranslate nohighlight">\(B, D\)</span>.</p>
+
+    </p></div></div>
+<p>Решење: Означимо са <span class="math notranslate nohighlight">\(S\)</span> центар симетрије ромба <span class="math notranslate nohighlight">\(ABCD\)</span>. Тачка <span class="math notranslate nohighlight">\(S\)</span> полови обе дијагонале,
+па можемо да је израчунамо као средиште дужи <span class="math notranslate nohighlight">\(AC\)</span>, тј.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_s = \frac{x_a + x_c}{2},\\
+y_s = \frac{y_a + y_c}{2}.\\
+\end{aligned}\end{split}\]</div>
+<div class="figure align-center" id="id8">
+<img alt="../_images/temena_romba.png" src="../_images/temena_romba.png" />
+<p class="caption"><span class="caption-text">Одређивање темена <cite>B</cite> и <cite>D</cite> ромба <cite>ABCD</cite>.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Одредимо сада једну тачку <span class="math notranslate nohighlight">\(N\)</span>, такву да је <span class="math notranslate nohighlight">\(SA \perp SN\)</span>. Раније смо видели да као тачку
+<span class="math notranslate nohighlight">\(N\)</span> можемо да изаберемо <span class="math notranslate nohighlight">\(N(x_s + y_a - y_s, y_s - x_a + x_s)\)</span>. За овако изабрану тачку
+<span class="math notranslate nohighlight">\(N\)</span>, поред <span class="math notranslate nohighlight">\(SA \perp SN\)</span> важи још и <span class="math notranslate nohighlight">\(SA = SN\)</span>.</p>
+<p>Из услова задатка закључујемо да је троугао <span class="math notranslate nohighlight">\(ABC\)</span> једнакостраничан, па за његову висину <span class="math notranslate nohighlight">\(SB\)</span>
+важи <span class="math notranslate nohighlight">\(SB = \frac{\sqrt{3}}{2} \cdot AC = \sqrt{3} \cdot SA = \sqrt{3} \cdot SN\)</span>. Одавде, због
+паралелности вектора <span class="math notranslate nohighlight">\(\overrightarrow{\rm SB}\)</span> и <span class="math notranslate nohighlight">\(\overrightarrow{\rm SN}\)</span> важи
+<span class="math notranslate nohighlight">\(B = S + \sqrt{3} \cdot \overrightarrow{\rm SN}\)</span>, или по координатама:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_b = x_s + \sqrt{3} (x_n - x_s),\\
+y_b = y_s + \sqrt{3} (y_n - y_s).\\
+\end{aligned}\end{split}\]</div>
+<p>На крају, тачку <span class="math notranslate nohighlight">\(D\)</span> можемо да израчунамо знајући да је тачка <span class="math notranslate nohighlight">\(S\)</span> средиште дужи <span class="math notranslate nohighlight">\(BD\)</span>.
+Из услова <span class="math notranslate nohighlight">\(\overrightarrow{\rm BS} = \overrightarrow{\rm SD}\)</span> следи
+<span class="math notranslate nohighlight">\(D = S + \overrightarrow{\rm BS}\)</span>, или по координатама:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_d = x_s + (x_s - x_b),\\
+y_d = y_s + (y_s - y_b).\\
+\end{aligned}\end{split}\]</div>
+<div class="section" id="id5">
+<h3>Задаци за вежбу:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Дате су редом координате темена <span class="math notranslate nohighlight">\(A, C\)</span> квадрата <span class="math notranslate nohighlight">\(ABCD\)</span>. Одредити координате темена
+<span class="math notranslate nohighlight">\(B, D\)</span>.</p></li>
+<li><p>Нека су <span class="math notranslate nohighlight">\(C_1, A_1, B_1\)</span> редом средишта страница <span class="math notranslate nohighlight">\(AB, BC, CA\)</span> троугла <span class="math notranslate nohighlight">\(ABC\)</span>.
+Ако су дате координате тачака <span class="math notranslate nohighlight">\(C_1, A_1, B_1\)</span>, одредити координате темена троугла <span class="math notranslate nohighlight">\(ABC\)</span>.</p></li>
+<li><p>Дате су редом координате темена <span class="math notranslate nohighlight">\(A, B\)</span> квадрата <span class="math notranslate nohighlight">\(ABCD\)</span>. Одредити координате темена
+<span class="math notranslate nohighlight">\(C, D\)</span>.</p></li>
+<li><p>Нека су <span class="math notranslate nohighlight">\(M, N, P\)</span> редом средишта страница <span class="math notranslate nohighlight">\(AB, BC, CD\)</span> паралелограма <span class="math notranslate nohighlight">\(ABCD\)</span>.
+Ако су дате координате тачака <span class="math notranslate nohighlight">\(M, N, P\)</span>, одредити координате темена паралелограма <span class="math notranslate nohighlight">\(ABCD\)</span>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="02b_bounding_boxes_quiz.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

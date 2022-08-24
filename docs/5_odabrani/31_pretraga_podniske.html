@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Претрага подниске</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Претрага подниске<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Претрага првог, последњег или свих појављивања дате подниске унутар
+шире ниске је један од основних задатака обраде текстуалног
+садржаја. Пошто се често претражује огромна количина текста, веома је
+значајно да алгоритми претраге подниске буду што је могуће
+ефикаснији. На пример, ако тражимо веб-странице које садрже неку реч,
+потребно је обрадити стотине милиона, па и милијарде веб-страница
+(наравно, то се не ради у тренутку постављања упита, већ претраживачи
+унапред праве и одржавају тзв. индексе који за сваку реч садрже листу
+веб-страница које садрже ту реч).</p>
+<p>У наставку ћемо веома укратко описати три алгоритма за претрагу
+подниске (један сасвим елементаран, заснован на грубој сили и два
+ефикасна). Претпоставићемо да се у ширем тексту <span class="math notranslate nohighlight">\(s\)</span> дужине
+<span class="math notranslate nohighlight">\(m\)</span> карактера тражи подниска <span class="math notranslate nohighlight">\(w\)</span> дужине <span class="math notranslate nohighlight">\(n\)</span> (да би
+ниска садржала подниску мора да важи <span class="math notranslate nohighlight">\(n \leq m\)</span>). Претпоставимо
+да је потребно пронаћи позицију првог појављивања тј. најмању позицију
+<span class="math notranslate nohighlight">\(p\)</span> такву да је <span class="math notranslate nohighlight">\(p + n \leq m\)</span> и да је <span class="math notranslate nohighlight">\(s_{p+i} = w_i\)</span>,
+за свако <span class="math notranslate nohighlight">\(0 \leq i &lt; n\)</span>.</p>
+<div class="section" id="id2">
+<h2>Груба сила<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Алгоритам претраге заснован на грубој сили је крајње
+елементаран. Посматрају се све могуће позиције почетка <span class="math notranslate nohighlight">\(0 \leq p
+&lt; m - n\)</span> и за сваку позицију се врши поређење ниски. Илустрација рада
+овог алгоритма је приказана на следећој анимацији. Карактери који се
+поклапају приказана су зеленом бојом, а карактери који се не поклапају
+приказани су црвеном бојом. Када год дође до непоклапања, поређење са
+подниском креће од почетка, али кренувши од наредне позиције <span class="math notranslate nohighlight">\(p\)</span>.</p>
+
+    <div class="gallery" id="bf_pretraga_1">
+        <div>
+            <div style="width: 800px;height:100%">
+            <img src="../_images/bf_pretraga1.png" width="100%" height="100%">
+<img src="../_images/bf_pretraga2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga21.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga22.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga23.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga24.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga25.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga26.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga27.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga28.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga29.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga30.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga31.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga32.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga33.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga34.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga35.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga36.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga37.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga38.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga39.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga40.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga41.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga42.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga43.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga44.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga45.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga46.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga47.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga48.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga49.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga50.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga51.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga52.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga53.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="bf_pretraga_1-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Пошто се испитује свака позиција (а број позиција је <span class="math notranslate nohighlight">\(O(m)\)</span>) и
+пошто се за сваку позицију у најгорем случају испитује <span class="math notranslate nohighlight">\(O(n)\)</span>
+карактера подниске, укупан број поређења је <span class="math notranslate nohighlight">\(O(mn)\)</span>. Ипак, број
+поређења је често мањи од <span class="math notranslate nohighlight">\(mn\)</span>. Као што видимо, када је текст
+релативно насумичан, за већину позиција <span class="math notranslate nohighlight">\(p\)</span> се веома брзо
+(најчешће већ на првом карактеру) проналази непоклапање. Ипак, у овом
+примеру се види да постоје позиције где се непоклапање проналази
+прилично касно тј. на којима је потребно испитивање скоро свих
+<span class="math notranslate nohighlight">\(n\)</span> карактера подниске пре него што се утврди да непоклапање
+постоји на неком од последњих карактера. Са друге стране, ако текст
+није насумичан, број поређења може да се приближи броју
+<span class="math notranslate nohighlight">\(mn\)</span>. Погледајмо следећи пример.</p>
+
+    <div class="gallery" id="bf_pretraga_1_worst_case">
+        <div>
+            <div style="width: 300px;height:100%">
+            <img src="../_images/bf_pretraga_1_1.png" width="100%" height="100%">
+<img src="../_images/bf_pretraga_1_2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_21.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_22.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_23.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_24.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_25.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_26.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_27.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bf_pretraga_1_28.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="bf_pretraga_1_worst_case-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>На свакој позицији се врши <span class="math notranslate nohighlight">\(n\)</span> поређења (тек на последњем
+карактеру се открива непоклапање). Стога је потребно развити
+ефикасније алгоритме код којих ће број поређења гарантовано бити
+линеаран у односу на дужине ниске и подниске.</p>
+</div>
+<div class="section" id="id3">
+<h2>Кнут-Морис-Прат-ов алгоритам (КМП)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Алгоритам KMP побољшава ефикасност претраге тако што користи чињеницу
+да је приликом проналажења првог непоклапања на некој позицији већ
+испитан одређен број карактера ниске и подниске и установљено је да су
+они једнаки. На пример, ако тражимо ниску <code class="docutils literal notranslate"><span class="pre">abcde</span></code> унутар неке шире
+ниске и кренувши од неке позиције <span class="math notranslate nohighlight">\(p\)</span> наиђемо на карактере
+<code class="docutils literal notranslate"><span class="pre">abcdf</span></code>, тада знамо да не морамо да испитујемо позиције <span class="math notranslate nohighlight">\(p+1\)</span>,
+<span class="math notranslate nohighlight">\(p+2\)</span> нити <span class="math notranslate nohighlight">\(p+2\)</span> јер смо већ видели да оне не садрже
+карактер <code class="docutils literal notranslate"><span class="pre">a</span></code> којим почиње тражена подниска, па она не може
+започињати ни на једној од тих позиција (прво непоклапање је било
+између слова <code class="docutils literal notranslate"><span class="pre">e</span></code> и <code class="docutils literal notranslate"><span class="pre">f</span></code>, што значи да су се претходна слова
+поклапала, а ми знамо да ниска <span class="math notranslate nohighlight">\(w\)</span> не садржи слово <code class="docutils literal notranslate"><span class="pre">a</span></code> након
+своје прве позиције). Погледамо у наредном примеру како алгоритам КМП
+користи информације овог типа да би прескочио велики број поређења.</p>
+
+    <div class="gallery" id="kmp_pretraga">
+        <div>
+            <div style="width: 800px;height:100%">
+            <img src="../_images/kmp_1.png" width="100%" height="100%">
+<img src="../_images/kmp_2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_21.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_22.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_23.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_24.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_25.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_26.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_27.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_28.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_29.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_30.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_31.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_32.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_33.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_34.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_35.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_36.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/kmp_37.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="kmp_pretraga-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Занемаримо на почетку табелу приказану при врху анимације и обратимо
+пажњу само на поређење карактера две ниске.</p>
+<ul class="simple">
+<li><p>На почетку алгоритам покушава једну по једну позицију, одмах наилази
+на непоклапање и прелази на следећу позицију, па ту нема разлике у
+односу на оно како функционише алгоритам грубе силе.</p></li>
+<li><p>Када претрага крене од позиције 3, почетна слова <code class="docutils literal notranslate"><span class="pre">bar</span></code> се
+поклапају и непоклапање се налази када се пореде слово <code class="docutils literal notranslate"><span class="pre">b</span></code> и
+размак у тексту. Знајући садржај ниске коју тражимо, можемо одмах да
+закључимо (без експлицитног испробавања) да се на три наредне
+позиције након текуће не налази слово <code class="docutils literal notranslate"><span class="pre">b</span></code> (пошто су на тим
+позицијама била успешна поклапања унапред знамо да на њима пише
+<code class="docutils literal notranslate"><span class="pre">ar␣</span></code>) па доњу ниску можемо одмах померити 4 позиције надесно.</p></li>
+<li><p>Након тога се ниска помера за по једну позицију надесно (јер се прво
+слово не поклапа) и алгоритам се понаша исто као претрага грубом
+силом.</p></li>
+<li><p>Наредни интересантан случај наступа када се установи да се након
+поклапања слова <code class="docutils literal notranslate"><span class="pre">barbar</span></code> слова <code class="docutils literal notranslate"><span class="pre">a</span></code> у траженој подниски и слово
+<code class="docutils literal notranslate"><span class="pre">e</span></code> у тексту не поклапају. У досадашњим примерима смо ниску
+померали иза позиције непоклапања. Аргумент због ког смо то смели да
+урадимо је да се прво слово ниске коју тражимо не јавља ни једном у
+делу ниске који се поклопио. У овом случају, међутим, не само да се
+почетно слово <code class="docutils literal notranslate"><span class="pre">b</span></code> јавља још једном, него се три почетна слова
+<code class="docutils literal notranslate"><span class="pre">bar</span></code> јављају и на крају ниске <code class="docutils literal notranslate"><span class="pre">barbar</span></code> за коју знамо да нам се
+тренутно јавила. Непоклапање нам говори да се иза <code class="docutils literal notranslate"><span class="pre">barbar</span></code> не
+налази жељено <code class="docutils literal notranslate"><span class="pre">a</span></code>, међутим, ако би се налазило <code class="docutils literal notranslate"><span class="pre">b</span></code>, постојала би
+шанса да реч почиње три позиције десно од текуће (на месту на ком се
+јавља друго <code class="docutils literal notranslate"><span class="pre">bar</span></code> у речи <code class="docutils literal notranslate"><span class="pre">barbar</span></code>). Стога померамо подниску на
+ту позицију у нади да ћемо иза <code class="docutils literal notranslate"><span class="pre">bar</span></code> пронаћи <code class="docutils literal notranslate"><span class="pre">b</span></code>. То се,
+међутим, не дешава (на тој позицији се уместо <code class="docutils literal notranslate"><span class="pre">b</span></code> налази <code class="docutils literal notranslate"><span class="pre">e</span></code>). У
+том тренутку знамо да се на три позиције иза текуће не налази ни
+једно <code class="docutils literal notranslate"><span class="pre">b</span></code> (налазе се карактери <code class="docutils literal notranslate"><span class="pre">bare</span></code>), па можемо подниску
+померити на позицију иза појављивања слова <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p></li>
+<li><p>У наставку опет улазимо у фазу у којој нема поклапања и у којој се у
+сваком кораку подниска помера за једну позицију надесно.</p></li>
+<li><p>Наредни интересантан случај је када се установи да се након
+поклапања слова <code class="docutils literal notranslate"><span class="pre">barbar</span></code> слова <code class="docutils literal notranslate"><span class="pre">a</span></code> у траженој подниски и слово
+<code class="docutils literal notranslate"><span class="pre">b</span></code> у тексту не поклапају. Слично као мало пре, подниску померамо
+за три позиције удесно на позицију на којој знамо да се налази текст
+<code class="docutils literal notranslate"><span class="pre">bar</span></code> који се, већ знамо, поклапа са прва три слова тражене
+ниске. Анализирајући четврти карактер, овај пут установљамо да се ту
+заиста налази слово <code class="docutils literal notranslate"><span class="pre">b</span></code>, па се поређење може наставити. Испоставља
+се да смо пронашли тражену позицију, па свако поређење слова до
+краја подниске довести до поклапања.</p></li>
+</ul>
+<p>Дакле, КМП алгоритам користи чињеницу да се неком врстом анализе
+подниске која се тражи и која се може обавити унапред може приликом
+сваког непоклапања установити за колико се позиција може померити
+подниска пре новог поређења карактера. Табела која је приказана на
+врху анимације нам тачно то говори. Ове бројеве треба тумачити на
+следећи начин: након непоклапања почетак подниске треба померити тако
+да њен први карактер дође на текућу позицију (позицију на којој је
+наступило непоклапање) и затим је треба померити за још онолико
+позиција улево колико то бројеви у табели говоре (ако пише -1,
+подниска треба да се помери за једну позицију удесно, ако пише 0,
+подниска не треба даље да се помера, а ако пише неки позитиван број,
+подниска треба да се помери за толико позиција улево). Погледајмо
+пример из претходне анимације:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">b</span>  <span class="n">a</span>  <span class="n">r</span>  <span class="n">b</span>  <span class="n">a</span>  <span class="n">r</span>  <span class="n">a</span>
+<span class="o">-</span><span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">3</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ако се већ прво <code class="docutils literal notranslate"><span class="pre">b</span></code> не поклопи, подниска се помера за једно место
+удесно (подсетимо се, вредност -1 у таблици означава да од позиције
+непоклапања подниску померамо једно место удесно).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>....?......     -&gt;       ....?......
+    b...                      b...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ако се <code class="docutils literal notranslate"><span class="pre">b</span></code> поклопи, али се <code class="docutils literal notranslate"><span class="pre">a</span></code> не поклопи, тада подниску
+померамо тако да јој почетно слово <code class="docutils literal notranslate"><span class="pre">b</span></code> дође на позицију на којој
+је карактер који се није поклопио са <code class="docutils literal notranslate"><span class="pre">a</span></code> (на тој позицији може
+бити карактер <code class="docutils literal notranslate"><span class="pre">b</span></code>, што ће се следећим поређењем
+испитати). Подсетимо се, вредност 0 у таблици означава да подниску
+треба померити тачно до позиције непоклапања.  И овим се подниска
+заправо помера за једну позицију удесно.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>....b?....     -&gt;       ....b?....
+    ba..                     ba....
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ако се слова <code class="docutils literal notranslate"><span class="pre">ba</span></code> поклопе, али се <code class="docutils literal notranslate"><span class="pre">r</span></code> не поклопи тада подниску
+померамо тако да јој почетно слово <code class="docutils literal notranslate"><span class="pre">b</span></code> дође на позицију на којој
+је карактер који се није поклопио са <code class="docutils literal notranslate"><span class="pre">r</span></code> (на тој позицији може
+бити карактер <code class="docutils literal notranslate"><span class="pre">b</span></code>, што ће се следећим поређењем испитати).
+Подсетимо се, вредност 0 у таблици означава да подниску треба
+померити тачно до позиције непоклапања. Овим смо прескочили једну
+позицију, али знамо да се на њој налази <code class="docutils literal notranslate"><span class="pre">a</span></code>, а не <code class="docutils literal notranslate"><span class="pre">b</span></code>, па је то
+у реду (подниска сигурно не може почињати на тој позицији).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>....ba?......     -&gt;       ....ba?.......
+    bar..                        ba....
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ако се слова <code class="docutils literal notranslate"><span class="pre">bar</span></code> поклопе, али се наредно <code class="docutils literal notranslate"><span class="pre">b</span></code> не поклопи тада
+подниску померамо тако да јој почетно слово <code class="docutils literal notranslate"><span class="pre">b</span></code> дође на једну
+позицију десно од позиције на којој је карактер који се није
+поклопио са <code class="docutils literal notranslate"><span class="pre">b</span></code> (то означава вредност -1 у таблици).  Овим смо
+прескочили три позиције, али знамо да се на њима налазе <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code>
+и неки карактер за који је управо установљено да је различит од
+<code class="docutils literal notranslate"><span class="pre">b</span></code>, па је то у реду (подниска која почиње карактером <code class="docutils literal notranslate"><span class="pre">b</span></code>
+сигурно не може почињати на позицијама на којима знамо да се не
+налази <code class="docutils literal notranslate"><span class="pre">b</span></code>).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>....bar?....     -&gt;       ....bar?.........
+    barb..                        barb...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ако се слова <code class="docutils literal notranslate"><span class="pre">barb</span></code> поклопе, али се <code class="docutils literal notranslate"><span class="pre">a</span></code> не поклопи тада подниску
+померамо тако да јој почетно слово <code class="docutils literal notranslate"><span class="pre">b</span></code> дође на позицију на којој
+је карактер који се није поклопио са <code class="docutils literal notranslate"><span class="pre">a</span></code> (на тој позицији може
+бити карактер <code class="docutils literal notranslate"><span class="pre">b</span></code>, што ће се следећим поређењем испитати). Ово је
+одређено вредношћу 0 у таблици. Овим смо прескочили позиције на
+којима знамо да се налазе <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">r</span></code>, па је то у реду. Прескочили
+смо и позицију на којој се налази карактер <code class="docutils literal notranslate"><span class="pre">b</span></code>, што је у реду, јер
+смо управо утврдили да се иза ње не налази <code class="docutils literal notranslate"><span class="pre">a</span></code>, па тим словом
+<code class="docutils literal notranslate"><span class="pre">b</span></code> не може почињати појављивање подниске.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>....barb?......     -&gt;       ....barb?.........
+    barba..                          barba..
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ако се слова <code class="docutils literal notranslate"><span class="pre">barba</span></code> поклопе, али се <code class="docutils literal notranslate"><span class="pre">r</span></code> не поклопи тада
+подниску померамо тако да јој почетно слово <code class="docutils literal notranslate"><span class="pre">b</span></code> дође на позицију
+на којој је карактер који се није поклопио са <code class="docutils literal notranslate"><span class="pre">r</span></code> (на тој позицији
+може бити карактер <code class="docutils literal notranslate"><span class="pre">b</span></code>, што ће се следећим поређењем
+испитати). Подсетимо се, број 0 у таблици сугерише да се подниска
+помера тачно до позиције непоклапања. Овим смо прескочили позиције
+на којима знамо да се налазе <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code> и још једно <code class="docutils literal notranslate"><span class="pre">a</span></code>, па је
+то у реду. Прескочили смо и позицију на којој се налази карактер
+<code class="docutils literal notranslate"><span class="pre">b</span></code>, што је у реду, јер смо управо утврдили да иако се иза ње
+налази карактер <code class="docutils literal notranslate"><span class="pre">a</span></code>, иза њега се не налази <code class="docutils literal notranslate"><span class="pre">r</span></code>, па тим словом
+<code class="docutils literal notranslate"><span class="pre">b</span></code> не може почињати појављивање подниске.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>....barba?....     -&gt;       ....barba?.........
+    barbar..                         barbar..
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ако се <code class="docutils literal notranslate"><span class="pre">barbar</span></code> поклопе, али се <code class="docutils literal notranslate"><span class="pre">a</span></code> не поклопи тада подниску
+померамо тако да јој почетно слово <code class="docutils literal notranslate"><span class="pre">b</span></code> дође на позицију на којој
+се налази друго <code class="docutils literal notranslate"><span class="pre">b</span></code>. Наиме, вредност 3 у таблици нам говори да
+подниску треба померити 3 позиције лево од позиције
+непоклапања. Овим смо прескочили позиције на којима знамо да се
+налазе <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">r</span></code>, па је то у реду. Карактер који се није
+поклопио са <code class="docutils literal notranslate"><span class="pre">a</span></code> може бити карактер <code class="docutils literal notranslate"><span class="pre">b</span></code>, што морамо проверити, па
+већа померања удесно нису могућа.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>....barbar?....     -&gt;       ....barbar?.........
+    barbara..                       barbara...
+</pre></div>
+</div>
+<p>Дакле, када је неком анализом подниске која се тражи изграђена оваква
+таблица, спровођење алгоритма је прилично једноставно. Међутим,
+поставља се питање како се ова таблица ефикасно формира. Приликом
+одређивања колико је потребно померити подниску након утврђеног
+непоклапања, потребно је одредити најдужи суфикс дела ниске на ком је
+утврђено поклапање који је уједно и префикс тог дела ниске. На пример,
+ако се поклапа <code class="docutils literal notranslate"><span class="pre">barbar</span></code>, најдужи суфикс који је уједно префикс има 3
+карактера, што указује на то да се померање врши на следећи начин.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">barbar</span>
+   <span class="n">barbar</span>
+</pre></div>
+</div>
+<p>ако би део који се поклопио био <code class="docutils literal notranslate"><span class="pre">abcdabcdabc</span></code>, тада би тај суфикс
+био <code class="docutils literal notranslate"><span class="pre">abcdabc</span></code>, а померање би се извршило на следећи начин.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abcdabcdabc</span>
+    <span class="n">abcdabcdabc</span>
+</pre></div>
+</div>
+<p>Дакле, поред алгоритма претраге који смо описали, важну компоненту КМП
+алгоритма чини веома ефикасан поступак изградње таблице померања
+заснован на одређивању оваквих најдужих суфикса који су уједно и
+префикси. Тај поступак је заснован на техници динамичког програмирања
+и може се извршити у сложености <span class="math notranslate nohighlight">\(O(n)\)</span>.  Заинтересоване читаоце
+позивамо да пробају да самостално осмисле овај поступак и да своје
+решење испробају у задатку <a class="reference external" href="https://petlja.org/biblioteka/r/Zbirka3/prefiks_sufiks">Префикс суфикс</a>
+из онлајн Збирке.  Пробајте на
+основу тога да направите комплетну имплементацију овог алгоритма (његов
+код је релативно кратак и елементаран, али слобдно можемо рећи да
+алгоритам није баш једноставан за разумевање).</p>
+<p>Анимације које смо видели су направљене помоћу веб-апликације доступне
+на адреси <a class="reference external" href="http://www.matf.bg.ac.rs/~filip/algoritmi/kmp.html">http://www.matf.bg.ac.rs/~filip/algoritmi/kmp.html</a>
+Употребите слободно ову апликацију да бисте и на неким другим
+примерима видели како се гради таблица померања и како функционише
+поступак претраге.</p>
+</div>
+<div class="section" id="id5">
+<h2>Рабин-Карпов алгоритам (хеширање ниски)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Основу овог алгоритма чини техника <strong>хеширања</strong>. Идеја је да се свакој
+ниски применом неке <strong>хеш-функције</strong> <span class="math notranslate nohighlight">\(h\)</span> додели неки неозначени
+број (обично релативно велики, 32-битни или 64-битни). Тада се за
+поређење једнакости две ниске може употребити поређење једнакости два
+броја, које је много брже од поређења појединачних карактера. Наиме,
+поређење ниски дужине <span class="math notranslate nohighlight">\(n\)</span> поређењем појединачних карактера је
+операција сложености <span class="math notranslate nohighlight">\(O(n)\)</span>, док је поређење бројева операција
+сложености <span class="math notranslate nohighlight">\(O(1)\)</span>. Две исте ниске се, наравно, функцијом
+<span class="math notranslate nohighlight">\(h\)</span> сликају у исти број, међутим, пошто је ниски више него
+бројева (нпр. 32-битних), јасно је да ће се више различитих ниски
+сликати у исти број. Дакле, хеш функција најчешће није 1-1. Зато
+различитост два броја (хеш-вредности) гарантује да су ниске различите,
+а једнакост бројева је веома јак индикатор, али не и гаранција да су
+ниске једнаке (па једнакост треба проверити поређењем карактера).</p>
+<p>Рабин-Карпов алгоритам се онда може изразити наредним псеудокодом.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">neka</span> <span class="n">je</span> <span class="n">hw</span> <span class="o">=</span> <span class="n">h</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="n">hes</span> <span class="n">vrednost</span> <span class="n">trazene</span> <span class="n">podniske</span> <span class="n">w</span>
+<span class="n">za</span> <span class="n">savaku</span> <span class="n">poziciju</span> <span class="n">p</span> <span class="n">od</span> <span class="mi">0</span> <span class="n">do</span> <span class="o">|</span><span class="n">s</span><span class="o">|-|</span><span class="n">w</span><span class="o">|</span><span class="p">:</span>
+    <span class="n">neka</span> <span class="n">je</span> <span class="n">hs</span> <span class="o">=</span> <span class="n">h</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">p</span><span class="o">..</span><span class="n">p</span><span class="o">+|</span><span class="n">w</span><span class="o">|-</span><span class="mi">1</span><span class="p">])</span> <span class="n">hes</span> <span class="n">vrednost</span> <span class="n">dela</span> <span class="n">teksta</span> <span class="n">s</span>
+    <span class="n">koji</span> <span class="n">pocinje</span> <span class="n">na</span> <span class="n">poziciji</span> <span class="n">p</span> <span class="n">i</span> <span class="n">duzine</span> <span class="n">je</span> <span class="n">kao</span> <span class="n">niska</span> <span class="o">|</span><span class="n">w</span><span class="o">|</span>
+    <span class="n">ako</span> <span class="n">je</span> <span class="n">hs</span> <span class="o">=</span> <span class="n">hp</span><span class="p">:</span>
+        <span class="n">ako</span> <span class="n">su</span> <span class="n">karakteri</span> <span class="n">niski</span> <span class="n">s</span><span class="p">[</span><span class="n">p</span><span class="o">..</span><span class="n">p</span><span class="o">+|</span><span class="n">w</span><span class="o">|-</span><span class="mi">1</span><span class="p">]</span> <span class="n">i</span> <span class="n">w</span> <span class="n">jednaki</span><span class="p">:</span>
+            <span class="n">vrati</span> <span class="n">da</span> <span class="n">je</span> <span class="n">podniska</span> <span class="n">je</span> <span class="n">pronadjena</span> <span class="n">na</span> <span class="n">poziciji</span> <span class="n">p</span>
+<span class="n">vrati</span> <span class="n">da</span> <span class="n">podniska</span> <span class="n">nije</span> <span class="n">pronadjena</span>
+</pre></div>
+</div>
+<p>Вероватноћа да различите ниске имају исте хеш-вредности је обично јако
+мала, тако да ће се приликом претраге подниске, обично редом добијати
+различите хеш-вредности све док се не пронађе појавиљивање подниске и
+тада ће се добити исти бројеви и само тада ће се поредити карактери
+(да бисмо били потпуно сигурни да смо заиста нашли подниску).</p>
+<p>Рачунање хеш-вредности ниске подразумева анализу свих њених карактера,
+па је сложеност те операције обично линеарна у односу на број
+карактера ниске.  Рачунање хеш-вредности подниске која се тражи врши
+се само једном, пре почетка претраге. Међутим, током извршавања
+Рабин-Карповог алгоритма, у најгорем случају је потребно израчунати
+хеш-вредности свих подниски дужине <span class="math notranslate nohighlight">\(n = |w|\)</span> ниске <span class="math notranslate nohighlight">\(s\)</span> (за
+сваку позицију анализира се нова подниска). Ако се то ради за сваку
+подниску изнова, сложеност алгоритма била би веома лоша (за сваку од
+<span class="math notranslate nohighlight">\(O(m)\)</span> позиција рачунали бисмо хеш-вредност подниске дужине
+<span class="math notranslate nohighlight">\(n\)</span> која на тој позицији почиње и то би се радило у сложености
+<span class="math notranslate nohighlight">\(O(n)\)</span>, па би укупна сложеност била <span class="math notranslate nohighlight">\(O(mn)\)</span>, што желимо да
+избегнемо). Решење је да хеш-вредности рачунамо инкрементално. Наиме,
+две суседне подниске дужине <span class="math notranslate nohighlight">\(n\)</span> унутар ниске <span class="math notranslate nohighlight">\(s\)</span> деле
+велики број карактера и разликују се само на почетку и на крају. На
+пример, ако је текст <code class="docutils literal notranslate"><span class="pre">abcdefg</span></code> његове подниске дужине 4 су:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abcd</span>
+ <span class="n">bcde</span>
+  <span class="n">cdef</span>
+   <span class="n">defg</span>
+</pre></div>
+</div>
+<p>Свака наредна подниска се добија избацивањем почетног карактера
+претходне и додавањем новог карактера на њен крај. Хеш-функције се
+дизајнирају тако да омогућавају лако ажурирање приликом измене ниске
+помоћу ове две операције (такве хеш-функције се зову <strong>котрљајући
+хеш</strong>, енгл. rolling hash). На пример, хеш вредност се може добити
+тако што се сваки карактер тумачи као цифра у некој великој бројевној
+основи <span class="math notranslate nohighlight">\(B\)</span> и хеш вредност се онда тумачи као вредност броја у
+тој основи. На пример, ако се користи ASCII таблица, тада основа система
+може да буде 128, а цифре које одговарају карактерима су одређене њиховом
+ASCII кодовима. Да не би дошло до прекорачења, вредност броја се
+рачуна по неком модулу <span class="math notranslate nohighlight">\(M\)</span>. Ако се одабере таква хеш-функција
+<span class="math notranslate nohighlight">\(h\)</span>, Хеш-вредност ниске <code class="docutils literal notranslate"><span class="pre">abcd</span></code> била би</p>
+<div class="math notranslate nohighlight">
+\[h(abcd) = (97\cdot 128^3 + 98\cdot 128^2 + 99\cdot 128^1 + 100\cdot 128^0)\ \mathrm{mod}\ M\]</div>
+<p>У општем случају, рачунамо вредност</p>
+<div class="math notranslate nohighlight">
+\[h(a_{n-1}a_{n-2}\ldots a_1a_0) = (a_{n-1} B^{n-1} + a_{n-2} B^{n-2} + \ldots + a_1 B + a_0)\ \mathrm{mod}\ M\]</div>
+<p>Ово се ефикасно може израчунати Хорнеровом схемом</p>
+<div class="math notranslate nohighlight">
+\[(\ldots (a_{n-1}\cdot_M B +_M a_{n-2}) \cdot_M B^{n-2}) \ldots +_M a_1)\cdot_M B +_M a_0\]</div>
+<p>где су са <span class="math notranslate nohighlight">\(+_M\)</span> и <span class="math notranslate nohighlight">\(\cdot_M\)</span> означене операције сабирања и
+множења по модулу <span class="math notranslate nohighlight">\(M\)</span>. Ажурирање хеш-вредности се тада може
+вршити у константној сложености. Прво се од тренутне хеш вредности
+одузме вредност <span class="math notranslate nohighlight">\((a_{n-1} \cdot B^{n-1})\ \mathrm{mod}\ M\)</span>,
+затим се добијена вредност помножи са <span class="math notranslate nohighlight">\(B\)</span> по модулу <span class="math notranslate nohighlight">\(M\)</span> и
+на крају јој се дода ASCII код новог карактера. При том, вредност
+<span class="math notranslate nohighlight">\((B^{n-1})\ \mathrm{mod}\ M\)</span> израчунавамо само једном, на
+почетку рада алгоритма.</p>
+<p>Покушај да на основу овог описа алгоритма направиш његову
+имплементацију (то не би требало да буде тешко).</p>
+<p>Поред алгоритама КМП и хеширања ниски, у пракси се користи и трећи
+веома ефикасан алгоритам претраге подниске - <strong>Бојер-Муров
+алгоритам</strong>.  Покушајте да пронађете његов опис на интернету. Он је
+компликованији од два алгоритма приказана у овом тексту, али у се
+пракси показује као најефикаснији.</p>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="24_geometrijski_dalje.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Визуализација</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Визуализација<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Међу проблемима из области рачунарске геометрије које смо до сада разматрали, неки су врло погодни
+за визуализацију у графичким апликацијама. На овом месту претпостављамо да сте већ стекли основно
+знање о креирању графичких апликација, па те основе нећемо објашњавати овде. Читаоце који немају
+искуства у прављењу графичких апликација упућујемо на Петљин приручник
+<a class="reference external" href="https://petlja.org/biblioteka/r/kursevi/gui_cs-sr-cyrl">Мали увод у графички кориснички интерфејс</a>.</p>
+<p>У наставку разматрамо неке уобичајене проблеме које треба решити приликом визуализације, као што је
+омогућавање кориснику да приказ помери, увећа или умањи по својој жељи. Приказаћемо начин на који
+ово може да се постигне, тако да овде приказану технику можете да комбинујете са својим програмима,
+који ће илустровати нешто од раније наученог.</p>
+<p>Чак и ако се одлучите да правите једноставније програме који не омогућавају померање и зумирање
+приказа, свакако ћете имати потребе да рачунате координате у корисниковом координатном систему
+када су дате координате у пикселима и обрнуто, тако да препоручујемо да свакако проучите бар део
+о трансформацији координата.</p>
+<p>Комплетан изворни кôд примера који је овде делимично изложен, можете да преузмете на насловној
+страници курса.</p>
+<div class="section" id="id3">
+<h2>Трансформације између координата света и екрана<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Корисник програма за визуализацију има на уму неки свој координатни систем, у коме <span class="math notranslate nohighlight">\(y\)</span>
+координата вероватно расте навише, а јединична дуж је је обично знатно већа од једног пиксела
+екрана. То значи да, када пишемо такав програм, имамо посла са два координатна система. Један
+координатни систем је корисников, а други потиче од прозора у коме цртамо. Уобичајено је да се
+координате тачака у ова два система зову редом координате света и координате екрана. Програм
+треба писати тако да су све информације које корисник задаје и добија изражене у координатама
+света.</p>
+<p>Због тога је потребно да можемо брзо и једноставно да прерачунавамо координате тачака, тј. да од
+координата тачке у једном систему добијемо координате у другом.</p>
+<div class="figure align-center" id="id10">
+<img alt="../_images/transformacija_koordinata.png" src="../_images/transformacija_koordinata.png" />
+<p class="caption"><span class="caption-text">Координате света (зелено) и екрана (плаво).</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id4">
+<h3>Трансформације светских координата у екранске<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Размотримо прво како на основу координата <span class="math notranslate nohighlight">\((x_w, y_w)\)</span> неке тачке <span class="math notranslate nohighlight">\(P\)</span> у систему света да
+израчунамо координате <span class="math notranslate nohighlight">\((x_s, y_s)\)</span> исте тачке у систему екрана.</p>
+<p>Нека је, на пример, <span class="math notranslate nohighlight">\(x_w=6, y_w=4.5\)</span>, тј. нека су координате тачке <span class="math notranslate nohighlight">\(P\)</span> у систему света
+<span class="math notranslate nohighlight">\((6, 4.5)\)</span>. Нека је координатни систем света померен у односу на систем екрана тако да су
+екранске координате координатног почетка светског система <span class="math notranslate nohighlight">\((-450, 550)\)</span>. Да бисмо израчунали
+екранске координате <span class="math notranslate nohighlight">\((x_s, y_s)\)</span> тачке <span class="math notranslate nohighlight">\(P\)</span>, потребно је још да знамо дужине јединичних
+дужи координатних оса система света, изражене у пикселима, тј. јединицама координатног система екрана.
+Означимо те дужине редом са <span class="math notranslate nohighlight">\(a, b\)</span> (<span class="math notranslate nohighlight">\(a\)</span> за осу <span class="math notranslate nohighlight">\(x\)</span>, а <span class="math notranslate nohighlight">\(b\)</span> за осу <span class="math notranslate nohighlight">\(y\)</span>).</p>
+<div class="figure align-center" id="id11">
+<img alt="../_images/transformacija_w_s.png" src="../_images/transformacija_w_s.png" />
+<p class="caption"><span class="caption-text">Израчунавање координата екрана <cite>Xs, Ys</cite>, када су познате координате света <cite>Xw, Yw</cite>.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>Користећи боје и ознаке са слике, закључујемо да вредност <span class="math notranslate nohighlight">\(x_s\)</span> можемо да израчунамо када „на плаву
+координату зелене <span class="math notranslate nohighlight">\(y\)</span> осе (а то је <span class="math notranslate nohighlight">\(x_t=-450\)</span>) додамо <span class="math notranslate nohighlight">\(x_w\)</span> дужи од по <span class="math notranslate nohighlight">\(a\)</span> пиксела”.
+Слично томе, вредност <span class="math notranslate nohighlight">\(y_s\)</span> можемо да израчунамо када „од плаве координате зелене <span class="math notranslate nohighlight">\(x\)</span> осе (а то је
+<span class="math notranslate nohighlight">\(y_t=550\)</span>) одузмемо <span class="math notranslate nohighlight">\(y_w\)</span> дужи од по <span class="math notranslate nohighlight">\(b\)</span> пиксела”. Конкретно, ако узмемо <span class="math notranslate nohighlight">\(a=b=100\)</span>,
+добијамо:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_s &amp;= -450 + 100 \cdot 6 = 150,\\
+y_s &amp;= 550 - 100 \cdot 4.5 = 100.\\
+\end{aligned}\end{split}\]</div>
+<p>Приметимо да вредност <span class="math notranslate nohighlight">\(y_s\)</span> добијамо одузимањем а не сабирањем, зато што су <span class="math notranslate nohighlight">\(y\)</span> осе у
+ова два координатна система различито усмерене.</p>
+<p>Пређимо сада на општи случај. Нека је познат положај координатног почетка и величине јединичних дужи
+система света у координатама екрана. Конкретније, нека су дати следећи параметри:</p>
+<ul class="simple">
+<li><p>координате <span class="math notranslate nohighlight">\((x_t, y_t)\)</span> координатног почетка система света, изражене у систему екрана,</p></li>
+<li><p>дужине <span class="math notranslate nohighlight">\(a, b\)</span> водоравне и усправне јединичне дужи система света, изражене у систему екрана.</p></li>
+</ul>
+<p>Знајући <span class="math notranslate nohighlight">\(x_t, y_t, a, b\)</span>, за било коју тачку чије су координате у систему света једнаке
+<span class="math notranslate nohighlight">\((x_w, y_w)\)</span>, екранске координате <span class="math notranslate nohighlight">\((x_s, y_s)\)</span> исте тачке можемо да израчунамо по формулама:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_s &amp;= a \cdot x_w + x_t,\\
+y_s &amp;= -b \cdot y_w + y_t.\\
+\end{aligned}\end{split}\]</div>
+<p>И у општем случају подразумевамо да су <span class="math notranslate nohighlight">\(x\)</span> осе у овим системима усмерене исто, а <span class="math notranslate nohighlight">\(y\)</span> осе
+различито, па зато у првој формули стоји плус, а у другој минус.</p>
+<p>Из ових формула лако се добија и обрнута трансформација.</p>
+</div>
+<div class="section" id="id5">
+<h3>Трансформације екранских координата у светске<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Када су дате координате <span class="math notranslate nohighlight">\((x_s, y_s)\)</span> тачке <span class="math notranslate nohighlight">\(P\)</span> у систему екрана, онда координате
+<span class="math notranslate nohighlight">\((x_w, y_w)\)</span> те тачке у систему света можемо да израчунамо помоћу следећих формула:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_w &amp;= \frac{1}{a} (x_s - x_t),\\
+y_w &amp;= -\frac{1}{b} (y_s - y_t).\\
+\end{aligned}\end{split}\]</div>
+<p>Еко како изгледају функције за прерачунавање координата. Напомињемо да се у програму за уведене
+параметре користе мало дужа имена:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_t\)</span> је у програму <code class="docutils literal notranslate"><span class="pre">TranslationX</span></code></p></li>
+<li><p><span class="math notranslate nohighlight">\(y_t\)</span> је у програму <code class="docutils literal notranslate"><span class="pre">TranslationY</span></code></p></li>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> је у програму <code class="docutils literal notranslate"><span class="pre">ScalingX</span></code></p></li>
+<li><p><span class="math notranslate nohighlight">\(b\)</span> је у програму <code class="docutils literal notranslate"><span class="pre">ScalingY</span></code></p></li>
+</ul>
+
+<div data-childcomponent="transformacija_koordinata" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=transformacija_koordinata data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+private void WorldToScreen(float xw, float yw, out float xs, out float ys)
+{
+    xs = xw * ScalingX + TranslationX;
+    ys = -yw * ScalingY + TranslationY;
+}
+private void ScreenToWorld(float xs, float ys, out float xw, out float yw)
+{
+    xw = (xs - TranslationX) / ScalingX;
+    yw = (ys - TranslationY) / -ScalingY;
+}
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Транслаторно померање слике вучењем<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Разумно је очекивати да корисник повремено жели да види део координатног система који тренутно
+није приказан на екрану. Многи програми зато омогућавају кориснику да мишем повуче приказ у жељену
+страну. Корисник вуче приказ тако што помера миша са притиснутим тастером и за то време координате
+миша не треба да се се мењају у систему света, већ само у систему екрана.</p>
+<p>Како се мењају параметри трансформације координата приликом вучења приказа? Дужине <span class="math notranslate nohighlight">\(a, b\)</span>
+јединичних дужи се не мењају, али се мења положај <span class="math notranslate nohighlight">\(x_t, y_t\)</span> координатног почетка система
+света, и то тачно за онолико, за колико се помери миш приликом вучења. Према томе, да бисмо подржали
+вучење приказа, потребно је да током померања миша са притиснутим тастером ажурирамо вредности
+<span class="math notranslate nohighlight">\(x_t\)</span> и <span class="math notranslate nohighlight">\(y_t\)</span> у формулама (променљиве <code class="docutils literal notranslate"><span class="pre">TranslationX</span></code> и <code class="docutils literal notranslate"><span class="pre">TranslationY</span></code> у програму).
+Ево како то може да изгледа у програму:</p>
+
+<div data-childcomponent="podrska_vucenju_prikaza" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=podrska_vucenju_prikaza data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+private void Form1_MouseDown(object sender, MouseEventArgs e)
+{
+    if (e.Button == MouseButtons.Right)
+    {
+        // zapocni vucenje
+        IsDragging = true;
+        LastDraggingPosX = e.X;
+        LastDraggingPosY = e.Y;
+    }
+    ... // druge obrade dogadjaja pritiska tastera misa
+}
+
+private void Form1_MouseMove(object sender, MouseEventArgs e)
+{
+    if (IsDragging)
+    {
+        TranslationX += e.X - LastDraggingPosX;
+        TranslationY += e.Y - LastDraggingPosY;
+        LastDraggingPosX = e.X;
+        LastDraggingPosY = e.Y;
+        Invalidate();
+    }
+    ... // druge obrade dogadjaja pomeranja misa
+}
+
+private void Form1_MouseUp(object sender, MouseEventArgs e)
+{
+    if (e.Button == MouseButtons.Right)
+        IsDragging = false;
+}
+</textarea>
+</div>
+<p>Покретањем примера који следи, можете да стекнете јаснију представу о томе како програм треба да се
+понаша приликом вучења приказа мишем. Резимирајмо које је очекивано понашање:</p>
+<ul class="simple">
+<li><p>Програм приказује на екрану нацртан координатни систем света и координате миша у систему света.</p></li>
+<li><p>Током обичног померања миша мењају се приказане координате миша у систему света, а положај
+координатног система света се не мења.</p></li>
+<li><p>Насупрот томе, када корисник вуче приказ (тј. помера миша са притиснутим тастером), приказане
+координате миша се не мењају, али се мења положај целог координатног система света.</p></li>
+</ul>
+
+<div data-childcomponent="viz_transformacije_koordinata_py" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=viz_transformacije_koordinata_py data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import math
+import pygame as pg
+
+X, Y = 0, 1
+
+pg.init()
+
+pg.display.set_caption(&quot;Трансформације координата&quot;)
+(W, H) = (600, 400)
+canvas = pg.display.set_mode((W, H))
+
+ScalingX = 50.0
+ScalingY = 50.0
+TranslationX = 20.0
+TranslationY = 580.0
+GridDragX0 = -1
+GridDragY0 = -1
+IsDraggingGrid = False
+fontSize = 25
+ex, ey = 0, 0 # mouse position
+message = &apos;&apos;
+
+def WorldToScreen(xw, yw):
+    xs = xw * ScalingX + TranslationX
+    ys = -yw * ScalingY + TranslationY
+    return (xs, ys)
+
+def ScreenToWorld(xs, ys):
+    xw = (xs - TranslationX) / ScalingX
+    yw = (ys - TranslationY) / -ScalingY
+    return (xw, yw)
+
+def DrawText(s, x, y, color):
+    font = pg.font.SysFont(&quot;Arial&quot;, int(fontSize))
+    txt = font.render(s, True, color)
+    # tw, th = (txt.get_width(), txt.get_height())
+    # x, y = (x - tw * (x / W), y - th * (y / H))
+    canvas.blit(txt, (x, y))
+
+def Draw():
+    canvas.fill(pg.Color(&quot;white&quot;))
+
+    # compute important points
+    xs0, xs1 = 0, W
+    ys0, ys1 = 0, H
+    xw0, yw0 = ScreenToWorld(xs0, ys0)
+    xw1, yw1 = ScreenToWorld(xs1, ys1)
+
+    gxw0 = math.ceil(xw0)
+    gxw1 = math.floor(xw1)
+    gyw0 = math.floor(yw0)
+    gyw1 = math.ceil(yw1)
+    gxs0, gys0 = WorldToScreen(gxw0, gyw0)
+    gxs1, gys1 = WorldToScreen(gxw1, gyw1)
+    xsYAxis, ysXAxis = WorldToScreen(0, 0)
+    
+    # draw grid
+    xw, xs = gxw0, gxs0
+    while xs &lt;= gxs1:
+        pg.draw.line(canvas, pg.Color(&quot;black&quot;), (xs, ys0), (xs, ys1))
+        DrawText(str(int(xw)), xs, ys1-fontSize, pg.Color(&quot;black&quot;))
+        xw += 1
+        xs += ScalingX
+    yw, ys = gyw0, gys0
+    while ys &lt;= gys1:
+        pg.draw.line(canvas, pg.Color(&quot;black&quot;), (xs0, ys), (xs1, ys))
+        DrawText(str(int(yw)), xs0, ys, pg.Color(&quot;black&quot;))
+        yw -= 1
+        ys += ScalingY
+
+    pg.draw.line(canvas, pg.Color(&quot;black&quot;), (xs0, ysXAxis), (xs1, ysXAxis), 3) # x-axis
+    pg.draw.line(canvas, pg.Color(&quot;black&quot;), (xsYAxis, ys0), (xsYAxis, ys1), 3) # y-axis
+
+    if message != &apos;&apos;:
+        DrawText(message, ex, ey, pg.Color(&quot;blue&quot;))
+
+    pg.display.update()
+
+Draw()
+while True:
+    event = pg.event.wait()
+
+    should_draw = False
+    message = &apos;&apos;
+    if event.type == pg.QUIT:
+        break
+    elif event.type == pg.MOUSEBUTTONDOWN:
+        GridDragX0 = ex
+        GridDragY0 = ey
+        IsDraggingGrid = True
+        should_draw = True
+        pass
+    elif event.type == pg.MOUSEMOTION:
+        ex, ey = event.pos
+        x, y = ScreenToWorld(ex, ey)
+        message = &apos;({:0.2f}, {:0.2f})&apos;.format(x, y)
+        should_draw = True
+        if IsDraggingGrid:
+            ex, ey = event.pos
+            TranslationX += ex - GridDragX0
+            TranslationY += ey - GridDragY0
+            GridDragX0 = ex
+            GridDragY0 = ey
+    elif event.type == pg.MOUSEBUTTONUP:
+        IsDraggingGrid = False
+    elif event.type == pg.KEYDOWN:
+        if event.key == pg.K_LEFT:
+            TranslationX -= 5
+            should_draw = True
+        elif event.key == pg.K_RIGHT:
+            TranslationX += 5
+            should_draw = True
+        elif event.key == pg.K_UP:
+            TranslationY -= 5
+            should_draw = True
+        elif event.key == pg.K_DOWN:
+            TranslationY += 5
+            should_draw = True
+
+    if event.type == pg.MOUSEBUTTONDOWN:
+        if event.button == 4: # mousewheel up
+            ScalingX /= 1.1
+            ScalingY /= 1.1
+            fontSize /= 1.1
+            should_draw = True 
+        elif event.button == 5: # mousewheel down
+            ScalingX *= 1.1
+            ScalingY *= 1.1
+            fontSize *= 1.1
+            should_draw = True
+
+    if should_draw:
+        Draw()
+
+pg.quit()
+"  >
+
+
+</textarea>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>Зумирање<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>Корисник може да има потребу да увећа или умањи приказ који му нудимо. То се у програмима најчешће
+ради окретањем точка миша. Размислимо како треба да се промене параметри трансформације координата,
+да бисмо подржали умањивање или увећавање приказа. Овај пут, мењају се дужине <span class="math notranslate nohighlight">\(a, b\)</span> јединичних
+дужи. Када је потребно да се приказ увећа, ове дужине множимо неким коефицијентом (већим од један),
+а када треба да се смањи, дужине делимо истим коефицијентом. Када се мења величина приказа, пожељно
+је да се промени и величина фонта којим се црта текст на екрану, што постижемо множењем или дељењем
+величине фонта истим коефицијентом који користимо и за промену параметара трансформације координата.</p>
+<p>Положај <span class="math notranslate nohighlight">\(x_t, y_t\)</span> координатног почетка система света не морамо да мењамо, и у том случају ће
+управо координатни почетак бити непомична тачка у приказу. Оно што такође често виђамо у програмима
+је да непомична тачка буде тренутна позиција миша. У том случају треба променити и вредности
+<span class="math notranslate nohighlight">\(x_t, y_t\)</span>, а извођење формула за нове вредности ових параметара остављамо читаоцима за вежбу.</p>
+<p>У програму, подршка промени величине приказа може да изгледа овако:</p>
+
+<div data-childcomponent="podrska_zumiranju" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=podrska_zumiranju data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+    private void Form1_MouseMove(object sender, MouseEventArgs e)
+    {
+        ... // ostale obrade dogadjaja pomeranja misa
+        if (e.Delta != 0)
+        {
+            // tocak misa je okrenut, zumiraj (ka ili od)
+            int WheelDelta = SystemInformation.MouseWheelScrollDelta;
+            float f = (float)Math.Pow(1.1, -e.Delta / WheelDelta);
+            ScalingX *= f;
+            ScalingY *= f;
+            FontSize *= f;
+            Invalidate();
+        }
+        ... // ostale obrade dogadjaja pomeranja misa
+</textarea>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Пример - поплочавање равни<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>T O D O</strong> - опис и дорада примера (померање и зумирање, без трансформације), JavaScript кôд</p>
+
+    </div></div>
+</div>
+<div class="section" id="id9">
+<h2>Задаци:<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Написати програм који омогућава кориснику да кликовима зада произвољан број тачака,
+а приказује задате тачке и најмањи рам (поравнати правоугаоник) који их садржи.</p></li>
+<li><p>Написати програм који омогућава кориснику да кликовима зада три тачке, а приказује
+паралелограм коме су задате тачке редом прва три темена (програм треба да одреди
+четврто теме).</p></li>
+<li><p>Написати програм који омогућава кориснику да кликовима зада две тачке, а приказује
+квадрат коме су то два суседна темена.</p></li>
+<li><p>Написати програм који омогућава кориснику да кликовима зада две тачке, а приказује
+квадрат коме су то два наспрамна темена.</p></li>
+<li><p>Написати програм који омогућава кориснику да кликовима зада три тачке, а затим
+одговара на питање да ли дата тројка чини заокрет и на коју страну.</p></li>
+<li><p>Написати програм који омогућава кориснику да кликовима зада темена многоугла, а
+затим одговара на питање да ли је задати многоугао конвексан.</p></li>
+<li><p>Написати програм који омогућава кориснику да кликовима зада темена многоугла, а
+затим израчунава и приказује обим и површину тог многоугла.</p></li>
+</ul>
+<p>Програмима по жељи можете да додате контроле или другачију подршку, помоћу које
+корисник може да обрише тачку, помери тачку, понови цео поступак и слично.</p>
+<p>Технике које су овде приказане можете и не морате да користите у својим програмима.
+Приказане технике су нарочито корисне у последњем задатку.</p>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="05b_obimi_i_povrsine_quiz.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

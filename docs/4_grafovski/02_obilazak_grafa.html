@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обилазак графова</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Обилазак графова<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Основни задаци над графом се често своде на то да се, кренувши од неког
+почетног чвора, праћењем грана обиђу сви чворови графа који су
+достижни из тог полазног чвора. Ако је неусмерен граф повезан, тиме ће
+се обићи сви његови чворови, а ако није, онда ће се обићи компонента
+повезаности којој припада почетни чвор.</p>
+<p>Примене обилазака графа су многобројне, а неке од њих ћемо видети у
+наставку (на пример, одређивање компонената повезаности и тополошко
+сортирање).</p>
+<p>Постоје два основна алгоритма за обилазак графа: <strong>обилазак у дубину</strong>
+(енгл. <em>depth first</em>) и <strong>обилазак у ширину</strong> (енгл. <em>breadth first</em>).</p>
+<div class="section" id="id2">
+<h2>Обилазак графа у дубину<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Обилазак графа у дубину можемо описати тако што размотримо како се
+обично крећемо када обилазимо неки музеј. Размотримо мапу музеја
+приказану на наредној слици.</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/muzej.png"><img alt="../_images/muzej.png" src="../_images/muzej.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Обилазак музеја (зеленим стрелицама је означено куда смо пролазили
+док смо први пут посећивали неке собе (пошавши из собе I), а црвеним
+куда смо пролазили док смо се враћали кроз собе које смо већ раније
+посетили).</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Претпоставимо да обилазак креће из собе I. Један начин да направимо
+обилазак је да кренемо на север и редом пролазимо кроз собе G и C,
+затим да скренемо на запад и прођемо кроз собе B и A, и затом да
+кренемо на југ и дођемо у собу F. Након тога не можемо да идемо даље и
+морамо да се враћамо до собе C. Одатле сада можемо да кренемо на исток
+кроз собе D и E и затим на југ до собе H. Тада се поново враћамо до
+собе C, а затим и до собе I. На веома сличан начин обилазимо и јужни
+део музеја и на крају се враћамо до собе I. Ово кретање је приказано и
+на следећој анимацији.</p>
+
+    <div class="gallery" id="obilazak_muzeja_dfs">
+        <div>
+            <div style="width: 200px;height:100%">
+            <img src="../_images/muzej0.png" width="100%" height="100%">
+<img src="../_images/muzej1.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej21.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej22.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej23.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej24.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej25.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej26.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej27.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej28.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej29.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej30.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej31.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej32.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej33.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej34.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="obilazak_muzeja_dfs-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Собе музеја и везе између њих се могу представити неусмереним графом
+(у овом случају граф је дрво). На наредној слици је представљен тај
+граф и његов обилазак.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/muzej-drvo.png"><img alt="../_images/muzej-drvo.png" src="../_images/muzej-drvo.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Граф који представља музеј. На слици је обележен и обилазак музеја
+(зеленим стрелицама је означено куда смо пролазили док смо први
+пут посећивали неке собе, а црвеним куда смо пролазили док смо се
+враћали кроз собе које смо већ раније посетили).</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Поступак који спроводимо приликом доласка у сваку собу се може
+рекурзивно описати на следећи начин:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poseti_sobu</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">za</span> <span class="n">svaku</span> <span class="n">sobu</span> <span class="n">s</span><span class="s1">&#39; koja je susedna sa sobom s</span>
+         <span class="n">poseti_sobu</span><span class="p">(</span><span class="n">s</span><span class="s1">&#39;)</span>
+</pre></div>
+</div>
+<p>Ипак, овако једноставан поступак нас неће увек успешно спровести кроз
+све собе музеја. Размотримо обилазак музеја који је приказан на
+наредној слици.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../_images/muzej-ciklus.png"><img alt="../_images/muzej-ciklus.png" src="../_images/muzej-ciklus.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Обилазак музеја који се никада не зауставља.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Обилазак започињемо из собе I и долазимо до собе C. Након тога крећемо
+да пролазимо једну по једну собу по ободу музеја. Пошто никада не
+стижемо до краја (из собе F сада можемо да наставимо кретање и дођемо
+у собу X, па затим и у собу J), догодиће нам се да ћемо се стално
+вртети у круг. Проблем је настао зато што у графу постоји циклус (од C
+до C) и наш обилазак креће да кружи дуж тог циклуса.</p>
+<p>Проблем можемо решити тако што ћемо памтити које собе смо већ посетили
+(као Ивица и Марица који су постављали каменчиће дуж свог пута) и
+избегавати да идемо даље у собу у којој смо већ били (у исту собу
+можемо доћи само када се враћамо из неке претходне). На тај начин када
+дођемо до собе D, нећемо ићи даље у собу C (јер смо у њој већ били),
+већ ћемо се вратити назад до собе О из које ћемо имати могућност да
+пређемо на север у собу K коју нисмо раније посетили. Из собе K нећемо
+ићи даље ка соби I (јер смо у њој већ били) него ћемо се вратити до
+собе O из које ћемо се вратити назад све до собе C. Из ње не можемо
+ићи у непосећене собе (јер смо собу D већ посетили) тако да се враћамо
+назад у собу I из које такође немамо непосећених алтернатива (јер смо
+собу K обишли), па завршавамо обилазак.</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../_images/muzej-ciklus-ispravno.png"><img alt="../_images/muzej-ciklus-ispravno.png" src="../_images/muzej-ciklus-ispravno.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Обилазак музеја када се избегава прелазак у собе које су већ биле
+посећене.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>У наредној анимацији је приказан овај обилазак музеја. Са десне стране
+је приказан и граф који одгогвара мапи музеја (са експлицитно
+приказаним гранама).</p>
+
+    <div class="gallery" id="obilazak_muzeja_ciklus_dfs">
+        <div>
+            <div style="width: 400px;height:100%">
+            <img src="../_images/muzej_c0.png" width="100%" height="100%">
+<img src="../_images/muzej_c1.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c21.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c22.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c23.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c24.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c25.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c26.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c27.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c28.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c29.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c30.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c31.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c32.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c33.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c34.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c35.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c36.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c37.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/muzej_c38.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="obilazak_muzeja_ciklus_dfs-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Рекурзивни алгоритам који овај пут спроводимо се може описати на следећи начин:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poseti_sobu</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">zapamti</span> <span class="n">da</span> <span class="n">si</span> <span class="n">posetio</span> <span class="n">sobu</span> <span class="n">s</span>
+    <span class="n">za</span> <span class="n">svaku</span> <span class="n">sobu</span> <span class="n">s</span><span class="s1">&#39; koja je susedna sa sobom s</span>
+         <span class="n">ako</span> <span class="n">s</span><span class="s1">&#39; nije posećena:</span>
+            <span class="n">poseti_sobu</span><span class="p">(</span><span class="n">s</span><span class="s1">&#39;)</span>
+</pre></div>
+</div>
+<p>На основу овог псеудокода могуће је веома једноставно направити и
+реалан програмски кôд у језику C#. Претпостављамо да је граф
+представљен листама повезаности.</p>
+
+<div data-childcomponent="fun_dfs_rekurz" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fun_dfs_rekurz data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="static void DFS(int cvor, List&lt;List&lt;int&gt;&gt; susedi, bool[] posecen)
+{
+    Console.WriteLine(&quot;Poseta cvoru {0}&quot;, cvor);
+    posecen[cvor] = true;
+    foreach (int sused in graf[cvor])
+        if (!posecen[sused])
+            DFS(sused, graf, posecen);
+}
+
+static void DFS(int cvor, List&lt;List&lt;int&gt;&gt; susedi)
+{
+    int n = susedi.Count;
+    bool[] posecen = new bool[n];
+    return DFS(cvor, susedi, posecen);
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Приликом обиласка графа у исти чвор се можемо вратити више
+пута. Најзначајније су нам прва посета (када први пут уђемо у тај
+чвор) и последња посета (када напустимо чвор и не враћамо се у њега
+након тога). Приликом сваке посете чвору можемо извршити неку обраду
+(на пример, исписати назив чвора). Обрада приликом прве посете се
+назива <strong>улазна обрада</strong>, а приликом последње посете се назива
+<strong>излазна обрада</strong>. Њих је веома једноставно реализовати у склопу
+рекурзивне имплементације обиласка у дубину.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poseti_cvor</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">zapamti</span> <span class="n">da</span> <span class="n">si</span> <span class="n">posetio</span> <span class="n">cvor</span> <span class="n">c</span>
+    <span class="n">izvrsi</span> <span class="n">ulaznu</span> <span class="n">obradu</span> <span class="n">cvora</span> <span class="n">c</span>
+    <span class="n">za</span> <span class="n">svaki</span> <span class="n">cvor</span> <span class="n">c</span><span class="s1">&#39; koja je susedan čvoru c</span>
+         <span class="n">ako</span> <span class="n">c</span><span class="s1">&#39; nije posećen:</span>
+            <span class="n">poseti_cvor</span><span class="p">(</span><span class="n">c</span><span class="s1">&#39;)</span>
+    <span class="n">izvrsi</span> <span class="n">izlaznu</span> <span class="n">obradu</span> <span class="n">cvora</span> <span class="n">c</span>
+</pre></div>
+</div>
+<p>Улазна и/или излазна обрада се разликују у зависности од примене
+(најчешће постоји само једна обрада). У раније приказаном C# коду
+улазна обрада је била испис чвора, док је излазна обрада била
+изостављена.</p>
+<p>Ако претпоставимо да улазна обрада чвора подразумева да се он обоји у
+сиву боју, а излазна да се обоји у црну боју, наредне анимације
+приказују обилазак у дубину два графа (први је дрво, а други граф који
+садржи циклусе.</p>
+
+    <div class="gallery" id="obilazak_drveta_dfs">
+        <div>
+            <div style="width: 400px;height:100%">
+            <img src="../_images/dfs_a01.png" width="100%" height="100%">
+<img src="../_images/dfs_a02.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a03.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a04.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a05.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a06.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a07.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a08.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a09.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_a21.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="obilazak_drveta_dfs-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+
+    <div class="gallery" id="obilazak_grafa_dfs">
+        <div>
+            <div style="width: 500px;height:100%">
+            <img src="../_images/dfs_b01.png" width="100%" height="100%">
+<img src="../_images/dfs_b02.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b03.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b04.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b05.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b06.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b07.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b08.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b09.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/dfs_b21.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="obilazak_grafa_dfs-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Иако је претходни граф садржао циклусе редослед обиласка у дубину
+(чворови и зелене стрелице које их спајају) чине дрво. То није
+случајно и увек ће се догађати приликом обиласка у дубину. То дрво се
+назива <strong>дрво обиласка у дубину</strong> или <strong>ДФС дрво</strong>. Дрво обиласка у
+дубину претходног графа је приказано на наредној слици.</p>
+<a class="reference internal image-reference" href="../_images/dfs-drvo.png"><img alt="../_images/dfs-drvo.png" class="align-center" src="../_images/dfs-drvo.png" style="width: 200px;" /></a>
+<p>Нагласимо да се обиласком у дубину покренутим из неког чвора обилазе
+само они чворови који су достижни из тог чвора. Ако је неусмерен граф
+који се обилази неповезан, тада ће се обићи само компонента
+повезаности којој припада почетни чвор. Ако се жели обилазак целог
+графа, обилазак у дубину је потребно покретати више пута (по једном за
+сваку компоненту повезаности).</p>
+<p>Скрећемо ти пажњу на наредни веб-сајт на Математичком факултету:
+<a class="reference external" href="http://www.matf.bg.ac.rs/~filip/algoritmi/dfs.html">http://www.matf.bg.ac.rs/~filip/algoritmi/dfs.html</a>. На њему
+можеш још мало да утврдиш поступак обиласка графа у дубину, али и да
+провериш своје знањe.</p>
+<p>Током обиласка у дубину сваки чвор се обилази тачно једном (раније
+посећени чворови се прескачу) и током његовог обиласка анализирају се
+сви његови суседи. Када се користе листе суседа, сложеност је зато
+<span class="math notranslate nohighlight">\(O(|V| + |E|)\)</span>.</p>
+<div class="section" id="id3">
+<h3>Итеративна имплементација помоћу стека<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Иако је једноставна за разумевање, мана рекурзивне имплементације је
+то што код неких графова може доћи до прекорачења стек-меморије
+приликом извршавања програма (то се може десити ако постоји дугачак
+низ чворова којим се пролази без враћања уназад). Стога је понекад
+потребно направити имплементацију обиласка у дубину која није
+рекурзивна. Као што је то и иначе често случај, ослобађање од
+рекурзије захтева коришћење структуре података <strong>стек</strong>. Наиме,
+рекурзивни позиви користе системски стек рачунара, на који се смештају
+параметри актуелних рекурзивних позива (аргументи прослеђени приликом
+сваког од рекурзивних позива и вредности локалних променљивих). Уместо
+системског стека који и на савременим системима представља веома
+ограничену количину меморије (обично је у питању тек неколико
+мегабајта) можемо у нашем програму одржавати посебан стек који може да
+заузме много више меморијског простора.</p>
+<p>Размотримо понашање стека приликом рекурзивног обиласка музеја (чвор
+бојимо жуто први пут када уђемо у њега, у склопу улазне обраде, а у
+зелено када последњи пут изађемо из њега, у склопу излазне обраде).</p>
+
+    <div class="gallery" id="stek_dfs_muzej">
+        <div>
+            <div style="width: 600px;height:100%">
+            <img src="../_images/stek0.png" width="100%" height="100%">
+<img src="../_images/stek1.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek21.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek22.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek23.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek24.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek25.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek26.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek27.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek28.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek29.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek30.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek31.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek32.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek33.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stek34.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="stek_dfs_muzej-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Можемо приметити да се на стеку у сваком тренутку налазе сви чворови
+на тренутној путањи од корена ДФС дрвета до текућег листа (у музеју су
+то собе кроз које смо прошли да бисмо дошли од почетне до текуће
+собе). Те информације су нам потребне због враћања унатраг. Наиме,
+када из текуће собе не можемо прећи даље у неку непосећену собу, соба
+која се на стеку налази испод текуће је она соба из које смо дошли у
+текућу собу и у коју треба да се вратимо. Приликом извршавања
+рекурзије у сваком чвору се извршава петља у којој се пролази кроз
+непосећене суседе тог чвора. Приликом повратка у собу потребно је
+извршити наредну итерацију те петље. Стога се у стек оквиру који
+одговара соби чува и тренутна вредност бројачке променљиве у склопу те
+петље (да би се након повратка у собу та променљива могла увећати и
+тако прећи на наредни корак итерације тј. на наредног суседа).</p>
+<p>Размотримо сада малу модификацију претходног поступка која ће додатно
+олакшати имплементацију решења без петље. Да не бисмо морали да
+прекидамо петљу и настављамо њено извршавање после прекида, можемо
+програм организовати тако да на стек одмах ставимо све суседе текућег
+чвора. Размотримо како би то радило на примеру обиласка музеја.</p>
+
+    <div class="gallery" id="stek_dfs_muzej_susedi">
+        <div>
+            <div style="width: 600px;height:100%">
+            <img src="../_images/stekB0.png" width="100%" height="100%">
+<img src="../_images/stekB1.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/stekB18.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="stek_dfs_muzej_susedi-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Следи опис ове варијанте обиласка у дубину у облику псеудокода.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obidji_graf_u_dubinu</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">stavi</span> <span class="n">pocetni</span> <span class="n">cvor</span> <span class="n">c</span> <span class="n">na</span> <span class="n">stek</span>
+    <span class="n">zapamti</span> <span class="n">da</span> <span class="n">je</span> <span class="n">obilazak</span> <span class="n">cvora</span> <span class="n">c</span> <span class="n">zakazan</span>
+    <span class="n">dok</span> <span class="n">se</span> <span class="n">stek</span> <span class="n">ne</span> <span class="n">isprazni</span><span class="p">:</span>
+        <span class="n">skini</span> <span class="n">cvor</span> <span class="n">c</span> <span class="n">sa</span> <span class="n">vrha</span> <span class="n">steka</span>
+        <span class="n">izvrsi</span> <span class="n">ulaznu</span> <span class="n">obradu</span> <span class="n">cvora</span> <span class="n">c</span>
+        <span class="n">za</span> <span class="n">svaki</span> <span class="n">cvor</span> <span class="n">c</span><span class="s1">&#39; koji je susedan čvoru c</span>
+            <span class="n">ako</span> <span class="n">za</span> <span class="n">c</span><span class="s1">&#39; nije zakazan obilazak:</span>
+                <span class="n">stavi</span> <span class="n">cvor</span> <span class="n">c</span><span class="s1">&#39; na stek</span>
+                <span class="n">zapamti</span> <span class="n">da</span> <span class="n">je</span> <span class="n">obilazak</span> <span class="n">cvora</span> <span class="n">c</span><span class="s1">&#39; zakazan</span>
+</pre></div>
+</div>
+<p>На стеку чувамо чворове које у будућности треба обрадити (када их
+ставимо на стек, сматрамо да смо заказали њихову обраду). Чвор
+обрађујемо у тренутку када га скидамо са стека. Након тога на стек
+стављамо његове суседе за које још није заказан обилазак.</p>
+<p>На основу овог псеудокода веома је једноставно направити
+имплементацију у језику C#. Претпостављамо поново да је граф задат
+коришћењем листа суседа. Користи се библиотечка имплементација
+структуре података стек (класа <code class="docutils literal notranslate"><span class="pre">Stack&lt;int&gt;</span></code> која пружа својство
+<code class="docutils literal notranslate"><span class="pre">Count</span></code> за проверу броја елемената који се тренутно налазе на стеку
+и методе <code class="docutils literal notranslate"><span class="pre">Push</span></code> и <code class="docutils literal notranslate"><span class="pre">Pop</span></code> за постављање елемената на врх стека и
+скидање елемената са врха стека).</p>
+
+<div data-childcomponent="fun_dfs_nerek" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fun_dfs_nerek data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="static void DFS(int polazniCvor, List&lt;List&lt;int&gt;&gt; susedi)
+{
+    int n = susedi.Count;
+    bool[] zakazan = new bool[n];
+    var zaPosetu = new Stack&lt;int&gt;();
+    zaPosetu.Push(polazniCvor);
+    zakazan[polazniCvor] = true;
+    while (zaPosetu.Count &gt; 0)
+    {
+        int tekuciCvor = zaPosetu.Pop();
+        Console.WriteLine(&quot;Poseta cvoru {0}&quot;, tekuciCvor);
+        int stepen = susedi[tekuciCvor].Count;
+        for (int i = stepen - 1; i &gt;= 0; i--)
+        {
+            int sused = graf[tekuciCvor][i];
+            if (!zakazan[sused])
+            {
+                zaPosetu.Push(sused);
+                zakazan[sused] = true;
+            }
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Приметимо да је редослед постављања суседа на стек обратан у односу на
+очекивани редослед њихове обраде (чвор који желимо да буде први
+обрађен треба последњи да буде постављен на стек).</p>
+<p>У овој варијанти алгоритма је веома једноставно реализовати улазну
+обраду чворова (она се врши у тренутку када се чвор скида са
+стека). Што се тиче излазне обраде, није на први поглед јасан тренутак
+у ком би она требало да буде извршена. Један начин да се то поправи је
+да се приликом обраде чвора, непосредно пре стављања његових суседа на
+стек, на стек стави посебна ознака која нам говори да је потребно
+извршити излазну обраду текућег чвора (пробајте за вежбу да ово
+имплементирате у језику C#).</p>
+<p>Асимптотска сложеност ове имплементације је <span class="math notranslate nohighlight">\(O(|V| + |E|)\)</span>.</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Обилазак графа у ширину<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Основна предност обиласка у ширину у односу на обилазак у дубину је то
+што се чворови обилазе у редоследу њиховог растојања од почетног
+чвора. Прво се посети почетни чвор (он је на растојању 0), затим
+његови суседи (они су на растојању 1), затим њихови раније непосећени
+суседи (они су на растојању 2) и тако даље. На пример, ако граф
+представља летове између аеродрома, обиласком у ширину биће пронађен
+пут од почетног до свих других аеродрома који нам гарантује најмање
+преседања.</p>
+<p>На наредној слици су приказани летови између неколико аеродрома у
+Европи и САД и обилазак тог графа у ширину.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="../_images/aerodromi.png"><img alt="../_images/aerodromi.png" src="../_images/aerodromi.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Усмерен граф којим су описани летови између аеродрома. На слици
+десно аеродроми су поређани у односу на број преседања од полазног
+београдског аеродрома. Обиласком у ширину би се прво посетио
+београдски аеродром (BEG), затим аеродроми у Михнену (MUC) и
+Франкфурту (FRA) до којих се може стићи помоћу једног лета, затим
+аеродроми у Њујорку (JFK) и Лос Анђелесу (LAX) до којих се може
+стићи помоћу два лета и на крају аеродроми у Чикагу (ORD) и Сан
+Франциску (SFO) до којих је потребно три лета.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>Када се приликом обиласка графа тражи чвор који задовољава неко
+својство, обилак у ширину нам гарантује да ће прво бити пронађен онај
+такав чвор који је најближи почетном.</p>
+<p>Имплементација обиласка у ширину се врши веома слично као нерекурзивна
+имплементација обиласка у дубину. Једина разлика је у томе што
+обилазак у дубину користи структуру података <strong>стек</strong>, а обилазак у
+ширину структуру података <strong>ред</strong>. Наиме, главна разлика је у
+редоследу обраде чворова који су заказани да треба буду
+обрађени. Претпоставимо да почетни чвор A има два суседа, B и C.
+Приликом обиласка у дубину, након скидања чвора A са стека на стек се
+стављају C и B. Обрада чвора B подразумева његово скидање са стека и
+замену његовим суседима. Пошто се они на стек постављају изнад чвора C
+они ће бити обрађени пре чвора C што значи да се на обраду чвора C не
+прелази све док се не обраде сви чворови који су доступни из чвора B,
+а они могу бити много даљи од полазног чвора него што је чвор C. Да бисмо
+постигли да чвор C буде обрађен пре њих, потребно је употребити
+структуру података која обезбеђује да се чворови ваде у истом
+редоследу у ком су додани, а то је управо FIFO (first-in-first-out)
+ред.</p>
+<p>Следи опис обиласка у ширину у облику псеудокода.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obidji_graf_u_sirinu</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">dodaj</span> <span class="n">pocetni</span> <span class="n">cvor</span> <span class="n">c</span> <span class="n">u</span> <span class="n">red</span>
+    <span class="n">zapamti</span> <span class="n">da</span> <span class="n">je</span> <span class="n">obilazak</span> <span class="n">cvora</span> <span class="n">c</span> <span class="n">zakazan</span>
+    <span class="n">dok</span> <span class="n">se</span> <span class="n">red</span> <span class="n">ne</span> <span class="n">isprazni</span><span class="p">:</span>
+        <span class="n">skini</span> <span class="n">cvor</span> <span class="n">c</span> <span class="n">sa</span> <span class="n">pocetka</span> <span class="n">reda</span>
+        <span class="n">izvrsi</span> <span class="n">ulaznu</span> <span class="n">obradu</span> <span class="n">cvora</span> <span class="n">c</span>
+        <span class="n">za</span> <span class="n">svaki</span> <span class="n">cvor</span> <span class="n">c</span><span class="s1">&#39; koja je susedan čvoru c</span>
+            <span class="n">ako</span> <span class="n">za</span> <span class="n">c</span><span class="s1">&#39; nije zakazan obilazak:</span>
+                <span class="n">dodaj</span> <span class="n">cvor</span> <span class="n">c</span><span class="s1">&#39; u red</span>
+                <span class="n">zapamti</span> <span class="n">da</span> <span class="n">je</span> <span class="n">obilazak</span> <span class="n">cvora</span> <span class="n">c</span><span class="s1">&#39; zakazan</span>
+</pre></div>
+</div>
+<p>У наредној анимацији приказано је како би се граф музеја обилазио у
+ширину. Приметимо да се собе обилазе у растућем редоследу растојања од
+почетне собе I. Прво се обилази соба I, затим собе G и K, које су на
+растојању 1 од ње, затим собе C и O на растојању 2, затим собе B, D, N
+и P на растојању 3, па собе A, E, M и Q на растојању 4 и на крају собе
+F, H, J и L које су на растојању 5. Наравно, овакав обилазак физички
+није могућ (јер не можемо да се телепортујемо из једне у другу собу),
+али се може спровести у рачунару. Приказано је и стање реда у сваком
+кораку. Основни корак алгоритма је да се елемент избаци из реда, а да
+се уместо њега убаце његови суседи (у анимацији су они приказани
+плавом бојом).</p>
+
+    <div class="gallery" id="red_bfs_muzej">
+        <div>
+            <div style="width: 600px;height:100%">
+            <img src="../_images/red0.png" width="100%" height="100%">
+<img src="../_images/red1.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red21.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red22.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red23.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red24.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red25.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red26.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red27.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red28.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red29.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red30.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red31.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red32.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red33.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/red34.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="red_bfs_muzej-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>У наредним анимацијама је приказан обилазак у ширину два графа (први
+је дрво, а други садржи циклусе). Чвор се боји у сиво у тренутку када
+се додаје у ред, а у црно када су сви његови суседи додати у ред.</p>
+
+    <div class="gallery" id="obilazak_drveta_bfs">
+        <div>
+            <div style="width: 400px;height:100%">
+            <img src="../_images/bfs_a01.png" width="100%" height="100%">
+<img src="../_images/bfs_a02.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a03.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a04.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a05.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a06.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a07.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a08.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a09.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_a21.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="obilazak_drveta_bfs-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+
+    <div class="gallery" id="obilazak_grafa_bfs">
+        <div>
+            <div style="width: 500px;height:100%">
+            <img src="../_images/bfs_b01.png" width="100%" height="100%">
+<img src="../_images/bfs_b02.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b03.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b04.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b05.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b06.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b07.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b08.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b09.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b18.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b19.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b20.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/bfs_b21.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="obilazak_grafa_bfs-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>На основу овог псеудокода веома је једноставно направити
+имплементацију у језику C#. Претпостављамо поново да је граф задат
+коришћењем листа суседа. Користи се библиотечка имплементација
+структуре података ред (класа <code class="docutils literal notranslate"><span class="pre">Queue&lt;int&gt;</span></code> која пружа својство
+<code class="docutils literal notranslate"><span class="pre">Count</span></code> за проверу броја елемената који се тренутно налазе у реду и
+методе <code class="docutils literal notranslate"><span class="pre">Enqueue</span></code> и <code class="docutils literal notranslate"><span class="pre">Dequeue</span></code> за постављање елемената на крај реда
+и узимање елемената са почетка реда.</p>
+
+<div data-childcomponent="fun_bfs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fun_bfs data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="static void BFS(int polazniCvor, List&lt;List&lt;int&gt;&gt; susedi)
+{
+    int n = susedi.Count;
+    bool[] zakazan = new bool[n];
+    var zaPosetu = new Queue&lt;int&gt;();
+    zaPosetu.Enqueue(polazniCvor);
+    zakazan[polazniCvor] = true;
+    while (zaPosetu.Count &gt; 0)
+    {
+        int tekuciCvor = zaPosetu.Dequeue();
+        Console.WriteLine(&quot;Poseta cvoru {0}&quot;, tekuciCvor);
+        foreach (int sused in susedi[tekuciCvor])
+            if (!zakazan[sused])
+            {
+                zaPosetu.Enqueue(sused);
+                zakazan[sused] = true;
+            }
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Пошто се сваки чвор тачно једном додаје у ред и тачно једном уклања из
+реда и пошто се свака грана обрађује тачно једном сложеност овог
+алгоритма је иста као и сложеност обиласка у дубину <span class="math notranslate nohighlight">\(O(|V| +
+|E|)\)</span>, под претпоставком да се користе листе суседа.</p>
+<p>Комплетан програм, у коме се види учитавање графа тј. његових листа
+суседа и покретање обиласка у ширину из функције <code class="docutils literal notranslate"><span class="pre">Main</span></code> је дат у
+наставку. Програм обилази и исписује само оне чворове који су достижни
+из почетног чвора.</p>
+
+<div data-childcomponent="bfs_komplet" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=bfs_komplet data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static List&lt;List&lt;int&gt;&gt; UcitajGraf()
+    {
+        Console.Write(&quot;Broj cvorova: &quot;);
+        int n = int.Parse(Console.ReadLine());
+        var susedi = new List&lt;List&lt;int&gt;&gt;();
+        for (int i = 0; i &lt; n; i++)
+        {
+            susedi.Add(new List&lt;int&gt;());
+            Console.Write(&quot;Susedi cvora {0}: &quot;, i);
+            string[] s = Console.ReadLine().Split();
+            int stepen = s.Length;
+            for (int j = 0; j &lt; stepen; j++)
+                susedi[i].Add(int.Parse(s[j]));
+        }
+        return susedi;
+    }
+
+    static void BFS(int polazniCvor, List&lt;List&lt;int&gt;&gt; susedi)
+    {
+        int n = susedi.Count;
+        bool[] zakazan = new bool[n];
+        
+        Queue&lt;int&gt; zaPosetu = new Queue&lt;int&gt;();
+        zaPosetu.Enqueue(polazniCvor);
+        zakazan[polazniCvor] = true;
+        while (zaPosetu.Count &gt; 0)
+        {
+            int tekuciCvor = zaPosetu.Dequeue();
+            Console.WriteLine(&quot;Poseta cvoru {0}&quot;, tekuciCvor);
+            foreach (int sused in susedi[tekuciCvor])
+                if (!zakazan[sused])
+                {
+                    zaPosetu.Enqueue(sused);
+                    zakazan[sused] = true;
+                }
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        List&lt;List&lt;int&gt;&gt; susedi = UcitajGraf();
+        Console.WriteLine(&quot;Polazni cvor:&quot;);
+        int polazniCvor = int.Parse(Console.ReadLine());
+        BFS(susedi, polazniCvor);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Скрећемо ти пажњу на наредни веб-сајт на Математичком факултету:
+<a class="reference external" href="http://www.matf.bg.ac.rs/~filip/algoritmi/bfs.html">http://www.matf.bg.ac.rs/~filip/algoritmi/bfs.html</a>. На њему можеш још
+мало да утврдиш поступак обиласка графа у ширину, али и да провериш
+своје знањe.</p>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="Представљање графова - задаци за самостални рад.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

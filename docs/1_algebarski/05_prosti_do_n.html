@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Одређивање свих простих бројева до дате границе</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Одређивање свих простих бројева до дате границе<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Нека су нам потребни сви прости бројеви мањи од <span class="math notranslate nohighlight">\(10~000~000\)</span>. Један начин да одредимо све
+просте бројеве у датим границама је да за сваки од њих појединачно проверимо да ли је прост, не
+користећи информације о осталим простим бројевима. Раније смо видели да провера да ли је број
+<span class="math notranslate nohighlight">\(K\)</span> прост захтева око <span class="math notranslate nohighlight">\(\sqrt K\)</span> операција. Зато је број операција потребан за проверу
+прималности сваког од првих <span class="math notranslate nohighlight">\(N\)</span> бројева појединачно, сразмеран са <span class="math notranslate nohighlight">\(N \sqrt N\)</span>.</p>
+
+    <div data-component="reveal" id="dokaz_suma_korena"   data-showtitle="Доказ" data-hidetitle="Сакриј доказ">
+    <p><strong>Доказ:</strong> Доказаћемо да за неке позитивне реалне константе <span class="math notranslate nohighlight">\(c_1, c_2\)</span> важи</p>
+<div class="math notranslate nohighlight">
+\[c_1 N \sqrt {N} \leq \sum\limits_{K=1}^N \sqrt{K} \leq c_2 N \sqrt {N}\]</div>
+<p>Друга неједнакост се лако доказује:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\sum\limits_{K=1}^N \sqrt{K} &amp;= \sqrt 1 + \sqrt 2 + \sqrt 3 + \ldots + \sqrt N\\
+&amp;\leq \sqrt N + \sqrt N + \sqrt N + \ldots + \sqrt N\\
+&amp;=  N \sqrt {N}\\
+&amp;= c_2 N \sqrt {N}\\
+\end{aligned}\end{split}\]</div>
+<p>где је <span class="math notranslate nohighlight">\(c_2 = 1\)</span>. Ради доказа прве неједнакости, претпоставимо да је <span class="math notranslate nohighlight">\(N\)</span> паран број.
+Тада важи</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\sum_{K=1}^N \sqrt{K} &amp;= \sqrt 1 + \sqrt 2 + \sqrt 3 + \ldots + \sqrt N\\
+&amp;\geq \sqrt {\frac{N}{2}+1} + \sqrt {\frac{N}{2}+2} + \ldots + \sqrt N \\
+&amp;\geq \sqrt {\frac{N}{2}} + \sqrt {\frac{N}{2}} + \ldots + \sqrt {\frac{N}{2}} \\
+&amp;= \frac{N}{2} \sqrt {\frac{N}{2}}\\
+&amp;= \frac{1}{2 \sqrt 2} N \sqrt {N}\\
+&amp;= c_1 N \sqrt {N}\\
+\end{aligned}\end{split}\]</div>
+<p>где је <span class="math notranslate nohighlight">\(c_1 = \frac{1}{2 \sqrt 2}\)</span>. Врло сличне неједнакости могу да се изведу и за
+непрарно <span class="math notranslate nohighlight">\(N\)</span>. Дакле, важи</p>
+<div class="math notranslate nohighlight">
+\[c_1 N \sqrt {N} \leq \sum\limits_{K=1}^N \sqrt{K} \leq c_2 N \sqrt {N}\]</div>
+
+    </div>
+    <p>Јасно је да при провери да ли је дати број <span class="math notranslate nohighlight">\(\sqrt K\)</span> прост, информација о мањим, претходно
+одређеним простим бројевима може да уштеди време. Постоје разни начини да ову информацију искористимо.
+Један веома једноставан, а истовремено веома ефикасан начин је да сваки прост број који откријемо,
+одмах искористимо да све његове умношке означимо као сложене.</p>
+<p>Поступак би текао овако:</p>
+<ul class="simple">
+<li><p>упишемо све бројеве од <span class="math notranslate nohighlight">\(1\)</span> до <span class="math notranslate nohighlight">\(N\)</span> у табелу. На почетку ниједан број није прецртан</p></li>
+<li><p>за сваки број <span class="math notranslate nohighlight">\(K\)</span> почевши од <span class="math notranslate nohighlight">\(K=2\)</span> до <span class="math notranslate nohighlight">\(K=N\)</span>, радимо следеће:</p>
+<ul>
+<li><p>ако је број <span class="math notranslate nohighlight">\(K\)</span> прецртан, значи да је сложен и прелазимо на следеће <span class="math notranslate nohighlight">\(K\)</span></p></li>
+<li><p>ако број <span class="math notranslate nohighlight">\(K\)</span> није прецртан, значи да је прост. Искористимо га да прецртамо све бројеве
+облика  <span class="math notranslate nohighlight">\(K \cdot M\)</span> до краја табеле, где је <span class="math notranslate nohighlight">\(M\)</span> природан број.</p></li>
+</ul>
+</li>
+</ul>
+<p>Јасно је да ће овим поступком бити прецртани сви сложени бројеви у табели (и само они). Према томе,
+бројеви који остану непрецртани морају бити прости.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Описани поступак налажења простих бројева у ствари налази сложене бројеве и избацује их из
+колекције. По томе поступак подсећа на просејавање, где кроз сито пропада све што нас не
+интересује, а на крају у ситу остаје оно што смо тражили. Зато је овај поступак познат као
+<strong>Ератостеново сито</strong>, по грчком математичару Ератостену који га је описао.</p>
+
+    </div></div>
+<p>Приметимо још да за просто <span class="math notranslate nohighlight">\(K\)</span> прецртавање можемо да почнемо од <span class="math notranslate nohighlight">\(K^2\)</span>, јер су
+сложени бројеви између <span class="math notranslate nohighlight">\(K\)</span> и <span class="math notranslate nohighlight">\(K^2\)</span> већ прецртани користећи неке њихове мање делиоце.
+Из истог разлога, довољно је да <span class="math notranslate nohighlight">\(K\)</span> иде само до <span class="math notranslate nohighlight">\(\sqrt N\)</span>, јер су сложени бројеви од
+<span class="math notranslate nohighlight">\(\sqrt N\)</span> до <span class="math notranslate nohighlight">\(N\)</span> прецртани већ наиласком на њихов први нетривијалан делилац, који мора
+бити мањи или једнак <span class="math notranslate nohighlight">\(\sqrt N\)</span>.</p>
+<p>Овако оптимизован поступак може да се илуструје следећим корацима:</p>
+
+    <div class="gallery" id="sito">
+        <div>
+            <div style="width: 600px;height:100%">
+            <img src="../_images/sito_01.png" width="100%" height="100%">
+<img src="../_images/sito_02.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/sito_03.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/sito_04.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/sito_05.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="sito-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Видимо да је за бројеве до 100 довољно да се за прецртавање искористе само прва 4 проста броја.</p>
+<p>Ево и имплементације Ератостеновог сита у облику <em>C#</em> програма:</p>
+
+<div data-childcomponent="prosti_brojevi_do_n" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=prosti_brojevi_do_n data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="// prosti brojevi do n - Eratostenovo sito
+using System;
+
+class Program
+{
+    static bool[] ProstiBrojeviDo(long n)
+    {
+        bool[] prost = new bool[n + 1];
+        for (long i = 0; i &lt;= n; i++)
+            prost[i] = true;
+
+        prost[0] = prost[1] = false;
+        for (long i = 2; i &lt; Math.Sqrt(n); i++)
+        {
+            if (prost[i])
+            {
+                for (long j = i * i; j &lt; n; j += i)
+                    prost[j] = false;
+            }
+        }
+        return prost;
+    }
+    static void Main(string[] args)
+    {
+        long n = long.Parse(Console.ReadLine());
+        bool[] prost = ProstiBrojeviDo(n);
+        for (long i = 2; i &lt; n; i++)
+            if (prost[i])
+                Console.WriteLine(i);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Број операција у овом алгоритму сразмеран је броју прецртавања, а он је једнак
+<span class="math notranslate nohighlight">\(n/2 + n/3 + n/5 + n/7 + n/11 + ... + n/p\)</span>, где је <span class="math notranslate nohighlight">\(p\)</span> највећи прост број мањи или једнак
+<span class="math notranslate nohighlight">\(\sqrt n\)</span>. Овде се нећемо упуштати у израчунавање процене вредности овог збира, али напомињемо
+да она расте тек незнатно брже од <span class="math notranslate nohighlight">\(n\)</span>, тачније, расте брзином <span class="math notranslate nohighlight">\(n \log {\log n}\)</span>. Ова
+брзина повећавања броја операција се за практичне потребе може сматрати равноправном са линеарном, јер
+за <span class="math notranslate nohighlight">\(n \leq 2^{64}\)</span> важи <span class="math notranslate nohighlight">\(\log {\log n} \leq \log {64} = 6\)</span>.</p>
+<div class="section" id="id2">
+<h2>Модификације Ератостеновог сита<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>У оригиналном алгоритму Ератостеновог сита користимо низ логичких вредности, у коме вредност <code class="docutils literal notranslate"><span class="pre">true</span></code>
+одговара непрецртаним бројевима, а вредност <code class="docutils literal notranslate"><span class="pre">false</span></code> прецртаним. Ако бисмо уместо низа логичких,
+користили низ целобројних вредности, онда приликом одређивања простих и сложених бројева можемо да
+запамтимо и неке додатне информације о сложеним бројевима, на основу којих могу да се убрзају неки
+будући поступци над њима. У наставку ћемо показати две модификације Ератостеновог сита, које
+омогућавају знатно ефикасније решавање разних проблема.</p>
+<div class="section" id="id3">
+<h3>Памћење броја простих бројева мањих од датог<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Најједноставнија модификација је да за сито користимо низ <span class="math notranslate nohighlight">\(p\)</span> целих бројева, у коме на позицијама
+простих бројева пишемо 1, а на осталим позицијама 0. Низ <span class="math notranslate nohighlight">\(p\)</span> називамо низом индикатора простих
+бројева. Описана модификација не носи ништа више информација него логички низ и сама за себе није
+нарочито корисна. Међутим, помоћу низа индикатора лако можемо да израчунамо кориснији низ <span class="math notranslate nohighlight">\(s\)</span>,
+у коме је <span class="math notranslate nohighlight">\(s_i\)</span> број простих бројева из интервала <span class="math notranslate nohighlight">\([1, i]\)</span>. Довољно је да уочимо да важи
+<span class="math notranslate nohighlight">\(s_i = s_{i-1} + p_i\)</span> да бисмо низ <span class="math notranslate nohighlight">\(s\)</span> израчунали у једном пролазу кроз низ индикатора.
+За низ <span class="math notranslate nohighlight">\(s\)</span> можемо чак да користимо исти простор, тј. низ <span class="math notranslate nohighlight">\(p\)</span>, јер нам након рачунања
+<span class="math notranslate nohighlight">\(s_i\)</span> неће више бити потребан индикатор <span class="math notranslate nohighlight">\(p_i\)</span>, тако да можемо да га „прегазимо”.</p>
+<p>Када израчунамо низ <span class="math notranslate nohighlight">\(s\)</span>, можемо да га искористимо за брзо одређивање броја простих бројева у
+било ком интервалу <span class="math notranslate nohighlight">\([a, b]\)</span> као <span class="math notranslate nohighlight">\(s_b - s_{a-1}\)</span>. Све ово је илустровано у следећем
+програму. Приликом покретања програма потребно је најпре унети величину сита <span class="math notranslate nohighlight">\(n\)</span>, а затим
+парове бројева <span class="math notranslate nohighlight">\(a, b\)</span>, који представљају границе интервала који нас интересују (<span class="math notranslate nohighlight">\(a \leq b\)</span>).
+Програм се завршава уносом нуле за вредност <span class="math notranslate nohighlight">\(b\)</span>.</p>
+
+<div data-childcomponent="broj_prostih_do_n" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=broj_prostih_do_n data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="// broj prostih brojeva u [1, k] za svako k
+using System;
+
+class Program
+{
+    static int[] BrojProstih(long n)
+    {
+        int[] jeProst = new int[n + 1];
+        for (int i = 2; i &lt;= n; i++)
+            jeProst[i] = 1;
+
+        for (int i = 2; i &lt;= Math.Sqrt(n); i++)
+        {
+            if (jeProst[i] == 1)
+            {
+                for (int j = i * i; j &lt;= n; j += i)
+                    jeProst[j] = 0;
+            }
+        }
+        int[] brProstihDo = jeProst; // isti prostor
+        for (int i = 1; i &lt;= n; i++)
+            brProstihDo[i] = brProstihDo[i - 1] + jeProst[i];
+        return brProstihDo;
+    }
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] brProstihDo = BrojProstih(n);
+
+        while (true)
+        {
+            string[] s = Console.ReadLine().Split();
+            int a = int.Parse(s[0]);
+            int b = int.Parse(s[1]);
+            if (b == 0)
+                break;
+
+            if (a &gt; 0)
+                Console.WriteLine(brProstihDo[b] - brProstihDo[a - 1]);
+            else
+                Console.WriteLine(brProstihDo[b]);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Памћење најмањег делиоца сваког броја<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Погледајмо следећу модификацију Ератостеновог сита:</p>
+
+<div data-childcomponent="delioci_brojeva_do_n" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=delioci_brojeva_do_n data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="// svi prosti delioci brojeva do n
+using System;
+
+class Program
+{
+    static int[] NajmanjiDelilac(long n)
+    {
+        int[] delilac = new int[n + 1];
+        for (int i = 0; i &lt;= n; i++)
+            delilac[i] = i;
+
+        for (int i = 2; i &lt;= Math.Sqrt(n); i++)
+        {
+            if (delilac[i] == i)
+            {
+                for (int j = i * i; j &lt;= n; j += i)
+                    if (delilac[j] == j)
+                        delilac[j] = i;
+            }
+        }
+
+        return delilac;
+    }
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] delilac = NajmanjiDelilac(n);
+
+        while (true)
+        {
+            int a = int.Parse(Console.ReadLine());
+            if (a == 0)
+                break;
+
+            while (a &gt; 1)
+            {
+                Console.Write(delilac[a] + &quot; &quot;);
+                a = a / delilac[a];
+            }
+            Console.WriteLine();
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>У функцији <code class="docutils literal notranslate"><span class="pre">NajmanjiDelilac</span></code> формира се низ <code class="docutils literal notranslate"><span class="pre">delilac</span></code>, који на позицији <code class="docutils literal notranslate"><span class="pre">i</span></code> садржи најмањи
+нетривијалан делилац броја <code class="docutils literal notranslate"><span class="pre">i</span></code>. И овај поступак је врло сличан оригиналном Ератостеновом ситу,
+тако да га нећемо посебно објашњавати.</p>
+<p>Као прву, најједноставнију илустрацију новодобијених могућности, поменимо да захваљујући направљеној
+модификацији Ератостеновог сита, сада било који број мањи или једнак <span class="math notranslate nohighlight">\(n\)</span> можемо да раставимо
+на просте чиниоце, без икаквог додатног рачунања (довољно је приступање елементима низа, које се обавља
+веома ефикасно). Управо ова могућност је већ илустрована у функцији <code class="docutils literal notranslate"><span class="pre">Main</span></code> претходног програма.</p>
+<p>Показаћемо још једну, нешто напреднију могућност употребе овако модификованог Ератостеновог сита, а то је
+веома ефикасно одређивање броја делилаца било ког датог броја, мањег или једнаког <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>На основу основне теореме алгебре знамо да за сваки природан број <span class="math notranslate nohighlight">\(x\)</span> постоји јединствени растав
+тог броја на просте чиниоце, <span class="math notranslate nohighlight">\(x = p_1 ^ {\alpha_1} \cdot p_2 ^ {\alpha_2}  \cdot ... \cdot p_k ^ {\alpha_k}\)</span>,
+где су <span class="math notranslate nohighlight">\(p_1, p_2, ... p_k\)</span> сви прости бројеви којима је број <span class="math notranslate nohighlight">\(x\)</span> дељив.
+Користећи ово, сваки делилац <span class="math notranslate nohighlight">\(d\)</span> броја <span class="math notranslate nohighlight">\(x\)</span> можемо да запишемо у облику
+<span class="math notranslate nohighlight">\(d = p_1 ^ {\beta_1} \cdot p_2 ^ {\beta_2}  \cdot ... \cdot p_k ^ {\beta_k}\)</span>, где је
+<span class="math notranslate nohighlight">\(0 \leq \beta_1 \leq \alpha_1, 0 \leq \beta_2 \leq \alpha_2, ... 0 \leq \beta_k \leq \alpha_k\)</span>.
+Према томе, сваки делилац <span class="math notranslate nohighlight">\(d\)</span> броја <span class="math notranslate nohighlight">\(x\)</span> одређен је k-торком бројева
+<span class="math notranslate nohighlight">\((\beta_1, \beta_2, ... \beta_k)\)</span>, па је број делилаца броја <span class="math notranslate nohighlight">\(x\)</span> (укључујући 1 и <span class="math notranslate nohighlight">\(x\)</span>)
+једнак броју оваквих k-торки. Како за <span class="math notranslate nohighlight">\(\beta_i\)</span> постоји <span class="math notranslate nohighlight">\(\alpha_i + 1\)</span> различитих могућих
+вредности од 0 до <span class="math notranslate nohighlight">\(\alpha_i\)</span> (<span class="math notranslate nohighlight">\(1 \leq i \leq k\)</span>), то је број могућих k-торки, а тиме и број
+делилаца броја <span class="math notranslate nohighlight">\(x\)</span> једнак <span class="math notranslate nohighlight">\((\alpha_1 + 1) \cdot (\alpha_2 + 1) \cdot ... \cdot (\alpha_k + 1)\)</span>.</p>
+<p>Примери:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(16 = 2^4\)</span>, па је број делилаца броја 16 једнак <span class="math notranslate nohighlight">\((4+1) = 5\)</span>. Заиста, делиоци броја 16 су
+бројеви 1, 2, 4,8 и 16.</p></li>
+<li><p><span class="math notranslate nohighlight">\(24 = 2^3 \cdot 3^1\)</span>, па је број делилаца броја 24 једнак <span class="math notranslate nohighlight">\((3+1) \cdot (1+1) = 8\)</span> (то су
+бројеви 1, 2, 3, 4, 6, 8, 12, 24).</p></li>
+<li><p><span class="math notranslate nohighlight">\(36 = 2^2 \cdot 3^2\)</span>, па је број делилаца броја 36 једнак <span class="math notranslate nohighlight">\((2+1) \cdot (2+1) = 9\)</span> (то су
+бројеви 1, 2, 3, 4, 6, 9, 12, 18, 36).</p></li>
+</ul>
+<p>Када је за сваки број унапред познат његов најмањи нетривијалан делилац, број делилаца броја <span class="math notranslate nohighlight">\(x\)</span>
+може по овој формули да се одреди уз веома мало рачунања. Следећи програм показује како то може да се
+уради.</p>
+
+<div data-childcomponent="broj_delilaca_za_brojeve_do_n" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=broj_delilaca_za_brojeve_do_n data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="// Brzo racunanje broja delilaca za brojeve do n
+using System;
+
+class Program
+{
+    static int[] NajmanjiDelilac(long n)
+    {
+        int[] delilac = new int[n + 1];
+        for (int i = 0; i &lt;= n; i++)
+            delilac[i] = i;
+
+        for (int i = 2; i &lt;= Math.Sqrt(n); i++)
+        {
+            if (delilac[i] == i)
+            {
+                for (int j = i * i; j &lt;= n; j += i)
+                    if (delilac[j] == j)
+                        delilac[j] = i;
+            }
+        }
+
+        return delilac;
+    }
+    static void Main(string[] args)
+    {
+        Console.Write(&quot;Unesite granicu n &quot;);
+        int n = int.Parse(Console.ReadLine());
+        int[] delilac = NajmanjiDelilac(n);
+
+        while (true)
+        {
+            Console.Write(&quot;x = &quot;);
+            int x0 = int.Parse(Console.ReadLine());
+            if (x0 == 0)
+                break;
+            long x = x0;
+            // broj delilaca od x=(p[1]^a[1] * ... * p[k]^a[k])
+            // je (a[1] + 1) * ... * (a[k] + 1)
+            long brDel = 1;
+            while (x &gt; 1)
+            {
+                int p = delilac[x];
+                int a = 1;
+                while (delilac[x] == p)
+                {
+                    a++;
+                    x = x / delilac[x];
+                }
+                brDel *= a;
+            }
+            Console.WriteLine(&quot;Broj {0} ima {1} delilaca.&quot;, x0, brDel);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Начини да употребимо модификовано Ератостеново сито се ни изблиза овим не исцрпљују. Примера ради,
+и збир делилаца датог природног броја може да се одреди користећи разматрање слично претходном.
+Покажимо ово на примеру <span class="math notranslate nohighlight">\(x = 72\)</span>. Овај број има <span class="math notranslate nohighlight">\(3 \cdot 4 = 12\)</span> делилаца, а то су 1, 2,
+3, 4, 6, 8, 9, 12, 18, 24, 36, 72. При рачунању њиховог збира можемо груписањем сабирака да формирамо
+неколико геометријских прогресија:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+s &amp;= 1 + 2 + 3 + 4 + 6 + 8 + 9 + 12 + 18 + 24 + 36 + 72\\
+&amp;= (1 + 2 + 4 + 8) + (3 + 6 + 12 + 24) + (9 + 18 + 36 + 72)\\
+&amp;= (1 + 2 + 4 + 8) + 3(1 + 2 + 4 + 8) + 9(1 + 2 + 4 + 8)\\
+&amp;= (1 + 2 + 4 + 8) \cdot (1 + 3 + 9)\\
+&amp;= \frac{16-1}{2-1} \cdot \frac{27-1}{3-1}\\
+&amp;= \frac{15}{1} \cdot \frac{26}{2}\\
+&amp;= 15 \cdot 13\\
+&amp;= 195\\
+\end{aligned}\end{split}\]</div>
+<p>У извођењу смо на два места искористили формулу <span class="math notranslate nohighlight">\(1 + p + p^2 + ... + p^k = \frac{p^{k+1}-1}{p-1}\)</span>
+за збир геометријске прогресије.</p>
+<p>Уопштавањем овог поступка можемо да дођемо до формуле за општи случај, у коме је
+<span class="math notranslate nohighlight">\(x = p_1 ^ {\alpha_1} \cdot p_2 ^ {\alpha_2}  \cdot ... \cdot p_k ^ {\alpha_k}\)</span>. Већ
+смо констатовали да је сваки делилац <span class="math notranslate nohighlight">\(d\)</span> броја <span class="math notranslate nohighlight">\(x\)</span> облика
+<span class="math notranslate nohighlight">\(d = p_1 ^ {\beta_1} \cdot p_2 ^ {\beta_2}  \cdot ... \cdot p_k ^ {\beta_k}\)</span>, при чему је
+<span class="math notranslate nohighlight">\(0 \leq \beta_1 \leq \alpha_1, 0 \leq \beta_2 \leq \alpha_2, \ldots, 0 \leq \beta_k \leq \alpha_k\)</span>.
+Према томе, збир <span class="math notranslate nohighlight">\(s\)</span> свих делилаца броја <span class="math notranslate nohighlight">\(x\)</span> је збир свих бројева облика
+<span class="math notranslate nohighlight">\(p_1 ^ {\beta_1} \cdot p_2 ^ {\beta_2}  \cdot ... \cdot p_k ^ {\beta_k}\)</span> за разне
+вредности <span class="math notranslate nohighlight">\(\beta_1, \beta_2, \ldots, \beta_k\)</span>. Груписањем и применом дистрибутивног закона,
+долазимо до тога да збир <span class="math notranslate nohighlight">\(s\)</span> може да се изрази овако:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+s &amp;= (1 + p_1 + p_1^2 + ... + p_1^{\alpha_1}) \cdot (1 + p_2 + p_2^2 + ... +  p_2^{\alpha_2}) \cdot ... \cdot (1 + p_k + p_k^2 + ... +  p_k^{\alpha_k})\\
+&amp;= \frac{p_1^{\alpha_1+1}-1}{p_1-1} \cdot \frac{p_2^{\alpha_2+1}-1}{p_2-1} \cdot ... \cdot \frac{p_k^{\alpha_k+1}-1}{p_k-1}\\
+\end{aligned}\end{split}\]</div>
+<p>Применом дистрибутивног закона у супротном смеру, тј. множењем по једног сабирка из сваке заграде
+у првом реду, добија се један чинилац броја <span class="math notranslate nohighlight">\(x\)</span>. При томе сваки чинилац броја <span class="math notranslate nohighlight">\(x\)</span>
+може да се добије бирањем одговарајућих сабирака по заградама, тако да је збир свих чинилаца
+једнак управо наведеном производу.</p>
+<p>Погледајмо још један пример. Нека је <span class="math notranslate nohighlight">\(x = 60\)</span>. Пошто је <span class="math notranslate nohighlight">\(60=2^2 \cdot 3^1 \cdot 5^1\)</span>, то
+је сваки делилац броја <span class="math notranslate nohighlight">\(60\)</span> облика <span class="math notranslate nohighlight">\(d=2^{\beta_1} \cdot 3^{\beta_2} \cdot 5^{\beta_3}\)</span>,
+где је <span class="math notranslate nohighlight">\(0 \leq \beta_1 \leq 2, 0 \leq \beta_2 \leq 1, 0 \leq \beta_3 \leq 1\)</span>. Дакле, збир свих
+делилаца броја <span class="math notranslate nohighlight">\(60\)</span> је</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+s &amp;= 2^0 3^0 5^0 + 2^1 3^0 5^0 + 2^2 3^0 5^0 + 2^0 3^1 5^0 + 2^1 3^1 5^0 + 2^2 3^1 5^0\\
+  &amp;+ 2^0 3^0 5^1 + 2^1 3^0 5^1 + 2^2 3^0 5^1 + 2^0 3^1 5^1 + 2^1 3^1 5^1 + 2^2 3^1 5^1\\
+  &amp;= (2^0 3^0 + 2^1 3^0 + 2^2 3^0 + 2^0 3^1 + 2^1 3^1 + 2^2 3^1) 5^0 + (2^0 3^0 + 2^1 3^0 + 2^2 3^0 + 2^0 3^1 + 2^1 3^1 + 2^2 3^1) 5^1\\
+  &amp;= (2^0 3^0 + 2^1 3^0 + 2^2 3^0 + 2^0 3^1 + 2^1 3^1 + 2^2 3^1) (5^0 + 5^1)\\
+  &amp;= ((2^0 + 2^1 + 2^2) 3^0 + (2^0 + 2^1 + 2^2) 3^1) (5^0 + 5^1)\\
+  &amp;= (2^0 + 2^1 + 2^2) (3^0 + 3^1) (5^0 + 5^1)\\
+  &amp;= \frac{2^3-1}{2-1} \cdot \frac{3^2-1}{3-1} \cdot \frac{5^2-1}{5-1}\\
+  &amp;= \frac{7}{1} \cdot \frac{8}{2} \cdot \frac{24}{4}\\
+  &amp;= 7 \cdot 4 \cdot 6\\
+  &amp;= 168\\
+\end{aligned}\end{split}\]</div>
+<p>Рачунање збира свих делилаца датог броја применом изведене формуле захтева знатно мање корака него
+што је потребно већ и за само генерисање или проналажење свих тих делилаца. Следећи програм то ради
+користећи претходно изведену формулу и модификовано Ератостеново сито.</p>
+
+<div data-childcomponent="zbir_delilaca_za_brojeve_do_n" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=zbir_delilaca_za_brojeve_do_n data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="// Brzo racunanje zbira delilaca za brojeve do n
+using System;
+
+class Program
+{
+    static int[] NajmanjiDelilac(long n)
+    {
+        int[] delilac = new int[n + 1];
+        for (int i = 0; i &lt;= n; i++)
+            delilac[i] = i;
+
+        for (int i = 2; i &lt;= Math.Sqrt(n); i++)
+        {
+            if (delilac[i] == i)
+            {
+                for (int j = i * i; j &lt;= n; j += i)
+                    if (delilac[j] == j)
+                        delilac[j] = i;
+            }
+        }
+
+        return delilac;
+    }
+    static void Main(string[] args)
+    {
+        Console.Write(&quot;Unesite granicu n &quot;);
+        int n = int.Parse(Console.ReadLine());
+        int[] delilac = NajmanjiDelilac(n);
+
+        while (true)
+        {
+            Console.Write(&quot;x = &quot;);
+            int x0 = int.Parse(Console.ReadLine());
+            if (x0 == 0)
+                break;
+            long x = x0;
+            // zbir delilaca od x=(p[1]^a[1] * ... * p[k]^a[k])
+            // je jednak proizvodu svih (p[i]^(a[i] + 1) - 1) / (p[i] - 1)
+            long zbirDel = 1;
+            while (x &gt; 1)
+            {
+                int p = delilac[x];
+                int p_na_ai = p;
+                while (delilac[x] == p)
+                {
+                    p_na_ai *= p;
+                    x = x / p;
+                }
+                zbirDel *= (p_na_ai - 1) / (p - 1);
+            }
+            Console.WriteLine(&quot;Zbir delilaca broja {0} je {1}.&quot;, x0, zbirDel);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="НЗД и НЗС - задаци.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

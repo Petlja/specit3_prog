@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Још неки графовски проблеми и алгоритми</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Још неки графовски проблеми и алгоритми<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>До сада смо се већ прилично детаљно упознали са графовима и видели смо
+широк дијапазон алгоритама за рад са графовима. Ипак, графови су
+толико богата тема да постоји заиста велики број практичних питања над
+графовима које до сада још нисмо размотрили, као и велики број
+напредних алгоритама који их решавају. У овом курсу нећемо детаљно
+описивати те алгоритме, али ћемо бар да набројимо још
+неколико чувених графовских проблема.</p>
+<div class="section" id="id2">
+<h2>Одређивање мостова и артикулационих тачака<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Размотримо мрежу рачунара која је представљена неусмереним графом
+приказаним на слици.</p>
+<a class="reference internal image-reference" href="../_images/most.png"><img alt="../_images/most.png" class="align-center" src="../_images/most.png" style="width: 150px;" /></a>
+<p>Која би по вашем мишљењу могла да буде њена најважнија грана? Који
+кабл је најопасније пресећи? Размислите из овог угла: када се грана
+уклони, да ли је и даље могуће послати поруку од било ког до било ког
+другог чвора у мрежи? Ако сте одговорили са <code class="docutils literal notranslate"><span class="pre">E-H</span></code>, онда сте у
+праву. То је једина грана након чијег избацивања граф постаје
+неповезан.</p>
+<p>Такве гране се називају <strong>мостови</strong> у графу (прецизније, то су гране
+чијим се избацивањем повећава број компонената повезаности графа). У
+графу са <span class="math notranslate nohighlight">\(n\)</span> чворова може постојати највише <span class="math notranslate nohighlight">\(n-1\)</span> мостова
+(јер <span class="math notranslate nohighlight">\(n-1\)</span> грана повезује граф, а свака додатна грана затвара
+неки циклус). Једини графови са
+<span class="math notranslate nohighlight">\(n-1\)</span> мостова су дрвета, док су шуме једини графови код којих је
+свака грана мост. Постоје, наравно, и графови у којима нема мостова
+(узмимо, на пример, троугао).</p>
+<p>Наивни алгоритам за одређивање мостова би избацивао једну по једну
+грану и затим експлицитно бројао компоненте повезаности. Сложеност би
+била лоша (<span class="math notranslate nohighlight">\(O(|V|(|V| + |E|))\)</span>).</p>
+<p>За одређивање мостова у графу се може употребити ефикаснији Тарџанов
+(енгл. Robert Tarjan) алгоритам, заснован на обиласку графа у дубину,
+а чија је сложеност <span class="math notranslate nohighlight">\(O(|V| + |E|)\)</span>.</p>
+<hr class="docutils" />
+<p>Сродан појам мостовима представљају <strong>артикулационе тачке</strong> (каже се и
+<strong>артикулациони чворови</strong>). То су чворови графа чијим се уклањањем из
+графа (заједно са суседним гранама) граф разбија, тј. повећава се број
+компонената повезаности. Размотримо шта би се десило да се у нашој
+мрежи неки рачунар поквари? Да ли би отказ неког од рачунара
+онемогућио слање порука између осталих? Када размотримо све
+могућности, видимо да су једине артикулационе тачке чворови <code class="docutils literal notranslate"><span class="pre">B</span></code>,
+<code class="docutils literal notranslate"><span class="pre">E</span></code> и <code class="docutils literal notranslate"><span class="pre">H</span></code>, јер се једино њиховим уклањањем добијају графови са по
+две компоменте повезаности (означене плавом и црвеном бојом), док се
+уклањањем било ког од осталих чворова добија повезан граф (код кога је
+једина компонента повезаности означена плавом бојом).</p>
+<a class="reference internal image-reference" href="../_images/artikulacione.png"><img alt="../_images/artikulacione.png" class="align-center" src="../_images/artikulacione.png" style="width: 250px;" /></a>
+<p>Артикулационе тачке се одређују на веома сличан начин као и мостови
+(најчешће Тарџановим алгоритмом).</p>
+<p>Више о мостовима и артикулационим чворовима можеш сазнати овде:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bridge_(graph_theory">https://en.wikipedia.org/wiki/Bridge_(graph_theory</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Biconnected_component">https://en.wikipedia.org/wiki/Biconnected_component</a></p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>Ојлерови и Хамилтонови путеви и циклуси<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>У уводу смо рекли да савремена теорија графова почиње са Ојлеровим
+проучавањем Кенингсбершких мостова. Овај проблем се уопштава на
+тзв. проблем проналажења Ојлерових путева. Проблем се најчешће
+разматра на неусмереним графовима. <strong>Ојлеров пут</strong> у графу је пут који
+пролази кроз сваку грану графа тачно једном (док кроз чворове сме да
+прође и више пута). Ако се тражи да се на крају обиласка вратимо у
+полазни чвор, тј. ако се тражи циклус који садржи сваку грану графа
+тачно једном, онда говоримо о <strong>Ојлеровом циклусу</strong>.</p>
+<p>Наредне две теореме дају јасну карактеризацију када постоје Ојлерови
+путеви и циклуси.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Ојлеров пут у повезаном графу постоји ако и само ако постоје
+највише два чвора непарног степена (и тада они морају бути почетни и
+завршни чвор).</p>
+
+    </div></div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Ојлеров циклус у повезаном графу постоји ако и само ако су сви чворови
+парног степена (и тада било који чвор може бити почетни и истовремено завршни).</p>
+
+    </div></div>
+<p>У наредној анимацији је приказан један Ојлеров пут. Приметимо да су
+сви чворови парног степена, осим чворова A и B, па пут мора да почне у
+једном од та два чвора и заврши се у другом.</p>
+
+    <div class="gallery" id="ojlerov_put">
+        <div>
+            <div style="width: 150px;height:100%">
+            <img src="../_images/ojlerov_put0.png" width="100%" height="100%">
+<img src="../_images/ojlerov_put1.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/ojlerov_put2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/ojlerov_put3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/ojlerov_put4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/ojlerov_put5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/ojlerov_put6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/ojlerov_put7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/ojlerov_put8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/ojlerov_put9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/ojlerov_put10.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="ojlerov_put-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Интересатно, постојање Ојлеровог пута нам говори и то да се граф може
+нацртати и из једног потеза, без дизања оловке са папира.</p>
+<p>На основу датих теорема можемо да за дати граф испитамо да ли постоји
+Ојлеров пут или циклус, али чак и када знамо да постоји, не умемо да
+га конструишемо. Постоји неколико алгоритама који у полиномијалном
+времену могу да конструишу Ојлеров пут или циклус.</p>
+<p><strong>Флуријев алгоритам</strong> датира још са краја 19. века. У питању је један
+елегантан, али неефикасан алгоритам. Основна идеја је да се крене од
+чвора са непарним степеном (или од било ког чвора ако су степени свих
+чворова парни) и да се у сваком бира она грана којом до сада нисмо
+прошли, а чијим би избацивањем граф остао повезан тј. грана која није
+мост у графу. Грана која јесте мост се бира само код оних чворова код
+којих је она једини преостали избор. Алгоритам је неефикасан, јер
+захтева одређивање мостова у сваком кораку (обично новим покретањем
+Тарџановог алгоритма). Чак иако се то избегне (постоје варијанте које
+инкрементално одређују мостове), постоје ефикаснији алгоритми од
+Флуријевог.</p>
+<p><strong>Хијерхолцеров алгоритам</strong> гради Ојлеров циклус тако што креће од
+произвољног чвора <span class="math notranslate nohighlight">\(v\)</span> и на произовољан начин прати гране док се
+не врати у чвор <span class="math notranslate nohighlight">\(v\)</span>. Нагласимо да није могуће да се заглавимо у
+било ком другом чвору јер паран степен чворова осигурава да ћемо кад
+год уђемо у неки други чвор моћи да из њега и изађемо неком
+неискоришћеном граном. Ако на тој путањи постоји неки чвор код кога
+нису искоришћене све гране, тада понављамо поступак од њега, а затим
+спајамо циклусе који се у том чвору сусрећу (просто надовезујемо
+њихове гране). Поступак се понавља све док се не исцрпе све
+гране. Сложеност овог алгоритма је <span class="math notranslate nohighlight">\(O(|E|)\)</span>.</p>
+<p>Више о Ојлеровим путањама можеш сазнати овде:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Eulerian_path">https://en.wikipedia.org/wiki/Eulerian_path</a></p></li>
+</ul>
+<p>За разлику од Ојлерових путева, <strong>Хамилтонови путеви</strong> и <strong>Хамилтонови
+циклуси</strong> пролазе кроз сваки чвор графа тачно једанпут, а не морају да
+прођу сваком граном. Проблем може да се разматра и на неусмереним и на
+усмереним графовима. Наредна анимација приказује један Хамилтонов пут.</p>
+
+    <div class="gallery" id="hamiltonov_put">
+        <div>
+            <div style="width: 150px;height:100%">
+            <img src="../_images/hamiltonov_put0.png" width="100%" height="100%">
+<img src="../_images/hamiltonov_put1.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/hamiltonov_put2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/hamiltonov_put3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/hamiltonov_put4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/hamiltonov_put5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/hamiltonov_put6.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="hamiltonov_put-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>За разлику од Ојлерових путева и циклуса који имају веома једноставне
+карактеризације на основу степена чворова, постојање Хамилтонових
+путева тј. циклуса није уопште једноставно окарактерисати. Постоје
+разни довољни услови (нпр. сваки потпуни граф је Хамилтонов) и
+потребни услови (нпр. у Хамилтоновим графовима не могу постојати
+артикулациони чворови), али нема једноставних потребних и довољних
+услова. До сада није пронађен ниједан алгоритам полиномијалне
+сложености који би за дати граф испитао да ли има Хамилтонов пут или
+циклус (без обзира на то да ли је граф усмерен или не) и мало је
+вероватно да такав алгоритам постоји.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Проблем испитивања постојања Хамилтонових путева и проблем
+испитивања постојања Хамилтонових циклуса (без обзира на то да ли
+је граф усмерен или не) спада у класу тзв. <strong>NP проблема</strong>
+(недетерминисички полиномијалних), што значи да се за дато решење у
+полиномијалном времену може проверити да је исправно (заиста, за
+дати пут или циклус је прилично лако проверити да ли јесте
+Хамилтонов), али и у категорију <strong>NP-тешких</strong> проблема што значи да
+још није откривен полиномијални алгоритам за њихово решавање. Мада
+није доказано да такав алгоритам не постоји, мало је вероватно да
+је то случај. Проблеми који су истовремено и у класи NP и у класи
+NP-тешких проблема су тзв. <strong>NP-комплетни</strong> проблеми. Ако би неко
+успео да реши било који NP-комплетан проблем било тако што пронађе
+полиномијални алгоритам за његово решавање или тако што докаже да
+такав алгоритам не постоји, добио би милион долара од Клејовог
+института (и још важније, стекао огромну светску славу).</p>
+
+    </div></div>
+<p>Више о Хамилтоновим путањама може сазнати овде:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hamiltonian_path">https://en.wikipedia.org/wiki/Hamiltonian_path</a></p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>Проблем трговачког путника<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Проблем проналажења Хамилтоновог пута тј. циклуса се природно дефинише
+и на усмереним графовима, при чему је тада сасвим природно тражити
+најкраћи Хамилтонов пут тј. циклус. Овај проблем се назива <strong>проблем
+трговачког путника</strong>, јер се природно јавља када је потребно
+организовати обилазак већег броја градова, тако да се сваки град
+посети тачно једном и да се пређе што краћи укупан пут. Овај проблем
+је, сасвим јасно, тежи од проблема тражења Хамилтоновог пута или
+циклуса, јер није довољно наћи било који пут већ онај најкраћи.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Проблем трговачког путника јесте NP-тежак, али не и NP, па самим
+тим није ни NP-комплетан. Наиме, чак и кад имамо решење, не умемо у
+полиномијалном времену да проверимо да ли је исправно (за дати пут
+умемо брзо да проверимо да ли сваки град посећује тачно једном, али
+не умемо да брзо проверимо да ли је он заиста најкраћи од свих
+таквих путева).</p>
+
+    </div></div>
+<p>Пошто овако тешке проблеме није могуће потпуно тачно решити (и то већ
+за графове од неколико десетина чворова), задовољавамо се приближним
+решењима. Уместо егзактних алгоритама који проналазе стварно најкраћи
+пут, али за то им је потребно недопустиво пуно времена, примењују се
+<strong>хеуристике</strong> које траже пут који не мора бити заиста најкраћи (али
+је прилично кратак) и то раде веома брзо.</p>
+<p>Једна једноставна хеуристика која прва пада на памет је да се из
+сваког града оде у њему најближи још непосећени град. Нажалост,
+постоје примери на којима ова хеуристика даје веома лоше решење
+(тј. пут који је много дужи од најкраћег). С временом је развијен
+заиста велики број добрих хеуристика за решавање овог и сродних
+проблема. Неке су засноване на <strong>локалној претрази</strong>, што значи да до
+све бољих и бољих решења долазе малим, локалним изменама до тада
+познатих решења (код овог проблема то значи да се мења распоред
+обилазака тек неколико градова унутар познатог циклуса).</p>
+<p>Одличан видео о разним стратегијама решавања овог проблема је доступан
+овде:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=GiDsjIBOVoA">https://www.youtube.com/watch?v=GiDsjIBOVoA</a></p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>Проток кроз мрежу<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Саобраћајни инжењери често имају задатак да направе мрежу
+саобраћајница тако да се саобраћај кроз град може одвијати ефикасно.
+Замислимо да је дата мрежа која има један чвор који представља улаз
+(сви аутомобили улазе у саобраћај на том месту), један чвор који
+представља излаз (сви аутомобили имају циљ да дођу до излаза) и већи
+број повезаних унутрашњих чворова које представљају локације преко
+којих аутомобили могу да пролазе. За сваку грану у овако одређеном
+графу познат је капацитет тј. број аутомобила који могу да прођу у
+некој јединици времена. Ако нема загушења, у свим унутрашњим чворовима
+важи да број аутомобила који уђу у тај чвор у некој јединици времена
+мора да буде једнак броју аутомобила који изађу у јединици времена
+(аутомобили се могу „створити” само на улазу и могу „нестати” само на
+излазу).</p>
+<p>Природно се поставља питање који је максимални проток целе мреже
+тј. колики је број аутомобила у јединици времена може да дође на улаз,
+да би без застајкивања прошао мрежу и изашао на излазу. Размотримо
+неколико примера.</p>
+<img alt="../_images/protok1.png" class="align-center" src="../_images/protok1.png" />
+<p>У мрежи на слици је улазни чвор означен словом U, а излазни
+словом I. По јединици времена улаз теоријски може да „створи”
+бесконачно возила, али без загушења из њега може да изађе 15
+аутомобила (5 ће отићи горе, а 10 доле). Излаз теоријски може да
+прихвати бесконачно аутомобила, међутим, нема потребе да прихвата више
+од 12 (9 пристиглих од горе и 3 пристигла од доле). Ипак гледајући
+мрежу у целини, можемо да закључимо да она може да пропусти само 8
+аутомбила по јединици времена и кажемо да је проток кроз ову мрежу
+једнак 8. Наиме, од 10 аутомобила који стигну у чвор 2, само 3 могу да
+оду на излаз, јер грана између чвора 2 и излаза има слабу пропусну моћ
+(ако би у чвор 2 стизало више аутомобила, у њему би се створило
+загушење). Са друге стране, свих 5 аутомобила који стигну у чвор 1
+могу без проблема да наставе кретање до излаза. Дакле, да не би било
+загушења, у мрежу сме да уђе 8 аутомобила по јединици времена, 5 треба
+да оде горе, 3 доле и свих 8 ће несметано стићи до излаза.</p>
+<p>Додавање (двосмерног) пута између чворова 1 и 2 може мало поправити
+ствари.</p>
+<img alt="../_images/protok2.png" class="align-center" src="../_images/protok2.png" />
+<p>Наиме, чвор 2 сада може у јединици времена да пропусти 5 аутомобила,
+јер ће се 2 кретати према чвору 1, а 3 према излазу. Чвор 1 у том
+случају прихвата 7 аутомобила по јединици времена и сви они могу
+несметано да оду до излаза. То значи да изградња новог пута повећава
+проток ове мреже са 8 на 10 аутомобила по јединици времена. Када 10
+аутомобила уђе у мрежу, 5 треба да оде ка чвору 1, а 5 ка чвору 2,
+свих 5 аутомобила из чвора 1 може да иде одмах ка излазу, а од 5
+аутомобила у чвору 2, 3 треба да иде ка излазу, а 2 ка чвору 1. Пут од
+чвора 1 до излаза има довољан капацитет да пропусти свих 7 аутомобила
+који сада стижу у чвор 1.</p>
+<p>За одређивање максималног протока у мрежи користи се
+<strong>Форд-Фулкерсонов</strong> алгоритам који је заснован на појму <strong>увећавајуће
+путање</strong>. Основна идеја је да се види да ли постоји нека путања од
+улаза до излаза таква да је на свакој грани те путање тренутни број
+возила мањи од капацитета те гране. Ако таква путања постоји, тада се
+број возила на свим гранама те путање може повећати онолико колико
+„уско грло” на тој путањи допушта тј. може се повећати за најмању
+разлику између капацитета и тренутног протока на гранама те
+путање. Када се проток повећа на основу неке повећавајуће путање, тражи
+се нова и поступак се понавља док год постоје повећавајуће путање.</p>
+<p>На наредној слици је приказана примена овог алгоритма за мрежу коју
+смо пешке анализирали.</p>
+<img alt="../_images/fordfulkerson.png" class="align-center" src="../_images/fordfulkerson.png" />
+<p>На почетку је свакој грани придружен проток 0 (плави
+бројеви). Проналази се увећавајућа путања U-1-I. „Уско грло” на њој је
+грана U-1, па се проток на тој путањи повећава за 5. Након тога се
+проналази увећавајућа путања U-2-I. „Уско грло” на њој је грана 2-I,
+па се проток на тој путањи повећава за 3. На крају се проналази и
+увећавајућа путања U-2-1-I. „Уско грло” на њој је грана 2-1, па се
+проток дуж путање увећава за 2. Пошто нема више увећавајућих путања,
+алгоритам се зауставља.</p>
+<p>Варијанта овог алгоритма која за тражење увећавајућих путања користи
+претрагу у ширину, назива се <strong>Едмондс-Карпов</strong> алгоритам.</p>
+<p>За потпуно прецизан опис овог алгоритма је потребно увести мало више
+детаља. Потребно је допустити да алгоритам „поништи” неке своје
+одлуке. Размотримо наредни пример.</p>
+<a class="reference internal image-reference" href="../_images/fordfulkerson1.png"><img alt="../_images/fordfulkerson1.png" class="align-center" src="../_images/fordfulkerson1.png" style="width: 400px;" /></a>
+<p>Након налажења прве повећавајуће путање у приказаној мрежи, долазимо у
+ситуацију која је приказана на првој слици. Гледајући усмерене гране,
+не постоји више ниједна увећавајућа путања. Међутим, ако одузмемо два
+возила са гране 1-2 и преусмеримо их на грану 1-I можемо повећати
+проток мреже за 2 и добијамо оптимални проток. Да би ово било лако
+оствариво, уводи се појам тзв. резидуалног графа који допушта да
+увећавајуће путање обилазе неке гране у супротном смеру, што значи да
+смањују тренутно додељен проток на тим гранама (што се у примеру
+десило са граном 1-2). Упућујемо те да те детаље самостално
+истражиш. Са друге стране, надамо се да ти примери који смо приказали
+дају неке основне идеје и да ћеш зато лакше самостално савладати и
+имплементирати овај алгоритам.</p>
+<div class="section" id="id6">
+<h3>Линкови<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Графови се често веома детаљно проучавају на факултетима. У наставку
+се налазе линкови ка неким материјалима на српском језику који су
+посвећени графовима и раду са њима.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://poincare.matf.bg.ac.rs/~vesnap/kaa/03_kaa-grafovi-obilazak.pdf">http://poincare.matf.bg.ac.rs/~vesnap/kaa/03_kaa-grafovi-obilazak.pdf</a></p></li>
+<li><p><a class="reference external" href="http://poincare.matf.bg.ac.rs/~vesnap/kaa/04_kaa-grafovi-povezanost.pdf">http://poincare.matf.bg.ac.rs/~vesnap/kaa/04_kaa-grafovi-povezanost.pdf</a></p></li>
+<li><p><a class="reference external" href="http://poincare.matf.bg.ac.rs/~vesnap/kaa/05_kaa2021-grafovi-najkraci-putevi.pdf">http://poincare.matf.bg.ac.rs/~vesnap/kaa/05_kaa2021-grafovi-najkraci-putevi.pdf</a></p></li>
+<li><p><a class="reference external" href="http://poincare.matf.bg.ac.rs/~vesnap/kaa/06_kaa2021-grafovi-najkraci-putevi-ciklusi.pdf">http://poincare.matf.bg.ac.rs/~vesnap/kaa/06_kaa2021-grafovi-najkraci-putevi-ciklusi.pdf</a></p></li>
+<li><p><a class="reference external" href="http://poincare.matf.bg.ac.rs/~ezivkovm/nastava/algoritmi.pdf">http://poincare.matf.bg.ac.rs/~ezivkovm/nastava/algoritmi.pdf</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="42_min_razapinjuce_drvo.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

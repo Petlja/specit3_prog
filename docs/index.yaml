@@ -1,0 +1,545 @@
+courseId: kurs-prog3-spec-IT
+description:
+  externalLinks:
+  - href: https://petlja.org/biblioteka/r/kursevi/Zbirka3
+    text: Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре
+      података
+  longDescription: '<div class="document">
+
+    <p>Овај курс је намењен пре свега ученицима специјализованих ИТ одељена 3. разреда
+    за предмет Програмирање. Материјал је организован по следећим  целинама:
+
+    &lt;ul&gt;
+
+    &lt;li style=''''color:white''''&gt; Основни алгебарски алгоритми&lt;/li&gt;
+
+    &lt;li style=''''color:white''''&gt; Геометријски алгоритми &lt;/li&gt;
+
+    &lt;li style=''''color:white''''&gt; Алгоритми над текстом и текстуалним датотекама
+    &lt;/li&gt;
+
+    &lt;li style=''''color:white''''&gt; Графовски алгоритми &lt;/li&gt;
+
+    &lt;li style=''''color:white''''&gt; Одабрани алгоритми и структуре података &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+    Поред рада у школи, курс се може пролазити и самостално.</p>
+
+    <p>&lt;p&gt;
+
+    &lt;a rel=&quot;license&quot; href=&quot;<a class="reference external" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">https://creativecommons.org/licenses/by/4.0/deed.sr_LATN</a>&quot;&gt;
+
+    &lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot;
+    src=&quot;https://i.creativecommons.org/l/by/4.0/88x31.png&quot; /&gt;&lt;/a&gt;
+
+    &lt;br /&gt;Овај курс Фондација Петља објавила je под лиценцом &lt;a rel=&quot;license&quot;
+    href=&quot;https://creativecommons.org/licenses/by/4.0/deed.sr_LATN&quot;&gt;Creative
+    Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)&lt;/a&gt;.
+
+    &lt;/p&gt;</p>
+
+    </div>
+
+    '
+  requirements:
+  - Окружење за развој програма (Visual Studio или одговарајућа замена)
+  shortDescription: Програмирање 3
+  toc:
+  - Основни алгебарски алгоритми
+  - Геометријски алгоритми
+  - Алгоритми над текстом и текстуалним датотекама
+  - Графовски алгоритми
+  - Одабрани алгоритми и структуре података
+  willLearn:
+  - Тест прималности, факторизација броја
+  - Еуклидов алгоритам
+  - Ератостеново сито
+  - Елементарни алгоритми над правама и дужима (припадност тачке правој и дужи, пресеци
+    правих, пресеци дужи)
+  - Елементарни алгоритми над троугловима и четвороугловима у равни
+  - Елементарни алгоритми над конвексним многоугловима (провера припадности тачке,
+    израчунавање обима и површине)
+  - Основни елементи рачунарске графике и визуелизације
+  - Ниске и основне операције над нискама (претрага подниске, издвајање подниске)
+  - Регуларни изрази
+  - Техника рекурзивног спуста
+  - Представљање графа у програму
+  - Алгоритми за обилазак графа
+  - Одређивање компонената повезаности
+  - Тополошко сортирање
+  - Одабрани графовски алгоритми (Примов и Краскелов алгоритам, Дајкстрин алгоритам,
+    Флојд-Варшалов алгоритам)
+  - Одабрани алгебарски алгоритми (проширени Еуклидов алгоритам и примене, Кинеска
+    теорема о остацима)
+  - Одабрани геометријски алгоритми (алгоритми за одређивање конвексног омотача, ефикасно
+    одређивање свих пресека скупа дужи, пресеци многоуглова)
+  - Одабрани алгоритми над нискама (алгоритам КМП, Бојер-Муров алгоритам, хеширање
+    ниски, Рабин-Карпов алгоритам, Маначеров алгоритам, Z-алгоритам, суфиксна дрвета)
+  - Имплементација и примена одабраних структура података (повезане листе, бинарна
+    дрвета, хип, сегментна и Фенвикова дрвета)
+lang: sr-Cyrl
+lessons:
+- activities:
+  - description: ''
+    file: 01_alg_uvod.html
+    guid: abe0f148-2f10-4aaa-ab4c-3a1e80de47e4
+    src: 01_alg_uvod.rst
+    title: 1.1 Увод
+    type: reading
+  - description: ''
+    file: 02_test_primalnosti.html
+    guid: 4eb8a675-9302-4dd6-9c19-49cd92071bb0
+    src: 02_test_primalnosti.rst
+    title: 1.2 Тест прималности
+    type: reading
+  - description: ''
+    file: 02b_test_primalnosti_quiz.html
+    guid: b802d578-2d84-4b9e-80ff-aa824dcefa04
+    src: 02b_test_primalnosti_quiz.rst
+    title: Тест прималности - квиз
+    type: quiz
+  - description: ''
+    file: Прости бројеви - задаци.html
+    guid: 2d62e603-e74e-4be9-9bce-fb2e1340e75c
+    src:
+    - https://petlja.org/biblioteka/r/Zbirka3/prost_broj
+    - https://petlja.org/biblioteka/r/Zbirka3/najblizi_prost_broj
+    title: Прости бројеви - задаци
+    type: coding-quiz
+  - description: ''
+    file: 03_faktorizacija.html
+    guid: 5fe604dc-3894-4da7-a788-6d9a8f2cf11b
+    src: 03_faktorizacija.rst
+    title: 1.3 Факторизација броја
+    type: reading
+  - description: ''
+    file: 03b_faktorizacija_quiz.html
+    guid: 1b112bb2-e3d2-44e0-a702-2991be1453af
+    src: 03b_faktorizacija_quiz.rst
+    title: Факторизација броја - квиз
+    type: quiz
+  - description: ''
+    file: Факторизација броја - задаци.html
+    guid: d69101d7-74af-44de-9553-bd3227f92151
+    src:
+    - https://petlja.org/biblioteka/r/Zbirka3/rastavljanje_na_proste_cinioce
+    - https://petlja.org/biblioteka/r/Zbirka3/dopuna_do_punog_kvadrata
+    - https://petlja.org/biblioteka/r/Zbirka3/proizvodi_potpuni_kvadrati
+    title: Факторизација броја - задаци
+    type: coding-quiz
+  - description: ''
+    file: 04_nzd.html
+    guid: 23632b89-fa40-4574-aac1-35725f03908d
+    src: 04_nzd.rst
+    title: 1.4 Највећи заједнички делилац
+    type: reading
+  - description: ''
+    file: 04b_nzd_quiz.html
+    guid: c292b7dc-cd69-48da-b769-b3cca4b7615f
+    src: 04b_nzd_quiz.rst
+    title: Највећи заједнички делилац - квиз
+    type: quiz
+  - description: ''
+    file: НЗД и НЗС - задаци.html
+    guid: 247836b2-eacc-4669-91b3-ac852ffe19ba
+    src:
+    - https://petlja.org/biblioteka/r/Zbirka3/euklid
+    - https://petlja.org/biblioteka/r/Zbirka3/pokloni_u_prodavnici
+    - https://petlja.org/biblioteka/r/Zbirka3/broj_deljiv_sa_1_do_n
+    - https://petlja.org/biblioteka/r/Zbirka3/bilijar_iz_coska
+    - https://petlja.org/biblioteka/r/Zbirka3/torta
+    - https://petlja.org/biblioteka/r/Zbirka3/ucenici_na_istim_sedistima
+    - https://petlja.org/biblioteka/r/Zbirka3/isti_ostaci_svih_brojeva
+    title: НЗД и НЗС - задаци
+    type: coding-quiz
+  - description: ''
+    file: 05_prosti_do_n.html
+    guid: 2bc4072c-d0fa-47e6-a988-1c746fdac27d
+    src: 05_prosti_do_n.rst
+    title: 1.5 Одређивање свих простих бројева до дате границе
+    type: reading
+  - description: ''
+    file: 05b_prosti_do_n_quiz.html
+    guid: f53050f6-5811-4f74-a719-b8e3beb80ba0
+    src: 05b_prosti_do_n_quiz.rst
+    title: Ератостеново сито - квиз
+    type: quiz
+  - description: ''
+    file: Ератостеново сито - задаци.html
+    guid: 3223e691-2635-4715-be4e-913006adb4c3
+    src:
+    - https://petlja.org/biblioteka/r/Zbirka3/eratostenovo_sito
+    - https://petlja.org/biblioteka/r/Zbirka3/zbir_prostih_prost
+    - https://petlja.org/biblioteka/r/Zbirka3/broj_prostih_u_intervalima
+    - https://petlja.org/biblioteka/r/Zbirka3/savrseni_brojevi
+    - https://petlja.org/biblioteka/r/Zbirka3/prijateljski_brojevi
+    - https://petlja.org/biblioteka/r/Zbirka3/zbir_eksponenata_faktorizacije_faktorijela
+    - https://petlja.org/biblioteka/r/Zbirka3/liuvilova_funkcija
+    - https://petlja.org/biblioteka/r/Zbirka3/mertensova_funkcija
+    - https://petlja.org/biblioteka/r/Zbirka3/broj_delilaca_proizvoda
+    title: Ератостеново сито - задаци
+    type: coding-quiz
+  archived-activities: []
+  description: ''
+  folder: 1_algebarski
+  guid: ca2c8858-6b18-422d-b096-4c2c7fd42732
+  normalized_title: 1. Основни алгебарски алгоритми
+  title: 1. Основни алгебарски алгоритми
+- activities:
+  - description: ''
+    file: 01_geom_uvod.html
+    guid: 3dc1dcda-b85f-49f1-a503-8cec2736ada6
+    src: 01_geom_uvod.rst
+    title: 2.1 Увод
+    type: reading
+  - description: ''
+    file: 02_bounding_boxes.html
+    guid: 20e1a885-79cd-4c08-a1f9-3254eaffe6d8
+    src: 02_bounding_boxes.rst
+    title: 2.2 Поравнати правоугаоници
+    type: reading
+  - description: ''
+    file: 02b_bounding_boxes_quiz.html
+    guid: 57517bd5-5963-44f0-a7b1-0f354c944d21
+    src: 02b_bounding_boxes_quiz.rst
+    title: Поравнати правоугаоници - квиз
+    type: quiz
+  - description: ''
+    file: 03_tacke_i_vektori.html
+    guid: 75131a9d-c992-4f03-97a9-774add4b640b
+    src: 03_tacke_i_vektori.rst
+    title: 2.3 Тачке и вектори
+    type: reading
+  - description: ''
+    file: 04_orijentacija_trojke_tacaka.html
+    guid: 21c0ccc1-6acd-4434-94e4-1998416fe420
+    src: 04_orijentacija_trojke_tacaka.rst
+    title: 2.4 Оријентација тројке тачака
+    type: reading
+  - description: ''
+    file: 04b_odnosi_tacaka_i_vektora_quiz.html
+    guid: f1a4dd25-1274-434c-80be-4dc4dea97f38
+    src: 04b_odnosi_tacaka_i_vektora_quiz.rst
+    title: Односи тачака и вектора - квиз
+    type: quiz
+  - description: ''
+    file: 05_obimi_i_povrsine.html
+    guid: 38a5cc2e-e12f-49dd-8179-68975ca5c368
+    src: 05_obimi_i_povrsine.rst
+    title: 2.5 Обими и површине многоуглова
+    type: reading
+  - description: ''
+    file: 05b_obimi_i_povrsine_quiz.html
+    guid: b5c3783f-9fb9-450e-9406-f8e3d097dd5c
+    src: 05b_obimi_i_povrsine_quiz.rst
+    title: Обими и површине многоуглова - квиз
+    type: quiz
+  - description: ''
+    file: 06_vizuelizacija.html
+    guid: 45d0eb94-caf2-426b-9b14-745ea5c9c20a
+    src: 06_vizuelizacija.rst
+    title: 2.6 Визуелизација
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 2_geometrijski
+  guid: d667eeac-4357-419b-9c52-24bf5b7c1fc8
+  normalized_title: 2. Основни геометријски алгоритми
+  title: 2. Основни геометријски алгоритми
+- activities:
+  - description: ''
+    file: 00_uvod.html
+    guid: e69ebffb-ca4d-4e52-aae9-fb437f010ffb
+    src: 00_uvod.rst
+    title: 3.1 Увод
+    type: reading
+  - description: ''
+    file: 01a_stringovi_metodi_pregled.html
+    guid: 4acee2b8-52a2-4193-a34b-9cd97bec3411
+    src: 01a_stringovi_metodi_pregled.rst
+    title: 3.2 Методи за рад са стринговима
+    type: reading
+  - description: ''
+    file: 01b_poredjenjе_stringova.html
+    guid: 9f46dbd5-3810-4a10-89c6-edfe0d703c11
+    src: 01b_poredjenjе_stringova.rst
+    title: 3.2.1 Поређење стрингова
+    type: reading
+  - description: ''
+    file: 01c_pretrazivanje_stringova.html
+    guid: 68370127-c65e-4d3b-9ad3-338d27f96b95
+    src: 01c_pretrazivanje_stringova.rst
+    title: 3.2.2 Претраживање и провера постојања садржаја стринга
+    type: reading
+  - description: ''
+    file: 01d_transformisanje_stringova.html
+    guid: 309fa955-00ca-4964-9bf0-3b13d261f594
+    src: 01d_transformisanje_stringova.rst
+    title: 3.2.3 Трансформисање стрингова
+    type: reading
+  - description: ''
+    file: 01e_stringovi_metodi_quiz.html
+    guid: c804c4a9-bab1-4bc8-9a75-762a5bb8ea18
+    src: 01e_stringovi_metodi_quiz.rst
+    title: Методи за рад са стринговима - квиз
+    type: quiz
+  - description: ''
+    file: 01f_stringovi_zadaci.html
+    guid: 1bd24d78-6144-4916-ac3b-a7ea326efeb9
+    src: 01f_stringovi_zadaci.rst
+    title: Стрингови - задаци
+    type: reading
+  - description: ''
+    file: 02a_regularni_izrazi.html
+    guid: 5df4a6a4-a659-4d5e-85ce-bd9b3f4ae05b
+    src: 02a_regularni_izrazi.rst
+    title: 3.3.1 Регуларни изрази
+    type: reading
+  - description: ''
+    file: 02b_slozeniji_izrazi.html
+    guid: 739439a5-5781-48a5-a542-60c851d91f40
+    src: 02b_slozeniji_izrazi.rst
+    title: 3.3.2 Сложенији регуларни изрази
+    type: reading
+  - description: ''
+    file: 02c_regexi_quiz.html
+    guid: 72c286be-6352-460d-801b-c66a3e6a050c
+    src: 02c_regexi_quiz.rst
+    title: Регуларни изрази - квиз
+    type: quiz
+  - description: ''
+    file: 02d_regexi_u_programima.html
+    guid: fb16dd88-7f3c-4b15-8311-cd173f35670a
+    src: 02d_regexi_u_programima.rst
+    title: 3.3.3 Регуларни изрази у програмима
+    type: reading
+  - description: ''
+    file: 02e_regexi_zadaci.html
+    guid: 95311b05-fec2-4433-ab83-366c0caad37a
+    src: 02e_regexi_zadaci.rst
+    title: Регуларни изрази - задаци
+    type: reading
+  - description: ''
+    file: 03_parsiranje_rekurzivni_spust.html
+    guid: f540babb-9c28-489b-9458-2f9138d38e89
+    src: 03_parsiranje_rekurzivni_spust.rst
+    title: 3.4 Парсирање и рекурзивни спуст
+    type: reading
+  - description: ''
+    file: 04_algoritmi_teksta_quiz.html
+    guid: 4650bbd2-ff3d-402f-9e78-9b3820441744
+    src: 04_algoritmi_teksta_quiz.rst
+    title: Алгоритми текста - квиз
+    type: quiz
+  - description: ''
+    file: 05_algoritmi_teksta_zadaci.html
+    guid: 99d435e2-39d3-433f-b9a4-9af5bcd22c98
+    src: 05_algoritmi_teksta_zadaci.rst
+    title: Алгоритми текста - задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 3_tekstualni
+  guid: f823569c-7312-44bd-91f7-85d50ee977b2
+  normalized_title: 3. Основни алгоритми текста
+  title: 3. Основни алгоритми текста
+- activities:
+  - description: ''
+    file: 00_grafovi_uvod.html
+    guid: 9bccf388a7fc4979b20c3cf4aabc4db2
+    src: 00_grafovi_uvod.rst
+    title: Увод
+    type: reading
+  - description: ''
+    file: 00_primeri_grafova.html
+    guid: 7fb5f158-afd0-4940-839b-24382f34add2
+    src: 00_primeri_grafova.rst
+    title: Примери графова
+    type: reading
+  - description: ''
+    file: 01_definicije_grafova.html
+    guid: 2249da03-b9b9-42aa-8cb1-e7d2e93fd3c7
+    src: 01_definicije_grafova.rst
+    title: Дефиниције појмова у вези са графовима
+    type: reading
+  - description: ''
+    file: 01_predstavljanje_grafova.html
+    guid: a468ef7e-f29d-48a8-940f-58a1860b32a7
+    src: 01_predstavljanje_grafova.rst
+    title: Представљање графова
+    type: reading
+  - description: ''
+    file: Представљање графова - задаци за самостални рад.html
+    guid: 4b8b0e83-7b93-40e1-8b00-660bb0461c30
+    src:
+    - https://petlja.org/biblioteka/r/Zbirka3/matrica_povezanosti
+    - https://petlja.org/biblioteka/r/Zbirka3/liste_povezanosti
+    - https://petlja.org/biblioteka/r/Zbirka3/najpopularniji_sajt
+    - https://petlja.org/biblioteka/r/Zbirka3/sudija
+    title: Представљање графова - задаци за самостални рад
+    type: coding-quiz
+  - description: ''
+    file: 02_obilazak_grafa.html
+    guid: db7a9436-793e-4c38-915f-f588383cc0f9
+    src: 02_obilazak_grafa.rst
+    title: Обилазак графова
+    type: reading
+  - description: ''
+    file: 02_obilazak_grafa_zadaci.html
+    guid: 136546d7-25ec-49aa-93c4-862f3917f20a
+    src: 02_obilazak_grafa_zadaci.rst
+    title: Обилазак графова - решени задаци
+    type: reading
+  - description: ''
+    file: Обилазак графова - задаци за самостални рад.html
+    guid: 505aa1ba-a46a-48ac-95fb-7dbe44a738d3
+    src:
+    - https://petlja.org/biblioteka/r/Zbirka3/dostizni_cvorovi
+    - https://petlja.org/biblioteka/r/Zbirka3/pecine
+    - https://petlja.org/biblioteka/r/Zbirka3/pecine_sa_tunelima
+    - https://petlja.org/biblioteka/r/Zbirka3/zmije_i_lestve
+    - https://petlja.org/biblioteka/r/Zbirka3/avionska_presedanja
+    - https://petlja.org/biblioteka/r/Zbirka3/korensko_drvo
+    - https://petlja.org/biblioteka/r/Zbirka3/prestolonaslednici
+    - https://petlja.org/biblioteka/r/Zbirka3/tastatura
+    - https://petlja.org/biblioteka/r/Zbirka3/da_li_je_bipartitan
+    - https://petlja.org/biblioteka/r/Zbirka3/kruzni_autobusi
+    title: Обилазак графова - задаци за самостални рад
+    type: coding-quiz
+  - description: ''
+    file: 03_povezane_komponente.html
+    guid: ea8530bc-3a60-477c-a789-af3d1241f342
+    src: 03_povezane_komponente.rst
+    title: Компоненте повезаности
+    type: reading
+  - description: ''
+    file: Компоненте повезаности - задаци за самостални рад.html
+    guid: c72629fb-70bf-4f51-8798-3469a644f1ff
+    src:
+    - https://petlja.org/biblioteka/r/Zbirka3/komponente_povezanosti
+    - https://petlja.org/biblioteka/r/Zbirka3/cudna_mreza
+    - https://petlja.org/biblioteka/r/Zbirka3/kose_crte
+    title: Компоненте повезаности - задаци за самостални рад
+    type: coding-quiz
+  - description: ''
+    file: 04_topolosko_sortiranje.html
+    guid: 0963b436-7a9e-4125-9ca7-9388d05e3613
+    src: 04_topolosko_sortiranje.rst
+    title: Тополошко сортирање
+    type: reading
+  - description: ''
+    file: Тополошко сортирање - задаци за самостални рад.html
+    guid: d2c9e7ea-fd91-429c-87de-fb17031512ea
+    src:
+    - https://petlja.org/biblioteka/r/Zbirka3/redosled_poslova
+    - https://petlja.org/biblioteka/r/Zbirka3/provera_ciklusa
+    title: Тополошко сортирање - задаци за самостални рад
+    type: coding-quiz
+  archived-activities: []
+  description: ''
+  folder: 4_grafovski
+  guid: e823e034-9fe8-419d-a9d3-d4ac5fcd7843
+  normalized_title: 4. Основни графовски алгоритми
+  title: 4. Основни графовски алгоритми
+- activities:
+  - description: ''
+    file: 0_uvod.html
+    guid: 798c64ce-d976-43df-8a27-9bf9c97cbd6e
+    src: 0_uvod.rst
+    title: Проширени Еуклидов алгоритам
+    type: reading
+  - description: ''
+    file: 11_prosireni_euklidov_alg.html
+    guid: 675a45da-9066-4e6d-9e15-ea7c2e645a4e
+    src: 11_prosireni_euklidov_alg.rst
+    title: Проширени Еуклидов алгоритам
+    type: reading
+  - description: ''
+    file: Проширени Еуклидов алгоритам - задаци.html
+    guid: ec9d1b31-8c11-48f3-b395-2dd87430138a
+    src:
+    - https://petlja.org/biblioteka/r/Zbirka3/modularni_inverz
+    - https://petlja.org/biblioteka/r/Zbirka3/kineska_teorema
+    - https://petlja.org/biblioteka/r/Zbirka3/bilijar
+    title: Проширени Еуклидов алгоритам - задаци
+    type: coding-quiz
+  - description: ''
+    file: 12_racunanje_sa_polinomima.html
+    guid: 8d062afb-850e-45b5-bb94-9ca6eda56468
+    src: 12_racunanje_sa_polinomima.rst
+    title: Рачунање са полиномима
+    type: reading
+  - description: ''
+    file: 13_algebarski_dalje.html
+    guid: c9892588-ae92-45b6-b1f6-48a0e6752954
+    src: 13_algebarski_dalje.rst
+    title: Још неки алгебарски алгоритми
+    type: reading
+  - description: ''
+    file: 21_konveksan_omotac.html
+    guid: 1130ed38-2155-4c45-9413-1a78c7742578
+    src: 21_konveksan_omotac.rst
+    title: Конвексан омотач
+    type: reading
+  - description: ''
+    file: 23_pripadnost_prostom_mnogouglu.html
+    guid: d8f9a6be-f296-4f14-890b-4825f5014f7c
+    src: 23_pripadnost_prostom_mnogouglu.rst
+    title: Припадност простом многоуглу
+    type: reading
+  - description: ''
+    file: 24_geometrijski_dalje.html
+    guid: 35e02ef0-acde-403f-9a36-ab20b61480f9
+    src: 24_geometrijski_dalje.rst
+    title: Још неки геометријски алгоритми
+    type: reading
+  - description: ''
+    file: 31_pretraga_podniske.html
+    guid: 3f848cd2-77ba-4924-be6e-b04c5b8faf5c
+    src: 31_pretraga_podniske.rst
+    title: Алгоритми претраге подниске
+    type: reading
+  - description: ''
+    file: 32_json_yaml.html
+    guid: 9532096b-4009-44fa-a57c-23c15e978434
+    src: 32_json_yaml.rst
+    title: Формати JSON и YAML
+    type: reading
+  - description: ''
+    file: 33_markdown.html
+    guid: c23925bc-6a8a-4794-96db-e6db1021fc3e
+    src: 33_markdown.rst
+    title: Формат Markdown
+    type: reading
+  - description: ''
+    file: 34_tekstualni_dalje.html
+    guid: c0b13dba-ddb4-4e41-be05-0c610164077d
+    src: 34_tekstualni_dalje.rst
+    title: Још неки алгоритми са текстом
+    type: reading
+  - description: ''
+    file: 41_najkraci_putevi.html
+    guid: 411a4616-18b6-4b02-b622-76fda6710d97
+    src: 41_najkraci_putevi.rst
+    title: Најкраћи путеви у графу
+    type: reading
+  - description: ''
+    file: 42_min_razapinjuce_drvo.html
+    guid: d8526739-3eb5-4394-9bcf-f6e9caf8f1c8
+    src: 42_min_razapinjuce_drvo.rst
+    title: Минимално разапињуће дрво
+    type: reading
+  - description: ''
+    file: 43_grafovski_dalje.html
+    guid: 0f844d6d-73a2-49f6-85da-ff21652eaa82
+    src: 43_grafovski_dalje.rst
+    title: Још неки графовски алгоритми
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 5_odabrani
+  guid: 61aa142d-a6f8-4632-856c-21cec6b11bdc
+  normalized_title: 5. Одабрани алгоритми и структуре података
+  title: 5. Одабрани алгоритми и структуре података
+title: Програмирање за трећи разред специјализованих ИТ одељења

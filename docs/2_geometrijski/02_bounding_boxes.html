@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поравнати правоугаоници и квадрови</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Поравнати правоугаоници и квадрови<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>Мотив<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>У многим применама рачунарске геометрије потребно је да се брзо провери да ли два објекта имају
+заједничких тачака, тј. да ли се ти објекти секу. Значај овог проблема је јаснији ако имамо на уму
+да наши геометријски модели често представљају стварне објекте у простору који се крећу по неким
+правилима. Установљавањем да нема пресека, потврђујемо да стварни објекти током свог кретања не би
+утицали један на други и да би наставили да се крећу по истим правилима као и до тада. Постојање
+пресека би значило да је дошло до судара и да се надаље објекти крећу по измењеним правилима. Зато
+се овај проблем често и назива откривање судара, односно откривање колизије (енгл. <em>collision
+detection</em>). Када се узме типична величина разматраног простора и објеката које пратимо, до судара
+два конкретна, изабрана објекта долази веома ретко, па је најчешћи одговор не. Зато је корисно да се
+пронађе начин који са врло мало рачунања може у многим случајевима да препозна да нема пресека. У ту
+сврху, у тродимензионалној графици уз сваки објекат може да се памти и најмањи квадар који садржи тај
+објекат, а чије су ивице паралелне координатним осама (енгл. <em>axis-alligned bounding box</em>, скраћено:
+<em>AABB</em>). Приликом провере постојања пресека објеката, обично се прво израчуна да ли се секу одговарајући
+квадрови. Ово је често много брже него провера постојања пресека самих објеката, који могу да буду
+разних компликованих облика. Кад год су два објекта довољно удаљени један од другог, неће се сећи
+квадрови, а тиме ни објекти, па добијамо брз одговор да пресек не постоји. У преосталим, ређим
+случајевима, потребно је да се обаве и остале, захтевније провере. Када се посматра велики број провера
+пресецања, овим поступком се често уштеди дуже време (потребно за сложеније рачунање), а тек понекад
+се изгуби краће време (за проверу пресека квадрова), па се укупно време рачунања овим поступком значајно
+смањује.
+Поменути квадрови који садрже објекте могу да буду корисни и у другим сличним проблемима, као што је
+провера припадности тачке објекту, односно одређивање тачке продора праве кроз објекат, ако продор
+постоји. Да би се рачунање додатно смањило, може да се формира хијерархија ових квадрова, у којој
+сваки квадар следећег нивоа садржи више квадрова претходног нивоа. Тако, у случају да већи квадар не
+садржи тачку (или нема пресека са другим квадром), нема потребе да проверавамо појединачне квадрове
+који се налазе у овом већем, па тиме додатно штедимо време.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Потпуно иста идеја може да се искористи и у дводимензионалној графици, само се уместо квадрова користе
+правоугаоници, чије су странице паралелне координатним осама (који се на енглеском такође називају
+<em>axis-aligned bounding boxes</em>, скраћено: <em>AABB</em>). За овакве правоугаонике и раније описане квадрове нема
+опште познатог, распрострањеног домаћег термина, па ћемо их у даљем тексту називати једноставно <strong>рамови</strong>
+и <strong>кутије</strong>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Због значаја рамова и кутија у применама, проћи ћемо кроз неколико једноставних, али у пракси важних
+поступака са њима.</p>
+<p>Погледајмо различите положаје два рама. Видимо да се рамови секу само онда када се секу њихове пројекције
+на обе координатне осе.</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="../_images/presek_ramova.png"><img alt="../_images/presek_ramova.png" src="../_images/presek_ramova.png" style="width: 660px;" /></a>
+<p class="caption"><span class="caption-text">Међусобни положаји два рама и њихових пројекција на координатне осе.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>Према томе, провера постојања пресека рамова се своди на проверу постојања пресека дужи на правој, што
+је једноставнији проблем. Можемо да кажемо да се овај дводимензиони проблем решава тако што два пута
+решимо одговарајући једнодимензиони проблем. При томе су једнодимензиони проблеми независни један од
+другог.</p>
+<p>Лако можемо да се уверимо да још неки проблеми са рамовима имају исту особину, тј. могу да се разложе
+на два једнодимензиона проблема. Такви су, на пример, провера да ли рам садржи дату тачку, растојање
+тачке од рама и растојање између два рама. Због тога ћемо прво да решимо одговарајуће проблеме са
+дужима и тачкама на правој.</p>
+</div>
+<div class="section" id="id3">
+<h2>Припадања, пресеци и растојања на правој<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Тачке на правој имају само једну координату, па се свака тачка праве задаје једним реалним бројем.
+Пошто је дуж одређена двема крајњим тачкама, дуж на правој се задаје са два броја, од којих сваки
+представља координату једне од крајњих тачака. На пример, ако је координата тачке <span class="math notranslate nohighlight">\(A\)</span> једнака
+3, а координата тачке <span class="math notranslate nohighlight">\(B\)</span> једнака 5, дуж је у потпуности одређена координатама <span class="math notranslate nohighlight">\(3\)</span> и
+<span class="math notranslate nohighlight">\(5\)</span>. При томе, координате тачака које припадају дужи <span class="math notranslate nohighlight">\(AB\)</span> се налазе у интервалу <span class="math notranslate nohighlight">\([3,5]\)</span>.</p>
+<div class="section" id="id4">
+<h3>Услов да тачка припада дужи на правој<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Нека је <span class="math notranslate nohighlight">\(t\)</span> координата тачке <span class="math notranslate nohighlight">\(T\)</span>, а <span class="math notranslate nohighlight">\(t_0, t_1\)</span> координате крајева дужи
+<span class="math notranslate nohighlight">\(AB\)</span>, где је <span class="math notranslate nohighlight">\(t_0 &lt; t_1\)</span>. Тачка <span class="math notranslate nohighlight">\(T\)</span> је између тачака <span class="math notranslate nohighlight">\(AB\)</span> ако и само ако
+је њена координата <span class="math notranslate nohighlight">\(t\)</span> између координата крајева дужи <span class="math notranslate nohighlight">\(AB\)</span>. Према томе, важи услов:</p>
+<div class="math notranslate nohighlight">
+\[T \in AB \iff t_0 \leq t \leq t_1.\]</div>
+</div>
+<div class="section" id="id5">
+<h3>Растојање тачке од дужи на правој<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Растојање тачке <span class="math notranslate nohighlight">\(T\)</span> од дужи <span class="math notranslate nohighlight">\(AB\)</span> дефинише се као растојање тачке <span class="math notranslate nohighlight">\(T\)</span> од њој
+најближе тачке, која припада дужи <span class="math notranslate nohighlight">\(AB\)</span>.</p>
+<div class="figure align-center" id="id12">
+<img alt="../_images/rastojanje_tacka_duz.png" src="../_images/rastojanje_tacka_duz.png" />
+<p class="caption"><span class="caption-text">Различити међусобни положаји тачке и дужи на правој.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>На слици су приказани различити међусобни положаји тачке и дужи на правој. У првом случају растојање
+је једнако дужини дужи <span class="math notranslate nohighlight">\(TA\)</span>, у другом нули, а у трећем дужини дужи <span class="math notranslate nohighlight">\(TB\)</span>. Користећи исте
+ознаке за координате као код услова припадности, имамо:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d(T, AB) =
+\left\{
+    \begin{array}{ll}
+        t_0 - t  &amp; \mbox{ако } t &lt; t_0\\
+        0 &amp; \mbox{ако } t_0 \leq t \leq t_1\\
+        t - t_1  &amp; \mbox{ако } t &gt; t_1\\
+    \end{array}
+\right.\end{split}\]</div>
+<p>Да убудуће не бисмо посебно наводили дефиниције растојања између две дужи, два рама, две кутије и
+слично, даћемо овде општију дефиницију растојања између два затворена скупа тачака, која може да
+се примени у свим случајевима који су нам од значаја. За скуп тачака кажемо да је затворен ако
+садржи своју границу.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Растојање између два затворена скупа тачака <span class="math notranslate nohighlight">\(S_1, S_2\)</span> се дефинише као минимум
+растојања тачака <span class="math notranslate nohighlight">\(P_1, P_2\)</span>, таквих да је <span class="math notranslate nohighlight">\(P_1 \in S_1, P_2 \in S_2\)</span>.</p>
+
+    </div></div>
+</div>
+<div class="section" id="id6">
+<h3>Растојање између две дужи на правој<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Нека су на правој дате тачке <span class="math notranslate nohighlight">\(M_0, M_1, N_0, N_1\)</span> и нека су њихове координате редом
+<span class="math notranslate nohighlight">\(m_0, m_1, n_0, n_1\)</span> такве да је <span class="math notranslate nohighlight">\(m_0 &lt; m_1, n_0 &lt; n_1\)</span>. Растојање између дужи
+<span class="math notranslate nohighlight">\(M_0M_1\)</span> и <span class="math notranslate nohighlight">\(N_0N_1\)</span> може да се израчуна разматрањем случајева:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d(M_0M_1, N_0N_1) =
+\left\{
+    \begin{array}{ll}
+        m_0 - n_1 &amp; \mbox{ако } m_0 &gt; n_1\\
+        n_0 - m_1 &amp; \mbox{ако } n_0 &gt; m_1\\
+        0 &amp; \mbox{иначе }\\
+    \end{array}
+\right.\end{split}\]</div>
+<p>Први случај је да је цела дуж <span class="math notranslate nohighlight">\(M_0M_1\)</span> десно од дужи <span class="math notranslate nohighlight">\(N_0N_1\)</span> (редослед координата
+је <span class="math notranslate nohighlight">\(n_0 &lt; n_1 &lt; m_0 &lt; m_1\)</span>), други случај је да је цела дуж <span class="math notranslate nohighlight">\(M_0M_1\)</span> лево од дужи
+<span class="math notranslate nohighlight">\(N_0N_1\)</span> (редослед координата је <span class="math notranslate nohighlight">\(m_0 &lt; m_1 &lt; n_0 &lt; n_1\)</span>), а трећи случај су сви
+остали редоследи координата, јер при сваком од њих постоји тачка која је заједничка двема
+дужима, па је растојање између дужи нула.</p>
+</div>
+<div class="section" id="id7">
+<h3>Постојање пресека двеју дужи на правој<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Из малопређашњег разматрања видимо да се дужи секу ако ниједна од њих није у целости лево (или
+десно) од друге. Ако користимо исте ознаке као при одређивању растојања између дужи, услов да
+се дужи секу је да не важи ниједна од неједнакости <span class="math notranslate nohighlight">\(m_0 &gt; n_1, n_0 &gt; m_1\)</span>. Према томе:</p>
+<div class="math notranslate nohighlight">
+\[M_0M_1 \cap N_0N_1 \neq \emptyset \iff m_0 \leq n_1 \land n_0 \leq m_1.\]</div>
+<p>Другим речима: две дужи на правој се секу ако и само ако крећући се по правој, свака од њих почиње
+пре него што се друга заврши.</p>
+<p>Формуле које смо до сада извели могу да се искористе за писање класе која представља дуж на правој.
+Део <code class="docutils literal notranslate"><span class="pre">1D</span></code> у називу <code class="docutils literal notranslate"><span class="pre">Duz1D</span></code> означава да се ради о једној димензији, тј. да свака тачка има само
+једну координату.</p>
+
+<div data-childcomponent="klasa_duz" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_duz data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="class Duz1D
+{
+    double t0;
+    double t1;
+    public Duz1D(double a, double b)
+    {
+        if (a &lt; b) { t0 = a; t1 = b; }
+        else { t0 = b; t1 = a; }
+    }
+    public bool Sadrzi(double t)
+    {
+        return t0 &lt;= t &amp;&amp; t &lt;= t1;
+    }
+    public double Rastojanje(double t)
+    {
+        if (t &lt; t0) return t0 - t;
+        else if (t &lt; t1) return 0;
+        else return t1 - t;
+    }
+    public double Rastojanje(Duz1D D)
+    {
+        if (t0 &gt; D.t1) return t0 - D.t1;
+        else if (D.t0 &gt; t1) return D.t0 - t1;
+        else return 0;
+    }
+    public bool Preseca(Duz1D D)
+    {
+        return t0 &lt;= D.t1 &amp;&amp; D.t0 &lt;= t1;
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Погледајмо сада како ову класу можемо да искористимо у решавању проблема у равни.</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Припадања, пресеци и растојања у равни<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>У претходном делу дошли смо до формула које представљају решења следећих проблема:</p>
+<ul class="simple">
+<li><p>Одредити услов да тачка припада дужи на правој;</p></li>
+<li><p>Израчунати растојање тачке од дужи на правој;</p></li>
+<li><p>Израчунати растојање између две дужи на правој;</p></li>
+<li><p>Утврдити да ли се две дужи на правој секу.</p></li>
+</ul>
+<p>Сваки од ова четири проблема има и своју верзију у равни, која се добија када реч <cite>дуж</cite> заменимо речју
+<cite>рам</cite>, а реч <cite>права</cite> речју <cite>раван</cite>. Као што смо већ нагласили, сваки од ова четири проблема може да се
+разложи на два независна једнодимензиона проблема исте врсте. У тексту који следи под пројекцијама се
+подразумевају пројекције на координатне осе.</p>
+<ul class="simple">
+<li><p>Тачка у равни припада раму ако и само ако њене пројекције припадају пројекцијама рама.</p></li>
+<li><p>Нека су <span class="math notranslate nohighlight">\(dx, dy\)</span> растојања пројекција тачке <span class="math notranslate nohighlight">\(T\)</span> од пројекција рама <span class="math notranslate nohighlight">\(R\)</span>.
+Тада је растојање тачке <span class="math notranslate nohighlight">\(T\)</span> од рама <span class="math notranslate nohighlight">\(R\)</span> једнако <span class="math notranslate nohighlight">\(\sqrt{dx^2+dy^2}\)</span>.</p></li>
+<li><p>Нека су <span class="math notranslate nohighlight">\(dx, dy\)</span> растојања пројекција рама <span class="math notranslate nohighlight">\(R_1\)</span> од пројекција рама <span class="math notranslate nohighlight">\(R_2\)</span>.
+Тада је растојање између рамова <span class="math notranslate nohighlight">\(R_1\)</span> и <span class="math notranslate nohighlight">\(R_2\)</span> једнако <span class="math notranslate nohighlight">\(\sqrt{dx^2+dy^2}\)</span>.</p></li>
+<li><p>Два рама се секу ако и само ако се као дужи секу њихове пројекције на обе координатне осе.</p></li>
+</ul>
+<p>Сва наведена тврђења могу да се докажу разматрањем случајева. При томе могу да буду од помоћи
+слике попут оне са почетка ове стране. Користећи ова тврђења и претходно написану класу <code class="docutils literal notranslate"><span class="pre">Duz1D</span></code>,
+можемо да напишемо класу <code class="docutils literal notranslate"><span class="pre">Ram</span></code> са методима за решавање ових задатака. При томе користимо и
+једноставну класу <code class="docutils literal notranslate"><span class="pre">Tacka2D</span></code>, која представља тачку у равни (<code class="docutils literal notranslate"><span class="pre">2D</span></code> – две димензије).</p>
+
+<div data-childcomponent="klasa_ram" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_ram data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="class Tacka2D
+{
+    public double x;
+    public double y;
+    public static Tacka2D Ucitaj()
+    {
+        string[] s = Console.ReadLine().Split();
+        return new Tacka2D()
+        {
+            x = double.Parse(s[0]),
+            y = double.Parse(s[1])
+        };
+    }
+}
+class Ram
+{
+    Duz1D X;
+    Duz1D Y;
+    public Ram(Duz1D DX, Duz1D DY) { X = DX; Y = DY; }
+    public static Ram Ucitaj()
+    {
+        string[] s = Console.ReadLine().Split();
+        double x1 = double.Parse(s[0]);
+        double y1 = double.Parse(s[1]);
+        double x2 = double.Parse(s[2]);
+        double y2 = double.Parse(s[3]);
+        return new Ram(new Duz1D(x1, x2), new Duz1D(y1, y2));
+    }
+    public bool Sadrzi(Tacka2D T)
+    {
+        return X.Sadrzi(T.x) &amp;&amp; Y.Sadrzi(T.y);
+    }
+    public double Rastojanje(Tacka2D T)
+    {
+        double dx = X.Rastojanje(T.x);
+        double dy = Y.Rastojanje(T.y);
+        return Math.Sqrt(dx * dx + dy * dy);
+    }
+    public double Rastojanje(Ram R)
+    {
+        double dx = X.Rastojanje(R.X);
+        double dy = Y.Rastojanje(R.Y);
+        return Math.Sqrt(dx * dx + dy * dy);
+    }
+    public bool Preseca(Ram K)
+    {
+        return X.Preseca(K.X) &amp;&amp; Y.Preseca(K.Y);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Овако написано решење се лако преправља за решавање истих проблема у (тродимензионалном) простору.</p>
+</div>
+<div class="section" id="id9">
+<h2>Припадања, пресеци и растојања у простору<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Лако се уверавамо да у случају тродимензионалног простора важе суштински иста тврђења као и у равни.
+Измене у формулацији су минималне, а односе се само на број димензија.</p>
+<ul class="simple">
+<li><p>Тачка у равни припада раму ако и само ако њене пројекције припадају пројекцијама рама.</p></li>
+<li><p>Нека су <span class="math notranslate nohighlight">\(dx, dy, dz\)</span> растојања од пројекција тачке <span class="math notranslate nohighlight">\(T\)</span> од пројекција рама <span class="math notranslate nohighlight">\(R\)</span>.
+Тада је растојање тачке <span class="math notranslate nohighlight">\(T\)</span> од рама <span class="math notranslate nohighlight">\(R\)</span> једнако <span class="math notranslate nohighlight">\(\sqrt{dx^2+dy^2+dz^2}\)</span>.</p></li>
+<li><p>Нека су <span class="math notranslate nohighlight">\(dx, dy, dz\)</span> растојања од пројекција рама <span class="math notranslate nohighlight">\(R_1\)</span> од пројекција рама <span class="math notranslate nohighlight">\(R_2\)</span>.
+Тада је растојање између рамова <span class="math notranslate nohighlight">\(R_1\)</span> и <span class="math notranslate nohighlight">\(R_2\)</span> једнако <span class="math notranslate nohighlight">\(\sqrt{dx^2+dy^2+dz^2}\)</span>.</p></li>
+<li><p>Два рама се секу ако и само ако се као дужи секу њихове пројекције на све три координатне осе.</p></li>
+</ul>
+<p>Као и у случају две димензије, сада имамо све што је потребно за писање класа <code class="docutils literal notranslate"><span class="pre">Tacka3D</span></code> и <code class="docutils literal notranslate"><span class="pre">Kutija</span></code>.</p>
+
+<div data-childcomponent="klasa_kutija" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_kutija data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="class Tacka3D
+{
+    public double x;
+    public double y;
+    public double z;
+    public static Tacka3D Ucitaj()
+    {
+        string[] s = Console.ReadLine().Split();
+        return new Tacka3D()
+        {
+            x = double.Parse(s[0]),
+            y = double.Parse(s[1]),
+            z = double.Parse(s[2])
+        };
+    }
+}
+class Kutija
+{
+    Duz1D X;
+    Duz1D Y;
+    Duz1D Z;
+    public Kutija(Duz1D DX, Duz1D DY, Duz1D DZ) { X = DX; Y = DY; Z = DZ; }
+    public static Kutija Ucitaj()
+    {
+        string[] s = Console.ReadLine().Split();
+        double x1 = double.Parse(s[0]);
+        double y1 = double.Parse(s[1]);
+        double z1 = double.Parse(s[2]);
+        double x2 = double.Parse(s[3]);
+        double y2 = double.Parse(s[4]);
+        double z2 = double.Parse(s[5]);
+        return new Kutija(new Duz1D(x1, x2), new Duz1D(y1, y2), new Duz1D(z1, z2));
+    }
+    public bool Sadrzi(Tacka3D T)
+    {
+        return X.Sadrzi(T.x) &amp;&amp; Y.Sadrzi(T.y) &amp;&amp; Z.Sadrzi(T.z);
+    }
+    public double Rastojanje(Tacka3D T)
+    {
+        double dx = X.Rastojanje(T.x);
+        double dy = Y.Rastojanje(T.y);
+        double dz = Z.Rastojanje(T.z);
+        return Math.Sqrt(dx * dx + dy * dy + dz * dz);
+    }
+    public double Rastojanje(Kutija K)
+    {
+        double dx = X.Rastojanje(K.X);
+        double dy = Y.Rastojanje(K.Y);
+        double dz = Z.Rastojanje(K.Z);
+        return Math.Sqrt(dx * dx + dy * dy + dz * dz);
+    }
+    public bool Preseca(Kutija K)
+    {
+        return X.Preseca(K.X) &amp;&amp; Y.Preseca(K.Y) &amp;&amp; Z.Preseca(K.Z);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Када видимо колико су имплементације класа <code class="docutils literal notranslate"><span class="pre">Ram</span></code> и <code class="docutils literal notranslate"><span class="pre">Kutija</span></code> сличне, долазимо до идеје да напишемо
+класу која може да послужи и за две и за три димензије. У тој имплементацији, тачку би требало задати
+низом координата од два или три елемента, па би и класа <code class="docutils literal notranslate"><span class="pre">Tacka</span></code> била дефинисана у складу са тиме.
+Слично томе, уопштење рама и кутије би могло да се представи низом једнодимензионих дужи, који би такође
+имао два или три елемента. У таквој класи би за рачунање растојања и проверу припадности
+и пресека била потребна петља по координатама. Овде се таквим решењем нећемо бавити.</p>
+</div>
+<div class="section" id="id10">
+<h2>Задаци:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>За две дате дужи проверити да ли нека од њих у потпуности садржи ону другу.</p></li>
+<li><p>За два дата рама проверити да ли неки од њих у потпуности садржи онај други.</p></li>
+<li><p>За дати низ рамова одредити најмањи рам који их све у целости садржи.</p></li>
+<li><p>Дате су две дужи на правој и њихове брзине (које могу да буду и негативне). Одредити временски
+интервал током кога ће ове дужи имати пресек.</p></li>
+<li><p>Дата су два рама у равни и њихови вектори брзина (сваки вектор се задаје са два реална броја). Одредити
+временски интервал током кога ће ови рамови имати пресек.</p></li>
+<li><p>Дата је тачка на правој и њена брзина. Одредити да ли ће та тачка упасти у дату дуж, и ако хоће – колико
+најмање времена је потребно за то.</p></li>
+<li><p>Дате су координате тачке у равни и њен вектор брзине. Одредити да ли ће та тачка упасти у дати рам, и
+ако хоће – колико најмање времена је потребно за то.</p></li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="01_geom_uvod.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

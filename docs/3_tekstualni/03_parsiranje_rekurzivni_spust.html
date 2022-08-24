@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Парсирање и рекурзивни спуст</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                <a href=../3_tekstualni/04_algoritmi_teksta_quiz.html><div class="studioLecture" id=activity-04_algoritmi_teksta_quiz><i class="far fa-question-circle activity-icon"></i>Алгоритми текста - квиз</div></a>
+                <a href=../3_tekstualni/05_algoritmi_teksta_zadaci.html><div class="studioLecture" id=activity-05_algoritmi_teksta_zadaci><i class="fas fa-file-alt activity-icon"></i>Алгоритми текста - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../4_grafovski/00_primeri_grafova.html><div class="studioLecture" id=activity-00_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>Примери графова</div></a>
+                <a href=../4_grafovski/01_definicije_grafova.html><div class="studioLecture" id=activity-01_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/01_predstavljanje_grafova.html><div class="studioLecture" id=activity-01_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>Представљање графова</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa.html><div class="studioLecture" id=activity-02_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>Обилазак графова</div></a>
+                <a href=../4_grafovski/02_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-02_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/03_povezane_komponente.html><div class="studioLecture" id=activity-03_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_topolosko_sortiranje.html><div class="studioLecture" id=activity-04_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Парсирање и рекурзивни спуст<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Као што смо видели, регуларни изрази су веома користан формализам и
+њихова уграђена подршка у савременим програмским језицима заиста
+олакшава велики број задатака обраде текста. Са друге стране,
+регуларни изрази имају своја ограничења и постоји велики број корисних
+језика (скупова ниски) који се не могу описати регуларним
+изразима. Типичан пример су аритметички изрази, попут, на пример,
+израза <code class="docutils literal notranslate"><span class="pre">(3+4)*(5+6)</span></code>. Структура исправно записаних аритметичких
+израза је превише компликована да би могла да се опише регуларним
+изразима. Регуларни изрази чак не могу да опишу ни само исправност
+заградa унутар ниске. Наиме, број затворених заграда мора да одговара
+броју отворених заграда (и додатно, заграде морају да буду исправно
+угнежђене), а регуларни изрази немају могућност упаривања броја
+појављивања подизраза.</p>
+<p>У поглављу које следи ћемо описати један изражајни начин за опис
+синтаксе језика. У питању су тзв. <strong>формалне граматике</strong> које нам дају
+начин да опишемо синтаксу суштински рекурзивних објеката, какви су, на
+пример, аритметички изрази. Као што неформалне граматике одређују
+синтаксички исправне реченице природних језика, тако формалне
+граматике прецизно одређују синтаксички исправне „реченице”
+програмских језика, тј. исправне делове програмског кода или неког другог
+формалног садржаја.</p>
+<p>Упознаћемо и технике програмирања које на основу граматичког описа
+могу да провере исправност датог текста (тј. да провере да ли се дати
+текст уклапа у дати граматички опис) и да дати текст рашчлане на
+делове у складу са датом граматичком структуром, па и обраде на неки
+начин (на пример, израчунају вредност аритметичког израза). Процес
+синтаксичке анализе датог текста тј. провере да ли је текст у складу
+са формалним граматичком описом и одређивање његове структуре
+тј. рашчлањавање на саставне делове назива се <strong>парсирање</strong> а програм
+који то ради назива се синтаксички анализатор или <strong>парсер</strong>.</p>
+<p>Кренимо од формалног граматичког описа аритметичких израза. Наредна
+слика јасно показује њихову рекурзивну природу: сложенији изрази се
+граде од једноставнијих израза (применом оператора и функција), при
+чему су најелементарнији изрази променљиве и константе.</p>
+<p>Размотримо, на пример, структуру аритметичког израза
+<code class="docutils literal notranslate"><span class="pre">(3+4*x)*(8+y)</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/izraz_kutijice.png"><img alt="../_images/izraz_kutijice.png" class="align-center" src="../_images/izraz_kutijice.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>Зашто је он исправан аритметички израз? Зато што је добијен применом
+оператора <code class="docutils literal notranslate"><span class="pre">*</span></code> на једноставније изразе <code class="docutils literal notranslate"><span class="pre">(3+4*x)</span></code> и
+<code class="docutils literal notranslate"><span class="pre">(8+y)</span></code>. Сваки исправан израз на претходној слици је уоквирен
+правоугаоником одређене боје. Полазни израз је исправан, па је
+уоквирен црном бојом и види се да се он састоји од два исправна
+подизраза (једног уоквиреног црвеном, а другог уоквиреног плавом
+бојом).</p></li>
+<li><p>Зашто је <code class="docutils literal notranslate"><span class="pre">(3+4*x)</span></code> исправан израз? Зато што је добијен стављањем
+исправног израза <code class="docutils literal notranslate"><span class="pre">3+4*x</span></code> у заграде (тај подизраз је на слици
+уоквирен зеленом бојом).</p></li>
+<li><p>Зашто је израз <code class="docutils literal notranslate"><span class="pre">3+4*x</span></code> исправан? Зато што је добијен применом
+оператора <code class="docutils literal notranslate"><span class="pre">+</span></code> на исправне подиразе <code class="docutils literal notranslate"><span class="pre">3</span></code> и <code class="docutils literal notranslate"><span class="pre">4*x</span></code>.</p></li>
+<li><p>Зашто је израз <code class="docutils literal notranslate"><span class="pre">3</span></code> исправан? Зато што је у питању бројевна
+константа, а свака бројевна константа предтавља исправни аритметички
+израз.</p></li>
+<li><p>Зашто је израз <code class="docutils literal notranslate"><span class="pre">4*x</span></code> исправан? Зато што је добијен применом
+оператора <code class="docutils literal notranslate"><span class="pre">*</span></code> на исправне изразе <code class="docutils literal notranslate"><span class="pre">4</span></code> и <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p>Зашто је израз <code class="docutils literal notranslate"><span class="pre">4</span></code> исправан? Зато што је у питању бројевна
+константа.</p></li>
+<li><p>Зашто је израз <code class="docutils literal notranslate"><span class="pre">x</span></code> исправан? Зато што је у питању променљива, а
+свака променљива је исправан аритметички израз.</p></li>
+</ul>
+<p>На веома сличан начин се доказује и да је израз <code class="docutils literal notranslate"><span class="pre">(8</span> <span class="pre">+</span> <span class="pre">y)</span></code> исправан
+аритметички израз.</p>
+<p>Структура датог израза се може представити и дрветом, као на следећој
+слици.</p>
+<a class="reference internal image-reference" href="../_images/izraz_drvo.png"><img alt="../_images/izraz_drvo.png" class="align-center" src="../_images/izraz_drvo.png" style="width: 400px;" /></a>
+<p>Приметимо да се из дрвета јасно види однос оператора, па нема потребе
+приказивати заграде. Резултат рада парсера је често неко дрво које
+личи на ово приказано на слици. Такво дрво се назива <strong>дрво апстрактне
+синтаксе</strong> (енгл. abstract syntax tree, <strong>AST</strong>).</p>
+<p>Покушајмо сада да опишемо која су то правила која смо користили да
+бисмо закључили да је нешто исправан аритметички израз?</p>
+<ul class="simple">
+<li><p>Свака константа је исправан аритметички израз.</p></li>
+<li><p>Свака променљива је исправан аритметички израз.</p></li>
+<li><p>Ако је <code class="docutils literal notranslate"><span class="pre">izraz</span></code> исправан аритметички израз, тада је и <code class="docutils literal notranslate"><span class="pre">(izraz)</span></code>
+исправан аритметички израз.</p></li>
+<li><p>Ако су <code class="docutils literal notranslate"><span class="pre">izraz1</span></code> и <code class="docutils literal notranslate"><span class="pre">izraz2</span></code> исправни аритметички изрази, тада је
+и <code class="docutils literal notranslate"><span class="pre">izraz1</span> <span class="pre">+</span> <span class="pre">izraz2</span></code> исправан аритметички израз.</p></li>
+<li><p>Ако су <code class="docutils literal notranslate"><span class="pre">izraz1</span></code> и <code class="docutils literal notranslate"><span class="pre">izraz2</span></code> исправни аритметички изрази, тада је
+и <code class="docutils literal notranslate"><span class="pre">izraz1</span> <span class="pre">*</span> <span class="pre">izraz2</span></code> исправан аритметички израз.</p></li>
+</ul>
+<p>Да би оваква дефиниција израза била комплетна, набројаним правилима треба
+придружити још једно, а то је: исправни аритметички изрази се могу добити
+само применом набројаних правила. Наравно, изрази могу да буду дефинисани и
+обухватније, тј. могуће је аналогно дефинисати и правила за друге
+операторе (одузимање, дељење), али једноставности ради у наставку ћемо
+се често задржати само на сабирању и множењу.</p>
+<p>Рекурзивна дефиниција коју смо приказали потпуно прецизно карактерише
+исправне аритметичке изразе. Дефиниције овог типа називамо
+<strong>контекстно слободним граматикама</strong>. Додуше, граматике се често пишу у
+доста компактнијем запису (без пуно речи, само симболички). Тако би се
+претходна граматика могла записати на следећи начин.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">izraz</span> <span class="o">-&gt;</span> <span class="n">konstanta</span>
+<span class="n">izraz</span> <span class="o">-&gt;</span> <span class="n">promenljiva</span>
+<span class="n">izraz</span> <span class="o">-&gt;</span> <span class="p">(</span> <span class="n">izraz</span> <span class="p">)</span>
+<span class="n">izraz</span> <span class="o">-&gt;</span> <span class="n">izraz</span> <span class="o">+</span> <span class="n">izraz</span>
+<span class="n">izraz</span> <span class="o">-&gt;</span> <span class="n">izraz</span> <span class="o">*</span> <span class="n">izraz</span>
+</pre></div>
+</div>
+<p>Граматика се састоји од скупа незавршних симбола (у овом случају је то
+само симбол <code class="docutils literal notranslate"><span class="pre">izraz</span></code>) и скупа завршних симбола (у овом случају су то
+заграде, плус, пута, константа и променљива). Подразумевамо да је низ
+карактера са улаза већ рашчлањен на низ завршних симбола
+(тзв. <strong>токена</strong>) тј. да приликом имплементације синтаксичког
+анализатора не морамо водити рачуна о детаљима препознавања појединих
+завршних симбола. Дакле, у претходној граматици подразумевамо да се
+зна шта је променљива и шта је константа и да умемо да их препознамо
+када се јаве на улазу нашег програма. Оне, на пример, могу бити
+описане коришћењем регуларних израза, попут регуларног израза
+<code class="docutils literal notranslate"><span class="pre">[a-z][a-z0-9]*</span></code> којим се често описују идентификатори који
+представљају називе променљивих. Део програма који се бави груписањем
+појединачних карактера у завршне симболе наше граматике зове се
+<strong>лексички анализатор</strong>. Упрошћено говорећи, задатак лексичког
+анализатора је да од појединачних карактера (слова) направи речи, а
+задатак синтаксичког анализатора тј. парсера је да провери да ли те
+речи граде исправне реченице (реченице које су у складу са жељеном
+граматиком).</p>
+<p>На основу граматичких правила изводе се исправне ниске које имају
+жељену структуру. На пример, израз <code class="docutils literal notranslate"><span class="pre">konstanta</span> <span class="pre">*</span> <span class="pre">promenljiva</span></code> је
+исправан јер се може извести на следећи начин.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">izraz</span> <span class="o">=&gt;</span> <span class="n">izraz</span> <span class="o">*</span> <span class="n">izraz</span> <span class="o">=&gt;</span> <span class="n">konstanta</span> <span class="o">*</span> <span class="n">izraz</span> <span class="o">=&gt;</span> <span class="n">konstanta</span> <span class="o">*</span> <span class="n">promenljiva</span>
+</pre></div>
+</div>
+<p>Извођење креће од неког почетног незавршног симбола и у сваком кораку
+се незавршни симболи мењају десним странама граматичких правила, све
+док не остану само завршни симболи.</p>
+<p>Често се за запис граматика користи тзв. <strong>Бекус-Наурова нотација</strong>,
+<strong>BNF</strong> (каже се скраћено и <strong>Бекусова нотација</strong>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">konstanta</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">promenjiva</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="s2">&quot;(&quot;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s2">&quot;)&quot;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s2">&quot;+&quot;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s2">&quot;*&quot;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Постоји и такозвана проширена Бекусова нотација (EBNF) која на неки
+начин комбинује контекстно-слободне граматике са неким конструкцијама
+које су нам познате из регуларних израза. На пример,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">promenljiva</span><span class="o">&gt;</span> <span class="p">::</span> <span class="o">&lt;</span><span class="n">slovo</span><span class="o">&gt;</span> <span class="p">{</span><span class="o">&lt;</span><span class="n">slovo</span><span class="o">&gt;</span> <span class="o">|</span> <span class="o">&lt;</span><span class="n">cifra</span><span class="o">&gt;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>У овој нотацији усправна црта означава „или”, а витичасте заграде
+означавају нешто што се понавља нула или више пута (слично као
+звездица код регуларних израза).</p>
+<p>Поставља се питање како од граматичког описа језика можемо добити
+програмски код који проверава исправност ниске (проверу да ли она
+припада том језику тј. да ли је у складу са датим граматичким
+описом). Видели смо да савремени програмски језици нуде ту могућност
+за описе дате регуларним изразима. Нажалост, то није случај за
+граматике, мада постоји алат који пружа могућност аутоматског
+генерисања C# кода за проверу само на основу граматике коју корисник
+уноси (нпр. ANTLR, GPPG/GPLEX, Coco/R). Са друге стране, постоје
+технике које омогућавају да се релативно једноставно добије програмски
+код на основу граматичкиих описа и у наставку овог поглавља ћемо их
+укратко описати.</p>
+<div class="section" id="id2">
+<h2>Потпуно заграђени изрази<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Циљ нам је да прикажемо како написати програм који анализира
+исправност и израчунава вредности аритметичких израза. То ћемо урадити
+постпуно, тако што ћемо прво решити упрошћен случај <strong>потпуно
+заграђених израза</strong>. То су изрази који имају заграде око сваке примене
+аритметичког оператора. На пример,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(((</span><span class="mi">3</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mi">7</span><span class="o">+</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="p">)))</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Чињеница да је израз потпуно заграђен олакшава израчунавање, јер нема
+потребе да водимо рачуна о приоритету и асоцијативности оператора.
+Такви изрази се описују наредном, веома једноставном граматиком.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">::</span> <span class="o">&lt;</span><span class="n">cifra</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">::</span> <span class="s1">&#39;(&#39;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s1">&#39;+&#39;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s1">&#39;)&#39;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">::</span> <span class="s1">&#39;(&#39;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s1">&#39;*&#39;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s1">&#39;)&#39;</span>
+</pre></div>
+</div>
+<p>Приметимо још једно значајно упрошћење - изрази су формирани само од
+цифара и вишецифрени бројеви нису допуштени.</p>
+<p>Када на овом, упрошћеном случају упознамо основне технике, применићемо их
+и у општем случају.</p>
+<div class="section" id="id3">
+<h3>Рекурзивни спуст<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Пошто је граматички опис суштински рекурзиван, један природан начин да
+се приступи решавању проблема је да и програм користи
+рекурзију. Обрада структурираног текстуалног улаза рекурзивним
+функцијама се назива <strong>рекурзивни спуст</strong> (енгл. recursive
+descent). Дефинишемо рекурзивну функцију чији је задатак да израчуна
+вредност дела ниске који представља исправан аритметички израз. Он
+може бити или број или израз у заградама.</p>
+<ul class="simple">
+<li><p>Случај када је израз број је излаз из рекурзије и израчунавање
+вредности таквог израза је тривијално, јер је вредност израза
+једнака вредности тог броја тј. цифре.</p></li>
+<li><p>У случају израза у заградама читамо прво отворену заграду, затим
+рекурзивним позивом израчунавамо вредност првог операнда, након тога
+читамо оператор, затим рекурзивним позивом израчунавамо вредност
+другог операнда, након тога читамо затворену заграду и израчунавамо
+вредност познајући оператор и вредност оба операнда.</p></li>
+</ul>
+<p>Ниска која се обрађује не мора да се мења током рекурзивних позива,
+међутим, рекурзивна функција у сваком рекурзивном позиву обрађује део
+ниске, који креће од неке позиције. Нека се та позиција чува у
+променљивој <code class="docutils literal notranslate"><span class="pre">i</span></code>. Ако, на пример, израз облика <code class="docutils literal notranslate"><span class="pre">(izraz+izraz)</span></code>
+почиње на некој позицији <code class="docutils literal notranslate"><span class="pre">i</span></code>, тада први рекурзивни позив треба да
+анализира ниску од позиције <code class="docutils literal notranslate"><span class="pre">i+1</span></code> (јер се отворена заграда
+прескаче). Након завршетка првог рекурзивног треба очитати оператор,
+међутим не знамо на којој се позицији он налази. Кључна идеја је да
+наша рекурзивна функција добије додатни задатак: задатак рекурзивне
+функције је да прочита израз који почиње на позицији <code class="docutils literal notranslate"><span class="pre">i</span></code>, да
+израчуна његову вредност и да променљиву <code class="docutils literal notranslate"><span class="pre">i</span></code> промени тако да њена
+нова вредност указује на позицију ниске непосредно након израза који
+је прочитан. Променљива <code class="docutils literal notranslate"><span class="pre">i</span></code> мења своју вредност кроз рекурзивне
+позиве. Стога ћемо је преносити по референци, тако да представља и
+улазну и излазну величину функције.</p>
+<p>Имајући све ово у виду, једноставно можемо направити имплементацију у језику C#.</p>
+
+<div data-childcomponent="rekspust1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=rekspust1 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+class Program
+{
+    static int Vrednost(string izraz, ref int i)
+    {
+        if (Char.IsDigit(izraz[i]))
+            return izraz[i++] - &apos;0&apos;;
+        else
+        {
+            // preskacemo otvorenu zagradu
+            i++;
+            // izracunavamo vrednost prvog operanda
+            int op1 = Vrednost(izraz, ref i);
+            // pamtimo operator
+            char op = izraz[i++];
+            // prevodimo drugi operand
+            int op2 = Vrednost(izraz, ref i);
+            // preskacemo zatvorenu zagradu
+            i++;
+            // racunamo konacnu vrednost u zavisnosti od operatora
+            if (op == &apos;+&apos;)
+                return op1 + op2;
+            if (op == &apos;*&apos;)
+                return op1 * op2;
+            return 0;
+        }
+    }
+
+    static int Vrednost(string izraz)
+    {
+        int i = 0;
+        return Vrednost(izraz, ref i);
+    }
+    
+    static void Main(string[] args)
+    {
+        string izraz = Console.ReadLine();
+        Console.WriteLine(Vrednost(izraz));
+    }
+}
+
+"   >
+
+
+</textarea>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Коришћење стека<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Као што је већ познато, рекурзија се може елиминисати коришћењем
+стека. На стек можемо стављати све симболе док не наиђемо на затворену
+заграду. У том тренутку:</p>
+<ul class="simple">
+<li><p>са стека скидамо два операнда, оператор и отворену заграду;</p></li>
+<li><p>израчунавамо вредност израза добијеног применом оператора на операнде;</p></li>
+<li><p>на стек стављамо резултат.</p></li>
+</ul>
+<p>Размотримо пример израза <code class="docutils literal notranslate"><span class="pre">((3+4)*(5+6))</span></code>. Обрађујемо редом један по
+један карактер. До прве затворене заграде, на стек стављамо један по
+један симбол и стек тада изгледа овако.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">4</span>     <span class="o">&lt;-</span>  <span class="n">vrh</span>
+ <span class="o">+</span>
+ <span class="mi">3</span>
+ <span class="p">(</span>
+ <span class="p">(</span>
+<span class="o">----</span>
+<span class="n">stek</span>
+</pre></div>
+</div>
+<p>Пошто смо наишли на затворену заграду покрећемо израчунавање и
+долазимо до следећег стања:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">7</span>     <span class="o">&lt;-</span>  <span class="n">vrh</span>
+ <span class="p">(</span>
+<span class="o">----</span>
+<span class="n">stek</span>
+</pre></div>
+</div>
+<p>Након тога настављамо читање до наредне затворене заграде. Пре њеног
+читања, стек овако изгледа:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">6</span>      <span class="o">&lt;-</span>  <span class="n">vrh</span>
+ <span class="o">+</span>
+ <span class="mi">5</span>
+ <span class="p">(</span>
+ <span class="o">*</span>
+ <span class="mi">7</span>
+ <span class="p">(</span>
+<span class="o">----</span>
+<span class="n">stek</span>
+</pre></div>
+</div>
+<p>Наилазимо на прву од две затворене заграде, покрећемо израчунавање и
+долазимо до следећег стања.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">11</span>     <span class="o">&lt;-</span>  <span class="n">vrh</span>
+ <span class="o">*</span>
+ <span class="mi">7</span>
+ <span class="p">(</span>
+<span class="o">----</span>
+<span class="n">stek</span>
+</pre></div>
+</div>
+<p>На крају долазимо до друге затворене заграде, покрећемо израчунавање и
+долазимо до стања:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">77</span>     <span class="o">&lt;-</span>  <span class="n">vrh</span>
+<span class="o">----</span>
+<span class="n">stek</span>
+</pre></div>
+</div>
+<p>Примећујемо да се тражена вредност израза налази на стеку вредности.</p>
+<p>Постављање отворених заграда на стек у овом алгоритму не доприноси
+ничему корисном, па се може прескочити (на стек можемо стављати само
+бројеве и операторе).</p>
+<p>Имплементацију овог алгоритма у језику C# отежава то што није јасно
+који тип података се поставља на стек (за разлику од, на пример,
+језика Python у коме листе могу садржати истовремено податке
+различитог типа, у језику C# сви елементи колекције морају имати
+јединствен тип). Зато ћемо уместо једног у програму одржавати два
+стека: један на који ћемо постављати бројеве (вредности операнада), а
+на други карактере (ознаке оператора).</p>
+<ul class="simple">
+<li><p>Када наиђемо на цифру постављаћемо је на стек вредности операнада.</p></li>
+<li><p>Када наиђемо на оператор, постављаћемо га на стек оператора.</p></li>
+<li><p>Када наиђемо на затворену заграду, тада ћемо скидати два операнда са
+стека вредности операнада, оператор са стека оператора, применићемо
+оператор на операнде и резултат стављати на стек вредности
+операнада.</p></li>
+</ul>
+<p>Размотримо пример израза <code class="docutils literal notranslate"><span class="pre">((3+4)*(5+6))</span></code>. Обрађујемо редом један по
+један карактер. Отворене заграде можемо да прескочимо, а када наићемо
+на карактер <code class="docutils literal notranslate"><span class="pre">3</span></code>, стављамо га на стек вредности. Након тога <code class="docutils literal notranslate"><span class="pre">+</span></code>
+стек оператора, а затим <code class="docutils literal notranslate"><span class="pre">4</span></code> на стек вредности. У том тренутку
+стекови изгледају овако:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">4</span>
+    <span class="mi">3</span>             <span class="o">+</span>
+<span class="o">---------</span>     <span class="o">---------</span>
+<span class="n">vrednosti</span>     <span class="n">operatori</span>
+</pre></div>
+</div>
+<p>Пошто смо наишли на затворену заграду покрећемо израчунавање и
+долазимо до следећег стања:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">7</span>
+<span class="o">---------</span>     <span class="o">---------</span>
+<span class="n">vrednosti</span>     <span class="n">operatori</span>
+</pre></div>
+</div>
+<p>Након тога на стек оператора постављамо оператор множења <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">7</span>             <span class="o">*</span>
+<span class="o">---------</span>     <span class="o">---------</span>
+<span class="n">vrednosti</span>     <span class="n">operatori</span>
+</pre></div>
+</div>
+<p>Отворену заграду прескачемо, а затим на стек вредности стављамо <code class="docutils literal notranslate"><span class="pre">5</span></code>,
+на стек оператора <code class="docutils literal notranslate"><span class="pre">+</span></code>, па на стек вредности <code class="docutils literal notranslate"><span class="pre">6</span></code>. У том тренутку
+стекови изгледају овако.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">6</span>
+    <span class="mi">5</span>             <span class="o">+</span>
+    <span class="mi">7</span>             <span class="o">*</span>
+<span class="o">---------</span>     <span class="o">---------</span>
+<span class="n">vrednosti</span>     <span class="n">operatori</span>
+</pre></div>
+</div>
+<p>Наилазимо на прву од две затворене заграде, покрећемо израчунавање и
+долазимо до следећег стања.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="mi">11</span>
+    <span class="mi">7</span>             <span class="o">*</span>
+<span class="o">---------</span>     <span class="o">---------</span>
+<span class="n">vrednosti</span>     <span class="n">operatori</span>
+</pre></div>
+</div>
+<p>На крају долазимо до друге затворене заграде, покрећемо израчунавање и
+долазимо до стања:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="mi">77</span>
+<span class="o">---------</span>     <span class="o">---------</span>
+<span class="n">vrednosti</span>     <span class="n">operatori</span>
+</pre></div>
+</div>
+<p>Примећујемо да се тражена вредност израза налази на стеку вредности.</p>
+<p>Имплементација ове технике је дата у следећем C# коду. Користимо
+библиотечку имплементацију стека (класа <code class="docutils literal notranslate"><span class="pre">Stack</span></code> са методима <code class="docutils literal notranslate"><span class="pre">Push</span></code>
+за постављање елемената на стек и <code class="docutils literal notranslate"><span class="pre">Pop</span></code> за скидање елемента са стека).</p>
+
+<div data-childcomponent="stek1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=stek1 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static int Vrednost(string izraz)
+    {
+        var vrednosti = new Stack&lt;int&gt;();
+        var operatori = new Stack&lt;char&gt;();
+        foreach (char c in izraz)
+            if (Char.IsDigit(c))
+            {
+                vrednosti.Push(c - &apos;0&apos;);
+            }
+            else if (c == &apos;)&apos;)
+            {
+                char op = operatori.Pop();
+                int op2 = vrednosti.Pop();
+                int op1 = vrednosti.Pop();
+                if (op == &apos;+&apos;)
+                    vrednosti.Push(op1 + op2);
+                else if (op == &apos;*&apos;)
+                    vrednosti.Push(op1 * op2);
+            }
+            else if (c == &apos;+&apos; || c == &apos;*&apos;)
+            {
+                operatori.Push(c);
+            }
+        return vrednosti.Pop();
+    }
+
+    static void Main(string[] args)
+    {
+        string izraz = Console.ReadLine();
+        Console.WriteLine(Vrednost(izraz));
+    }
+}
+
+"   >
+
+
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Израчунавање вредности аритметичких израза<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Пређимо сада на израчунавање вредности произвољних, а не само потпуно
+заграђених израза. Постоји неколико начина да се то уради.</p>
+<div class="section" id="id6">
+<h3>Рекурзивни спуст<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Кренимо од рекурзивног спуста. Проблем са граматиком</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">konstanta</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">promenjiva</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="s2">&quot;(&quot;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s2">&quot;)&quot;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s2">&quot;+&quot;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s2">&quot;*&quot;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>је то што се у њој дефинисани оператори <code class="docutils literal notranslate"><span class="pre">+</span></code> и <code class="docutils literal notranslate"><span class="pre">*</span></code> никако не разликују
+по свом приоритету. Размотримо зато шта треба да се промени у дефиницији
+граматике, да бисмо узели у обзир и приоритет оператора. Пошто је сабирање
+операција нижег приоритета, на највишем нивоу сваки израз се састоји од
+једног или више сабирака. На пример:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">2+3*4</span></code> има два сабирка, <code class="docutils literal notranslate"><span class="pre">2</span></code> и <code class="docutils literal notranslate"><span class="pre">3*4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(3+4)*2+(5+2)*3+1</span></code> има три сабирка, <code class="docutils literal notranslate"><span class="pre">(3+4)*2</span></code>, <code class="docutils literal notranslate"><span class="pre">(5+2)*3</span></code> и <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(1+2)*(3+4)</span></code> има само један сабирак (без обзира што његови подизрази
+имају више сабирака).</p></li>
+</ul>
+<p>Сваки сабирак се састоји од једног или више чинилаца. Сваки чинилац је
+или број или израз у заградама. На пример, израз <code class="docutils literal notranslate"><span class="pre">(3+4)*2</span></code> има два
+чиниоца, док <code class="docutils literal notranslate"><span class="pre">1</span></code> и <code class="docutils literal notranslate"><span class="pre">(4*2+5)</span></code> имају само један чинилац.  Тиме се
+долази до следеће граматике у EBNF (сабирци су именовани називом терм,
+а чиниоци називом фактор).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span>  <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">term</span><span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;+&quot;</span> <span class="o">&lt;</span><span class="n">term</span><span class="o">&gt;</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="n">term</span><span class="o">&gt;</span>   <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">faktor</span><span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;*&quot;</span> <span class="o">&lt;</span><span class="n">faktor</span><span class="o">&gt;</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="n">faktor</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">broj</span><span class="o">&gt;</span> <span class="o">|</span> <span class="s2">&quot;(&quot;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s2">&quot;)&quot;</span>
+</pre></div>
+</div>
+<p>Подсетимо се, витичасте заграде у EBNF означавају да се оно у њима
+јавља нула или више пута (на пример, израз је један сабирак иза којег
+могу да се нула или више пута јаве плус и неки нови сабирак.</p>
+<p>Граматику можемо врло једноставно да проширимо операторима одузимања и
+дељења, поштујући при томе приоритет свих оператора.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span>  <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">term</span><span class="o">&gt;</span> <span class="p">{(</span><span class="s2">&quot;+&quot;</span><span class="o">|</span><span class="s2">&quot;-&quot;</span><span class="p">)</span> <span class="o">&lt;</span><span class="n">term</span><span class="o">&gt;</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="n">term</span><span class="o">&gt;</span>   <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">faktor</span><span class="o">&gt;</span> <span class="p">{(</span><span class="s2">&quot;*&quot;</span><span class="o">|</span><span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="o">&lt;</span><span class="n">faktor</span><span class="o">&gt;</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="n">faktor</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">:=</span> <span class="o">&lt;</span><span class="n">broj</span><span class="o">&gt;</span> <span class="o">|</span> <span class="s2">&quot;(&quot;</span> <span class="o">&lt;</span><span class="n">izraz</span><span class="o">&gt;</span> <span class="s2">&quot;)&quot;</span>
+</pre></div>
+</div>
+<p>Надаље, под појмом терм поред сабирака подразумевамо и умењеник и умањилац,
+а под појмом фактор поред чинилаца подразумевамо и дељеник и делилац.</p>
+<p>Вредност израза рачунамо техником рекурзивног спуста. Сваки нетерминал
+граматике ћемо представити посебном функцијом, која чита део израза
+који настаје из тог нетерминала и враћа вредност тог дела
+израза. Функцији се по референци преноси индекс <cite>i</cite> који означава
+почетак дела ниске <cite>s</cite> који се анализира. На крају рада функције овај
+индекс се премешта иза прочитаног дела ниске. Променљива <cite>ok</cite> која се
+такође преноси по референци је индикатор да ли је дошло до грешке
+дељења нулом током израчунавања вредности израза. Још једно проширење
+у односу на претходни, упрошћени програм је то што допуштамо да у
+изразима учествују и вишецифрени бројеви (а не само
+једноцифрени). Читање и одређивање вредности бројева је ручно
+имплементирано, а за вежбу вам остављамо да покушате да за ово
+употребите регуларне изразе.</p>
+
+<div data-childcomponent="rekspust2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=rekspust2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+class Program
+{
+    static int izraz(string s, ref int i, ref bool ok)
+    {
+        // racunamo vrednost prvog sabirka (ili umanjenika)
+        int a = term(s, ref i, ref ok);
+        // dok ima jos sabiraka (ili umanjilaca)
+        while (ok &amp;&amp; i &lt; s.Length &amp;&amp; (s[i] == &apos;+&apos; || s[i] == &apos;-&apos;))
+        {
+            // ako iza sledi sabirak 
+            if (s[i] == &apos;+&apos;)
+            {
+                // preskacemo znak +
+                i++;
+                // citamo i dodajemo vrednost narednog sabirka
+                a += term(s, ref i, ref ok);
+            }
+            // ako iza sledi umanjilac
+            else if (s[i] == &apos;-&apos;)
+            {
+                // preskacemo znak -
+                i++;
+                // citamo i oduzimamo vrednost umanjioca
+                a -= term(s, ref i, ref ok);
+            }
+        }
+        return a;
+    }
+    
+    static int term(string s, ref int i, ref bool ok)
+    {
+        // citamo i racunamo vrednost prvog cinioca (ili deljenika)
+        int a = faktor(s, ref i, ref ok);
+        // dok ima jos cinilaca (ili delilaca)
+        while (ok &amp;&amp; i &lt; s.Length &amp;&amp; (s[i] == &apos;*&apos; || s[i] == &apos;/&apos;))
+        {
+            // ako iza sledi cinilac
+            if (s[i] == &apos;*&apos;)
+            {
+                // preskacemo znak *
+                i++;
+                // citamo i mnozimo izraz narednim ciniocem
+                a *= faktor(s, ref i, ref ok);
+            }
+            // ako iza sledi delilac
+            else if (s[i] == &apos;/&apos;)
+            {
+                // preskacemo znak /
+                i++;
+                // citamo i racunamo vrednost delioca
+                int b = faktor(s, ref i, ref ok);
+                // proveravamo da li je u pitanju deljenje nulom
+                if (b == 0)
+                    ok = false;
+                else
+                    a /= b;
+            }
+        }
+        return a;
+    }
+    
+    static int faktor(string s, ref int i, ref bool ok)
+    {
+        // ako smo procitali prvu cifru
+        if (s[i] &gt;= &apos;0&apos; &amp;&amp; s[i] &lt;= &apos;9&apos;)
+            // citamo i odredjujemo vrednost celog broja
+            return broj(s, ref i);
+        else
+        {
+            // preskacemo otvorenu zagradu
+            i++;
+            // citamo i racunamo vrednost izraza u zagradama
+            int a = izraz(s, ref i, ref ok);
+            // preskacemo zatvorenu zagradu
+            i++;
+            return a;
+        }
+    }
+
+    static int broj(string s, ref int i)
+    {
+        // Hornerovom shemom racunamo vrednost broja
+        // citamo cifre dokle god ih ima
+        int x = 0;
+        while (i &lt; s.Length &amp;&amp; s[i] &gt;= &apos;0&apos; &amp;&amp; s[i] &lt;= &apos;9&apos;)
+        {
+            x = x * 10 + s[i] - &apos;0&apos;;
+            i++;
+        }
+        return x;
+    }
+    
+    static void Main(string[] args)
+    {
+        string s;
+        int i, rez;
+        bool ok;
+        while ((s = Console.ReadLine()) != null)
+        {
+            i = 0;
+            ok = true;
+            rez = izraz(s, ref i, ref ok);
+            if (ok)
+                Console.WriteLine(rez);
+            else
+                Console.WriteLine(&quot;deljenje nulom&quot;);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Приметимо да се у претходном програму користи узајамна рекурзија
+(функција <code class="docutils literal notranslate"><span class="pre">izraz</span></code> позива функцију <code class="docutils literal notranslate"><span class="pre">term</span></code> која позива функцију
+<code class="docutils literal notranslate"><span class="pre">faktor</span></code>, а која позива функцију <code class="docutils literal notranslate"><span class="pre">izraz</span></code>).</p>
+</div>
+<div class="section" id="id7">
+<h3>Коришћење стека<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Проблем се решава слично као код потпуно заграђених израза, али овај
+пут се мора обраћати пажња на приоритет и асоцијативност оператора.</p>
+<p>Једноставности ради претпоставимо прво да не израчунавамо вредност
+израза, већ само израз пребацујемо у тзв. постфиксни облик који нам
+даје веома једноставно упутство како би се вредност израза могла
+израчунати (уз коришћење помоћног стека). У постфиксном облику,
+оператор се не пише између, него након операнада. На пример, постфиксни
+облик израза <code class="docutils literal notranslate"><span class="pre">(3+4)*5</span></code> је <code class="docutils literal notranslate"><span class="pre">34+5*</span></code>. Захваљујући оваквом редоследу
+писања, у постфиксном облику израза заграде нису потребне. Погледајмо
+на примеру истог израза како тече израчунавање вредности на основу
+постфиксног записа: прво на стек вредности (овде је то једини стек)
+треба ставити бројеве 3 и 4; затим, наиласком на знак <code class="docutils literal notranslate"><span class="pre">+</span></code> те две
+вредности треба скинути са стека и заменити њиховим збиром (бројем
+7); затим се на стек ставља и број 5, а наиласком на знак <code class="docutils literal notranslate"><span class="pre">*</span></code> са стека
+се скидају вредности 7 и 5 и замењују њиховим производом (бројем 35).</p>
+<p>Изрази се обично записују у једном од три наредна облика:</p>
+<ul class="simple">
+<li><p>постфиксни облик (на пример, <code class="docutils literal notranslate"><span class="pre">34+5*</span></code>) је, видели смо, облик у ком
+се оператор исписује након својих операнада</p></li>
+<li><p>инфиксни облик (на пример, <code class="docutils literal notranslate"><span class="pre">(3+4)*5</span></code>) је класичан облик записа
+израза и у њему се оператор записује између својих операнада</p></li>
+<li><p>префиксни облик (на пример, <code class="docutils literal notranslate"><span class="pre">*+345</span></code>) је облик у коме се оператор
+записује испред својих операнада. Овај облик је веома погодан за парсирање,
+јер се структура израза (водећи оператор) може открити већ на самом
+почетку (у примеру се види да је у питању „производ збира бројева 3
+и 4 и броја 5”).</p></li>
+</ul>
+<p>Превођење потпуно заграђених израза у постфиксни облик би било јако
+једноставно:</p>
+<ul class="simple">
+<li><p>када наиђемо на број преписујемо га на излаз;</p></li>
+<li><p>када наиђемо на оператор стављамо га на стек;</p></li>
+<li><p>када наиђемо на затворену заграду скидамо оператор са стека и
+преписујемо га на излаз.</p></li>
+</ul>
+<p>Заиста, потпуно заграђена форма претходног израза је
+<code class="docutils literal notranslate"><span class="pre">((3+4)*5)</span></code>. Отворене заграде прескачемо, преписујемо <code class="docutils literal notranslate"><span class="pre">3</span></code> на
+излаз, стављамо <code class="docutils literal notranslate"><span class="pre">+</span></code> на стек, преписујемо <code class="docutils literal notranslate"><span class="pre">4</span></code> на излаз и онда,
+пошто смо наишли на затворену заграду пребацујемо <code class="docutils literal notranslate"><span class="pre">+</span></code> са стека на
+излаз. Након тога на стек стављамо <code class="docutils literal notranslate"><span class="pre">*</span></code>, преписујемо <code class="docutils literal notranslate"><span class="pre">5</span></code> на излаз и
+при наиласку на другу затворену заграду пребацујемо <code class="docutils literal notranslate"><span class="pre">*</span></code> са стека на
+излаз, чиме добијамо постфиксни облик <code class="docutils literal notranslate"><span class="pre">34+5*</span></code>. Ако излаз заменимо
+стеком вредности и пребацивање оператора на излаз заменимо њиховом
+применом на стеку вредности, добићемо алгоритам који израчунава
+вредност израза.</p>
+<p>Пређимо сада на случај израза који не мора бити потпуно
+заграђен. Кључна дилема је шта радити у ситуацији када се прочита
+<cite>op2</cite> у изразу облика <code class="docutils literal notranslate"><span class="pre">i1</span> <span class="pre">op1</span> <span class="pre">i2</span> <span class="pre">op2</span> <span class="pre">i3</span></code> где су <code class="docutils literal notranslate"><span class="pre">i1</span></code>, <code class="docutils literal notranslate"><span class="pre">i2</span></code> и
+<code class="docutils literal notranslate"><span class="pre">i3</span></code> три израза (било броја било израза у заградама), а <code class="docutils literal notranslate"><span class="pre">op1</span></code> и
+<code class="docutils literal notranslate"><span class="pre">op2</span></code> два оператора. У том тренутку на излазу ће се налазити израз
+<code class="docutils literal notranslate"><span class="pre">i1</span></code> преведен у постфиксни облик и иза њега израз <code class="docutils literal notranslate"><span class="pre">i2</span></code> преведен у
+постфиксни облик, док ће се оператор <code class="docutils literal notranslate"><span class="pre">op1</span></code> налазити на врху стека
+оператора. Уколико <code class="docutils literal notranslate"><span class="pre">op1</span></code> има виши приоритет од оператора <code class="docutils literal notranslate"><span class="pre">op2</span></code> или
+уколико им је приоритет исти, али је асоцијативност лева (врши се
+израчунавање слева надесно, што је прилично уобичајено), тада је
+потребно прво израчунавати израз <code class="docutils literal notranslate"><span class="pre">i1</span> <span class="pre">op1</span> <span class="pre">i2</span></code> тиме што се оператор
+<code class="docutils literal notranslate"><span class="pre">op1</span></code> са врха стека пребаци на излаз. У супротном (ако <code class="docutils literal notranslate"><span class="pre">op2</span></code> има
+виши приоритет или ако је приоритет исти, а асоцијативност десна)
+оператор <code class="docutils literal notranslate"><span class="pre">op1</span></code> остаје на стеку и изнад њега се поставља оператор
+<code class="docutils literal notranslate"><span class="pre">op2</span></code>.</p>
+<p>Наредна анимација приказује примену овог алгоритма на једном примеру.</p>
+
+    <div class="gallery" id="shunting_algoritam">
+        <div>
+            <div style="width: 600px;height:100%">
+            <img src="../_images/shunting0.png" width="100%" height="100%">
+<img src="../_images/shunting1.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting17.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="shunting_algoritam-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>Уместо превођења у постфиксни облик, можемо одмах израчунавати
+вредност израза (тако што се уместо текстуалног излаза користи стек
+вредности).</p>
+
+    <div class="gallery" id="shunting_algoritam_val">
+        <div>
+            <div style="width: 600px;height:100%">
+            <img src="../_images/shunting_val0.png" width="100%" height="100%">
+<img src="../_images/shunting_val1.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val2.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val3.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val4.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val5.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val6.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val7.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val8.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val9.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val10.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val11.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val12.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val13.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val14.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val15.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val16.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val17.png" width="100%" height="100%" style="display: none;">
+<img src="../_images/shunting_val18.png" width="100%" height="100%" style="display: none;">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-gallery row" id="shunting_algoritam_val-nav">
+        <div class="prev-img">
+        &#10094;
+        </div>
+        <div class="next-img">
+        <span class="float-right">&#10095;</span>
+        </div>
+    </div>
+<p>У наставку је приказана имплементација овог алгоритма у језику C#. И
+стек вредности и стек оператора су представљени библиотечком
+колекцијом <code class="docutils literal notranslate"><span class="pre">Stack</span></code> (метода <code class="docutils literal notranslate"><span class="pre">Push</span></code> ставља елемент на врх стека,
+<code class="docutils literal notranslate"><span class="pre">Pop</span></code> скида елемент са врха стека, <code class="docutils literal notranslate"><span class="pre">Peek</span></code> очитава елемент са врха
+непразног стека, али га не скида са стека, док својство <code class="docutils literal notranslate"><span class="pre">Count</span></code>
+означава тренутни број елемената на стеку и користи се да би се
+проверило да ли је стек празан).</p>
+
+<div data-childcomponent="stek2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=stek2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+
+class Program
+{
+    // provera da li je karakter aritmeticki operator
+    static bool jeOperator(char c)
+    {
+        return c == &apos;+&apos; || c == &apos;-&apos; || c == &apos;*&apos; || c == &apos;/&apos;;
+    }
+
+    // prioritet datog operatora
+    static int prioritet(char c)
+    {
+        if (c == &apos;+&apos; || c == &apos;-&apos;)
+            return 1;
+        else if (c == &apos;*&apos; || c == &apos;/&apos;)
+            return 2;
+        // greska
+        return 0;
+    }
+
+    // primenjuje datu operaciju na dve vrednosti na vrhu steka, 
+    // zamenjujuci ih sa rezultatom primene te operacije
+    // vracamo informaciju o tome da li operator uspesno primenjen ili je
+    // doslo do deljenja nulom
+    static bool primeni(Stack&lt;char&gt; operatori, Stack&lt;int&gt; vrednosti)
+    {
+        // operator se nalazi na vrhu steka operatora
+        char op = operatori.Pop();
+        // operandi se nalaze na vrhu steka operatora
+        int op2 = vrednosti.Pop();
+        int op1 = vrednosti.Pop();
+
+        // izracunavamo vrednost izraza
+        int v = 0;
+        if (op == &apos;+&apos;) v = op1 + op2;
+        else if (op == &apos;-&apos;) v = op1 - op2;
+        else if (op == &apos;*&apos;) v = op1 * op2;
+        else if (op == &apos;/&apos;) {
+            // deljenje nulom
+            if (op2 == 0)
+                return false;
+            v = op1 / op2;
+        }
+        // postavljamo ga na stek operatora
+        vrednosti.Push(v);
+        // operator je uspesno primenjen
+        return true;
+    }
+
+
+    // izracunavamo vrednost izraza
+    // vracamo informaciju o tome da li je vrednost uspesno izracunata ili
+    // je doslo do deljenja nulom
+    static bool vrednost(string izraz, out int v)
+    {
+        v = 0;
+        var vrednosti = new Stack&lt;int&gt;();
+        var operatori = new Stack&lt;char&gt;();
+
+        // analiziramo sve karaktere u ulaznom izrazu
+        int i = 0;
+        while (i &lt; izraz.Length) {
+            if (Char.IsDigit(izraz[i]))
+            {
+                // brojevne konstante postavljamo na stek
+                v = izraz[i] - &apos;0&apos;;
+                i++;
+                while (i &lt; izraz.Length &amp;&amp; Char.IsDigit(izraz[i]))
+                    v = 10 * v + (izraz[i++] - &apos;0&apos;);
+                vrednosti.Push(v);
+            }
+            else if (izraz[i] == &apos;(&apos;)
+            {
+                // otvorene zagrade postavljamo na stek
+                operatori.Push(&apos;(&apos;);
+                i++;
+            }
+            else if (izraz[i] == &apos;)&apos;)
+            {
+                // izracunavamo vrednost izraza u zagradi
+                while (operatori.Peek() != &apos;(&apos;)
+                    if (!primeni(operatori, vrednosti))
+                        return false;
+                // uklanjamo otvorenu zagradu
+                operatori.Pop();
+                i++;
+            } else if (jeOperator(izraz[i])) {
+                // obradjujemo sve prethodne operatore viseg prioriteta
+                while (operatori.Count &gt; 0 &amp;&amp; jeOperator(operatori.Peek()) &amp;&amp;
+                       prioritet(operatori.Peek()) &gt;= prioritet(izraz[i]))
+                    if (!primeni(operatori, vrednosti))
+                        return false;
+                // stavljamo operator na stek
+                operatori.Push(izraz[i]);
+                i++;
+            }
+        }
+
+        // izracunavamo sve preostale operacije
+        while (operatori.Count &gt; 0)
+            if (!primeni(operatori, vrednosti))
+                return false;
+
+        // vrednost izraza se nalazi na vrhu steka
+        v = vrednosti.Pop();
+        return true;
+    }
+    
+    static void Main(string[] args)
+    {
+        string s;
+        while ((s = Console.ReadLine()) != null)
+        {
+            // pokusavamo da izracunamo vrednost izraza 
+            int rez;
+            if (vrednost(s, out rez))
+                Console.WriteLine(rez);
+            else
+                Console.WriteLine(&quot;deljenje nulom&quot;);
+        }
+    }
+    
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Ово је један од многих алгоритама које је извео Едсгер Дијкстра и
+назива се на енглеском језику <strong>Shunting yard algortihm</strong>, што би се
+могло слободно превести као алгоритам сортирања железничких
+вагона. Замислимо да израз треба да пређе са једног на други крај
+пруге. На прузи се налази споредни колосек (пруга је у облику слова Т
+и споредни колосек је усправна црта). Делови израза прелазе са десног
+на леви крај (замислимо да иду по горњој ивици слова Т). Бројеви увек
+прелазе директно. Оператори се увек задржавају на споредном колосеку,
+али тако да се пре него што оператор уђе на споредни колосек са њега
+на излаз пребацују сви оператори који су вишег приоритета у односу на
+текући или имају исти приоритет као текући а лево су асоцијативни. И
+отворене заграде се постављају на споредни колосек, а када наиђе
+затворена заграда, са споредног колосека се уклањају сви оператори до
+отворене заграде. Када се исцрпи цео израз на десној страни, сви
+оператори са споредног колосека се пребацују на леву страну. Јасно је
+да споредни колосек има понашање стека, тако да се у имплементацији
+користи стек (на њега се стављају оператори).</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Цртање математичких функција<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>У наставку ћемо приказати како се технике које смо до сада научили
+могу применити да би се направио наизглед прилично напредан програм
+који црта график математичке функције једне променљиве коју корисник
+уноси у облику ниске карактера. У овом програму ћемо употребити
+технике програмирања које се уче у склопу предмета
+„Објектно-оријентисано програмирање”: дефинисање класа, објеката,
+наслеђивање, апстрактне класе, полиморфизам. Стога ти саветујемо да
+се, ако је потребно, подсетиш тих техника када год је потребно, док
+читаш наредни текст. Ако те технике још ниси научио, одложи читање
+остатка овог поглавља за касније.</p>
+<p>Основна идеја је да на основу унетог текстуалног описа математичке
+функције формирамо у меморији репрезентацију те функције у облику који
+омогућава да се веома једноставно израчунава њена вредност за задату
+вредност променљиве <code class="docutils literal notranslate"><span class="pre">x</span></code>. Најзгодније је да то буде нека дрволика
+репрезентација, са различитим врстама чворова: чворовима који
+представљају контанте, променљиве, бинарне операције (плус, минус,
+пута, подељено), позиве функција (корен, синус, логаритам)
+итд. Најзгодније је сваку врсту чвора дрвета представити објектом
+посебне класе. Све те класе су врсте израза, па ће представљати
+наследнице апстрактне класе израз. Дефинисаћемо две методе:</p>
+<ul class="simple">
+<li><p>метода <code class="docutils literal notranslate"><span class="pre">Vrednost</span></code> ће враћати вредност чвора (тј. израза
+представљеног поддрветом чији је корен тај чвор) за дату вредност
+променњиве <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p>метода <code class="docutils literal notranslate"><span class="pre">Stampaj</span></code> ће нам служити само за дебаговање и штампаће у
+конзолу текстуалну репрезентацију формираног израза, у потпуно
+заграђеном облику.</p></li>
+</ul>
+<p>Погледајмо како би та хијерархија класа могла бити дефинисана. У класи
+<code class="docutils literal notranslate"><span class="pre">Izraz</span></code> постоји и статичка метода <code class="docutils literal notranslate"><span class="pre">Parsiraj</span></code> која гради дрво
+израза на основу дате ниске карактера, међутим, цела њена
+функционалност је реализована у засебној класи коју ћемо звати
+<code class="docutils literal notranslate"><span class="pre">IzrazParser</span></code>.</p>
+
+<div data-childcomponent="grafik_funkcije_izraz" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=grafik_funkcije_izraz data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="abstract class Izraz
+{
+    public abstract double Vrednost(double x);
+
+    public abstract void Stampaj();
+    
+    static public Izraz Parsiraj(string s)
+    {
+        IzrazParser parser = new IzrazParser(s);
+        return parser.Parsiraj();
+    }
+}
+
+class Promenljiva : Izraz
+{
+    public override void Stampaj()
+    {
+        Console.Write(&quot;x&quot;);
+    }
+    
+    public override double Vrednost(double x)
+    {
+        return x;
+    }
+}
+
+class Konstanta : Izraz
+{
+    public Konstanta(double c)
+    {
+        this._c = c;
+    }
+
+    public override void Stampaj()
+    {
+        Console.Write(_c);
+    }
+    
+    public override double Vrednost(double x)
+    {
+        return _c;
+    }
+
+    private double _c;
+}
+
+abstract class UnarnaOperacija : Izraz
+{
+    public UnarnaOperacija(Izraz op, string simbol)
+    {
+        this._op = op;
+        this._simbol = simbol;
+    }
+
+    public override void Stampaj()
+    {
+        Console.Write(_simbol);
+        Console.Write(&quot;(&quot;);
+        _op.Stampaj();
+        Console.Write(&quot;)&quot;);
+    }
+    
+    public abstract double PrimeniOp(double op);
+    
+    public override double Vrednost(double x)
+    {
+        return PrimeniOp(_op.Vrednost(x));
+    }
+    
+    private Izraz _op;
+    private string _simbol;
+}
+
+abstract class BinarnaOperacija : Izraz
+{
+    public BinarnaOperacija(Izraz op1, Izraz op2, string simbol)
+    {
+        this._op1 = op1;
+        this._op2 = op2;
+        this._simbol = simbol;
+    }
+
+    public override void Stampaj()
+    {
+        Console.Write(&quot;(&quot;);
+        _op1.Stampaj();
+        Console.Write(&quot;)&quot;);
+        Console.Write(_simbol);
+        Console.Write(&quot;(&quot;);
+        _op2.Stampaj();
+        Console.Write(&quot;)&quot;);
+    }
+
+    public abstract double PrimeniOp(double op1, double op2);
+
+    public override double Vrednost(double x)
+    {
+        return PrimeniOp(_op1.Vrednost(x), _op2.Vrednost(x));
+    }
+    
+    private Izraz _op1, _op2;
+    private string _simbol;
+}
+
+class Plus : BinarnaOperacija
+{
+    public Plus(Izraz op1, Izraz op2) : base(op1, op2, &quot;+&quot;)
+    {
+    }
+        
+    public override double PrimeniOp(double op1, double op2)
+    {
+        return op1 + op2;
+    }
+}
+
+class Minus : BinarnaOperacija
+{
+    public Minus(Izraz op1, Izraz op2) : base(op1, op2, &quot;-&quot;)
+    {
+    }
+    
+    public override double PrimeniOp(double op1, double op2)
+    {
+        return op1 - op2;
+    }
+}
+
+class Puta : BinarnaOperacija
+{
+    public Puta(Izraz op1, Izraz op2) : base(op1, op2, &quot;*&quot;)
+    {
+    }
+    
+    public override double PrimeniOp(double op1, double op2)
+    {
+        return op1 * op2;
+    }
+}
+
+class Podeljeno : BinarnaOperacija
+{
+    public Podeljeno(Izraz op1, Izraz op2) : base(op1, op2, &quot;/&quot;)
+    {
+    }
+    
+    public override double PrimeniOp(double op1, double op2)
+    {
+        return op1 / op2;
+    }
+}
+
+class Sqrt : UnarnaOperacija
+{
+    public Sqrt(Izraz op) : base(op, &quot;sqrt&quot;)
+    {
+    }
+
+    public override double PrimeniOp(double op)
+    {
+        return Math.Sqrt(op);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Видиш да је у коду за сада подржана само функција кореновања. Прошири
+програм тако да подржиш још неке функције (на пример, тригонометријске
+и инверзне тригонометријске функције, логаритамску и експонецијалну
+функцију и слично).</p>
+<p>Пређимо сада на парсирање. Као што то добра пракса обично налаже,
+приликом имплементације парсера, згодно је издвојити лексички
+анализатор у засебан модул. Задатак лексичког анализатора је да из
+унете ниске врати наредни токен. На пример, ако је унети текст
+<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">sqrt(2.1</span> <span class="pre">*</span> <span class="pre">x)</span></code>, лексички анализатор редом треба да враћа наредне
+токене:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>      <span class="n">PROMENLJIVA</span>
+<span class="o">+</span>      <span class="n">PLUS</span>
+<span class="n">sqrt</span>   <span class="n">ID</span>
+<span class="p">(</span>      <span class="n">OTVORENA_ZAGRADA</span>
+<span class="mf">2.1</span>    <span class="n">KONSTANTA</span>
+<span class="o">*</span>      <span class="n">PUTA</span>
+<span class="n">x</span>      <span class="n">PROMENLJIVA</span>
+<span class="p">)</span>      <span class="n">ZATVORENA_ZAGRADA</span>
+       <span class="n">KRAJ</span>
+</pre></div>
+</div>
+<p>При том се све белине прескачу.</p>
+<p>Имплементација лексичког анализатора је реализована у засебној класи
+<code class="docutils literal notranslate"><span class="pre">IzrazLekser</span></code>. Најкомпликованија је метода <code class="docutils literal notranslate"><span class="pre">SledeciToken</span></code> чији је
+задатак да препозна следећи токен на улазу. Улаз се чува у променљивој
+чланици <code class="docutils literal notranslate"><span class="pre">_s</span></code> типа <code class="docutils literal notranslate"><span class="pre">string</span></code>, а променљива чланица <code class="docutils literal notranslate"><span class="pre">_i</span></code> означава
+позицију наредног необрађеног карактера те ниске. Када се препозна
+токен <code class="docutils literal notranslate"><span class="pre">KONSTANTA</span></code> важно је знати и која је вредност константе која
+је пронађена. Стога се та вредност чува у променљивој чланици
+<code class="docutils literal notranslate"><span class="pre">_vrednost</span></code>, слично, за идентификаторе нам је битно да знамо који је
+идентификатор препознат, па његове карактере чувамо у оквиру
+променљиве чланице <code class="docutils literal notranslate"><span class="pre">_naziv</span></code>. Делови улаза који одговарају
+препознатим токенима се у теорији називају <strong>лексеме</strong>. Када се не
+препозна ни један од обичних токена, враћа се специјални токен
+<code class="docutils literal notranslate"><span class="pre">KRAJ</span></code> којим се сигнализира да се дошло до краја исправног дела
+улаза.</p>
+
+<div data-childcomponent="grafik_funkcije_lekser" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=grafik_funkcije_lekser data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="enum Token
+{
+    PROMENLJIVA, KONSTANTA,
+    PLUS, MINUS, PUTA, PODELJENO,
+    OTVORENA_ZAGRADA, ZATVORENA_ZAGRADA,
+    ID,
+    KRAJ,
+};
+
+class IzrazLekser
+{
+    public IzrazLekser(string s)
+    {
+        this._s = s;
+        this._i = 0;
+    }
+
+    public Token SledeciToken()
+    {
+        // preskacemo beline
+        while (_i &lt; _s.Length &amp;&amp; Char.IsWhiteSpace(_s[_i]))
+            _i++;
+
+        if (_i &gt;= _s.Length)
+            return Token.KRAJ;
+               
+        if (_s[_i] == &apos;(&apos;)
+        {
+            _i++;
+            return Token.OTVORENA_ZAGRADA;
+        }
+        if (_s[_i] == &apos;)&apos;)
+        {
+            _i++;
+            return Token.ZATVORENA_ZAGRADA;
+        }
+        if (_s[_i] == &apos;+&apos;)
+        {
+            _i++;
+            return Token.PLUS;
+        }
+        if (_s[_i] == &apos;-&apos;)
+        {
+            _i++;
+            return Token.MINUS;
+        }
+        if (_s[_i] == &apos;*&apos;)
+        {
+            _i++;
+            return Token.PUTA;
+        }
+        if (_s[_i] == &apos;/&apos;)
+        {
+            _i++;
+            return Token.PODELJENO;
+        }
+        if (_s[_i] == &apos;x&apos;)
+        {
+            _i++;
+            return Token.PROMENLJIVA;
+        }
+        
+        if (Char.IsDigit(_s[_i])) {
+            _vrednost = 0.0;
+            while (_i &lt; _s.Length &amp;&amp; Char.IsDigit(_s[_i])) {
+                _vrednost = 10*_vrednost + _s[_i] - &apos;0&apos;;
+                _i++;
+            }
+            if (_i &lt; _s.Length &amp;&amp; _s[_i] == &apos;.&apos;) {
+                _i++;
+                double decimala = 0.1;
+                while (_i &lt; _s.Length &amp;&amp; Char.IsDigit(_s[_i])) {
+                    _vrednost += decimala * (_s[_i] - &apos;0&apos;);
+                    decimala /= 10;
+                    _i++;
+                }
+            }
+            return Token.KONSTANTA;
+        }
+
+        if (Char.IsLetter(_s[_i]))
+        {
+            // optimizovati nadovezivanje niski
+            _naziv = &quot;&quot;;
+            while (_i &lt; _s.Length &amp;&amp;
+                   (Char.IsLetter(_s[_i]) || Char.IsDigit(_s[_i])))
+            {
+                _naziv += _s[_i];
+                _i++;
+            }
+            return Token.ID;
+        }
+        
+        return Token.KRAJ;
+    }
+
+    public double Vrednost()
+    {
+        return _vrednost;
+    }
+
+    public string Naziv()
+    {
+        return _naziv;
+    }
+
+    private string _s;
+    private int _i;
+    private double _vrednost;
+    private string _naziv;
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Пре имплементације парсирања, није лоше истестирати лексички
+анализатор. На пример,</p>
+
+<div data-childcomponent="grafik_funkcije_lekser_test" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=grafik_funkcije_lekser_test data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static void Main()
+{
+    IzrazLekser lekser = new IzrazLekser("x +sqrt(2.1 * x)");
+    Token token;
+    while ((token = lekser.SledeciToken()) != Token.KRAJ)
+    {
+         Console.Write(token);
+         if (token == Token.KONSTANTA)
+            Console.Write(" " + lekser.Vrednost());
+         if (token == Token.ID)
+            Console.Write(" " + lekser.Tekst());
+         Console.WriteLine();
+    }
+}
+</textarea>
+</div>
+<p>Када имамо овакав лексички анализатор на располагању, можемо прећи на
+имплементацију парсера. Користимо технику рекурзивног спуста, по узору
+на програме које смо раније видели. Променљива чланица <code class="docutils literal notranslate"><span class="pre">_token</span></code> чува
+следећи токен који је на улазу. Наредна једноставна имплементација
+подразумева да је израз увек коректно задат. Покушај да је допуниш
+проверама које осигуравају да ће грешка увек исправно бити пријављена
+у случају да</p>
+
+<div data-childcomponent="grafik_funkcije_parser" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=grafik_funkcije_parser data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="class IzrazParser
+{
+    public IzrazParser(string s)
+    {
+        _lekser = new IzrazLekser(s);
+    }
+    
+    public Izraz Parsiraj()
+    {
+        // citamo prvi token
+        _token = _lekser.SledeciToken();
+        return Izraz();
+    }
+    
+    private Izraz Izraz()
+    {
+        Izraz sabirak = Sabirak();
+        while (_token == Token.PLUS || _token == Token.MINUS) {
+            if (_token == Token.PLUS)
+            {
+                // preskacemo token PLUS
+                _token = _lekser.SledeciToken();
+                Izraz noviSabirak = Sabirak();
+                sabirak = new Plus(sabirak, noviSabirak);
+            }
+
+            else if (_token == Token.MINUS)
+            {
+                // preskacemo token MINUS
+                _token = _lekser.SledeciToken();
+                Izraz noviSabirak = Sabirak();
+                sabirak = new Minus(sabirak, noviSabirak);
+            }
+        }
+        return sabirak;
+    }
+
+    private Izraz Sabirak()
+    {
+        Izraz cinilac = Cinilac();
+        while (_token == Token.PUTA || _token == Token.PODELJENO) {
+            if (_token == Token.PUTA)
+            {
+                // preskacemo token PUTA
+                _token = _lekser.SledeciToken();
+                Izraz noviCinilac = Cinilac();
+                cinilac = new Puta(cinilac, noviCinilac);
+            }
+            else if (_token == Token.PODELJENO)
+            {
+                // preskacemo token PODELJENO
+                _token = _lekser.SledeciToken();
+                Izraz noviCinilac = Cinilac();
+                cinilac = new Podeljeno(cinilac, noviCinilac);
+            }
+        }
+        return cinilac;
+    }
+
+    private Izraz Cinilac()
+    {
+        if (_token == Token.OTVORENA_ZAGRADA)
+        {
+            // preskacemo token OTVORENA_ZAGRADA
+            _token = _lekser.SledeciToken();
+            Izraz izraz = Izraz();
+            // preskacemo token ZATVORENA_ZAGRADA
+            _token = _lekser.SledeciToken();
+            return izraz;
+        } else if (_token == Token.PROMENLJIVA) {
+            // preskacemo token PROMENLJIVA
+            _token = _lekser.SledeciToken();
+            return new Promenljiva();
+        } else if (_token == Token.KONSTANTA) {
+            Izraz k = new Konstanta(_lekser.Vrednost());
+            // preskacemo token KONSTANTA
+            _token = _lekser.SledeciToken();
+            return k;
+        } else if (_token == Token.ID &amp;&amp; _lekser.Tekst() == &quot;sqrt&quot;) {
+            // preskacemo token ID
+            _token = _lekser.SledeciToken();
+            // preskacemo token OTVORENA_ZAGRADA
+            _token = _lekser.SledeciToken();
+            Izraz op = Izraz();
+            // preskacemo token ZATVORENA_ZAGRADA
+            _token = _lekser.SledeciToken();
+            return new Sqrt(op);
+        }
+        // ako je ulaz ispravan do ovoga se ne moze stici
+        return null;
+    }
+
+    // leksicki analizator
+    private IzrazLekser _lekser;
+    // token koji je naredni na ulazu
+    private Token _token;
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Досадашња инфраструктура нам омогућава да израчунамо вредност функције
+коју корисник уноси.</p>
+
+<div data-childcomponent="grafik_funkcije_primer" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=grafik_funkcije_primer data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static void Main()
+{
+    Console.Write("Unesi matematicku funkciju:");
+    string s = Console.ReadLine();
+    Izraz izraz = Izraz.Parsiraj(s);
+    Console.Write("Unesi vrednost promenljive x:");
+    double x = double.Parse(Console.ReadLine());
+    Console.WriteLine(izraz.Vrednost(x));
+}
+</textarea>
+</div>
+<p>Сада имамо све потребне елементе за тражену графичку апликацију и
+препуштамо вам да је до краја реализујете. Направите поље за унос
+текста (<code class="docutils literal notranslate"><span class="pre">TextBox</span></code>) у које корисник уноси функцију, платно за цртање
+(<code class="docutils literal notranslate"><span class="pre">PictureBox</span></code>) и дугме за цртање (<code class="docutils literal notranslate"><span class="pre">Button</span></code>). Након клика на дугме,
+чита се садржај унет у поље за унос текста, парсира се и гради се
+<code class="docutils literal notranslate"><span class="pre">Izraz</span></code>. Претпоставите за почетак да су координате света фиксиране
+на неке вредности (на пример, обе координате могу бити у интервалу
+од -1 до 1) и дефинишите функције за прерачунавања из координата света
+у координате екрана и обратно, из координата екрана у координате
+света. Направите затим петљу која пролази кроз пикселе платна за
+цртање његовом ширином (нпр. гледа сваки пиксел), затим екранску x
+координату тог пиксела преводи у координату света, израчунава вредност
+израза за тако добијену координату и на крају такво y добијено у
+координатном систему света преводи назад у екрански координати систем
+да би нацртала одговарајући пиксел. Уместо цртања појединачних
+пиксела, могуће је цртати и изломљену линију тако што се спајају
+суседни пиксели графика.</p>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="02e_regexi_zadaci.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
