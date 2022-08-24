@@ -253,10 +253,18 @@ lessons:
         title: Примери графова
         file: 00_primeri_grafova.rst
         guid: 7fb5f158-afd0-4940-839b-24382f34add2
+      - type: quiz
+        title: Примери графова - квиз
+        file: 00b_primeri_grafova_kviz.rst
+        guid: 48d43f2b-b1a7-4b53-a8b0-0c0d002714ce
       - type: reading
         title: Дефиниције појмова у вези са графовима
         file: 01_definicije_grafova.rst
         guid: 2249da03-b9b9-42aa-8cb1-e7d2e93fd3c7
+      - type: quiz
+        title: Дефиниције појмова у вези са графовима - квиз
+        file: 01b_definicije_grafova_kviz.rst
+        guid: 6f836fe2-329a-4803-929d-db80351cb0bd
       - type: reading
         title: Представљање графова
         file: 01_predstavljanje_grafova.rst
