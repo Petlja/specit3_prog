@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "teselacija", "teselacija\teselacija.csproj", "{82D000F4-DD8D-4BAC-AA14-154268036131}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "obim_povrsina", "obim_povrsina\obim_povrsina.csproj", "{DF68A156-BD01-4E15-A57B-6D5D3FDBBA4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "transformacija_koordinata", "transformacija_koordinata\transformacija_koordinata.csproj", "{A5C6FEBE-79DB-40CB-80FE-7C8560C3012C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vizualizacija", "vizualizacija", "{21F2F81B-B414-4293-A4EE-B0B38F416E4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "odabrani_alg", "odabrani_alg", "{93AAAFD6-4B86-4B73-9A8C-1B39B8A1355A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "polinomi", "polinomi\polinomi.csproj", "{90335E24-D076-4BD1-9E58-6020CF0FCA51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "polinomi_demo", "polinomi_demo\polinomi_demo.csproj", "{4FF0B2D7-8DB6-4FE2-B466-62E0B8745890}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82D000F4-DD8D-4BAC-AA14-154268036131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82D000F4-DD8D-4BAC-AA14-154268036131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82D000F4-DD8D-4BAC-AA14-154268036131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82D000F4-DD8D-4BAC-AA14-154268036131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF68A156-BD01-4E15-A57B-6D5D3FDBBA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF68A156-BD01-4E15-A57B-6D5D3FDBBA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF68A156-BD01-4E15-A57B-6D5D3FDBBA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF68A156-BD01-4E15-A57B-6D5D3FDBBA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C6FEBE-79DB-40CB-80FE-7C8560C3012C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C6FEBE-79DB-40CB-80FE-7C8560C3012C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C6FEBE-79DB-40CB-80FE-7C8560C3012C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C6FEBE-79DB-40CB-80FE-7C8560C3012C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90335E24-D076-4BD1-9E58-6020CF0FCA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90335E24-D076-4BD1-9E58-6020CF0FCA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90335E24-D076-4BD1-9E58-6020CF0FCA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90335E24-D076-4BD1-9E58-6020CF0FCA51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF0B2D7-8DB6-4FE2-B466-62E0B8745890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF0B2D7-8DB6-4FE2-B466-62E0B8745890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF0B2D7-8DB6-4FE2-B466-62E0B8745890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF0B2D7-8DB6-4FE2-B466-62E0B8745890}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82D000F4-DD8D-4BAC-AA14-154268036131} = {21F2F81B-B414-4293-A4EE-B0B38F416E4C}
+		{DF68A156-BD01-4E15-A57B-6D5D3FDBBA4C} = {21F2F81B-B414-4293-A4EE-B0B38F416E4C}
+		{A5C6FEBE-79DB-40CB-80FE-7C8560C3012C} = {21F2F81B-B414-4293-A4EE-B0B38F416E4C}
+		{90335E24-D076-4BD1-9E58-6020CF0FCA51} = {93AAAFD6-4B86-4B73-9A8C-1B39B8A1355A}
+		{4FF0B2D7-8DB6-4FE2-B466-62E0B8745890} = {93AAAFD6-4B86-4B73-9A8C-1B39B8A1355A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4ED7D82-047A-4AFF-903C-54634FB61577}
+	EndGlobalSection
+EndGlobal

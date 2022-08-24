@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      table { border-collapse: collapse; border: 1px solid black; }
+      td, th { border: 1px solid black; width: 18px; height: 18px; text-align: center; margin: 0px}
+      td.mismatch { color: red; font-weight: bold }
+      td.match { color: green; font-weight: bold }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr id="trTh"></tr>
+      <tr id="trThw"></tr>
+      <tr id="trT"></tr>
+    </table>
+
+    <h3>Pretraga</h3>
+    <table>
+      <tr id="trs"></tr>
+      <tr id="trw"></tr>
+    </table>
+    <p id="akcija"></p>
+    
+    <input type="button" value="Sledeći korak" id="sledeci"></input>
+
+    <script>
+      const BRUTE_FORCE = 0;
+      const KMP = 1;
+      
+      var metod = KMP;
+      function kmp_table(w) {
+          var T = new Array(w.length);
+          var pos = 1;
+          T[0] = -1;
+          var i = 0;
+          while (pos < w.length) {
+              if (w[pos] == w[i])
+                  T[pos] = T[i];
+              else {
+                  T[pos] = i;
+                  while (i >= 0 && w[pos] != w[i])
+                      i = T[i];
+              }
+              pos++; i++;
+          }
+          return T;
+      }
+
+//      var w = "ABCDABD"
+//      var s = "ABC ABCDAB ABCDABCDABDE"
+      var w = "barbara";
+      var s = "eh bar da si barbarela o barbarbara ti";
+//      var w = "AAAB";
+//      var s = "AAAAAAAAAB";
+      var T = kmp_table(w);
+      var j = 0, k = 0;
+      var found = false;
+      show();
+      p_akcija = document.getElementById("akcija");
+      function nextStep() {
+          if (found || j >= s.length)
+              return;
+          if (w[k] == s[j]) {
+              
+              j++; k++;
+              if (k == w.length)
+                  found = true;
+          } else {
+              if (metod == KMP) {
+                  k = T[k];
+                  if (k < 0) {
+                      j++; k++;
+                  }
+              } else if (metod == BRUTE_FORCE) {
+                  j = j - k + 1;
+                  k = 0;
+              }
+          }
+
+          show();
+      }
+
+      function show() {
+          var trs = document.getElementById("trs");
+          var trw = document.getElementById("trw");
+          trs.innerHTML = "";
+          trw.innerHTML = "";
+          for (var m = 0; m < s.length; m++) {
+              var td = document.createElement("td");
+              td.innerHTML = s[m];
+              trs.append(td);
+          }
+
+          var start = j - k;
+          for (var m = 0; m < start; m++) {
+              var td = document.createElement("td");
+              td.innerHTML = "&nbsp";
+              trw.append(td);
+          }
+
+          var inMatching = true;
+          for (var m = 0; m < w.length; m++) {
+              var td = document.createElement("td");
+              td.innerHTML = w[m];
+              trw.append(td);
+
+              if (w[m] != s[start + m]) {
+                  if (m <= k && inMatching)
+                      td.classList.add("mismatch");
+                  inMatching = false;
+              }
+
+              if (m <= k && inMatching)
+                  td.classList.add("match");
+          }
+
+          for (var m = start + w.length; m < s.length; m++) {
+              var td = document.createElement("td");
+              td.innerHTML = "&nbsp";
+              trw.append(td);
+          }
+
+
+          if (metod == KMP) {
+          var trTh = document.getElementById("trTh");
+          var trThw = document.getElementById("trThw");
+          var trT = document.getElementById("trT");
+          trTh.innerHTML = "";
+          trThw.innerHTML = "";
+          trT.innerHTML = "";
+          for (var m = 0; m < T.length; m++) {
+
+              var td = document.createElement("td");
+              if (m < w.length) {
+                  td.innerHTML += w[m];
+                  if (m == k && w[m] != s[start + m])
+                      td.classList.add("mismatch");
+              }
+              trThw.append(td);
+
+              
+              var th = document.createElement("th");
+              th.innerHTML = m;
+              trTh.append(th);
+              
+              var td = document.createElement("td");
+              td.innerHTML = T[m];
+              trT.append(td);
+          }
+          }
+      }
+
+      document.getElementById("sledeci").addEventListener("click", nextStep);
+    </script>
+    
+  </body>
+</html>
