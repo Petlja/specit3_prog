@@ -269,6 +269,10 @@ lessons:
         title: Представљање графова
         file: 01_predstavljanje_grafova.rst
         guid: a468ef7e-f29d-48a8-940f-58a1860b32a7
+      - type: quiz
+        title: Представљање графова у рачунару - квиз
+        file: 01b_predstavljanje_grafova_kviz.rst
+        guid: df0e11c0-7e8d-439a-8be8-fed7f0809359
       - type: coding-quiz
         title: Представљање графова - задаци за самостални рад
         problems: 
@@ -281,6 +285,10 @@ lessons:
         title: Обилазак графова
         file: 02_obilazak_grafa.rst
         guid: db7a9436-793e-4c38-915f-f588383cc0f9
+      - type: quiz
+        title: Обилазак графова - квиз
+        file: 02b_obilazak_grafa_kviz.rst
+        guid: fe4de87c-126b-4f05-828a-43c318406665
       - type: reading
         title: Обилазак графова - решени задаци
         file: 02_obilazak_grafa_zadaci.rst
@@ -325,7 +333,7 @@ lessons:
     folder: 5_odabrani
     activities:
       - type: reading
-        title: Проширени Еуклидов алгоритам 
+        title: Увод
         file: 0_uvod.rst
         guid: 798c64ce-d976-43df-8a27-9bf9c97cbd6e
       - type: reading
