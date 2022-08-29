@@ -251,27 +251,27 @@ lessons:
         guid: 9bccf388a7fc4979b20c3cf4aabc4db2
       - type: reading
         title: Примери графова
-        file: 00_primeri_grafova.rst
+        file: 01_primeri_grafova.rst
         guid: 7fb5f158-afd0-4940-839b-24382f34add2
       - type: quiz
         title: Примери графова - квиз
-        file: 00b_primeri_grafova_kviz.rst
+        file: 01b_primeri_grafova_kviz.rst
         guid: 48d43f2b-b1a7-4b53-a8b0-0c0d002714ce
       - type: reading
         title: Дефиниције појмова у вези са графовима
-        file: 01_definicije_grafova.rst
+        file: 02_definicije_grafova.rst
         guid: 2249da03-b9b9-42aa-8cb1-e7d2e93fd3c7
       - type: quiz
         title: Дефиниције појмова у вези са графовима - квиз
-        file: 01b_definicije_grafova_kviz.rst
+        file: 02b_definicije_grafova_kviz.rst
         guid: 6f836fe2-329a-4803-929d-db80351cb0bd
       - type: reading
         title: Представљање графова
-        file: 01_predstavljanje_grafova.rst
+        file: 03_predstavljanje_grafova.rst
         guid: a468ef7e-f29d-48a8-940f-58a1860b32a7
       - type: quiz
         title: Представљање графова у рачунару - квиз
-        file: 01b_predstavljanje_grafova_kviz.rst
+        file: 03b_predstavljanje_grafova_kviz.rst
         guid: df0e11c0-7e8d-439a-8be8-fed7f0809359
       - type: coding-quiz
         title: Представљање графова - задаци за самостални рад
@@ -283,15 +283,15 @@ lessons:
         guid: 4b8b0e83-7b93-40e1-8b00-660bb0461c30
       - type: reading
         title: Обилазак графова
-        file: 02_obilazak_grafa.rst
+        file: 04_obilazak_grafa.rst
         guid: db7a9436-793e-4c38-915f-f588383cc0f9
       - type: quiz
         title: Обилазак графова - квиз
-        file: 02b_obilazak_grafa_kviz.rst
+        file: 04b_obilazak_grafa_kviz.rst
         guid: fe4de87c-126b-4f05-828a-43c318406665
       - type: reading
         title: Обилазак графова - решени задаци
-        file: 02_obilazak_grafa_zadaci.rst
+        file: 04_obilazak_grafa_zadaci.rst
         guid: 136546d7-25ec-49aa-93c4-862f3917f20a
       - type: coding-quiz
         title: Обилазак графова - задаци за самостални рад
@@ -309,7 +309,7 @@ lessons:
         guid: 505aa1ba-a46a-48ac-95fb-7dbe44a738d3
       - type: reading
         title: Компоненте повезаности
-        file: 03_povezane_komponente.rst
+        file: 05_povezane_komponente.rst
         guid: ea8530bc-3a60-477c-a789-af3d1241f342
       - type: coding-quiz
         title: Компоненте повезаности - задаци за самостални рад
@@ -320,7 +320,7 @@ lessons:
         guid: c72629fb-70bf-4f51-8798-3469a644f1ff
       - type: reading
         title: Тополошко сортирање
-        file: 04_topolosko_sortiranje.rst
+        file: 06_topolosko_sortiranje.rst
         guid: 0963b436-7a9e-4125-9ca7-9388d05e3613
       - type: coding-quiz
         title: Тополошко сортирање - задаци за самостални рад
