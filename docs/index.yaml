@@ -326,18 +326,6 @@ lessons:
     src: 03_parsiranje_rekurzivni_spust.rst
     title: 3.4 Парсирање и рекурзивни спуст
     type: reading
-  - description: ''
-    file: 04_algoritmi_teksta_quiz.html
-    guid: 4650bbd2-ff3d-402f-9e78-9b3820441744
-    src: 04_algoritmi_teksta_quiz.rst
-    title: Алгоритми текста - квиз
-    type: quiz
-  - description: ''
-    file: 05_algoritmi_teksta_zadaci.html
-    guid: 99d435e2-39d3-433f-b9a4-9af5bcd22c98
-    src: 05_algoritmi_teksta_zadaci.rst
-    title: Алгоритми текста - задаци
-    type: reading
   archived-activities: []
   description: ''
   folder: 3_tekstualni
@@ -349,26 +337,44 @@ lessons:
     file: 00_grafovi_uvod.html
     guid: 9bccf388a7fc4979b20c3cf4aabc4db2
     src: 00_grafovi_uvod.rst
-    title: Увод
+    title: 4.1 Увод
     type: reading
   - description: ''
-    file: 00_primeri_grafova.html
+    file: 01_primeri_grafova.html
     guid: 7fb5f158-afd0-4940-839b-24382f34add2
-    src: 00_primeri_grafova.rst
-    title: Примери графова
+    src: 01_primeri_grafova.rst
+    title: 4.2 Примери графова
     type: reading
   - description: ''
-    file: 01_definicije_grafova.html
+    file: 01b_primeri_grafova_kviz.html
+    guid: 48d43f2b-b1a7-4b53-a8b0-0c0d002714ce
+    src: 01b_primeri_grafova_kviz.rst
+    title: Примери графова - квиз
+    type: quiz
+  - description: ''
+    file: 02_definicije_grafova.html
     guid: 2249da03-b9b9-42aa-8cb1-e7d2e93fd3c7
-    src: 01_definicije_grafova.rst
-    title: Дефиниције појмова у вези са графовима
+    src: 02_definicije_grafova.rst
+    title: 4.3 Дефиниције појмова у вези са графовима
     type: reading
   - description: ''
-    file: 01_predstavljanje_grafova.html
+    file: 02b_definicije_grafova_kviz.html
+    guid: 6f836fe2-329a-4803-929d-db80351cb0bd
+    src: 02b_definicije_grafova_kviz.rst
+    title: Дефиниције појмова у вези са графовима - квиз
+    type: quiz
+  - description: ''
+    file: 03_predstavljanje_grafova.html
     guid: a468ef7e-f29d-48a8-940f-58a1860b32a7
-    src: 01_predstavljanje_grafova.rst
-    title: Представљање графова
+    src: 03_predstavljanje_grafova.rst
+    title: 4.4 Представљање графова
     type: reading
+  - description: ''
+    file: 03b_predstavljanje_grafova_kviz.html
+    guid: df0e11c0-7e8d-439a-8be8-fed7f0809359
+    src: 03b_predstavljanje_grafova_kviz.rst
+    title: Представљање графова у рачунару - квиз
+    type: quiz
   - description: ''
     file: Представљање графова - задаци за самостални рад.html
     guid: 4b8b0e83-7b93-40e1-8b00-660bb0461c30
@@ -380,15 +386,21 @@ lessons:
     title: Представљање графова - задаци за самостални рад
     type: coding-quiz
   - description: ''
-    file: 02_obilazak_grafa.html
+    file: 04_obilazak_grafa.html
     guid: db7a9436-793e-4c38-915f-f588383cc0f9
-    src: 02_obilazak_grafa.rst
-    title: Обилазак графова
+    src: 04_obilazak_grafa.rst
+    title: 4.5 Обилазак графова
     type: reading
   - description: ''
-    file: 02_obilazak_grafa_zadaci.html
+    file: 04b_obilazak_grafa_kviz.html
+    guid: fe4de87c-126b-4f05-828a-43c318406665
+    src: 04b_obilazak_grafa_kviz.rst
+    title: Обилазак графова - квиз
+    type: quiz
+  - description: ''
+    file: 04_obilazak_grafa_zadaci.html
     guid: 136546d7-25ec-49aa-93c4-862f3917f20a
-    src: 02_obilazak_grafa_zadaci.rst
+    src: 04_obilazak_grafa_zadaci.rst
     title: Обилазак графова - решени задаци
     type: reading
   - description: ''
@@ -408,10 +420,10 @@ lessons:
     title: Обилазак графова - задаци за самостални рад
     type: coding-quiz
   - description: ''
-    file: 03_povezane_komponente.html
+    file: 05_povezane_komponente.html
     guid: ea8530bc-3a60-477c-a789-af3d1241f342
-    src: 03_povezane_komponente.rst
-    title: Компоненте повезаности
+    src: 05_povezane_komponente.rst
+    title: 4.6 Компоненте повезаности
     type: reading
   - description: ''
     file: Компоненте повезаности - задаци за самостални рад.html
@@ -423,10 +435,10 @@ lessons:
     title: Компоненте повезаности - задаци за самостални рад
     type: coding-quiz
   - description: ''
-    file: 04_topolosko_sortiranje.html
+    file: 06_topolosko_sortiranje.html
     guid: 0963b436-7a9e-4125-9ca7-9388d05e3613
-    src: 04_topolosko_sortiranje.rst
-    title: Тополошко сортирање
+    src: 06_topolosko_sortiranje.rst
+    title: 4.7 Тополошко сортирање
     type: reading
   - description: ''
     file: Тополошко сортирање - задаци за самостални рад.html
@@ -447,13 +459,13 @@ lessons:
     file: 0_uvod.html
     guid: 798c64ce-d976-43df-8a27-9bf9c97cbd6e
     src: 0_uvod.rst
-    title: Проширени Еуклидов алгоритам
+    title: Увод
     type: reading
   - description: ''
     file: 11_prosireni_euklidov_alg.html
     guid: 675a45da-9066-4e6d-9e15-ea7c2e645a4e
     src: 11_prosireni_euklidov_alg.rst
-    title: Проширени Еуклидов алгоритам
+    title: 5.1.1 Проширени Еуклидов алгоритам
     type: reading
   - description: ''
     file: Проширени Еуклидов алгоритам - задаци.html
@@ -468,73 +480,73 @@ lessons:
     file: 12_racunanje_sa_polinomima.html
     guid: 8d062afb-850e-45b5-bb94-9ca6eda56468
     src: 12_racunanje_sa_polinomima.rst
-    title: Рачунање са полиномима
+    title: 5.1.2 Рачунање са полиномима
     type: reading
   - description: ''
     file: 13_algebarski_dalje.html
     guid: c9892588-ae92-45b6-b1f6-48a0e6752954
     src: 13_algebarski_dalje.rst
-    title: Још неки алгебарски алгоритми
+    title: 5.1.3 Још неки алгебарски алгоритми
     type: reading
   - description: ''
     file: 21_konveksan_omotac.html
     guid: 1130ed38-2155-4c45-9413-1a78c7742578
     src: 21_konveksan_omotac.rst
-    title: Конвексан омотач
+    title: 5.2.1 Конвексан омотач
     type: reading
   - description: ''
     file: 23_pripadnost_prostom_mnogouglu.html
     guid: d8f9a6be-f296-4f14-890b-4825f5014f7c
     src: 23_pripadnost_prostom_mnogouglu.rst
-    title: Припадност простом многоуглу
+    title: 5.2.2 Припадност простом многоуглу
     type: reading
   - description: ''
     file: 24_geometrijski_dalje.html
     guid: 35e02ef0-acde-403f-9a36-ab20b61480f9
     src: 24_geometrijski_dalje.rst
-    title: Још неки геометријски алгоритми
+    title: 5.2.3 Још неки геометријски алгоритми
     type: reading
   - description: ''
     file: 31_pretraga_podniske.html
     guid: 3f848cd2-77ba-4924-be6e-b04c5b8faf5c
     src: 31_pretraga_podniske.rst
-    title: Алгоритми претраге подниске
+    title: 5.3.1 Алгоритми претраге подниске
     type: reading
   - description: ''
     file: 32_json_yaml.html
     guid: 9532096b-4009-44fa-a57c-23c15e978434
     src: 32_json_yaml.rst
-    title: Формати JSON и YAML
+    title: 5.3.2 Формати JSON и YAML
     type: reading
   - description: ''
     file: 33_markdown.html
     guid: c23925bc-6a8a-4794-96db-e6db1021fc3e
     src: 33_markdown.rst
-    title: Формат Markdown
+    title: 5.3.3 Формат Markdown
     type: reading
   - description: ''
     file: 34_tekstualni_dalje.html
     guid: c0b13dba-ddb4-4e41-be05-0c610164077d
     src: 34_tekstualni_dalje.rst
-    title: Још неки алгоритми са текстом
+    title: 5.3.4 Још неки алгоритми са текстом
     type: reading
   - description: ''
     file: 41_najkraci_putevi.html
     guid: 411a4616-18b6-4b02-b622-76fda6710d97
     src: 41_najkraci_putevi.rst
-    title: Најкраћи путеви у графу
+    title: 5.4.1 Најкраћи путеви у графу
     type: reading
   - description: ''
     file: 42_min_razapinjuce_drvo.html
     guid: d8526739-3eb5-4394-9bcf-f6e9caf8f1c8
     src: 42_min_razapinjuce_drvo.rst
-    title: Минимално разапињуће дрво
+    title: 5.4.2 Минимално разапињуће дрво
     type: reading
   - description: ''
     file: 43_grafovski_dalje.html
     guid: 0f844d6d-73a2-49f6-85da-ff21652eaa82
     src: 43_grafovski_dalje.rst
-    title: Још неки графовски алгоритми
+    title: 5.4.3 Још неки графовски алгоритми
     type: reading
   archived-activities: []
   description: ''

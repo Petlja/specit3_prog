@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Представљање графова у рачунару</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/regex-check.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'prog3_it';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'prog3_it';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://petlja.org/biblioteka/r/kursevi/Zbirka3" target="_blank">Методичка збирка задатака из алгоритмике - одабрани алгоритми и структуре података</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање 3</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_algebarski>
+                    <h5>1. Основни алгебарски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_algebarski/01_alg_uvod.html><div class="studioLecture" id=activity-01_alg_uvod><i class="fas fa-file-alt activity-icon"></i>1.1 Увод</div></a>
+                <a href=../1_algebarski/02_test_primalnosti.html><div class="studioLecture" id=activity-02_test_primalnosti><i class="fas fa-file-alt activity-icon"></i>1.2 Тест прималности</div></a>
+                <a href=../1_algebarski/02b_test_primalnosti_quiz.html><div class="studioLecture" id=activity-02b_test_primalnosti_quiz><i class="far fa-question-circle activity-icon"></i>Тест прималности - квиз</div></a>
+                <a href=../1_algebarski/Прости%20бројеви%20-%20задаци.html><div class="studioLecture" id=activity-Прости%20бројеви%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Прости бројеви - задаци</div></a>
+                <a href=../1_algebarski/03_faktorizacija.html><div class="studioLecture" id=activity-03_faktorizacija><i class="fas fa-file-alt activity-icon"></i>1.3 Факторизација броја</div></a>
+                <a href=../1_algebarski/03b_faktorizacija_quiz.html><div class="studioLecture" id=activity-03b_faktorizacija_quiz><i class="far fa-question-circle activity-icon"></i>Факторизација броја - квиз</div></a>
+                <a href=../1_algebarski/Факторизација%20броја%20-%20задаци.html><div class="studioLecture" id=activity-Факторизација%20броја%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Факторизација броја - задаци</div></a>
+                <a href=../1_algebarski/04_nzd.html><div class="studioLecture" id=activity-04_nzd><i class="fas fa-file-alt activity-icon"></i>1.4 Највећи заједнички делилац</div></a>
+                <a href=../1_algebarski/04b_nzd_quiz.html><div class="studioLecture" id=activity-04b_nzd_quiz><i class="far fa-question-circle activity-icon"></i>Највећи заједнички делилац - квиз</div></a>
+                <a href=../1_algebarski/НЗД%20и%20НЗС%20-%20задаци.html><div class="studioLecture" id=activity-НЗД%20и%20НЗС%20-%20задаци><i class="far fa-question-circle activity-icon"></i>НЗД и НЗС - задаци</div></a>
+                <a href=../1_algebarski/05_prosti_do_n.html><div class="studioLecture" id=activity-05_prosti_do_n><i class="fas fa-file-alt activity-icon"></i>1.5 Одређивање свих простих бројева до дате границе</div></a>
+                <a href=../1_algebarski/05b_prosti_do_n_quiz.html><div class="studioLecture" id=activity-05b_prosti_do_n_quiz><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - квиз</div></a>
+                <a href=../1_algebarski/Ератостеново%20сито%20-%20задаци.html><div class="studioLecture" id=activity-Ератостеново%20сито%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Ератостеново сито - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_geometrijski>
+                    <h5>2. Основни геометријски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_geometrijski/01_geom_uvod.html><div class="studioLecture" id=activity-01_geom_uvod><i class="fas fa-file-alt activity-icon"></i>2.1 Увод</div></a>
+                <a href=../2_geometrijski/02_bounding_boxes.html><div class="studioLecture" id=activity-02_bounding_boxes><i class="fas fa-file-alt activity-icon"></i>2.2 Поравнати правоугаоници</div></a>
+                <a href=../2_geometrijski/02b_bounding_boxes_quiz.html><div class="studioLecture" id=activity-02b_bounding_boxes_quiz><i class="far fa-question-circle activity-icon"></i>Поравнати правоугаоници - квиз</div></a>
+                <a href=../2_geometrijski/03_tacke_i_vektori.html><div class="studioLecture" id=activity-03_tacke_i_vektori><i class="fas fa-file-alt activity-icon"></i>2.3 Тачке и вектори</div></a>
+                <a href=../2_geometrijski/04_orijentacija_trojke_tacaka.html><div class="studioLecture" id=activity-04_orijentacija_trojke_tacaka><i class="fas fa-file-alt activity-icon"></i>2.4 Оријентација тројке тачака</div></a>
+                <a href=../2_geometrijski/04b_odnosi_tacaka_i_vektora_quiz.html><div class="studioLecture" id=activity-04b_odnosi_tacaka_i_vektora_quiz><i class="far fa-question-circle activity-icon"></i>Односи тачака и вектора - квиз</div></a>
+                <a href=../2_geometrijski/05_obimi_i_povrsine.html><div class="studioLecture" id=activity-05_obimi_i_povrsine><i class="fas fa-file-alt activity-icon"></i>2.5 Обими и површине многоуглова</div></a>
+                <a href=../2_geometrijski/05b_obimi_i_povrsine_quiz.html><div class="studioLecture" id=activity-05b_obimi_i_povrsine_quiz><i class="far fa-question-circle activity-icon"></i>Обими и површине многоуглова - квиз</div></a>
+                <a href=../2_geometrijski/06_vizuelizacija.html><div class="studioLecture" id=activity-06_vizuelizacija><i class="fas fa-file-alt activity-icon"></i>2.6 Визуелизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_tekstualni>
+                    <h5>3. Основни алгоритми текста</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_tekstualni/00_uvod.html><div class="studioLecture" id=activity-00_uvod><i class="fas fa-file-alt activity-icon"></i>3.1 Увод</div></a>
+                <a href=../3_tekstualni/01a_stringovi_metodi_pregled.html><div class="studioLecture" id=activity-01a_stringovi_metodi_pregled><i class="fas fa-file-alt activity-icon"></i>3.2 Методи за рад са стринговима</div></a>
+                <a href=../3_tekstualni/01b_poredjenjе_stringova.html><div class="studioLecture" id=activity-01b_poredjenjе_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.1 Поређење стрингова</div></a>
+                <a href=../3_tekstualni/01c_pretrazivanje_stringova.html><div class="studioLecture" id=activity-01c_pretrazivanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.2 Претраживање и провера постојања садржаја стринга</div></a>
+                <a href=../3_tekstualni/01d_transformisanje_stringova.html><div class="studioLecture" id=activity-01d_transformisanje_stringova><i class="fas fa-file-alt activity-icon"></i>3.2.3 Трансформисање стрингова</div></a>
+                <a href=../3_tekstualni/01e_stringovi_metodi_quiz.html><div class="studioLecture" id=activity-01e_stringovi_metodi_quiz><i class="far fa-question-circle activity-icon"></i>Методи за рад са стринговима - квиз</div></a>
+                <a href=../3_tekstualni/01f_stringovi_zadaci.html><div class="studioLecture" id=activity-01f_stringovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Стрингови - задаци</div></a>
+                <a href=../3_tekstualni/02a_regularni_izrazi.html><div class="studioLecture" id=activity-02a_regularni_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.1 Регуларни изрази</div></a>
+                <a href=../3_tekstualni/02b_slozeniji_izrazi.html><div class="studioLecture" id=activity-02b_slozeniji_izrazi><i class="fas fa-file-alt activity-icon"></i>3.3.2 Сложенији регуларни изрази</div></a>
+                <a href=../3_tekstualni/02c_regexi_quiz.html><div class="studioLecture" id=activity-02c_regexi_quiz><i class="far fa-question-circle activity-icon"></i>Регуларни изрази - квиз</div></a>
+                <a href=../3_tekstualni/02d_regexi_u_programima.html><div class="studioLecture" id=activity-02d_regexi_u_programima><i class="fas fa-file-alt activity-icon"></i>3.3.3 Регуларни изрази у програмима</div></a>
+                <a href=../3_tekstualni/02e_regexi_zadaci.html><div class="studioLecture" id=activity-02e_regexi_zadaci><i class="fas fa-file-alt activity-icon"></i>Регуларни изрази - задаци</div></a>
+                <a href=../3_tekstualni/03_parsiranje_rekurzivni_spust.html><div class="studioLecture" id=activity-03_parsiranje_rekurzivni_spust><i class="fas fa-file-alt activity-icon"></i>3.4 Парсирање и рекурзивни спуст</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_grafovski>
+                    <h5>4. Основни графовски алгоритми</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_grafovski/00_grafovi_uvod.html><div class="studioLecture" id=activity-00_grafovi_uvod><i class="fas fa-file-alt activity-icon"></i>4.1 Увод</div></a>
+                <a href=../4_grafovski/01_primeri_grafova.html><div class="studioLecture" id=activity-01_primeri_grafova><i class="fas fa-file-alt activity-icon"></i>4.2 Примери графова</div></a>
+                <a href=../4_grafovski/01b_primeri_grafova_kviz.html><div class="studioLecture" id=activity-01b_primeri_grafova_kviz><i class="far fa-question-circle activity-icon"></i>Примери графова - квиз</div></a>
+                <a href=../4_grafovski/02_definicije_grafova.html><div class="studioLecture" id=activity-02_definicije_grafova><i class="fas fa-file-alt activity-icon"></i>4.3 Дефиниције појмова у вези са графовима</div></a>
+                <a href=../4_grafovski/02b_definicije_grafova_kviz.html><div class="studioLecture" id=activity-02b_definicije_grafova_kviz><i class="far fa-question-circle activity-icon"></i>Дефиниције појмова у вези са графовима - квиз</div></a>
+                <a href=../4_grafovski/03_predstavljanje_grafova.html><div class="studioLecture" id=activity-03_predstavljanje_grafova><i class="fas fa-file-alt activity-icon"></i>4.4 Представљање графова</div></a>
+                <a href=../4_grafovski/03b_predstavljanje_grafova_kviz.html><div class="studioLecture" id=activity-03b_predstavljanje_grafova_kviz><i class="far fa-question-circle activity-icon"></i>Представљање графова у рачунару - квиз</div></a>
+                <a href=../4_grafovski/Представљање%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Представљање%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Представљање графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/04_obilazak_grafa.html><div class="studioLecture" id=activity-04_obilazak_grafa><i class="fas fa-file-alt activity-icon"></i>4.5 Обилазак графова</div></a>
+                <a href=../4_grafovski/04b_obilazak_grafa_kviz.html><div class="studioLecture" id=activity-04b_obilazak_grafa_kviz><i class="far fa-question-circle activity-icon"></i>Обилазак графова - квиз</div></a>
+                <a href=../4_grafovski/04_obilazak_grafa_zadaci.html><div class="studioLecture" id=activity-04_obilazak_grafa_zadaci><i class="fas fa-file-alt activity-icon"></i>Обилазак графова - решени задаци</div></a>
+                <a href=../4_grafovski/Обилазак%20графова%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Обилазак%20графова%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Обилазак графова - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/05_povezane_komponente.html><div class="studioLecture" id=activity-05_povezane_komponente><i class="fas fa-file-alt activity-icon"></i>4.6 Компоненте повезаности</div></a>
+                <a href=../4_grafovski/Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Компоненте%20повезаности%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Компоненте повезаности - задаци за самостални рад</div></a>
+                <a href=../4_grafovski/06_topolosko_sortiranje.html><div class="studioLecture" id=activity-06_topolosko_sortiranje><i class="fas fa-file-alt activity-icon"></i>4.7 Тополошко сортирање</div></a>
+                <a href=../4_grafovski/Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад.html><div class="studioLecture" id=activity-Тополошко%20сортирање%20-%20задаци%20за%20самостални%20рад><i class="far fa-question-circle activity-icon"></i>Тополошко сортирање - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_odabrani>
+                    <h5>5. Одабрани алгоритми и структуре података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_odabrani/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Увод</div></a>
+                <a href=../5_odabrani/11_prosireni_euklidov_alg.html><div class="studioLecture" id=activity-11_prosireni_euklidov_alg><i class="fas fa-file-alt activity-icon"></i>5.1.1 Проширени Еуклидов алгоритам</div></a>
+                <a href=../5_odabrani/Проширени%20Еуклидов%20алгоритам%20-%20задаци.html><div class="studioLecture" id=activity-Проширени%20Еуклидов%20алгоритам%20-%20задаци><i class="far fa-question-circle activity-icon"></i>Проширени Еуклидов алгоритам - задаци</div></a>
+                <a href=../5_odabrani/12_racunanje_sa_polinomima.html><div class="studioLecture" id=activity-12_racunanje_sa_polinomima><i class="fas fa-file-alt activity-icon"></i>5.1.2 Рачунање са полиномима</div></a>
+                <a href=../5_odabrani/13_algebarski_dalje.html><div class="studioLecture" id=activity-13_algebarski_dalje><i class="fas fa-file-alt activity-icon"></i>5.1.3 Још неки алгебарски алгоритми</div></a>
+                <a href=../5_odabrani/21_konveksan_omotac.html><div class="studioLecture" id=activity-21_konveksan_omotac><i class="fas fa-file-alt activity-icon"></i>5.2.1 Конвексан омотач</div></a>
+                <a href=../5_odabrani/23_pripadnost_prostom_mnogouglu.html><div class="studioLecture" id=activity-23_pripadnost_prostom_mnogouglu><i class="fas fa-file-alt activity-icon"></i>5.2.2 Припадност простом многоуглу</div></a>
+                <a href=../5_odabrani/24_geometrijski_dalje.html><div class="studioLecture" id=activity-24_geometrijski_dalje><i class="fas fa-file-alt activity-icon"></i>5.2.3 Још неки геометријски алгоритми</div></a>
+                <a href=../5_odabrani/31_pretraga_podniske.html><div class="studioLecture" id=activity-31_pretraga_podniske><i class="fas fa-file-alt activity-icon"></i>5.3.1 Алгоритми претраге подниске</div></a>
+                <a href=../5_odabrani/32_json_yaml.html><div class="studioLecture" id=activity-32_json_yaml><i class="fas fa-file-alt activity-icon"></i>5.3.2 Формати JSON и YAML</div></a>
+                <a href=../5_odabrani/33_markdown.html><div class="studioLecture" id=activity-33_markdown><i class="fas fa-file-alt activity-icon"></i>5.3.3 Формат Markdown</div></a>
+                <a href=../5_odabrani/34_tekstualni_dalje.html><div class="studioLecture" id=activity-34_tekstualni_dalje><i class="fas fa-file-alt activity-icon"></i>5.3.4 Још неки алгоритми са текстом</div></a>
+                <a href=../5_odabrani/41_najkraci_putevi.html><div class="studioLecture" id=activity-41_najkraci_putevi><i class="fas fa-file-alt activity-icon"></i>5.4.1 Најкраћи путеви у графу</div></a>
+                <a href=../5_odabrani/42_min_razapinjuce_drvo.html><div class="studioLecture" id=activity-42_min_razapinjuce_drvo><i class="fas fa-file-alt activity-icon"></i>5.4.2 Минимално разапињуће дрво</div></a>
+                <a href=../5_odabrani/43_grafovski_dalje.html><div class="studioLecture" id=activity-43_grafovski_dalje><i class="fas fa-file-alt activity-icon"></i>5.4.3 Још неки графовски алгоритми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Представљање графова у рачунару<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Два најчешћа начина представљања графова су преко <em>матрице суседства</em>
+и преко <em>листа суседства</em>.</p>
+<div class="section" id="id2">
+<h2>Матрица повезаности (суседства)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Нека је <span class="math notranslate nohighlight">\(V=\{v_1,v_2,\ldots,v_n\}\)</span>.  <strong>Матрица повезаности</strong>
+тј. <strong>матрица суседства</strong> графа <span class="math notranslate nohighlight">\(G = (V, E)\)</span> је квадратна
+матрица <span class="math notranslate nohighlight">\(A=(a_{ij})\)</span> реда <span class="math notranslate nohighlight">\(n\)</span>, са елементима
+<span class="math notranslate nohighlight">\(a_{ij}\)</span> који су једнаки 1 ако и само ако <span class="math notranslate nohighlight">\((v_i,v_j)\in
+E\)</span>; остали елементи матрице <span class="math notranslate nohighlight">\(A\)</span> су једнаки 0. Уместо јединица и
+нула могу се користити логичке вредности тачно и нетачно. Врста
+<span class="math notranslate nohighlight">\(i\)</span> ове матрице је дакле низ дужине <span class="math notranslate nohighlight">\(n\)</span> чија је
+<span class="math notranslate nohighlight">\(j\)</span>-та координата једнака <span class="math notranslate nohighlight">\(1\)</span> (или <span class="math notranslate nohighlight">\(\top\)</span>) ако из
+чвора <span class="math notranslate nohighlight">\(v_i\)</span> постоји грана ка чвору <span class="math notranslate nohighlight">\(v_j\)</span>, односно у
+противном <span class="math notranslate nohighlight">\(0\)</span> (или <span class="math notranslate nohighlight">\(\bot\)</span>).</p>
+<p>Размотримо представљање графа пријатељстава на једној друштвеној мрежи
+матрицом повезаности.</p>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="../_images/fejsbuk.png"><img alt="../_images/fejsbuk.png" src="../_images/fejsbuk.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Праћења на мрежи Фејсбук</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>Ако претпоставимо да су чворови нумерисани на следећи начин: <cite>0 -
+Пера</cite>, <cite>1 - Мика</cite>, <cite>2 - Ана</cite>, <cite>3 - Јована</cite>, тада се граф пријатељства
+приказан на слици може представити матрицом:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(
+\begin{array}{cccc}
+0 &amp; 1 &amp; 1 &amp; 0\\
+1 &amp; 0 &amp; 1 &amp; 1\\
+1 &amp; 1 &amp; 0 &amp; 1\\
+0 &amp; 1 &amp; 1 &amp; 0
+\end{array}
+\right)\end{split}\]</div>
+<p>Ако је граф неусмерен (као у претходном примеру), матрица <span class="math notranslate nohighlight">\(A\)</span> је
+симетрична (око главне дијагонале) и у том случају је могуће памтити
+само једну њену половину (горњи или доњи троугао).</p>
+<p>Матрицом се могу представљати и усмерени графови. Размотримо поново
+пример графа којим се представљају праћења на једној друштвеној мрежи.</p>
+<div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="../_images/instagram1.png"><img alt="../_images/instagram1.png" src="../_images/instagram1.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Праћења на мрежи Инстаграм</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>Он се може представити наредном матрицом (која није симетрична):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(
+\begin{array}{cccc}
+0 &amp; 1 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1\\
+0 &amp; 1 &amp; 0 &amp; 1\\
+1 &amp; 0 &amp; 1 &amp; 0
+\end{array}
+\right)\end{split}\]</div>
+<p>Ако је <span class="math notranslate nohighlight">\(n\)</span> број чворова графа, и ако користимо логичке
+вредности, у језику C# можемо употребити следећу меморијску
+репрезентацију матрице повезаности (без обзира на то да ли је она
+симетрична или није).</p>
+
+<div data-childcomponent="MatricaPovezanosti" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=MatricaPovezanosti data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+bool[,] A = new bool[n, n];
+</textarea>
+</div>
+<p>Претпоставимо да се матрица учитава са стандардног улаза, тако што се
+прво учитава њена димензија, а затим и матрица задата нулама и
+јединицама раздвојеним по једним размаком. На пример,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
+<span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span>
+<span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Матрица се тада може учитати помоћу следеће функције:</p>
+
+<div data-childcomponent="MatricaPovezanostiUcitavanje1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=MatricaPovezanostiUcitavanje1 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static bool[,] UcitajGraf()
+{
+   int n = int.Parse(Console.ReadLine());
+   bool[,] A = new bool[n, n];
+   for (int i = 0; i < n; i++)
+   {
+       string[] str = Console.ReadLine().Split();
+       for (int j = 0; j < n; j++)
+          A[i, j] = int.Parse(str[j]) == 1;
+   }
+   return A;
+}
+</textarea>
+</div>
+<p>Уместо задавања графа матрицом на улазу, граф се често задаје тако што
+се наведу његове гране. На пример, ако се претпостави да су чворови
+нумерисани бројевима од <span class="math notranslate nohighlight">\(1\)</span> до <span class="math notranslate nohighlight">\(n\)</span>, тада се оријентисани
+граф праћења може представити на следећи начин (прво се задаје број
+чворова, затим број грана и на крају подаци о појединачним гранама).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
+<span class="mi">7</span>
+<span class="mi">1</span> <span class="mi">2</span>
+<span class="mi">1</span> <span class="mi">3</span>
+<span class="mi">2</span> <span class="mi">4</span>
+<span class="mi">3</span> <span class="mi">1</span>
+<span class="mi">3</span> <span class="mi">4</span>
+<span class="mi">4</span> <span class="mi">0</span>
+<span class="mi">4</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Прикажимо сада функцију која на основу оваквог улаза у меморији креира
+матрицу повезаности усмереног графа.</p>
+
+<div data-childcomponent="MatricaPovezanostiUcitavanje2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=MatricaPovezanostiUcitavanje2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static bool[,] UcitajGraf()
+{
+   int n = int.Parse(Console.ReadLine()); // broj cvorova
+   int m = int.Parse(Console.ReadLine()); // broj grana
+   bool[,] A = new bool[n, n]; // sve je inicijalizovano na false
+   for (int i = 0; i < m; i++)
+   {
+       string[] str = Console.ReadLine().Split();
+       int a = int.Parse(str[0]);
+       int b = int.Parse(str[1]);
+       A[a-1, b-1] = true;
+   }
+   return A;
+}
+</textarea>
+</div>
+<p>Приметимо да смо због нумерације чворова која почиње од 1, а не од 0,
+учитане индексе чворова грана <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> умањивали за 1 пре
+приступа пољу матрице. У задацима се често среће и нумерација која
+креће од 0 и нумерација која креће од 1, па је потребно обратити пажњу
+на овај детаљ.</p>
+<p>Ако се претпоставља да је граф неусмерен, тада за сваку учитану
+неусмерену грану два симетрично постављена елемента матрице треба
+поставити на вредност <code class="docutils literal notranslate"><span class="pre">true</span></code> (за сваку неусмерену грану додају се
+обе усмерене гране које јој одговарају).</p>
+
+<div data-childcomponent="MatricaPovezanostiUcitavanje2neusmeren" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=MatricaPovezanostiUcitavanje2neusmeren data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static bool[,] UcitajGraf()
+{
+   int n = int.Parse(Console.ReadLine()); // broj cvorova
+   int m = int.Parse(Console.ReadLine()); // broj grana
+   bool[,] A = new bool[n, n]; // sve je inicijalizovano na false
+   for (int i = 0; i < m; i++)
+   {
+       string[] str = Console.ReadLine().Split();
+       int a = int.Parse(str[0]);
+       int b = int.Parse(str[1]);
+       A[a-1, b-1] = true;
+       A[b-1, a-1] = true;
+   }
+   return A;
+}
+</textarea>
+</div>
+<div class="section" id="id3">
+<h3>Сложеност основних операција<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Основна лоша страна коришћења матрица повезаности је то што оне увек
+заузимају простор величине <span class="math notranslate nohighlight">\(O(|V|^2)\)</span>, где је <span class="math notranslate nohighlight">\(|V|\)</span> број
+чворова графа, независно од тога колико грана има граф. Ако је број
+грана у графу мали (за такве графове кажемо да су ретки), већина
+елемената матрице повезаности биће нуле и ова репрезентација је
+изразито меморијски неефикасна (јако велике графове уопште није могуће
+репрезентовати на овај начин).</p>
+<p>Сложеност операције испитивања да ли су два чвора у графу повезана је
+<span class="math notranslate nohighlight">\(O(1)\)</span>, јер се она одређује провером једног елемента матрице.</p>
+<p>Са друге стране, сложеност одређивања свих суседа датог чвора, која је
+у применама веома честа, је <span class="math notranslate nohighlight">\(O(|V|)\)</span>, јер се она реализује
+проласком кроз одговарајућу врсту или колону матрице.</p>
+
+<div data-childcomponent="SviSusedi" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=SviSusedi data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+// ispis svih suseda cvora i
+for (int j = 0; j < n; j++)
+    if (A[i, j])
+       Console.WriteLine(j);
+</textarea>
+</div>
+<p>Сложеност операција додавања и уклањања неке гране из графа је
+<span class="math notranslate nohighlight">\(O(1)\)</span>, јер се оне реализују изменом једног елемента матрице.</p>
+<p>Операције које захтевају пролазак кроз све елементе матрице су веома
+неефикасне (сложеност им је <span class="math notranslate nohighlight">\(O(|V|^2)\)</span>). Као што је то обично
+случај у раду са матрицама, обилазак врсту по врсту је често
+ефикаснији него колону по колону (захваљујући томе што се у меморији
+рачунара матрице најчешће чувају по врстама и томе што се наредни
+елементи текуће врсте често налазе у кеш-меморији којој се брзо
+приступа).</p>
+</div>
+<div class="section" id="id4">
+<h3>Пример обраде графа представљеног матрицом повезаности<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Претпоставимо да је (усмерени) граф праћења на једној друштвеној
+мрежи задат матрицом повезаности. Елемент <span class="math notranslate nohighlight">\(a_{ij}\)</span> има
+вредност тачно ако и само ако особа <span class="math notranslate nohighlight">\(i\)</span> прати особу
+<span class="math notranslate nohighlight">\(j\)</span>. Дефинишите функцију које одређује листу редних бројева
+корисника са највише пратилаца, и функцију која одређује листу
+редних бројева корисника који прате највише других.</p>
+
+    </p></div></div>
+<p>Да бисмо одредили кориснике који имају највише пратилаца, прво
+одређујемо број пратилаца сваког појединачног корисника (рачунамо
+излазне степене чворова). Те податке можемо да чувамо у једном
+низу. Све елементе низа иницијализујемо на нулу, затим угнежђеним
+петљама пролазимо кроз све елементе матрице суседства и за сваку везу
+од особе <span class="math notranslate nohighlight">\(i\)</span> до особе <span class="math notranslate nohighlight">\(j\)</span> увећавамо број пратилаца особе
+<span class="math notranslate nohighlight">\(j\)</span>. Након одређивања броја пратилаца сваке особе одређујемо
+максимум тог низа тј. максималан број пратилаца неког
+корисника. На крају, одређујемо оне кориснике који имају тај
+максималан број пратилаца. Пошто њих може бити више, све их смештамо у
+листу коју враћамо као резултат функције.</p>
+
+<div data-childcomponent="KorisniciSaNajvisePratilaca" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=KorisniciSaNajvisePratilaca data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static List<int> KorisniciSaNajvisePratilaca(bool[,] A, int n)
+{
+    // odredjujemo broj pratilaca svakog korisnika
+    int[] brojPratilaca = new int[n];
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            if (A[i, j])
+                brojPratilaca[j]++;
+    // odredjujemo najveci broj pratilaca nekog korisnika
+    int maks = brojPratilaca.Max();
+    // izdvajamo sve korisnike koji imaju taj maksimalni broj pratilaca
+    var korisnici = new List<int>();
+    for (int i = 0; i < n; i++)
+        if (brojPratilaca[i] == maks)
+            korisnici.Add(i);
+    return korisnici;
+}
+</textarea>
+</div>
+<p>Друга функција је веома слична првој. Једина разлика је што се за
+сваку особу не одређује број пратилаца, већ број корисника које она
+прати.</p>
+
+<div data-childcomponent="KorisniciKojiNajvisePrate" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=KorisniciKojiNajvisePrate data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static List<int> KorisniciKojiNajvisePrate(bool[,] A, int n)
+{
+    int[] brojPracenih = new int[n];
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            if (A[i, j])
+                brojPracenih[i]++;
+    int maks = brojPracenih.Max();
+    var korisnici = new List<int>();
+    for (int i = 0; i < n; i++)
+        if (brojPracenih[i] == maks)
+            korisnici.Add(i);
+    return korisnici;
+}
+</textarea>
+</div>
+<p>Нагласимо да се у овом задатку претпостављало да је граф већ
+представљен матрицом у меморији рачунара. Задаци који се своде на
+анализу степена чворова се често могу решити и без експлицитног
+представљања графа, јер се степени чворова могу израчунати током
+учитавања графа (приликом учитавања података о грани која спаја
+чворове <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> увећава се излазни степен чвора
+<span class="math notranslate nohighlight">\(a\)</span> и улазни степен чвора <span class="math notranslate nohighlight">\(b\)</span>).</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Представљање тежинских графова матрицом тежина<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Матрична репрезентација се веома често користи и за представљање
+тежинских графова тако што се на месту <span class="math notranslate nohighlight">\((i, j)\)</span> поставља
+вредност <span class="math notranslate nohighlight">\(a_{ij}\)</span> која представља тежину гране између чворова
+<span class="math notranslate nohighlight">\(i\)</span> и <span class="math notranslate nohighlight">\(j\)</span> (претпостављамо да су чворови нумерисани
+вредностима од <span class="math notranslate nohighlight">\(0\)</span> до <span class="math notranslate nohighlight">\(n-1\)</span>). Ако између два чвора не
+постоји грана, у матрицу се уписује нека специјална вредност која
+обично представља <span class="math notranslate nohighlight">\(\infty\)</span> (то може бити 0, -1, највећи број
+који се може представити помоћу одговарајућег целобројног типа ако су
+тежине целобројне или вредност <span class="math notranslate nohighlight">\(+\infty\)</span> ако се користи реални
+тип који обично има могућност експлицитног представљање те вредности).</p>
+<div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="../_images/vojvodina_deo.png"><img alt="../_images/vojvodina_deo.png" src="../_images/vojvodina_deo.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Део мреже путева у Војводини</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>Претпоставимо да смо места у Војводини обележили редом бројевима <cite>0 -
+Суботица</cite>, <cite>1 - Сомбор</cite>, <cite>2 - Бачка Топола</cite>, <cite>3 - Кикинда</cite>, <cite>4 -
+Оџаци</cite>, <cite>5 - Врбас</cite> и <cite>6 - Бечеј</cite>. Део мреже путева између ових
+градова се тада може представити следећом матрицом:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(
+\begin{array}{ccccccc}
+0,0 &amp; 56,9 &amp; 34,8 &amp; 91,4 &amp; +\infty &amp; +\infty &amp; +\infty\\
+56,9 &amp; 0,0 &amp; 46,3 &amp; +\infty &amp; 35,9 &amp; 52,1 &amp; +\infty\\
+34,8 &amp; 46,3 &amp; 0,0 &amp; 80,5 &amp; +\infty &amp; 30,1 &amp; 41,1 \\
+91,4 &amp; +\infty &amp; 80,5 &amp; 0,0 &amp; +\infty &amp; +\infty &amp; 52,6 \\
++\infty &amp; 35,9 &amp; +\infty &amp; +\infty &amp; 0,0 &amp; 37,7 &amp; +\infty\\
++\infty &amp; 52,1 &amp; 30,1 &amp; +\infty &amp; 37,7 &amp; 0,0 &amp; 52,6\\
++\infty &amp; +\infty &amp; 41,1 &amp; 52,6 &amp; +\infty &amp; 52,6 &amp; 0,0
+\end{array}
+\right)\end{split}\]</div>
+<p>Пошто је граф неусмерен, матрица је симетрична.</p>
+<div class="section" id="id6">
+<h3>Сложеност основних операција<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Све особине коришћења матрице повезаности се преносе и на случај
+тежинских графова. Меморијска сложеност ове репрезентације је
+<span class="math notranslate nohighlight">\(O(|V|^2)\)</span>, без обзира на број грана. Обилазак целе матрице
+захтева време <span class="math notranslate nohighlight">\(O(|V|^2)\)</span>. Проналажење свих суседа датог чвора
+захтева анализу целе врсте (или колоне) и сложености је <span class="math notranslate nohighlight">\(O(|V|)\)</span>.
+Са друге стране, читање или измена тежине било које појединачне гране
+је операција сложености <span class="math notranslate nohighlight">\(O(1)\)</span>.</p>
+</div>
+<div class="section" id="id7">
+<h3>Пример обраде графа представљеног матрицом тежина<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Авиони лете између аеродрома и позната су времена летова између
+аеродрома. За сваки аеродром одредити време најкраћег лета до неког
+другог аеродрома (без преседања). Претпоставити да су времена
+летова задата матрицом неусмереног тежинског графа.</p>
+
+    </p></div></div>
+<p>Илустрације ради, прикажимо прво део програма који учитава податке о
+летовима и формира матрицу тежинског графа. Претпоставићемо да се подаци
+учитавају у следећем формату:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
+<span class="mi">4</span>
+<span class="mi">0</span> <span class="mi">1</span> <span class="mi">1</span><span class="p">:</span><span class="mi">25</span>
+<span class="mi">0</span> <span class="mi">2</span> <span class="mi">2</span><span class="p">:</span><span class="mi">13</span>
+<span class="mi">1</span> <span class="mi">4</span> <span class="mi">3</span><span class="p">:</span><span class="mi">17</span>
+<span class="mi">2</span> <span class="mi">4</span> <span class="mi">2</span><span class="p">:</span><span class="mi">53</span>
+</pre></div>
+</div>
+<p>Прво се учитава број аеродрома, затим број летова, а затим подаци о
+појединачним летовима: редни бројеви полазног и долазног аеродрома и
+време трајања лета. Претпоставићемо да се у матрицу уписује -1 за све
+аеродроме између којих не постоји лет. Једноставности ради уместо
+времена лета у сатима и минутима, у матрици ћемо памтити само времена
+летова у минутима. Дакле, од учитаних података треба формирати наредну
+матрицу:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(
+\begin{array}{ccccc}
+-1 &amp; 85 &amp; 133 &amp; -1 &amp; -1\\
+85 &amp; -1 &amp; -1 &amp; -1 &amp; 197\\
+133 &amp; -1 &amp; -1 &amp; -1 &amp; 173\\
+-1 &amp; -1 &amp; -1 &amp; -1 &amp; -1\\
+-1 &amp; 197 &amp; 173 &amp; -1 &amp; -1
+\end{array}
+\right)\end{split}\]</div>
+
+<div data-childcomponent="NajkraciLetoviUcitavanje" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=NajkraciLetoviUcitavanje data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static int[,] UcitajLetove()
+{
+    int n = int.Parse(Console.ReadLine());
+    int[,] A = new int[n, n];
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            A[i, j] = -1;
+    int m = int.Parse(Console.ReadLine());
+    for (int i = 0; i < m; i++) {
+        string[] str = Console.ReadLine().Split(' ', ':');
+        int a = int.Parse(str[0]);
+        int b = int.Parse(str[1]);
+        int hh = int.Parse(str[2]);
+        int mm = int.Parse(str[3]);
+        int t = hh*60 + mm;
+        A[a, b] = t;
+        A[b, a] = t;
+    }
+    return A;
+}
+</textarea>
+</div>
+<p>Прикажимо сада функцију којом се за сваки аеродром одређује најкраћи
+лет. Ово се заснива на томе да се у свакој врсти матрице одреди
+најмања бројевна вредност која је различита од -1. Пошто је матрица
+симетрична, уместо врста је могуће обрађивати и колоне (али то је по
+правилу неефикасније).</p>
+
+<div data-childcomponent="NajkraciLetovi" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=NajkraciLetovi data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static int[] NajkraciLetovi(int[,] A, int n)
+{
+    int[] letovi = new int[n];
+    for (int i = 0; i < n; i++) {
+        int mint = -1;
+        for (int j = 0; j < n; j++)
+            if (A[i, j] != -1)
+                if (mint == -1 || A[i, j] < mint)
+                    mint = A[i, j];
+        letovi[i] = mint;
+    }
+    return letovi;
+}
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Представљање графа помоћу листа суседа (чворова)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>Уместо да се и све непостојеће гране експлицитно представљају у
+матрици повезаности, за сваку врсту <span class="math notranslate nohighlight">\(i=1,2,\ldots,n\)</span> може се
+формирати повезана листа оних позиција из <span class="math notranslate nohighlight">\(i\)</span>-те врсте на којима се
+налазе јединице. Дакле, сваком чвору придружује се листа (или низ),
+која садржи бројеве чворова који су суседни том чвору (односно гране
+ка суседним чворовима). Граф је представљен низом листа
+(тј. низова). Овај начин представљања графа зове се представљање
+помоћу <strong>листа суседа</strong>, односно <strong>листа повезаности</strong>.</p>
+<p>На пример, усмерен граф приказан на слици се може представити
+следећим листама суседа:</p>
+<div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="../_images/liste_povezanosti.png"><img alt="../_images/liste_povezanosti.png" src="../_images/liste_povezanosti.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Представљање усмереног графа листама суседа</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<p>Треба напоменути да, иако име тако сугерише, имплементација овакве
+репрезентације графа не мора бити заснована на листама, већ се уместо
+повезаних листи може користити низ или нека врста балансираних
+бинарних дрвета или пак хеш табела (чиме се омогућава ефикасна
+претрага свих суседа).</p>
+<p>У језику C# можемо употребити следећу имплементацију засновану на
+коришћењу проширивих низова (<code class="docutils literal notranslate"><span class="pre">List&lt;int&gt;</span></code>). Наредни кôд гради празне
+листе суседа.</p>
+
+<div data-childcomponent="ListeSusedaAlokacija" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ListeSusedaAlokacija data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+List<int>[] susedi = new List<int>[n];
+for (int cvorOd = 0; cvorOd < n; cvorOd++)
+     susedi[cvorOd] = new List<int>();
+</textarea>
+</div>
+<p>Нову усмерену грану која спаја два чвора (<code class="docutils literal notranslate"><span class="pre">cvorOd</span></code> и <code class="docutils literal notranslate"><span class="pre">cvorDo</span></code>)
+тада можемо додати помоћу:</p>
+
+<div data-childcomponent="ListeSusedaDodavanjeGrane" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ListeSusedaDodavanjeGrane data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+susedi[cvorOd].Add(cvorDo);
+</textarea>
+</div>
+<p>Ако је граф неусмерен, тада се за сваку неусмерену грану која спаја
+два чвора (<code class="docutils literal notranslate"><span class="pre">cvorA</span></code> и <code class="docutils literal notranslate"><span class="pre">cvorB</span></code>) додају два податка:</p>
+
+<div data-childcomponent="ListeSusedaDodavanjeGraneNeusmereno" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ListeSusedaDodavanjeGraneNeusmereno data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+susedi[cvorA].push_back(cvorB);
+susedi[cvorB].push_back(cvorA);
+</textarea>
+</div>
+<p>Итерацију кроз све суседе чвора можемо остварити помоћу:</p>
+
+<div data-childcomponent="ListeSusedaIteracija" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ListeSusedaIteracija data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+foreach (int cvorDo in susedi[cvorOd])
+    ...
+</textarea>
+</div>
+<p>Прикажимо сада функцију која на основу учитаног списка грана
+оријентисаног графа формира његову репрезентацију у облику листа
+суседа. Претпоставићемо да се прво учитава број чворова, затим број
+грана и након тога подаци о појединачним гранама. На пример:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
+<span class="mi">7</span>
+<span class="mi">1</span> <span class="mi">2</span>
+<span class="mi">1</span> <span class="mi">3</span>
+<span class="mi">2</span> <span class="mi">4</span>
+<span class="mi">3</span> <span class="mi">1</span>
+<span class="mi">3</span> <span class="mi">4</span>
+<span class="mi">4</span> <span class="mi">0</span>
+<span class="mi">4</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Функција која учитава граф би се тада могла дефинисати на следећи начин:</p>
+
+<div data-childcomponent="ListeSusedaUcitavanje" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ListeSusedaUcitavanje data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+static List<int>[] UcitajGraf()
+{
+   int n = int.Parse(Console.ReadLine());
+   List<int>[] susedi = new List<int>[n];
+   for (int cvorOd = 0; cvorOd < n; cvorOd++)
+      susedi[cvorOd] = new List<int>();
+   int m = int.Parse(Console.ReadLine());
+   for (int i = 0; i < m; i++)
+   {
+      string[] str = Console.ReadLine().Split();
+      int cvorOd = int.Parse(str[0]);
+      int cvorDo = int.Parse(str[1]);
+      susedi[cvorOd].Add(cvorDo);
+   }
+   return susedi;
+}
+</textarea>
+</div>
+<p>Да је у питању неусмерен граф, за сваку грану (a,b) би требало додати
+елементе у две листе (чвор a у листу суседа чвора b и чвор b у листу
+суседа чвора a).</p>
+<div class="section" id="id9">
+<h3>Сложеност основних операција<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Меморијска сложеност репрезентације помоћу листа суседа је
+<span class="math notranslate nohighlight">\(O(|V| + |E|)\)</span>, где је <span class="math notranslate nohighlight">\(|V|\)</span> број чворова, а <span class="math notranslate nohighlight">\(|E|\)</span>
+број грана графа (чувамо <span class="math notranslate nohighlight">\(|V|\)</span> листа које укупно садрже
+<span class="math notranslate nohighlight">\(|E|\)</span> елемената). У случају ретких графова (графова код којих је
+број грана мали) ово може бити много ефикасније него у случају матрица
+суседа. Ретки графови се веома често срећу у пракси. На пример, иако
+друштвене мреже имају стотине милиона, па и милијарде корисника, сваки
+корисник обично остварује везе тек са неколико десетина или стотина
+других, па је укупан број грана баш много мањи од квадрата броја
+чворова. Такве графове заправо није ни могуће репрезентовати помоћу
+матрице и за њих се користи репрезентација помоћу листа повезаности.</p>
+<p>Најдужа листа суседа неког чвора може бити дужине <span class="math notranslate nohighlight">\(|V|\)</span> (ако су
+сви чворови суседи неког чвора). Зато је сложеност провере да ли су
+два задата чвора повезана <span class="math notranslate nohighlight">\(О(|V|)\)</span> (ова операција се обично врши
+линеарном претрагом листе суседа једног од датих чворова).</p>
+
+<div data-childcomponent="ListeSusedaProveraPovezanosti" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ListeSusedaProveraPovezanosti data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+// provera da li su cvorovi i i j povezani
+bool povezani(int i, int j)
+{
+    foreach (int sused in susedi[i])
+       if (sused == j)
+          return true;
+    return false;
+}
+</textarea>
+</div>
+<p>Приметимо да је то спорије него код матрице, где је то операција
+константне сложености. Са друге стране сложеност итерације кроз све
+суседе неког чвора, што је често основни корак алгоритама за обраду
+графова има сложеност <span class="math notranslate nohighlight">\(O(|S|)\)</span>, где је <span class="math notranslate nohighlight">\(S\)</span> скуп суседа тог
+чвора. Када је број суседа мали, ово може бити значајно ефикасније
+него <span class="math notranslate nohighlight">\(O(|V|)\)</span>, што је сложеност ове операције у случају
+коришћења матрице суседа.</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Репрезентација тежинског графа листама повезаности<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>И тежински графови могу бити ретки и тада их је боље представити
+листама повезаности него матрицом. У том случају листа повезаности
+сваког чвора садржи уређени пар који садржи индекс суседног чвора и
+тежину гране. На пример, граф путева између градова <cite>0 - Суботица</cite>,
+<cite>1 - Сомбор</cite>, <cite>2 - Бачка Топола</cite>, <cite>3 - Кикинда</cite>, <cite>4 - Оџаци</cite>, <cite>5 -
+Врбас</cite> и <cite>6 - Бечеј</cite> би се могао представити листама на следећи начин.</p>
+<div class="figure align-center" id="id16">
+<a class="reference internal image-reference" href="../_images/vojvodina_deo.png"><img alt="../_images/vojvodina_deo.png" src="../_images/vojvodina_deo.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Део мреже путева у Војводини</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="../_images/vojvodina_liste.png"><img alt="../_images/vojvodina_liste.png" src="../_images/vojvodina_liste.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">Листе повезаности тежинског графа</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<p>Прикажимо сада програм који учитава неусмерени тежински граф и формира
+овакву репрезентацију. Можемо претпоставити да је сваки уређени пар
+задат посебно дефинисаном структуром (а можемо употребити и тип
+<code class="docutils literal notranslate"><span class="pre">Tuple</span></code>).  Претпоставићемо да је на улазу дат број чворова, број
+грана и подаци о појединачним гранама. На пример:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span>
+<span class="mi">12</span>
+<span class="mi">0</span> <span class="mi">1</span> <span class="mf">56.9</span>
+<span class="mi">0</span> <span class="mi">2</span> <span class="mf">34.8</span>
+<span class="mi">0</span> <span class="mi">3</span> <span class="mf">91.4</span>
+<span class="mi">1</span> <span class="mi">2</span> <span class="mf">46.3</span>
+<span class="mi">1</span> <span class="mi">4</span> <span class="mf">35.9</span>
+<span class="mi">1</span> <span class="mi">5</span> <span class="mf">52.1</span>
+<span class="mi">2</span> <span class="mi">3</span> <span class="mf">80.5</span>
+<span class="mi">2</span> <span class="mi">5</span> <span class="mf">30.1</span>
+<span class="mi">2</span> <span class="mi">6</span> <span class="mf">41.1</span>
+<span class="mi">3</span> <span class="mi">6</span> <span class="mf">52.6</span>
+<span class="mi">4</span> <span class="mi">5</span> <span class="mf">37.7</span>
+<span class="mi">5</span> <span class="mi">6</span> <span class="mf">35.3</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="UcitavanjeTezinskog" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=UcitavanjeTezinskog data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+struct Grana
+{
+    public int cvorDo;
+    public double tezina;
+}
+
+List<Grana>[] UcitajGraf()
+{
+    int n = int.Parse(Console.ReadLine());
+    var susedi = new List<Grana>[n];
+    for (int i = 0; i < n; i++)
+       susedi[i] = new List<Grana>();
+    int m = int.Parse(Console.ReadLine());
+    for (int i = 0; i < m; i++)
+    {
+       string[] str = Console.ReadLine().Split();
+       int cvorA = int.Parse(str[0]);
+       int cvorB = int.Parse(str[1]);
+       double tezina = double.Parse(str[2]);
+
+       Grana granaDoB;
+       granaDoB.cvorDo = cvorB;
+       grana.tezina = tezina;
+       susedi[cvorA].add(granaDoB);
+
+       Grana granaDoA;
+       granaDoA.cvorDo = cvorA;
+       grana.tezina = tezina;
+       susedi[cvorB].add(granaDoA);
+    }
+    return susedi;
+}
+</textarea>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>Имплицитна репрезентација<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>У неким примерима граф се не представља експлицитно, већ само
+имплицитно. Најчешћи примери тог типа су матрице. Наиме, свако поље
+матрице се може представити неким чвором графа, док се гране графа
+успостављају измећу оних чворова који представљају суседна поља
+матрице (при чему свако унутрашње поље матрице може имати или четири
+суседа или осам суседа, у зависности од тога да ли су дозвољени
+дијагонални прелази). Уместо да се за сваки чвор експлицитно чувају
+листе суседа, те листе се не памте у меморији рачунара, а обилазак
+свих суседа се врши петљама које израчунавају координате суседних поља
+на основу познатих координата текућег поља.</p>
+<p>Набрајање 8 суседних поља се врши на следећи начин:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">dv</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">dv</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">dv</span><span class="o">++</span><span class="p">)</span>
+   <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">dk</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">dk</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">dk</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="n">dv</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">dk</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+          <span class="k">continue</span><span class="p">;</span>
+       <span class="nb">int</span> <span class="n">vv</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="n">dv</span><span class="p">;</span>
+       <span class="nb">int</span> <span class="n">kk</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">dk</span><span class="p">;</span>
+       <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">vv</span> <span class="o">&amp;&amp;</span> <span class="n">vv</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">kk</span> <span class="o">&amp;&amp;</span> <span class="n">kk</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
+           <span class="o">//</span> <span class="n">polje</span> <span class="p">(</span><span class="n">vv</span><span class="p">,</span> <span class="n">kk</span><span class="p">)</span> <span class="n">je</span> <span class="n">sused</span> <span class="n">polju</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+   <span class="p">}</span>
+</pre></div>
+</div>
+<p>Ако се матрицом представе поља шаховске табле по којој се креће
+скакач, тада се суседна поља могу обићи на следећи начин:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">[]</span> <span class="n">dv</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="mi">2</span><span class="p">};</span>
+<span class="nb">int</span><span class="p">[]</span> <span class="n">dk</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">};</span>
+<span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+       <span class="nb">int</span> <span class="n">vv</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="n">dv</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+       <span class="nb">int</span> <span class="n">kk</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">dk</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+       <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">vv</span> <span class="o">&amp;&amp;</span> <span class="n">vv</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">kk</span> <span class="o">&amp;&amp;</span> <span class="n">kk</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
+           <span class="o">//</span> <span class="n">polje</span> <span class="p">(</span><span class="n">vv</span><span class="p">,</span> <span class="n">kk</span><span class="p">)</span> <span class="n">je</span> <span class="n">sused</span> <span class="n">polju</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="02b_definicije_grafova_kviz.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
