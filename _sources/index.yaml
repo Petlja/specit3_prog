@@ -233,24 +233,16 @@ lessons:
         title: 3.4 Парсирање и рекурзивни спуст
         file: 03_parsiranje_rekurzivni_spust.rst
         guid: f540babb-9c28-489b-9458-2f9138d38e89
-      - type: quiz
-        title: Алгоритми текста - квиз
-        file: 04_algoritmi_teksta_quiz.rst
-        guid: 4650bbd2-ff3d-402f-9e78-9b3820441744
-      - type: reading
-        title: Алгоритми текста - задаци
-        file: 05_algoritmi_teksta_zadaci.rst
-        guid: 99d435e2-39d3-433f-b9a4-9af5bcd22c98
   - title: 4. Основни графовски алгоритми
     guid: e823e034-9fe8-419d-a9d3-d4ac5fcd7843
     folder: 4_grafovski
     activities:
       - type: reading
-        title: Увод
+        title: 4.1 Увод
         file: 00_grafovi_uvod.rst
         guid: 9bccf388a7fc4979b20c3cf4aabc4db2
       - type: reading
-        title: Примери графова
+        title: 4.2 Примери графова
         file: 01_primeri_grafova.rst
         guid: 7fb5f158-afd0-4940-839b-24382f34add2
       - type: quiz
@@ -258,7 +250,7 @@ lessons:
         file: 01b_primeri_grafova_kviz.rst
         guid: 48d43f2b-b1a7-4b53-a8b0-0c0d002714ce
       - type: reading
-        title: Дефиниције појмова у вези са графовима
+        title: 4.3 Дефиниције појмова у вези са графовима
         file: 02_definicije_grafova.rst
         guid: 2249da03-b9b9-42aa-8cb1-e7d2e93fd3c7
       - type: quiz
@@ -266,7 +258,7 @@ lessons:
         file: 02b_definicije_grafova_kviz.rst
         guid: 6f836fe2-329a-4803-929d-db80351cb0bd
       - type: reading
-        title: Представљање графова
+        title: 4.4 Представљање графова
         file: 03_predstavljanje_grafova.rst
         guid: a468ef7e-f29d-48a8-940f-58a1860b32a7
       - type: quiz
@@ -282,7 +274,7 @@ lessons:
           - https://petlja.org/biblioteka/r/Zbirka3/sudija
         guid: 4b8b0e83-7b93-40e1-8b00-660bb0461c30
       - type: reading
-        title: Обилазак графова
+        title: 4.5 Обилазак графова
         file: 04_obilazak_grafa.rst
         guid: db7a9436-793e-4c38-915f-f588383cc0f9
       - type: quiz
@@ -308,7 +300,7 @@ lessons:
           - https://petlja.org/biblioteka/r/Zbirka3/kruzni_autobusi
         guid: 505aa1ba-a46a-48ac-95fb-7dbe44a738d3
       - type: reading
-        title: Компоненте повезаности
+        title: 4.6 Компоненте повезаности
         file: 05_povezane_komponente.rst
         guid: ea8530bc-3a60-477c-a789-af3d1241f342
       - type: coding-quiz
@@ -319,7 +311,7 @@ lessons:
           - https://petlja.org/biblioteka/r/Zbirka3/kose_crte
         guid: c72629fb-70bf-4f51-8798-3469a644f1ff
       - type: reading
-        title: Тополошко сортирање
+        title: 4.7 Тополошко сортирање
         file: 06_topolosko_sortiranje.rst
         guid: 0963b436-7a9e-4125-9ca7-9388d05e3613
       - type: coding-quiz
@@ -337,7 +329,7 @@ lessons:
         file: 0_uvod.rst
         guid: 798c64ce-d976-43df-8a27-9bf9c97cbd6e
       - type: reading
-        title: Проширени Еуклидов алгоритам 
+        title: 5.1.1 Проширени Еуклидов алгоритам 
         file: 11_prosireni_euklidov_alg.rst
         guid: 675a45da-9066-4e6d-9e15-ea7c2e645a4e
       - type: coding-quiz
@@ -348,15 +340,15 @@ lessons:
           - https://petlja.org/biblioteka/r/Zbirka3/bilijar
         guid: ec9d1b31-8c11-48f3-b395-2dd87430138a
       - type: reading
-        title: Рачунање са полиномима
+        title: 5.1.2 Рачунање са полиномима
         file: 12_racunanje_sa_polinomima.rst
         guid: 8d062afb-850e-45b5-bb94-9ca6eda56468
       - type: reading
-        title: Још неки алгебарски алгоритми
+        title: 5.1.3 Још неки алгебарски алгоритми
         file: 13_algebarski_dalje.rst
         guid: c9892588-ae92-45b6-b1f6-48a0e6752954
       - type: reading
-        title: Конвексан омотач
+        title: 5.2.1 Конвексан омотач
         file: 21_konveksan_omotac.rst
         guid: 1130ed38-2155-4c45-9413-1a78c7742578
       # - type: reading
@@ -364,38 +356,42 @@ lessons:
         # file: 22_svi_preseci_duzi.rst
         # guid: 78d5b8fd-dae2-4e1c-9401-7ff7db6925e8
       - type: reading
-        title: Припадност простом многоуглу
+        title: 5.2.2 Припадност простом многоуглу
         file: 23_pripadnost_prostom_mnogouglu.rst
         guid: d8f9a6be-f296-4f14-890b-4825f5014f7c
       - type: reading
-        title: Још неки геометријски алгоритми
+        title: 5.2.3 Још неки геометријски алгоритми
         file: 24_geometrijski_dalje.rst
         guid: 35e02ef0-acde-403f-9a36-ab20b61480f9
       - type: reading
-        title: Алгоритми претраге подниске
+        title: 5.3.1 Алгоритми претраге подниске
         file: 31_pretraga_podniske.rst
         guid: 3f848cd2-77ba-4924-be6e-b04c5b8faf5c
       - type: reading
-        title: Формати JSON и YAML
+        title: 5.3.2 Формати JSON и YAML
         file: 32_json_yaml.rst
         guid: 9532096b-4009-44fa-a57c-23c15e978434
       - type: reading
-        title: Формат Markdown
+        title: 5.3.3 Формат Markdown
         file: 33_markdown.rst
         guid: c23925bc-6a8a-4794-96db-e6db1021fc3e
       - type: reading
-        title: Још неки алгоритми са текстом
+        title: 5.3.4 Још неки алгоритми са текстом
         file: 34_tekstualni_dalje.rst
         guid: c0b13dba-ddb4-4e41-be05-0c610164077d
       - type: reading
-        title: Најкраћи путеви у графу
+        title: 5.4.1 Најкраћи путеви у графу
         file: 41_najkraci_putevi.rst
         guid: 411a4616-18b6-4b02-b622-76fda6710d97
       - type: reading
-        title: Минимално разапињуће дрво
+        title: 5.4.2 Минимално разапињуће дрво
         file: 42_min_razapinjuce_drvo.rst
         guid: d8526739-3eb5-4394-9bcf-f6e9caf8f1c8
       - type: reading
-        title: Још неки графовски алгоритми
+        title: 5.4.3 Још неки графовски алгоритми
         file: 43_grafovski_dalje.rst
         guid: 0f844d6d-73a2-49f6-85da-ff21652eaa82
+
+        # za arhivu:
+        # guid: 4650bbd2-ff3d-402f-9e78-9b3820441744
+        # guid: 99d435e2-39d3-433f-b9a4-9af5bcd22c98
