@@ -6,6 +6,7 @@
     <title>Визуализација</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -375,9 +377,9 @@
 света.</p>
 <p>Због тога је потребно да можемо брзо и једноставно да прерачунавамо координате тачака, тј. да од
 координата тачке у једном систему добијемо координате у другом.</p>
-<div class="figure align-center" id="id9">
+<div class="figure align-center" id="id10">
 <img alt="../_images/transformacija_koordinata.png" src="../_images/transformacija_koordinata.png" />
-<p class="caption"><span class="caption-text">Координате света (зелено) и екрана (плаво).</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Координате света (зелено) и екрана (плаво).</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="id4">
 <h3>Трансформације светских координата у екранске<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
@@ -389,9 +391,9 @@
 екранске координате <span class="math notranslate nohighlight">\((x_s, y_s)\)</span> тачке <span class="math notranslate nohighlight">\(P\)</span>, потребно је још да знамо дужине јединичних
 дужи координатних оса система света, изражене у пикселима, тј. јединицама координатног система екрана.
 Означимо те дужине редом са <span class="math notranslate nohighlight">\(a, b\)</span> (<span class="math notranslate nohighlight">\(a\)</span> за осу <span class="math notranslate nohighlight">\(x\)</span>, а <span class="math notranslate nohighlight">\(b\)</span> за осу <span class="math notranslate nohighlight">\(y\)</span>).</p>
-<div class="figure align-center" id="id10">
+<div class="figure align-center" id="id11">
 <img alt="../_images/transformacija_w_s.png" src="../_images/transformacija_w_s.png" />
-<p class="caption"><span class="caption-text">Израчунавање координата екрана <cite>Xs, Ys</cite>, када су познате координате света <cite>Xw, Yw</cite>.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Израчунавање координата екрана <cite>Xs, Ys</cite>, када су познате координате света <cite>Xw, Yw</cite>.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <p>Користећи боје и ознаке са слике, закључујемо да вредност <span class="math notranslate nohighlight">\(x_s\)</span> можемо да израчунамо када „на плаву
 координату зелене <span class="math notranslate nohighlight">\(y\)</span> осе (а то је <span class="math notranslate nohighlight">\(x_t=-450\)</span>) додамо <span class="math notranslate nohighlight">\(x_w\)</span> дужи од по <span class="math notranslate nohighlight">\(a\)</span> пиксела”.
@@ -710,7 +712,19 @@ pg.quit()
 </div>
 </div>
 <div class="section" id="id8">
-<h2>Задаци:<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<h2>Пример - поплочавање равни<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>T O D O</strong> - опис и дорада примера (померање и зумирање, без трансформације), JavaScript кôд</p>
+
+    </div></div>
+</div>
+<div class="section" id="id9">
+<h2>Задаци:<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Написати програм који омогућава кориснику да кликовима зада произвољан број тачака,
 а приказује задате тачке и најмањи рам (поравнати правоугаоник) који их садржи.</p></li>

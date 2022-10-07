@@ -6,6 +6,7 @@
     <title>Још неки графовски проблеми и алгоритми</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -419,22 +421,22 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Ојлеров пут у повезаном графу постоји ако и само ако постоје
 највише два чвора непарног степена (и тада они морају бути почетни и
 завршни чвор).</p>
 
-    </p></div></div>
+    </div></div>
 
     <div class="note-wrapper infonote-type">
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Ојлеров циклус у повезаном графу постоји ако и само ако су сви чворови
 парног степена (и тада било који чвор може бити почетни и истовремено завршни).</p>
 
-    </p></div></div>
+    </div></div>
 <p>У наредној анимацији је приказан један Ојлеров пут. Приметимо да су
 сви чворови парног степена, осим чворова A и B, па пут мора да почне у
 једном од та два чвора и заврши се у другом.</p>
@@ -542,7 +544,7 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Проблем испитивања постојања Хамилтонових путева и проблем
 испитивања постојања Хамилтонових циклуса (без обзира на то да ли
 је граф усмерен или не) спада у класу тзв. <strong>NP проблема</strong>
@@ -559,7 +561,7 @@ NP-тешких проблема су тзв. <strong>NP-комплетни</str
 такав алгоритам не постоји, добио би милион долара од Клејовог
 института (и још важније, стекао огромну светску славу).</p>
 
-    </p></div></div>
+    </div></div>
 <p>Више о Хамилтоновим путањама може сазнати овде:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hamiltonian_path">https://en.wikipedia.org/wiki/Hamiltonian_path</a></p></li>
@@ -580,7 +582,7 @@ NP-тешких проблема су тзв. <strong>NP-комплетни</str
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Проблем трговачког путника јесте NP-тежак, али не и NP, па самим
 тим није ни NP-комплетан. Наиме, чак и кад имамо решење, не умемо у
 полиномијалном времену да проверимо да ли је исправно (за дати пут
@@ -588,7 +590,7 @@ NP-тешких проблема су тзв. <strong>NP-комплетни</str
 не умемо да брзо проверимо да ли је он заиста најкраћи од свих
 таквих путева).</p>
 
-    </p></div></div>
+    </div></div>
 <p>Пошто овако тешке проблеме није могуће потпуно тачно решити (и то већ
 за графове од неколико десетина чворова), задовољавамо се приближним
 решењима. Уместо егзактних алгоритама који проналазе стварно најкраћи

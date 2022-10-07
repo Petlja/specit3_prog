@@ -6,6 +6,7 @@
     <title>Тест прималности</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -355,13 +357,13 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p><strong>Дефиниција:</strong></p>
 <p>Природан број <span class="math notranslate nohighlight">\(n &gt; 1\)</span> је прост, ако су <span class="math notranslate nohighlight">\(1\)</span> и <span class="math notranslate nohighlight">\(n\)</span> његови једини делиоци.</p>
 <p>Природан број <span class="math notranslate nohighlight">\(n &gt; 1\)</span> је сложен, ако он, осим <span class="math notranslate nohighlight">\(1\)</span> и <span class="math notranslate nohighlight">\(n\)</span>, има и других делилаца
 (већих од <span class="math notranslate nohighlight">\(1\)</span>, а мањих од <span class="math notranslate nohighlight">\(n\)</span>).</p>
 
-    </p></div></div>
+    </div></div>
 <p>На основу дате дефиниције закључујемо да је сваки природан број осим јединице или прост или сложен.
 При томе, за било који довољно мали природан број лако можемо напамет да проверимо да ли је он прост.
 На пример, број 29 је прост, јер он није дељив ни са једним од бројева од 2 до 28. Са друге стране, број
@@ -372,16 +374,14 @@
 <code class="docutils literal notranslate"><span class="pre">%</span></code> представља операцију рачунања остатка при дељењу, услов да је број <code class="docutils literal notranslate"><span class="pre">n</span></code> дељив бројем <code class="docutils literal notranslate"><span class="pre">d</span></code>
 записујемо као <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">d</span> <span class="pre">==</span> <span class="pre">0</span></code>. Оваква провера ће се редовно појављивати у програмима који следе.</p>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p><strong>Задатак – да ли је број прост:</strong>
 За дати цео број <span class="math notranslate nohighlight">\(n\)</span> проверити да ли је прост (исписати <strong>DA</strong> ако јесте, а <strong>NE</strong> ако није).</p>
 
-    </p></div></div>
+    </div></div>
 <p>Формулисаћемо први поступак директно на основу дефиниције простог броја. Проверу да ли је број <span class="math notranslate nohighlight">\(n\)</span>
 прост обавићемо тако што за сваки број <span class="math notranslate nohighlight">\(i\)</span> од <span class="math notranslate nohighlight">\(2\)</span> до <span class="math notranslate nohighlight">\(n-1\)</span> проверимо да ли је <span class="math notranslate nohighlight">\(n\)</span>
 дељив бројем <span class="math notranslate nohighlight">\(i\)</span>. Ако <span class="math notranslate nohighlight">\(n\)</span> није дељив ни са једним од тих бројева, то значи да је прост. Овакав
@@ -499,7 +499,11 @@ class Program
 <p>Приметимо да овај програм чак и за <span class="math notranslate nohighlight">\(n = 1~111~111~111~111~111~111\)</span> даје одговор да је број прост у року
 од свега неколико секунди, док би почетној верзији програма за ово било потребно много више времена.</p>
 
-            <div class="course-box course-box-question course-content">
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="primalnost_broj_operacija">
             <p>Q-1: Претпоставимо да је првој верзији програма потребно 6 секунди да дође до одговора за <span class="math notranslate nohighlight">\(n = 1~000~000~007\)</span>.
 Колико времена би истом програму било потребно да одговори за <span class="math notranslate nohighlight">\(n = 1~111~111~111~111~111~111\)</span>?</p>
@@ -565,12 +569,10 @@ class Program
 </div>
 <p>Даља убрзавања програма би била сразмерно све мања, али за веома велике бројеве и она могу да буду значајна.</p>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p><strong>Задатак:</strong></p>
 <div class="line-block">
 <div class="line">Проучите следећу, четврту верзију програма.</div>
@@ -579,7 +581,7 @@ class Program
 <div class="line">Процените однос брзина последње две верзије програма за велике вредности <em>n</em>.</div>
 </div>
 
-    </p></div></div>
+    </div></div>
 
 <div data-childcomponent="prost_4" class="course-box course-box-problem course-content">
 
@@ -625,7 +627,11 @@ class Program
 </textarea>
 </div>
 
-            <div class="course-box course-box-question course-content">
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="primalnost_odnos_brzina">
             <p>Q-2: Нека је претпоследњој (трећој) верзији програма потребно време <span class="math notranslate nohighlight">\(t\)</span> да одговори на питање за
 дато <span class="math notranslate nohighlight">\(n\)</span>. Колико је времена приближно потребно последњој, четвртој верзији програма за

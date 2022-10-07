@@ -6,6 +6,7 @@
     <title>Претраживање и провера постојања садржаја стринга</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -434,18 +436,16 @@ class Program
 <div class="section" id="id4">
 <h3>Пример<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Дата су два стринга, дужине до 50000 карактера. Проверити да ли први од њих може да се добије
 ротирањем другог за одређени број места улево. Ако може, одредити најмањи такав број места. На
 пример, ако су дати стрингови <code class="docutils literal notranslate"><span class="pre">TRAVA</span></code> и <code class="docutils literal notranslate"><span class="pre">VATRA</span></code>, ротирањем другог стринга за 2 места улево
 се добија први стринг, па је тражени број 2.</p>
 
-    </p></div></div>
+    </div></div>
 <p>За једноставно и временски ефикасно решење кључно је да се примети следеће: ако дате стрингове означимо
 са <code class="docutils literal notranslate"><span class="pre">s1</span></code> и <code class="docutils literal notranslate"><span class="pre">s2</span></code>, задатак се своди на проверу да ли су стрингови <code class="docutils literal notranslate"><span class="pre">s1</span></code> и <code class="docutils literal notranslate"><span class="pre">s2</span></code> исте дужине и затим
 на одређивање позиције првог појављивања  стринга <code class="docutils literal notranslate"><span class="pre">s1</span></code> у стрингу <code class="docutils literal notranslate"><span class="pre">s2+s2</span></code>, ако појављивање постоји.</p>

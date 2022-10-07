@@ -6,6 +6,7 @@
     <title>Највећи заједнички делилац</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -355,11 +357,11 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Највећи заједнички делилац (НЗД) два природна броја је највећи природан број који дели оба дата
 броја без остатка.</p>
 
-    </p></div></div>
+    </div></div>
 <p>На пример, НЗД бројева 60 и 42 је 6, јер 6 дели и 60 и 42, а при томе не постоји већи број са овом особином.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -473,17 +475,15 @@ class Program
         </div>
     </div>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Опишите један посебно неповољан улаз за алгоритам смањивања за по 1, тј. вредности <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span>
 за које је алгоритму потребан посебно велики број операција.</p>
 <p>Можете ли да процените време рада алгоритма у случају неповољних 64-битних вредности (тј. вредности типа <code class="docutils literal notranslate"><span class="pre">long</span></code>)?</p>
 
-    </p></div></div>
+    </div></div>
 <p>Није тешко приметити да је за алгоритам смањивања за по 1 (у смислу броја потребних операција)
 неповољно када су вредности <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> веома велике и међусобно блиске, јер је тада
 вредност НЗД сразмерно веома мала. Екстреман пример би био <span class="math notranslate nohighlight">\(a=2^{63}-1, b=2^{63}-2\)</span>.
@@ -565,17 +565,15 @@ class Program
 </textarea>
 </div>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Које вредности су посебно неповољне за алгоритам налажења НЗД помоћу факторизације?</p>
 <p>Колико операција, односно времена може у најнеповољнијем случају да буде потребно
 овом алгоритму за вредности из опсега типа <code class="docutils literal notranslate"><span class="pre">long</span></code>?</p>
 
-    </p></div></div>
+    </div></div>
 <p>Алгоритам налажења НЗД помоћу факторизације је веома сличан поступку факторизације, тј. растављања
 једног датог броја на просте чиниоце. Због тога је и број операција, као и код алгоритма факторизације,
 у најгорем случају сразмеран корену из већег од бројева <span class="math notranslate nohighlight">\(a, b\)</span>. Као што смо раније видели,
@@ -734,19 +732,17 @@ class Program
 </textarea>
 </div>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Покушајте да пронађете вредности <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span>, за које би Еуклидовом алгоритму био потребан
 што већи број итерација. Да бисте дошли до таквог пара бројева, предлажемо вам да кренете од вредности
 за <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> у последњој итерацији, затим у претпоследњој итд. ка почетним вредностима.
 Наравно, број итерација које на овај начин можемо да извршимо уназад, ограничен је опсегом 64-битних
 променљивих које користимо у овим алгоритмима.</p>
 
-    </p></div></div>
+    </div></div>
 <p>Пошто желимо да максимизирамо број итерација, најбоље је да почнемо од најмањег могућег завршног пара
 вредности, а то је <span class="math notranslate nohighlight">\(a=1, b=1\)</span>. Да бисмо у датом опсегу могли да изведемо што већи број итерација
 уназад, вредности <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span> ћемо повећавати штедљиво, тј. тако да ове вредности што спорије
@@ -832,11 +828,11 @@ class Program
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Најмањи заједнички садржалац (НЗС) два природна броја је најмањи природан број који је дељив са оба дата
 броја без остатка.</p>
 
-    </p></div></div>
+    </div></div>
 <p>На пример, НЗС бројева 60 и 42 је 420, јер 420 је дељив и са 60 и са 42, а при томе не постоји мањи број са овом
 особином.</p>
 <div class="line-block">

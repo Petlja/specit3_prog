@@ -6,6 +6,7 @@
     <title>Конвексан омотач</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -357,23 +359,21 @@
 <p>У случају да многоугао <span class="math notranslate nohighlight">\(Q\)</span> није конвексан, од интереса је да се одреди најмањи конвексан многоугао
 који садржи сва темена многоугла <span class="math notranslate nohighlight">\(Q\)</span>. Такав многоугао се назива конвексан омотач многоугла <span class="math notranslate nohighlight">\(Q\)</span>.
 Општије, конвексан омотач можемо да дефинишемо на исти начин и за било какав скуп тачака.</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="../_images/convex_hull.png"><img alt="../_images/convex_hull.png" src="../_images/convex_hull.png" style="width: 560px;" /></a>
-<p class="caption"><span class="caption-text">Скуп тачака и конвексан омотач тог скупа</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Скуп тачака и конвексан омотач тог скупа</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>Интуитивно, конвексан омотач скупа тачака је облик гумице која је прво растегнута тако да обухвати
 све те тачке, а затим пуштена да се затегне око њих.</p>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Покушајте да набројите неке примене конвексног омотача. Потражите на интернету информације о
 таквим применама.</p>
 
-    </p></div></div>
+    </div></div>
 <div class="section" id="id2">
 <h2>Алгоритам<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Овде ћемо објаснити један од неколико познатих ефикасних алгоритама за налажење конвексног омотача.
@@ -575,6 +575,10 @@ class Program
 линеарна.</p>
 <p>Сабирајући сложености појединих корака, долазимо до закључка да је сложеност комплетног алгоритма
 Грејамовог скенирања <span class="math notranslate nohighlight">\(O(n \log n)\)</span>.</p>
+</div>
+<div class="section" id="id5">
+<h2>Задаци<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>?</p>
 </div>
 </div>
 

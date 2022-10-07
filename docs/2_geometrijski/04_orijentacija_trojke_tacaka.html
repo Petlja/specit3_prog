@@ -6,6 +6,7 @@
     <title>Колинеарност и оријентација тројке тачака</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -354,16 +356,14 @@
 <p>Један од основних задатака у рачунарској геометрији је провера да ли три дате тачке припадају истој
 правој, тј. да ли су три дате тачке колинеарне. Поставимо задатак формално.</p>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Дате су целобројне координате тачака <span class="math notranslate nohighlight">\(A, B, C\)</span> (по апсолутној вредности мање или једнаке
 милион). Написати функцију којом се проверава да ли су тачке <span class="math notranslate nohighlight">\(A, B, C\)</span> колинеарне.</p>
 
-    </p></div></div>
+    </div></div>
 <p>Претпоставимо да тачке <span class="math notranslate nohighlight">\(A, B\)</span> одређују праву <span class="math notranslate nohighlight">\(b\)</span>, а да тачке <span class="math notranslate nohighlight">\(A, C\)</span> одређују праву
 <span class="math notranslate nohighlight">\(c\)</span>. Тада се задатак своди на питање да ли су <span class="math notranslate nohighlight">\(b\)</span> и <span class="math notranslate nohighlight">\(c\)</span> иста права. Пошто праве
 <span class="math notranslate nohighlight">\(b\)</span> и <span class="math notranslate nohighlight">\(c\)</span> обе садрже тачку <span class="math notranslate nohighlight">\(A\)</span>, да би то биле исте праве довољно је да имају исти
@@ -465,14 +465,14 @@ class Program
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p><strong>Дефиниција</strong>: Неколинеарна тројка тачака <span class="math notranslate nohighlight">\(ABC\)</span> чини <strong>заокрет налево</strong> ако и само
 ако je оријентисани угао <span class="math notranslate nohighlight">\(\angle A_1BC\)</span> конвексан (тј.
 <span class="math notranslate nohighlight">\(0 &lt; \angle A_1BC &lt; 180^{\circ}\)</span>).</p>
 <p>Неколинеарна тројка тачака <span class="math notranslate nohighlight">\(ABC\)</span> чини <strong>заокрет надесно</strong> ако и само ако не чини
 заокрет налево.</p>
 
-    </p></div></div>
+    </div></div>
 <p><strong>Одређивање заокрета</strong></p>
 <p>Ако са <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> означимо оријентисане углове које вектори
 <span class="math notranslate nohighlight">\(\overrightarrow{\rm BA_1}, \overrightarrow{\rm BC}\)</span> редом заклапају са позитивним смером
@@ -494,7 +494,7 @@ class Program
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Неколинеарна тројка тачака <span class="math notranslate nohighlight">\(ABC\)</span> чини <strong>заокрет налево</strong> ако и само ако је:</p>
 <div class="math notranslate nohighlight">
 \[(y_c - y_b)(x_b - x_a) - (y_b - y_a)(x_c - x_b) &gt; 0.\]</div>
@@ -502,7 +502,7 @@ class Program
 <div class="math notranslate nohighlight">
 \[(y_c - y_b)(x_b - x_a) - (y_b - y_a)(x_c - x_b) &lt; 0.\]</div>
 
-    </p></div></div>
+    </div></div>
 <p>Следећи програм илуструје како за дате три тачке можемо да израчунамо да ли оне чине заокрет
 налево, заокрет надесно, или су колинеарне.</p>
 

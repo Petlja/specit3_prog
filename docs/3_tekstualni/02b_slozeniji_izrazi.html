@@ -6,6 +6,7 @@
     <title>Сложенији регуларни изрази</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -389,21 +391,19 @@
 <p>На тај начин многи регуларни изрази могу да се запишу краће.</p>
 <p><strong>Вежбање</strong></p>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Задајте регуларан израз који поклапа било коју од речи <code class="docutils literal notranslate"><span class="pre">двојица</span></code>, <code class="docutils literal notranslate"><span class="pre">двојице</span></code>,
 <code class="docutils literal notranslate"><span class="pre">двојици</span></code>, <code class="docutils literal notranslate"><span class="pre">двојицу</span></code>, <code class="docutils literal notranslate"><span class="pre">двојицом</span></code>.</p>
 <p>У овом вежбању претрага није осетљива на мала и велика слова.</p>
 
-    </p></div></div>
+    </div></div>
 
     <div id="dvojica_padezi" class="regex-check" data-regex='{"solution": "\u0434\u0432\u043e\u0458\u0438\u0446(\u0430|\u0435|\u0438|\u0443|(\u043e\u043c))", "editable": true, "flags": "gim", "initregex": "", "text": "\u041f\u043e\u043a\u043b\u0430\u043f\u0430\u045a\u0430:\n\u045a\u0438\u0445 \u0434\u0432\u043e\u0458\u0438\u0446\u0430, \u043e\u0434 \u045a\u0438\u0445 \u0434\u0432\u043e\u0458\u0438\u0446\u0435, \u045a\u0438\u043c\u0430 \u0434\u0432\u043e\u0458\u0438\u0446\u0438, \u045a\u0438\u0445 \u0434\u0432\u043e\u0458\u0438\u0446\u0443, \u0441\u0430 \u045a\u0438\u043c\u0430 \u0434\u0432\u043e\u0458\u0438\u0446\u043e\u043c.\n\u041d\u0435\u043f\u043e\u043a\u043b\u0430\u043f\u0430\u045a\u0430:\n\u0434\u0432\u043e\u0458\u0438\u0446, \u0434\u0432\u043e\u0458\u0438\u0446\u043e, \u0434\u0432\u043e\u0458\u0438\u0446_."}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -420,12 +420,10 @@
         </div>
     </div>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Задајте регуларан израз који поклапа било који од текстова</p>
 <div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">бели</span> <span class="pre">краљ</span></code>, <code class="docutils literal notranslate"><span class="pre">бели</span> <span class="pre">топ</span></code>, <code class="docutils literal notranslate"><span class="pre">бели</span> <span class="pre">ловац</span></code>, <code class="docutils literal notranslate"><span class="pre">бели</span> <span class="pre">скакач</span></code>, <code class="docutils literal notranslate"><span class="pre">бели</span> <span class="pre">пешак</span></code>,</div>
@@ -433,11 +431,11 @@
 </div>
 <p>У овом вежбању претрага није осетљива на мала и велика слова.</p>
 
-    </p></div></div>
+    </div></div>
 
     <div id="sah_figure_osim_dame" class="regex-check" data-regex='{"solution": "((\u0431\u0435\u043b\u0438)|(\u0446\u0440\u043d\u0438)) ((\u043a\u0440\u0430\u0459)|(\u0442\u043e\u043f)|(\u043b\u043e\u0432\u0430\u0446)|(\u0441\u043a\u0430\u043a\u0430\u0447)|(\u043f\u0435\u0448\u0430\u043a))", "editable": true, "flags": "gim", "initregex": "", "text": "\u0411\u0435\u043b\u0438 \u043a\u0440\u0430\u0459 \u0458\u0435 \u0441\u0430\u0434\u0430 \u043d\u0430 F6, \u0430 \u043f\u0435\u0448\u0430\u043a \u043d\u0430 F7. \u041e\u0432\u0430\u0458 \u0431\u0435\u043b\u0438 \u043f\u0435\u0448\u0430\u043a \u0438\u043c\u0430 \u043a\u0459\u0443\u0447\u043d\u0443 \u0443\u043b\u043e\u0433\u0443,\n\u0442\u0430\u043a\u043e \u0434\u0430 \u0458\u0435 \u0431\u0435\u043b\u0438 \u0434\u043e\u0431\u0440\u043e \u043f\u0440\u043e\u0446\u0435\u043d\u0438\u043e \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u0458\u0443 \u0438 \u043f\u0430\u043c\u0435\u0442\u043d\u043e \u0440\u0430\u0437\u043c\u0435\u043d\u0438\u043e \u043e\u0441\u0442\u0430\u043b\u0435 \u0444\u0438\u0433\u0443\u0440\u0435\n(\u0431\u0435\u043b\u0430 \u0434\u0430\u043c\u0430, \u0431\u0435\u043b\u0438 \u0442\u043e\u043f, \u0431\u0435\u043b\u0438 \u043b\u043e\u0432\u0430\u0446, \u0431\u0435\u043b\u0438 \u0441\u043a\u0430\u043a\u0430\u0447). \u0426\u0440\u043d\u0438 \u043a\u0440\u0430\u0459 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u043f\u0440\u0435\u0447\u0438\n\u043f\u0440\u043e\u043c\u043e\u0446\u0438\u0458\u0443 \u0438 \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0458\u0435 \u043c\u0443 \u0431\u0430\u0440 \u0458\u043e\u0448 \u0446\u0440\u043d\u0438 \u043b\u043e\u0432\u0430\u0446, \u043a\u043e\u0458\u0438 \u0458\u0435 \u0443\u043f\u0440\u0430\u0432\u043e \u0440\u0430\u0437\u043c\u0435\u045a\u0435\u043d.\n\u0426\u0440\u043d\u0438 \u0441\u043a\u0430\u043a\u0430\u0447\u0438 \u0441\u0443 \u0434\u0430\u043b\u0435\u043a\u043e, \u0430 \u0446\u0440\u043d\u0438 \u043f\u0435\u0448\u0430\u0446\u0438 \u043d\u0430 \u0434\u0430\u043c\u0438\u043d\u043e\u043c \u043a\u0440\u0438\u043b\u0443 \u0441\u0443 \u0437\u0430\u043e\u0441\u0442\u0430\u043b\u0438, \u0442\u0430\u043a\u043e\n\u0434\u0430 \u0441\u0443 \u0444\u0438\u0433\u0443\u0440\u0435 \u0446\u0440\u043d\u043e\u0433 \u0441\u043a\u043e\u0440\u043e \u0431\u0435\u0441\u043a\u043e\u0440\u0438\u0441\u043d\u0435 \u0443 \u043e\u0432\u043e\u0458 \u043f\u043e\u0437\u0438\u0446\u0438\u0458\u0438.\n\u0423 \u0442\u0435\u043a\u0441\u0442\u0443 \u0442\u0440\u0435\u0431\u0430 \u0434\u0430 \u0441\u0435 \u043f\u043e\u043a\u043b\u043e\u043f\u0435:\n\u0431\u0435\u043b\u0438 \u043a\u0440\u0430\u0459, \u0431\u0435\u043b\u0438 \u0442\u043e\u043f, \u0431\u0435\u043b\u0438 \u043b\u043e\u0432\u0430\u0446, \u0431\u0435\u043b\u0438 \u0441\u043a\u0430\u043a\u0430\u0447, \u0431\u0435\u043b\u0438 \u043f\u0435\u0448\u0430\u043a,\n\u0446\u0440\u043d\u0438 \u043a\u0440\u0430\u0459, \u0446\u0440\u043d\u0438 \u0442\u043e\u043f, \u0446\u0440\u043d\u0438 \u043b\u043e\u0432\u0430\u0446, \u0446\u0440\u043d\u0438 \u0441\u043a\u0430\u043a\u0430\u0447, \u0446\u0440\u043d\u0438 \u043f\u0435\u0448\u0430\u043a.\n\u041d\u0435 \u0442\u0440\u0435\u0431\u0430 \u043f\u043e\u043a\u043b\u0430\u043f\u0430\u0442\u0438 \u043f\u043e\u0458\u0435\u0434\u0438\u043d\u0430\u0447\u043d\u0430 \u043f\u043e\u0458\u0430\u0432\u0459\u0438\u0432\u0430\u045a\u0430 \u0440\u0435\u0447\u0438\n\u0431\u0435\u043b\u0438, \u0446\u0440\u043d\u0438, \u043a\u0440\u0430\u0459, \u0442\u043e\u043f, \u043b\u043e\u0432\u0430\u0446, \u0441\u043a\u0430\u043a\u0430\u0447, \u043f\u0435\u0448\u0430\u043a."}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -454,12 +452,10 @@
         </div>
     </div>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Задајте регуларан израз који поклапа назив било које шаховске фигуре (укључујући и даму),
 тј. било који од текстова</p>
 <div class="line-block">
@@ -468,11 +464,11 @@
 </div>
 <p>У овом вежбању претрага није осетљива на мала и велика слова.</p>
 
-    </p></div></div>
+    </div></div>
 
     <div id="sah_sve_figure" class="regex-check" data-regex='{"solution": "(((\u0431\u0435\u043b\u0438)|(\u0446\u0440\u043d\u0438)) ((\u043a\u0440\u0430\u0459)|(\u0442\u043e\u043f)|(\u043b\u043e\u0432\u0430\u0446)|(\u0441\u043a\u0430\u043a\u0430\u0447)|(\u043f\u0435\u0448\u0430\u043a)))|(((\u0431\u0435\u043b\u0430)|(\u0446\u0440\u043d\u0430)) \u0434\u0430\u043c\u0430)", "editable": true, "flags": "gim", "initregex": "", "text": "\u0411\u0435\u043b\u0438 \u043a\u0440\u0430\u0459 \u0458\u0435 \u0441\u0430\u0434\u0430 \u043d\u0430 F6, \u0430 \u043f\u0435\u0448\u0430\u043a \u043d\u0430 F7. \u041e\u0432\u0430\u0458 \u0431\u0435\u043b\u0438 \u043f\u0435\u0448\u0430\u043a \u0438\u043c\u0430 \u043a\u0459\u0443\u0447\u043d\u0443 \u0443\u043b\u043e\u0433\u0443,\n\u0442\u0430\u043a\u043e \u0434\u0430 \u0458\u0435 \u0431\u0435\u043b\u0438 \u0434\u043e\u0431\u0440\u043e \u043f\u0440\u043e\u0446\u0435\u043d\u0438\u043e \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u0458\u0443 \u0438 \u043f\u0430\u043c\u0435\u0442\u043d\u043e \u0440\u0430\u0437\u043c\u0435\u043d\u0438\u043e \u043e\u0441\u0442\u0430\u043b\u0435 \u0444\u0438\u0433\u0443\u0440\u0435\n(\u0431\u0435\u043b\u0430 \u0434\u0430\u043c\u0430, \u0431\u0435\u043b\u0438 \u0442\u043e\u043f, \u0431\u0435\u043b\u0438 \u043b\u043e\u0432\u0430\u0446, \u0431\u0435\u043b\u0438 \u0441\u043a\u0430\u043a\u0430\u0447). \u0426\u0440\u043d\u0438 \u043a\u0440\u0430\u0459 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u043f\u0440\u0435\u0447\u0438\n\u043f\u0440\u043e\u043c\u043e\u0446\u0438\u0458\u0443 \u0438 \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0458\u0435 \u043c\u0443 \u0431\u0430\u0440 \u0458\u043e\u0448 \u0446\u0440\u043d\u0438 \u043b\u043e\u0432\u0430\u0446, \u043a\u043e\u0458\u0438 \u0458\u0435 \u0443\u043f\u0440\u0430\u0432\u043e \u0440\u0430\u0437\u043c\u0435\u045a\u0435\u043d.\n\u0426\u0440\u043d\u0438 \u0441\u043a\u0430\u043a\u0430\u0447\u0438 \u0441\u0443 \u0434\u0430\u043b\u0435\u043a\u043e, \u0430 \u0446\u0440\u043d\u0438 \u043f\u0435\u0448\u0430\u0446\u0438 \u043d\u0430 \u0434\u0430\u043c\u0438\u043d\u043e\u043c \u043a\u0440\u0438\u043b\u0443 \u0441\u0443 \u0437\u0430\u043e\u0441\u0442\u0430\u043b\u0438, \u0442\u0430\u043a\u043e\n\u0434\u0430 \u0441\u0443 \u0444\u0438\u0433\u0443\u0440\u0435 \u0446\u0440\u043d\u043e\u0433 \u0441\u043a\u043e\u0440\u043e \u0431\u0435\u0441\u043a\u043e\u0440\u0438\u0441\u043d\u0435 \u0443 \u043e\u0432\u043e\u0458 \u043f\u043e\u0437\u0438\u0446\u0438\u0458\u0438.\n\u0423 \u0442\u0435\u043a\u0441\u0442\u0443 \u0442\u0440\u0435\u0431\u0430 \u0434\u0430 \u0441\u0435 \u043f\u043e\u043a\u043b\u043e\u043f\u0435:\n\u0431\u0435\u043b\u0430 \u0434\u0430\u043c\u0430, \u0431\u0435\u043b\u0438 \u043a\u0440\u0430\u0459, \u0431\u0435\u043b\u0438 \u0442\u043e\u043f, \u0431\u0435\u043b\u0438 \u043b\u043e\u0432\u0430\u0446, \u0431\u0435\u043b\u0438 \u0441\u043a\u0430\u043a\u0430\u0447, \u0431\u0435\u043b\u0438 \u043f\u0435\u0448\u0430\u043a,\n\u0446\u0440\u043d\u0430 \u0434\u0430\u043c\u0430, \u0446\u0440\u043d\u0438 \u043a\u0440\u0430\u0459, \u0446\u0440\u043d\u0438 \u0442\u043e\u043f, \u0446\u0440\u043d\u0438 \u043b\u043e\u0432\u0430\u0446, \u0446\u0440\u043d\u0438 \u0441\u043a\u0430\u043a\u0430\u0447, \u0446\u0440\u043d\u0438 \u043f\u0435\u0448\u0430\u043a.\n\u041d\u0435 \u0442\u0440\u0435\u0431\u0430 \u043f\u043e\u043a\u043b\u0430\u043f\u0430\u0442\u0438 \u043f\u043e\u0458\u0435\u0434\u0438\u043d\u0430\u0447\u043d\u0430 \u043f\u043e\u0458\u0430\u0432\u0459\u0438\u0432\u0430\u045a\u0430 \u0440\u0435\u0447\u0438\n\u0431\u0435\u043b\u0438, \u0446\u0440\u043d\u0438, \u0431\u0435\u043b\u0430, \u0446\u0440\u043d\u0430, \u0434\u0430\u043c\u0430, \u043a\u0440\u0430\u0459, \u0442\u043e\u043f, \u043b\u043e\u0432\u0430\u0446, \u0441\u043a\u0430\u043a\u0430\u0447, \u043f\u0435\u0448\u0430\u043a."}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -498,7 +494,7 @@
 
     <div id="visecifreni_brojevi" class="regex-check" data-regex='{"solution": "\\d{4}", "editable": true, "flags": "gm", "initregex": "\\d{4}", "text": "1, 12, 123, 1234, 12345, 123456, 1234567, 12345678, 123456789."}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -518,7 +514,7 @@
 
     <div id="top_deo_reci" class="regex-check" data-regex='{"solution": "top", "editable": true, "flags": "gm", "initregex": "top", "text": "Poklapanja: top, potop, toplota, topot, otopiti\nNepoklapanja: to, t-o-p, potpora"}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -552,7 +548,7 @@
 
     <div id="top_deo_reci" class="regex-check" data-regex='{"solution": "^top$", "editable": true, "flags": "gm", "initregex": "", "text": "top\ntop potop top toplota\ntopot top otopiti top\nto\nt-o-p\npotpora"}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -579,7 +575,12 @@
 <p><strong>1)</strong> Регуларан израз <code class="docutils literal notranslate"><span class="pre">\d\d:\d\d</span></code> није потпуно одговарајући опис за време, јер прихвата и неке
 текстове који не представљају исправно записано време.</p>
 
-        <div class="course-box course-box-question course-content">
+        <div class="course-box course-box-question course-content petlja-problem-box fitb-question">
+        <div class="image-background"></div>
+        <div class="petlja-problem-box-icon-holder"> </div>
+        <img src="../_static/img/fitb-img.svg" class="petlja-problem-image  fitb-image" /> 
+        <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+        
         <div data-component="fillintheblank" id="koji_tekst_prolazi_a_ne_treba">
             <p>Наведите неки текст који је поклапање за израз <code class="docutils literal notranslate"><span class="pre">\d\d:\d\d</span></code>, а не представља исправно
 записано време?</p>
@@ -595,7 +596,12 @@
 обрнут проблем, а то је да сваки текст који се проналази овим изразом јесте запис времена,
 али неки записи времена не би били пронађени.</p>
 
-        <div class="course-box course-box-question course-content">
+        <div class="course-box course-box-question course-content petlja-problem-box fitb-question">
+        <div class="image-background"></div>
+        <div class="petlja-problem-box-icon-holder"> </div>
+        <img src="../_static/img/fitb-img.svg" class="petlja-problem-image  fitb-image" /> 
+        <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+        
         <div data-component="fillintheblank" id="koji_tekst_ne_prolazi_a_treba">
             <p>Наведите неки текст који није поклапање за израз <code class="docutils literal notranslate"><span class="pre">[0-2][0-3]:[0-5][0-9]</span></code>, а представља исправно
 записано време?</p>
@@ -631,22 +637,20 @@
 <div class="section" id="s">
 <h3>Речи које почињу словом <cite>s</cite><a class="headerlink" href="#s" title="Permalink to this headline">¶</a></h3>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Задајте регуларан израз који поклапа све речи које почињу словом <code class="docutils literal notranslate"><span class="pre">s</span></code>.
 У овом вежбању, реч је секвенца слова, пре и после које могу да се нађу
 почетак реда, крај реда, знаци интерпункције или белине.</p>
 <p>У овом вежбању претрага није осетљива на мала и велика слова.</p>
 
-    </p></div></div>
+    </div></div>
 
     <div id="izdvajanje_reci_koje_pocinju_na_s" class="regex-check" data-regex='{"solution": "\\bs[a-z]*\\b", "editable": true, "flags": "gim", "initregex": "", "text": "Samo sto nisam stigao, siguran sam da necu kasniti.\nMada, posle svega sto se desilo, mislim da je svejedno.\nSignal S33 je neispravan."}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -666,22 +670,20 @@
 <div class="section" id="id8">
 <h3>Датуми<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Задајте регуларан израз који поклапа све датуме у било ком од облика <code class="docutils literal notranslate"><span class="pre">dd.mm.gg.</span></code>, <code class="docutils literal notranslate"><span class="pre">dd.mm.gggg.</span></code>,
 <code class="docutils literal notranslate"><span class="pre">dd.mm.</span></code>, <code class="docutils literal notranslate"><span class="pre">dd.m.</span></code>, <code class="docutils literal notranslate"><span class="pre">d.mm.</span></code>, <code class="docutils literal notranslate"><span class="pre">d.m.</span></code>. Допуштени су и непостојећи датуми, попут <code class="docutils literal notranslate"><span class="pre">31.04.</span></code>
 и слично, тј. дозвољено је да у наведеним схемама уместо слова <code class="docutils literal notranslate"><span class="pre">d</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code> и <code class="docutils literal notranslate"><span class="pre">g</span></code> стоје било
 које цифре. Подразумева се да је запис датума једини текст у том реду.</p>
 
-    </p></div></div>
+    </div></div>
 
     <div id="datumi" class="regex-check" data-regex='{"solution": "^\\d\\d?\\.\\d\\d?\\.(\\d\\d(\\d\\d)?\\.)?$", "editable": true, "flags": "gm", "initregex": "", "text": "\u0418\u0441\u043f\u0440\u0430\u0432\u043d\u0438 \u0434\u0430\u0442\u0443\u043c\u0438:\n01.01.\n31.01.1999.\n30.4.18.\n3.5.27.\n3.04.23.\n\u041d\u0435\u043f\u043e\u0441\u0442\u043e\u0458\u0435\u045b\u0438 \u0434\u0430\u0442\u0443\u043c\u0438 \u0443 \u0438\u0441\u043f\u0440\u0430\u0432\u043d\u043e\u043c \u0444\u043e\u0440\u043c\u0430\u0442\u0443:\n01.13.\n31.04.1999.\n34.11.18.\n\u041d\u0435\u0438\u0441\u043f\u0440\u0430\u0432\u043d\u0438 \u0434\u0430\u0442\u0443\u043c\u0438:\n123.12.1999.\n23.123.1999.\n23.12.199.\n23.12.1."}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -701,22 +703,20 @@
 <div class="section" id="ip">
 <h3>IP адресе<a class="headerlink" href="#ip" title="Permalink to this headline">¶</a></h3>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Задајте регуларан израз који поклапа <cite>IP</cite> адресе по стандарду <cite>IPV4</cite>. По овом стандарду, <cite>IP</cite>
 адреса се састоји од 4 цела броја из опсега 0-255, раздвојена тачкама. Водеће нуле могу а не
 морају да се користе. Ако се користе водеће нуле, број има тачно три цифре.
 Подразумева се да је запис <cite>IP</cite> адресе једини текст у том реду.</p>
 
-    </p></div></div>
+    </div></div>
 
     <div id="ipv4_adrese" class="regex-check" data-regex='{"solution": "^((25[0-5]|2[0-4]\\d|[01]\\d\\d|[1-9]\\d|\\d)\\.){3}(25[0-5]|2[0-4]\\d|[01]\\d\\d|[1-9]\\d|\\d)$", "editable": false, "flags": "gm", "initregex": "", "text": "\u041f\u043e\u043a\u043b\u0430\u043f\u0430\u045a\u0430: \u0438\u0441\u043f\u0440\u0430\u0432\u043d\u0435 IPV4 \u0430\u0434\u0440\u0435\u0441\u0435 \u0441\u0443\n192.168.1.1\n127.14.25.192\n127.238.25.192\n1.1.1.1\n127.099.255.255\n127.009.255.255\n127.0.0.1\n255.255.255.255\n\u041d\u0435\u043f\u043e\u043a\u043b\u0430\u043f\u0430\u045a\u0430: \u043d\u0435\u0438\u0441\u043f\u0440\u0430\u0432\u043d\u0435 IPV4 \u0430\u0434\u0440\u0435\u0441\u0435 \u0441\u0443\n127.512.34.11\n127.256.25.192\n127.268.25.192\n127.05.25.192\n127.51.34.\n127.12.21"}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -736,21 +736,19 @@
 <div class="section" id="mac">
 <h3>MAC адресе<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h3>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Задајте регуларан израз који поклапа све MAC адресе. MAC адреса се састоји од 6 група по две
 хексадекадне цифре, при чему су групе раздвојене цртицама или двотачкама.
 Подразумева се да је запис MAC адресе једини текст у том реду.</p>
 
-    </p></div></div>
+    </div></div>
 
     <div id="MAC_adrese" class="regex-check" data-regex='{"solution": "^((([0-9A-Fa-f]{2}\\:){5}([0-9A-Fa-f]{2}))|(([0-9A-Fa-f]{2}\\-){5}([0-9A-Fa-f]{2})))$", "editable": false, "flags": "gm", "initregex": "", "text": "\u0418\u0441\u043f\u0440\u0430\u0432\u043d\u0435:\n2B-7A-D4-53-C9-6E\n2B:7A:D4:53:C9:6E\n\u041d\u0435\u0438\u0441\u043f\u0440\u0430\u0432\u043d\u0435:\n2B:7A-D4:53-C9:6E\n2B:C8:7A:D4:53:C9:6E\n2B:C8:7A:D4:53\n2B:C8:7A:D4:53:C9:\n2B:C8:7A:D4:53:G3\n2B:C8:7A:D4:53:127\n2B-C8-7A-D4-53-C9-6E\n2B-C8-7A-D4-53\n2B-C8-7A-D4-53-C9-\n2B-C8-7A-D4-53-G3\n2B-C8-7A-D4-53-127"}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -772,7 +770,12 @@
 <p>У примеру у коме смо формирали регуларан израз за време, поставили смо вам два питања. Једно од
 њих је било ово питање:</p>
 
-        <div class="course-box course-box-question course-content">
+        <div class="course-box course-box-question course-content petlja-problem-box fitb-question">
+        <div class="image-background"></div>
+        <div class="petlja-problem-box-icon-holder"> </div>
+        <img src="../_static/img/fitb-img.svg" class="petlja-problem-image  fitb-image" /> 
+        <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+        
         <div data-component="fillintheblank" id="koji_tekst_prolazi_a_ne_treba_2">
             <p>Наведите неки текст који је поклапање за израз <code class="docutils literal notranslate"><span class="pre">\d\d:\d\d</span></code>, а не представља исправно
 записано време?</p>
@@ -790,21 +793,19 @@
 (који су једна врста нетачног одговора) добијате један коментар, а за текст који није поклапање израза
 <code class="docutils literal notranslate"><span class="pre">\d\d:\d\d</span></code> (друга врста нетачног одговора) други коментар.</p>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Ваш задатак овде је да задате регуларан израз, који може да се искористи за препознавање
 тачних одговора на претходно питање. То значи да израз треба да прихвата само неисправна
 времена, која су поклапање за израз <code class="docutils literal notranslate"><span class="pre">\d\d:\d\d</span></code>.</p>
 
-    </p></div></div>
+    </div></div>
 
     <div id="neispravno_vreme_dd_dd" class="regex-check" data-regex='{"solution": "((2[4-9]|[3-9][0-9]):\\d\\d)|(\\d\\d:[6-9]\\d)", "editable": true, "flags": "gm", "initregex": "", "text": "\u041f\u043e\u0437\u0438\u0442\u0438\u0432\u043d\u0438 \u043f\u0440\u0438\u043c\u0435\u0440\u0438:\n99:99\n23:60\n24:00\n30:15\n\n\u041d\u0435\u0433\u0430\u0442\u0438\u0432\u043d\u0438 \u043f\u0440\u0438\u043c\u0435\u0440\u0438 (\u0438\u0441\u043f\u0440\u0430\u0432\u043d\u0430 \u0432\u0440\u0435\u043c\u0435\u043d\u0430):\n19:45\n00:00\n23:59\n07:15\n\n\u041e\u0441\u0442\u0430\u043b\u0438 \u043d\u0435\u0433\u0430\u0442\u0438\u0432\u043d\u0438 \u043f\u0440\u0438\u043c\u0435\u0440\u0438 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0441\u0443 \u043e\u0431\u043b\u0438\u043a\u0430 dd:dd):\n8:45\n15:0\n17:\u041e\u041e\ndd:dd"}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>
@@ -865,7 +866,7 @@
 
     <div id="bilo_sta" class="regex-check" data-regex='{"solution": ".{100000}", "editable": true, "flags": "gm", "initregex": "", "text": ""}''>
         <div>
-            <p class="title"></p>
+            <p class="title"> </p>
             <textarea type="text" spellcheck="false"  class="regex-input"></textarea>
         </div>
         <div>

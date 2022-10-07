@@ -6,6 +6,7 @@
     <title>Још неки алгоритми са текстом</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -349,30 +351,14 @@
     
   <div class="section" id="id1">
 <h1>Још неки алгоритми са текстом<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>Како смо алгоритме за рад са текстом покрили прилично широко, овде ћемо за посебно заинтересоване
-читаоце да поменемо само још један мање познат алгоритам, сличан алгоритму КМП (алгоритам КМП је
-описан <a class="reference external" href="31_pretraga_podniske.html#id3">овде</a>).</p>
-<p>Реч је алгоритму Манакера (Glenn Manacher), који проналази најдужи палиндром у ниски. Подразумева
-се да се слова палиндрома налазе на узастопним позицијама у ниске.</p>
-<p>Веома наиван алгоритам би за сваки сегмент у датој ниски (опадајуће по дужини сегмента) проверио
-да ли дати сегмент представља палиндром. Сложеност овог алгоритма је чак <span class="math notranslate nohighlight">\(O(n^3)\)</span>, јер се он у
-суштини своди на три угнежђене петље: спољна петља одређује дужину сегмента, средња одређује почетну
-позицију сегмента, а унутрашња проверава да ли је сегмент палиндром.</p>
-<p>Бољи, али и даље наиван пиступ је да се за сваку позицију као средину будућег палиндрома пронађе што
-веће проширење од те позиције налево и надесно, тако да се добија сегмент који је палиндром. Средња
-позиција се различито описује за сегменте парне и непарне дужине, па је згодно да се ова два случаја
-обраде раздвојено. Наиме, за сегменте непарне дужине почиње се од једног слова, а за сегменте парне
-дужине од два узастопна слова. Прошривање се врши додавањем по једног слова слева и сдесна и
-провером да ли су та два додата слова једнака.</p>
-<p>Манакеров алгоритам решава проблем налажења најдужег палиндрома у ниски у линеарном времену.
-Чињеница да уопште постоји алгоритам линеарне сложености који решава овај проблем може да делује
-невероватно када се са њом сретнемо први пут. Међутим, након што смо научили да постоје алгоритми
-линеарне сложености који налазе дату подниску у датој ниски (Кнут-Морис-Прат-ов алгоритам,
-Рабин-Карпов алгоритам, Бојер-Муров алгоритам), ово више и није толико изненађење.</p>
-<p>Манакеров алгоритам је детаљно описан у решењу задатка <a class="reference external" href="https://petlja.org/biblioteka/r/Zbirka3/maksimalan_palindrom">Најдужа палиндромска подниска</a> у Петљиној онлајн збирци, па га овде
-нећемо понављати. О овом алгоритму се може прочитати и на википедији (<a class="reference external" href="https://sr.wikipedia.org/wiki/Проблем_најдужег_палиндрома_у_стрингу">Проблем најдужег палиндрома у
-стрингу</a>, а на енглеском,
-опширније: <a class="reference external" href="https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm">Manacher’s_algorithm</a>).</p>
+<p>предлог за посебно заинтересоване читаоце</p>
+<ul class="simple">
+<li><p>Манакеров алгоритам</p></li>
+<li><p>…</p></li>
+<li><p>(Манакер)
+- <a class="reference external" href="https://sr.wikipedia.org/wiki">https://sr.wikipedia.org/wiki</a>/Проблем_најдужег_палиндрома_у_стрингу
+- <a class="reference external" href="https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm">https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher’s_algorithm</a></p></li>
+</ul>
 </div>
 
 

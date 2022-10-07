@@ -6,6 +6,7 @@
     <title>Још неки геометријски алгоритми</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -363,7 +365,7 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p><strong>Псеудокод алгоритма увијања поклона:</strong></p>
 <div class="line-block">
 <div class="line">- нађи једну тачку <span class="math notranslate nohighlight">\(P_0\)</span>, која сигурно припада конвексном омотачу (нпр. тачка са највећом <span class="math notranslate nohighlight">\(x\)</span></div>
@@ -381,7 +383,7 @@
 </div>
 </div>
 
-    </p></div></div>
+    </div></div>
 <p>Лако се уочава да је сложеност алгоритма увијања поклона <span class="math notranslate nohighlight">\(O(nk)\)</span>, где је <span class="math notranslate nohighlight">\(n\)</span> број тачака
 полазног скупа, а <span class="math notranslate nohighlight">\(k\)</span> број темена конвексног омотача. Због тога у неповољним случајевима овај
 алгоритам може да захтева и број операција (а тиме и време) реда <span class="math notranslate nohighlight">\(n^2\)</span>.</p>
@@ -394,15 +396,13 @@
 <div class="section" id="id7">
 <h2>Постојање пресека међу више дужи<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Дато је <span class="math notranslate nohighlight">\(n\)</span> дужи у равни. Одредити да ли се неке две од тих дужи секу, или су сваке две дисјунктне.</p>
 
-    </p></div></div>
+    </div></div>
 <p>Овај проблем може да се реши алгоритмом бришуће (чистеће) линије
 (<a class="reference external" href="https://en.wikipedia.org/wiki/Sweep_line_algorithm">sweep line algorithm</a>)
 у времену <span class="math notranslate nohighlight">\(O(n \log n)\)</span>. Идеја алгоритма је да се замисли линија, која се помера преко равни,
@@ -423,7 +423,7 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p><strong>Псеудокод алгоритма бришуће линије:</strong></p>
 <div class="line-block">
 <div class="line">Сортирај низ <span class="math notranslate nohighlight">\(P\)</span> свих крајњих тачака датих дужи, растуће по <span class="math notranslate nohighlight">\(X\)</span> координати</div>
@@ -450,7 +450,7 @@
 <div class="line">врати <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 
-    </p></div></div>
+    </div></div>
 <p>Приметимо да нема потребе да се проверава постојање пресека дужи <span class="math notranslate nohighlight">\(L\)</span> са осталим (активним) дужима.
 Заиста, ако се дуж <span class="math notranslate nohighlight">\(L\)</span> сече са било којом дужи која јој је на почетку претходила, то значи да у тренутку
 када бришућа линија дође до краја дужи <span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, координата дужи <span class="math notranslate nohighlight">\(L\)</span> постаје већа од
@@ -474,15 +474,13 @@
 <div class="section" id="id12">
 <h2>Налажење свих пресека међу више дужи<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Дато је <span class="math notranslate nohighlight">\(n\)</span> дужи у равни. Одредити све пресеке дужи по паровима.</p>
 
-    </p></div></div>
+    </div></div>
 <p>Овај проблем је сличан претходном и може да се реши модификацијом претходно описаног алгоритма чистеће
 линије. Једна таква модификација је алгоритaм Бентли-Отмана, који налази све пресечне тачке
 у времену <span class="math notranslate nohighlight">\(O((n + k) \log n)\)</span>, где је <span class="math notranslate nohighlight">\(k\)</span> број пресечних тачака. У односу на класичан
@@ -495,16 +493,14 @@
 <div class="section" id="id13">
 <h2>Пресек два конвексна многоугла<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Дата су два конвексна многоугла својим теменима, наведеним у редоследу обиласка у позитивном смеру.
 Наћи многоугао који представља њихов пресек.</p>
 
-    </p></div></div>
+    </div></div>
 <p>Можда помало неочекивано, овај проблем може да се реши у линеарном времену. Једна од идеја, до које
 су 1981. године дошли Џозеф О’Рурк и сарадници (Joseph O’Rourke, Chi-Bin Chien, Thomas Olson, David
 Naddor: <cite>A New Linear Algorithm for Intersecting Convex Polygons</cite>), у суштини је сложени пример технике
@@ -564,7 +560,7 @@ Naddor: <cite>A New Linear Algorithm for Intersecting Convex Polygons</cite>), �
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Псеудокод алгоритма за одређивање пресечног многоугла:</p>
 <div class="line-block">
 <div class="line-block">
@@ -620,7 +616,7 @@ Naddor: <cite>A New Linear Algorithm for Intersecting Convex Polygons</cite>), �
 </div>
 </div>
 
-    </p></div></div>
+    </div></div>
 </div>
 </div>
 

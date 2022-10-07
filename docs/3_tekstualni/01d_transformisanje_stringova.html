@@ -6,6 +6,7 @@
     <title>Трансформисање стрингова</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
     <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
@@ -109,6 +110,7 @@
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
     <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
@@ -376,18 +378,16 @@
 <div class="section" id="id3">
 <h3>Пример - Приказивање садржаја књиге<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Дати су називи поглавља књиге у облику низа стрингова, и почетне странице тих поглавља као низ
 целих бројева. Приказати садржај те књиге, тако да је у сваком реду приказан наслов једног
 поглавља и почетна страница, са тачкицама између. Између наслова и тачкица треба да постоји
 један размак, а између тачкица и броја странице ниједан.</p>
 
-    </p></div></div>
+    </div></div>
 <p>Да не бисмо повећавали програм разним детаљима познатим од раније, овде ћемо да издвојимо само начин
 приказивања садржаја (прескочили смо учитавање, одређивање укупне дужине приказа и сличне споредне
 детаље).</p>
@@ -435,19 +435,17 @@ class Program
 <div class="section" id="id4">
 <h3>Пример - Анализа садржаја књиге<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Дат је низ стрингова у коме се налази садржај књиге, попут оног исписаног у претходом примеру.
 Сваки стринг садржи редом наслов поглавља, тачкице и назив стране на којој поглавље почиње.
 Између наслова и тачкица се налази један размак, а између тачкица и броја странице ниједан.</p>
 <p>Издвојити називе поглавља и почетне странице, а затим за свако поглавље осим последњег исписати
 колико има страница.</p>
 
-    </p></div></div>
+    </div></div>
 <p>У овом примеру радимо обрнуто, тј. из формираног садржаја издвајамо делове који га чине. Поново
 ћемо изоставити учитавање и друге од раније познате детаље, да би фокус био на трансформисању
 стрингова. Методом <code class="docutils literal notranslate"><span class="pre">LastIndexOf</span></code> можемо да добијемо позицију последњег размака у стрингу, а то је
@@ -543,17 +541,15 @@ class Program
 <div class="section" id="id5">
 <h3>Пример - Парна и непарна појављивања<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Трансформисати дати стринг тако да се непарна појављивања цртице (минуса) у њему замењују доњом
 цртом, а парна појављивања плусом.</p>
 <p>На пример, за дати стринг <code class="docutils literal notranslate"><span class="pre">1-2-abc-xyz-...-</span></code> добија се резултат <code class="docutils literal notranslate"><span class="pre">1_2+abc_xyz+..._</span></code>.</p>
 
-    </p></div></div>
+    </div></div>
 <p>Задатак може да се реши помоћу метода <code class="docutils literal notranslate"><span class="pre">IndexOf</span></code>, <code class="docutils literal notranslate"><span class="pre">Remove</span></code> и <code class="docutils literal notranslate"><span class="pre">Insert</span></code>, али то решење би могло
 да буде неефикасно. У овом случају, решење помоћу низа карактера је једноставно јер су стринг који
 тражимо и обе замене исте дужине (овде дужине 1).</p>
@@ -600,16 +596,14 @@ class Program
 <div class="section" id="id6">
 <h3>Пример - Замене различите дужине<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 
-    <div class="course-box course-box-special">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
 <p>Трансформисати дати стринг тако да се непарна појављивања цртице (минуса) у њему замењују двема
 доњим цртaма, а парна појављивања плусом.</p>
 
-    </p></div></div>
+    </div></div>
 <p>У овом случају је једна од замена дужа него стринг који тражимо. Без обзира на то, задатак и у овом
 случају може да се реши ефикасно (у линеарном времену), и то чак на различине начине.</p>
 <p>Једно решење се заснива на употреби објекта <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> (градитељ стринга). Овај објекат је
@@ -675,7 +669,7 @@ class Program
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Замените наредбу</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;neki-dugacak-tekst-sa-mnogo-crtica&quot;</span><span class="p">;</span>
 </pre></div>
@@ -687,7 +681,7 @@ class Program
 <p>а затим упоредите време извршавања тако добијеног програма са програмом који не користи градитељ
 стринга, већ дописује садржај у променљиву типа стринг. Колика времена извршавања сте добили?</p>
 
-    </p></div></div>
+    </div></div>
 <p>Комплетности ради, напомињемо да задатак може да се реши ефикасно и без употребе градитеља стринга.
 Такво решење захтева да се прво одреди дужина резултујућег стринга и да се алоцира низ карактера те
 дужине. Ово може да се ефикасно обави вишеструком применом метода <code class="docutils literal notranslate"><span class="pre">IndexOf</span></code>. Након тога, уместо да
@@ -752,10 +746,10 @@ class Program
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
-            <p>
+            
 <p>Више задатака можете да нађете на страници <a class="reference external" href="02e_regexi_zadaci.html">Стрингови и регуларни изрази - задаци</a>, после лекција о регуларним изразима.</p>
 
-    </p></div></div>
+    </div></div>
 </div>
 </div>
 </div>
