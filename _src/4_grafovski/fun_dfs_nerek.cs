@@ -12,7 +12,7 @@ static void DFS(int polazniCvor, List<List<int>> susedi)
         int stepen = susedi[tekuciCvor].Count;
         for (int i = stepen - 1; i >= 0; i--)
         {
-            int sused = graf[tekuciCvor][i];
+            int sused = susedi[tekuciCvor][i];
             if (!zakazan[sused])
             {
                 zaPosetu.Push(sused);

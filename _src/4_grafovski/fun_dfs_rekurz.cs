@@ -2,7 +2,7 @@ static void DFS(int cvor, List<List<int>> susedi, bool[] posecen)
 {
     Console.WriteLine("Poseta cvoru {0}", cvor);
     posecen[cvor] = true;
-    foreach (int sused in graf[cvor])
+    foreach (int sused in susedi[cvor])
         if (!posecen[sused])
             DFS(sused, graf, posecen);
 }
