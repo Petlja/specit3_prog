@@ -233,6 +233,22 @@ lessons:
         title: 3.4 Парсирање и рекурзивни спуст
         file: 03_parsiranje_rekurzivni_spust.rst
         guid: f540babb-9c28-489b-9458-2f9138d38e89
+      - type: reading
+        title: 3.4.1 Примери граматика
+        file: 03_primeri_gramatika.rst
+        guid: fa0d96ca-d6f4-48f5-8306-50afd2ed8fb9
+      - type: reading
+        title: 3.4.2 Потпуно заграћени изрази
+        file: 03a_parsiranje_potpuno_zagradjeni_izrazi.rst
+        guid: 7de17901-c061-45c0-94b5-05c7b9fb0758
+      - type: reading
+        title: 3.4.3 Произвољни изрази
+        file: 03b_parsiranje_izrazi.rst
+        guid: d96d970c-f78a-46b8-ad2d-9b059f9a5c78
+      - type: reading
+        title: 3.4.4 Креирање дрвета израза
+        file: 03c_parsiranje_drvo_izraza.rst
+        guid: 3640a731-492f-4214-b00f-94a4fcd2751b
   - title: 4. Основни графовски алгоритми
     guid: e823e034-9fe8-419d-a9d3-d4ac5fcd7843
     folder: 4_grafovski
