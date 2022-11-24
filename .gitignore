@@ -8,3 +8,6 @@ course
 _tmp
 Debug
 *~
+override.json
+export
+course.json
