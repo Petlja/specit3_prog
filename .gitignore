@@ -6,7 +6,11 @@ _intermediate
 _build
 course
 _tmp
+obj
+bin
+.suo
 Debug
+Release
 *~
 override.json
 export
