@@ -153,9 +153,7 @@
     :folder: ../../_images/4_grafovski/dajkstra_1
     :images: dajkstra1_1.png, dajkstra1_2.png, dajkstra1_3.png, dajkstra1_4.png, dajkstra1_5.png, dajkstra1_6.png, dajkstra1_7.png, dajkstra1_8.png, dajkstra1_9.png, dajkstra1_10.png, dajkstra1_11.png, dajkstra1_12.png, dajkstra1_13.png, dajkstra1_14.png, dajkstra1_15.png, dajkstra1_16.png, dajkstra1_17.png, dajkstra1_18.png, dajkstra1_19.png, dajkstra1_20.png, dajkstra1_21.png, dajkstra1_22.png, dajkstra1_23.png
 
-Ова анимација је креирана коришћењем веб-апликације доступне на сајту
-Математичког факултета у Београду
-(http://www.matf.bg.ac.rs/~filip/algoritmi/dajkstra.html). Покушај да
+Ова анимација је креирана коришћењем `веб-апликације доступне на сајту <http://www.matf.bg.ac.rs/~filip/algoritmi/dajkstra.html>`_ Математичког факултета у Београду. Покушај да
 коришћењем ове апликације тестираш своје досадашње разумевање алгоритма
 (за граф који ти буде приказан попуни таблицу, па провери да ли си је
 добро попунио/попунила)
@@ -465,9 +463,7 @@ k-1\}`. Размотримо шта се дешава са најкраћим п
     :folder: ../../_images/4_grafovski/FlojdVarsal
     :images: FV1.png, FV2.png, FV3.png, FV4.png, FV5.png, FV6.png, FV7.png
 
-Ова анимација је креирана коришћењем веб-апликације доступне на сајту
-Математичког факултета у Београду
-(http://www.matf.bg.ac.rs/~filip/algoritmi/flojdVarsal.html). Покушај
+Ова анимација је креирана коришћењем `веб-апликације <http://www.matf.bg.ac.rs/~filip/algoritmi/flojdVarsal.html> доступне на сајту`_ Математичког факултета у Београду. Покушај
 да коришћењем ове апликације учврстиш своје разумевање рада овог
 алгоритма.
              

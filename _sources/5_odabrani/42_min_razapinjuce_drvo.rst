@@ -70,9 +70,8 @@
     :folder: ../../_images/4_grafovski/prim
     :images: prim1.png, prim2.png, prim3.png, prim4.png, prim5.png, prim6.png, prim7.png, prim8.png, prim9.png
 
-Ова анимација је направљена помоћу веб-апликације која је бесплатно
-доступна на сајту Математичког факултета Универзитета у Београду
-(http://www.matf.bg.ac.rs/~filip/algoritmi/prim.html). Употреби ову
+Ова анимација је направљена помоћу `веб-апликације <http://www.matf.bg.ac.rs/~filip/algoritmi/prim.html>`_ која је бесплатно
+доступна на сајту Математичког факултета Универзитета у Београду. Употреби ову
 апликацију да провериш колико добро разумеш како функционише овај
 алгоритам.
 
@@ -162,9 +161,8 @@
     :folder: ../../_images/4_grafovski/kraskel
     :images: kraskel1.png, kraskel2.png, kraskel3.png, kraskel4.png, kraskel5.png, kraskel6.png, kraskel7.png, kraskel8.png, kraskel9.png, kraskel10.png, kraskel11.png, kraskel12.png, kraskel13.png, kraskel14.png
 
-Ова анимација је направљена помоћу веб-апликације која је бесплатно
-доступна на сајту Математичког факултета Универзитета у Београду
-(http://www.matf.bg.ac.rs/~filip/algoritmi/kraskel.html). Употреби ову
+Ова анимација је направљена помоћу `веб-апликације која је бесплатно
+доступна на сајту Математичког факултета Универзитета у Београду <http://www.matf.bg.ac.rs/~filip/algoritmi/kraskel.html>`_. Употреби ову
 апликацију да провериш колико добро разумеш како функционише овај
 алгоритам.
 
