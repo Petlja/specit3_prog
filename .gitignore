@@ -15,3 +15,4 @@ Release
 override.json
 export
 course.json
+.venv
